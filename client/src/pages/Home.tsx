@@ -13,6 +13,20 @@
  * noindex, nofollow | No tracking | No live forms | No patient data
  */
 
+// Insurance logos — normalized 320x112 artboard, served from Manus CDN
+// Source: biermanautism.com/wp-content/uploads/ (read-only download, no hotlinks)
+const INSURANCE_LOGOS = [
+  { src: "/manus-storage/bierman-insurance-aetna_f6d238ed.webp", alt: "Aetna health insurance — accepted at Bierman Autism Centers Ramsey" },
+  { src: "/manus-storage/bierman-insurance-ambetter_34baba91.webp", alt: "Ambetter health insurance — accepted at Bierman Autism Centers Ramsey" },
+  { src: "/manus-storage/bierman-insurance-carelon_4a70fbdd.webp", alt: "Carelon health insurance — accepted at Bierman Autism Centers Ramsey" },
+  { src: "/manus-storage/bierman-insurance-cigna_1c21165d.webp", alt: "Cigna health insurance — accepted at Bierman Autism Centers Ramsey" },
+  { src: "/manus-storage/bierman-insurance-compsych_657fa980.webp", alt: "ComPsych health insurance — accepted at Bierman Autism Centers Ramsey" },
+  { src: "/manus-storage/bierman-insurance-meritain-health_bc730b51.webp", alt: "Meritain Health insurance — accepted at Bierman Autism Centers Ramsey" },
+  { src: "/manus-storage/bierman-insurance-surest_3872fe70.webp", alt: "Surest health insurance — accepted at Bierman Autism Centers Ramsey" },
+  { src: "/manus-storage/bierman-insurance-umr_9c11ff1b.webp", alt: "UMR health insurance — accepted at Bierman Autism Centers Ramsey" },
+  { src: "/manus-storage/bierman-insurance-united-healthcare_0b5b310b.webp", alt: "United Healthcare — accepted at Bierman Autism Centers Ramsey" },
+];
+
 const ASSETS = {
   logo: "/manus-storage/bierman-logo-anniversary-20_3f19246b.webp",
   facility: "/manus-storage/bierman-autism-new-jersey-ramsey-facility-main_296feafd.webp",
@@ -344,27 +358,40 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Insurance — softer, Horizon featured, rest as pending placeholders */}
+      {/* Insurance — all 10 logos normalized, served from Manus CDN, no hotlinks */}
       <section className="py-12 bg-white border-y border-slate-100">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-8">
             <div className="text-teal-600 text-sm font-bold uppercase tracking-widest mb-2">Insurance & Coverage</div>
             <h2 className="text-2xl font-bold text-[#1a2b47]">We Accept Most Major Insurance Plans</h2>
           </div>
-          <div className="flex flex-wrap justify-center items-center gap-4">
-            {/* Horizon BCBS NJ — confirmed, featured */}
-            <div className="bg-white rounded-2xl p-4 shadow-sm border-2 border-teal-200">
-              <img src={ASSETS.insurance} alt="Horizon Blue Cross Blue Shield New Jersey — confirmed accepted" className="h-10 w-auto" />
+          {/* Logo grid — consistent badge style, uniform height */}
+          <div className="flex flex-wrap justify-center items-center gap-3">
+            {/* Horizon BCBS NJ — from original CDN asset */}
+            <div className="bg-white rounded-xl p-3 shadow-sm border border-slate-200 flex items-center justify-center" style={{ minWidth: "120px", height: "64px" }}>
+              <img
+                src={ASSETS.insurance}
+                alt="Horizon Blue Cross Blue Shield New Jersey — accepted at Bierman Autism Centers Ramsey"
+                style={{ maxWidth: "100%", maxHeight: "40px", width: "auto", height: "auto", objectFit: "contain" }}
+              />
             </div>
-            {/* Remaining payers — clearly marked as pending */}
-            {["Aetna", "United Healthcare", "Cigna", "Carelon", "Ambetter", "UMR", "ComPsych", "Meritain", "Surest"].map((ins) => (
-              <div key={ins} className="bg-slate-50 rounded-xl px-4 py-2.5 border border-slate-200">
-                <span className="text-slate-500 font-medium text-sm">{ins}</span>
+            {/* All other payer logos — normalized 320x112 artboard */}
+            {INSURANCE_LOGOS.map((logo) => (
+              <div
+                key={logo.alt}
+                className="bg-white rounded-xl p-3 shadow-sm border border-slate-200 flex items-center justify-center"
+                style={{ minWidth: "120px", height: "64px" }}
+              >
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  style={{ maxWidth: "100%", maxHeight: "40px", width: "auto", height: "auto", objectFit: "contain" }}
+                />
               </div>
             ))}
           </div>
           <p className="text-center text-slate-400 text-xs mt-5">
-            Payer list pending confirmation with Bierman marketing team before production use.{" "}
+            Payer list pending final confirmation with Bierman marketing team before production use.{" "}
             <a href={LOCATION.intakeUrl} target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:underline font-medium">
               Verify your coverage →
             </a>
