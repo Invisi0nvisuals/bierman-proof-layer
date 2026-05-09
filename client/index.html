@@ -4,9 +4,238 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>ABA Therapy in Ramsey, NJ | Bierman Autism Centers — Proof Layer</title>
-    <meta name="robots" content="noindex, nofollow" />
-    <meta name="description" content="Proof-layer prototype: ABA therapy, speech therapy, occupational therapy, and diagnostic evaluations in Ramsey, New Jersey. Bierman Autism Centers — Bergen County." />
+
+    <!-- ============================================================
+         PROOF LAYER — SCHEMA/RICH RESULTS TESTING MODE
+         ============================================================
+         Default mode:   robots = noindex, nofollow  (safe review)
+         Schema test:    ?schema=test → robots = index, follow
+                         Canonical = self-referencing proof-layer URL
+         No GTM · No GA4 · No Meta Pixel · No Google Ads · No Bing UET
+         No CallRail · No Birdeye · No UserWay · No live forms
+         No patient data · No production changes
+         Production remains untouched: biermanautism.com/location/ramsey/
+         ============================================================ -->
+
+    <title>ABA Therapy in Ramsey, NJ | Bierman Autism Centers</title>
+
+    <!-- Robots: default = noindex/nofollow. Overridden to index/follow by ?schema=test script below. -->
+    <meta id="meta-robots" name="robots" content="noindex, nofollow" />
+
+    <!-- Canonical: set dynamically by schema-mode script below -->
+    <link id="link-canonical" rel="canonical" href="https://bierman-proof-layer.manus.space/" />
+
+    <!-- Primary meta description -->
+    <meta name="description" content="Bierman Autism Centers in Ramsey, NJ provides individualized ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism. Serving Bergen County and surrounding New Jersey communities." />
+
+    <!-- ============================================================
+         OPEN GRAPH
+         ============================================================ -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Bierman Autism Centers" />
+    <meta property="og:title" content="ABA Therapy in Ramsey, NJ | Bierman Autism Centers" />
+    <meta property="og:description" content="Bierman Autism Centers in Ramsey, NJ provides individualized ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism. Serving Bergen County." />
+    <meta id="og-url" property="og:url" content="https://bierman-proof-layer.manus.space/" />
+    <meta property="og:image" content="https://bierman-proof-layer.manus.space/manus-storage/bierman-autism-new-jersey-ramsey-facility-main_296feafd.webp" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Bierman Autism Centers — Ramsey, NJ clinic interior" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- ============================================================
+         TWITTER / X CARD
+         ============================================================ -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ABA Therapy in Ramsey, NJ | Bierman Autism Centers" />
+    <meta name="twitter:description" content="Individualized ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations in Ramsey, NJ. Serving Bergen County." />
+    <meta name="twitter:image" content="https://bierman-proof-layer.manus.space/manus-storage/bierman-autism-new-jersey-ramsey-facility-main_296feafd.webp" />
+    <meta name="twitter:image:alt" content="Bierman Autism Centers — Ramsey, NJ clinic interior" />
+
+    <!-- ============================================================
+         STRUCTURED DATA — JSON-LD
+         Schema QA note: This crawlable mode exists only to validate
+         the proof-layer architecture. It does not mean the page is
+         production, approved, or migrated.
+         ============================================================ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": ["LocalBusiness", "MedicalClinic"],
+          "@id": "https://bierman-proof-layer.manus.space/#localbusiness",
+          "name": "Bierman Autism Centers — Ramsey",
+          "alternateName": "Bierman Autism Centers Ramsey NJ",
+          "description": "Bierman Autism Centers in Ramsey, NJ provides individualized ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism.",
+          "url": "https://bierman-proof-layer.manus.space/",
+          "telephone": "(201) 596-8104",
+          "image": "https://bierman-proof-layer.manus.space/manus-storage/bierman-autism-new-jersey-ramsey-facility-main_296feafd.webp",
+          "logo": "https://bierman-proof-layer.manus.space/manus-storage/bierman-logo-anniversary-20_3f19246b.webp",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "500 N Franklin Tpke, Ste 203",
+            "addressLocality": "Ramsey",
+            "addressRegion": "NJ",
+            "postalCode": "07446",
+            "addressCountry": "US"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 41.0579,
+            "longitude": -74.1441
+          },
+          "areaServed": [
+            {
+              "@type": "AdministrativeArea",
+              "name": "Bergen County, NJ"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Passaic County, NJ"
+            }
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Autism Support Services — Ramsey",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "ABA Therapy" } },
+              { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Speech-Language Therapy" } },
+              { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Occupational Therapy" } },
+              { "@type": "Offer", "itemOffered": { "@type": "DiagnosticProcedure", "name": "Diagnostic Evaluation" } }
+            ]
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+              "opens": "08:00",
+              "closes": "18:00"
+            }
+          ],
+          "parentOrganization": {
+            "@type": "Organization",
+            "@id": "https://www.biermanautism.com/#organization",
+            "name": "Bierman Autism Centers",
+            "url": "https://www.biermanautism.com/"
+          },
+          "sameAs": [
+            "https://www.biermanautism.com/location/ramsey/"
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://bierman-proof-layer.manus.space/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Bierman Autism Centers",
+              "item": "https://bierman-proof-layer.manus.space/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Locations",
+              "item": "https://bierman-proof-layer.manus.space/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "New Jersey",
+              "item": "https://bierman-proof-layer.manus.space/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "Ramsey",
+              "item": "https://bierman-proof-layer.manus.space/"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://bierman-proof-layer.manus.space/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Does Bierman Autism Centers in Ramsey accept insurance?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Bierman Ramsey accepts most major insurance plans including Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others. Contact us to verify your specific coverage."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What age groups does the Ramsey center serve?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The Ramsey center serves children from early intervention age through adolescence. Services are individualized based on each child's needs and developmental stage."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do I get started with services at the Ramsey location?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The first step is completing our intake request. A member of our team will contact you to discuss your child's needs, verify insurance, and schedule an initial consultation."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Where is the Bierman Autism Centers Ramsey clinic located?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The Ramsey clinic is located at 500 N Franklin Tpke, Suite 203, Ramsey, NJ 07446, serving families in Bergen County and surrounding areas."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is ABA therapy and how does it help children with autism?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Applied Behavior Analysis (ABA) is a scientifically validated approach that uses structured techniques to teach skills and reduce challenging behaviors. It is individualized to each child's goals and delivered by trained therapists."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- ============================================================
+         SCHEMA TEST MODE — ?schema=test
+         When present: robots = index, follow + self-referencing canonical
+         Default (no param): robots = noindex, nofollow
+         noindex/nofollow is the safe default for all other sessions.
+         ============================================================ -->
+    <script>
+      (function() {
+        var params = new URLSearchParams(window.location.search);
+        var schemaMode = params.get('schema') === 'test';
+        var previewMode = params.get('preview') === 'clean';
+        var baseUrl = 'https://bierman-proof-layer.manus.space/';
+
+        // Robots meta
+        var metaRobots = document.getElementById('meta-robots');
+        if (metaRobots) {
+          metaRobots.setAttribute('content', schemaMode ? 'index, follow' : 'noindex, nofollow');
+        }
+
+        // Canonical — self-referencing proof-layer URL (never points to production)
+        var linkCanonical = document.getElementById('link-canonical');
+        if (linkCanonical) {
+          linkCanonical.setAttribute('href', baseUrl + (schemaMode ? '?schema=test' : ''));
+        }
+
+        // OG URL — match canonical
+        var ogUrl = document.getElementById('og-url');
+        if (ogUrl) {
+          ogUrl.setAttribute('content', baseUrl + (schemaMode ? '?schema=test' : ''));
+        }
+      })();
+    </script>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
@@ -15,6 +244,7 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <!-- Manus platform analytics only — no GTM, GA4, Meta Pixel, Google Ads, Bing UET, CallRail, or any third-party tracking -->
     <script
       defer
       src="%VITE_ANALYTICS_ENDPOINT%/umami"
