@@ -6,4 +6,8 @@
 User-agent: *
 Allow: /
 
+# Allow Facebook scraper for Open Graph / link preview validation
+User-agent: facebookexternalhit
+Allow: /
+
 Sitemap: https://bierman-proof-layer.manus.space/sitemap.xml
