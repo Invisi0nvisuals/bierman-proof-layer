@@ -58,6 +58,19 @@
 
 ---
 
+## Built Deck — Proof-Layer System Deck (v1)
+
+**File:** `Bierman_Proof_Layer_System_Deck_v1.pdf`  
+**Slides:** 18  
+**Format:** PDF (exported from HTML presentation)  
+**Status:** ✅ Complete  
+**Audience:** Bierman stakeholders, agency partners, acquisition reviewers  
+**Purpose:** The full 18-slide system deck that walks through the proof layer build end-to-end — from the problem statement through the schema architecture, Rich Results validation, location matrix, and next steps. Designed to be presented in a 30-minute meeting or sent as a standalone deliverable.
+
+**Connected repo docs:** `docs/PRD.md`, `docs/SCHEMA_STRATEGY.md`, `docs/LOCATION_MATRIX_STRATEGY.md`, `docs/ACQUISITION_READINESS.md`, `docs/evidence/`
+
+---
+
 ## New Deck Outlines
 
 Three new deck outlines are documented below. Each outline is also available as a standalone Markdown file in this folder.
