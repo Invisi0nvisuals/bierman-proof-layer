@@ -13,6 +13,16 @@
  * noindex, nofollow | No tracking | No live forms | No patient data
  */
 
+// All image assets — normalized and served from Manus CDN
+// Source: biermanautism.com/wp-content/uploads/ (read-only download, no hotlinks)
+// Generated: Speech-Language Therapy + Diagnostic Evaluation cards (AI-generated, Bierman style reference)
+
+const TRUST_BADGES = [
+  { src: "/manus-storage/bierman-trust-group-of-year-2022_866c3645.webp", alt: "Group of the Year 2022 Award" },
+  { src: "/manus-storage/bierman-trust-bacb-ace-provider_f1995271.webp", alt: "BACB ACE Authorized Continuing Education Provider" },
+  { src: "/manus-storage/bierman-trust-casp-member_7cc1f427.webp", alt: "CASP — Council of Autism Service Providers Member" },
+];
+
 // Insurance logos — normalized 320x112 artboard, served from Manus CDN
 // Source: biermanautism.com/wp-content/uploads/ (read-only download, no hotlinks)
 const INSURANCE_LOGOS = [
@@ -31,7 +41,7 @@ const ASSETS = {
   logo: "/manus-storage/bierman-logo-anniversary-20_3f19246b.webp",
   facility: "/manus-storage/bierman-autism-new-jersey-ramsey-facility-main_296feafd.webp",
   speechTherapy: "/manus-storage/bierman-autism-speech-therapy-room_5813b4e7.jpg",
-  mascot: "/manus-storage/bierman-autism-pilot-mascot-standing_ab2e5cf1.webp",
+  mascot: "/manus-storage/bierman-brand-nj-penguin-accent_64e9cbdd.webp",  // NJ-specific Pilot the Penguin
   insurance: "/manus-storage/bierman-autism-insurance-horizon-bcbs-new-jersey_8162212b.webp",
   videoPoster: "/manus-storage/bierman-ramsey-video-poster_28eb470d.jpg",
   video: "/manus-storage/bierman-ramsey-aba-therapy-overview_e3501ef2.mp4",
@@ -102,28 +112,28 @@ const SERVICES = [
     title: "ABA Therapy",
     desc: "Applied Behavior Analysis — individualized, evidence-based therapy designed to build communication, social, and daily living skills.",
     icon: <IconABA />,
-    img: null,
+    img: "/manus-storage/bierman-service-aba-therapy-card_d7ddabc1.webp",
     link: "#",
   },
   {
     title: "Speech-Language Therapy",
     desc: "Targeted speech and language support to help children communicate more effectively and confidently.",
     icon: <IconSpeech />,
-    img: ASSETS.speechTherapy,
+    img: "https://d2xsxph8kpxj0f.cloudfront.net/91389010/QxDhxTcSVFBCVe6sC7dKv5/bierman-service-speech-language-therapy-card-U56PgjdAJCh3qfqqeXDCyK.webp",
     link: "#",
   },
   {
     title: "Occupational Therapy",
     desc: "Sensory integration, fine motor skills, and daily living activities to support independence and engagement.",
     icon: <IconOT />,
-    img: null,
+    img: "/manus-storage/bierman-service-occupational-therapy-card_2cffd7a2.webp",
     link: "#",
   },
   {
     title: "Diagnostic Evaluation",
     desc: "Comprehensive autism diagnostic evaluations by licensed clinicians, with results and recommendations for families.",
     icon: <IconDiag />,
-    img: null,
+    img: "https://d2xsxph8kpxj0f.cloudfront.net/91389010/QxDhxTcSVFBCVe6sC7dKv5/bierman-service-diagnostic-evaluation-card-7MEyR3pXUm3dwqH5E9PnMK.webp",
     link: "#",
   },
 ];
@@ -246,6 +256,23 @@ export default function Home() {
           <div className="flex flex-wrap justify-center md:justify-between items-center gap-3 text-sm font-medium">
             {["✓ Evidence-Based ABA Therapy", "✓ Insurance Accepted", "✓ BCBA-Supervised Programs", "✓ 20 Years of Experience", "✓ Serving Bergen County"].map((item) => (
               <span key={item} className="text-white/90">{item}</span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Credential Badges — BACB ACE, CASP, Group of Year */}
+      <section className="bg-white border-b border-slate-100 py-6">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="flex flex-wrap justify-center items-center gap-6">
+            {TRUST_BADGES.map((badge) => (
+              <div key={badge.alt} className="flex items-center justify-center" style={{ height: "64px" }}>
+                <img
+                  src={badge.src}
+                  alt={badge.alt}
+                  style={{ maxHeight: "56px", width: "auto", objectFit: "contain" }}
+                />
+              </div>
             ))}
           </div>
         </div>
