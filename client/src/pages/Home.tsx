@@ -528,6 +528,18 @@ export default function Home() {
                       <>
                         <a href={`tel:${LOCATION.phone}`} className="text-teal-600 hover:underline">{LOCATION.phone}</a>
                         <div className="text-slate-400 text-xs mt-0.5">Phone number pending client NAP confirmation</div>
+                        {/* DATA FLAG: GBP phone discrepancy — DO NOT change proof-layer NAP until confirmed */}
+                        {/* Gemini GBP Report (May 2026) listed: (201) 308-3735 */}
+                        {/* Matrix/proof-layer NAP uses: (201) 596-8104 */}
+                        {/* Status: Needs confirmation from Bierman before production */}
+                        {!isCleanPreview && (
+                          <div className="mt-1.5 inline-flex items-center gap-1.5 bg-amber-50 border border-amber-200 rounded-lg px-2.5 py-1">
+                            <svg viewBox="0 0 12 12" fill="none" className="w-3 h-3 text-amber-500 flex-shrink-0" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+                              <circle cx="6" cy="6" r="5"/><path d="M6 4v2.5M6 8v.3" strokeLinecap="round"/>
+                            </svg>
+                            <span className="text-amber-700 text-xs">GBP discrepancy: report shows (201) 308-3735 — confirm before production</span>
+                          </div>
+                        )}
                       </>
                     ),
                   },
@@ -694,62 +706,89 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Reviews — "Local Review Architecture" module, not fake testimonials */}
+      {/* Review Themes — Format B: "Themes of Care" module */}
+      {/* Source: Gemini GBP Review Evidence Report (May 2026) */}
+      {/* No fake reviewer names, no star ratings, no direct GBP quotes, no child-specific details */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-4">
-            <div className="text-teal-600 text-sm font-bold uppercase tracking-widest mb-2">Local Review Architecture</div>
-            <h2 className="text-3xl font-bold text-[#1a2b47]">Example Review Layout — Ramsey</h2>
+            <div className="text-teal-600 text-sm font-bold uppercase tracking-widest mb-2">What Families Value</div>
+            <h2 className="text-3xl font-bold text-[#1a2b47]">What Families Value at Ramsey</h2>
+            <p className="text-slate-500 mt-3 max-w-2xl mx-auto text-sm leading-relaxed">
+              Public review evidence and Bierman testimonial themes suggest families value supportive communication, BCBA guidance, and a child-centered environment. Final review copy should be reviewed and approved by Bierman before production use.
+            </p>
           </div>
-          {/* Notice: shown unless dismissed or in clean preview */}
-          {!isCleanPreview && (
+
+          {/* Dismissible source notice */}
+          {!isCleanPreview && reviewsNoticeVisible && (
             <div className="bg-slate-50 border border-slate-200 rounded-2xl px-6 py-3 text-center mb-8 max-w-2xl mx-auto flex items-center justify-center gap-2">
               <p className="text-slate-500 text-sm">
-                This module shows how live GBP reviews would be displayed. Cards below are layout examples only — not real reviews.
+                Review themes are based on public review evidence and Bierman testimonial patterns. Final review copy requires Bierman approval before production use.
               </p>
-              {reviewsNoticeVisible && (
-                <DismissBtn onDismiss={dismissReviewsNotice} label="Dismiss reviews notice" />
-              )}
+              <DismissBtn onDismiss={dismissReviewsNotice} label="Dismiss review themes notice" />
             </div>
           )}
+          {!isCleanPreview && !reviewsNoticeVisible && (
+            <div className="mb-8" />
+          )}
 
-          {/* Review cards: skeleton-only in clean preview (no fake author labels) */}
+          {/* 3 Theme Cards — no fake names, no star ratings, no GBP quotes */}
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { author: "Parent, Bergen County", rating: 5 },
-              { author: "Parent, Ramsey NJ", rating: 5 },
-              { author: "Parent, Passaic County", rating: 5 },
-            ].map((review, i) => (
-              <div key={i} className="bg-slate-50 border border-slate-200 rounded-3xl p-6 relative">
-                {/* Star rating */}
-                <div className="text-amber-400 text-lg mb-3">{"\u2605".repeat(review.rating)}</div>
-                {/* Blurred placeholder text bars */}
-                <div className="space-y-2 mb-4">
-                  <div className="h-3 bg-slate-200 rounded-full w-full blur-[2px]" />
-                  <div className="h-3 bg-slate-200 rounded-full w-5/6 blur-[2px]" />
-                  <div className="h-3 bg-slate-200 rounded-full w-4/5 blur-[2px]" />
-                  <div className="h-3 bg-slate-200 rounded-full w-3/4 blur-[2px]" />
-                </div>
-                {/* Author label: shown in default mode, hidden in clean preview */}
-                {!isCleanPreview && (
-                  <div className="text-slate-400 text-sm">— {review.author}</div>
-                )}
-                {/* Example badge: always visible when fake content is shown */}
-                {!isCleanPreview && (
-                  <div className="absolute top-3 right-3 bg-slate-200 text-slate-500 text-xs font-semibold px-2 py-0.5 rounded-md">
-                    Example
-                  </div>
-                )}
+              {
+                icon: (
+                  <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" aria-hidden="true">
+                    <circle cx="24" cy="24" r="22" fill="#ccfbf1" />
+                    <circle cx="24" cy="20" r="6" stroke="#0d9488" strokeWidth="2.5" />
+                    <path d="M14 36c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="#0d9488" strokeWidth="2.5" strokeLinecap="round" />
+                    <path d="M32 18l2 2 4-4" stroke="#f97316" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                ),
+                title: "Supportive BCBA Guidance",
+                copy: "Families consistently value hands-on guidance from clinical team members and BCBAs throughout the care journey.",
+              },
+              {
+                icon: (
+                  <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" aria-hidden="true">
+                    <circle cx="24" cy="24" r="22" fill="#ccfbf1" />
+                    <path d="M16 30c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke="#0d9488" strokeWidth="2.5" strokeLinecap="round" />
+                    <circle cx="24" cy="18" r="5" stroke="#0d9488" strokeWidth="2.5" />
+                    <path d="M10 34c0-3.314 2.686-6 6-6" stroke="#0d9488" strokeWidth="2" strokeLinecap="round" strokeDasharray="2 2" />
+                    <path d="M38 34c0-3.314-2.686-6-6-6" stroke="#0d9488" strokeWidth="2" strokeLinecap="round" strokeDasharray="2 2" />
+                  </svg>
+                ),
+                title: "Family Partnership",
+                copy: "Parents often highlight clear communication and feeling known by the care team.",
+              },
+              {
+                icon: (
+                  <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" aria-hidden="true">
+                    <circle cx="24" cy="24" r="22" fill="#ccfbf1" />
+                    <path d="M14 34l6-8 5 4 5-10 4 6" stroke="#0d9488" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                    <circle cx="36" cy="16" r="4" fill="#ccfbf1" stroke="#f97316" strokeWidth="2" />
+                    <path d="M36 14v2.5l1.5 1" stroke="#f97316" strokeWidth="1.5" strokeLinecap="round" />
+                  </svg>
+                ),
+                title: "Progress-Focused Support",
+                copy: "Bierman's care model emphasizes individualized goals, structured support, and steady progress over time.",
+              },
+            ].map((theme) => (
+              <div
+                key={theme.title}
+                className="bg-white border border-teal-100 rounded-3xl p-7 flex flex-col gap-4 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
+              >
+                <div>{theme.icon}</div>
+                <h3 className="font-bold text-[#1a2b47] text-base">{theme.title}</h3>
+                <p className="text-slate-500 text-sm leading-relaxed">{theme.copy}</p>
               </div>
             ))}
           </div>
 
-          {/* Footer note: shown unless in clean preview */}
-          {!isCleanPreview && (
-            <p className="text-center text-slate-400 text-xs mt-6">
-              Live GBP reviews to be reviewed and approved by Bierman before production use.
-            </p>
-          )}
+          {/* Source attribution — always visible, not dismissible */}
+          <p className="text-center text-slate-400 text-xs mt-8">
+            Themes derived from public GBP review evidence and Bierman corporate testimonials. Not direct Google reviews.
+            Source: Gemini GBP Review Evidence Report, May 2026.
+          </p>
         </div>
       </section>
 
