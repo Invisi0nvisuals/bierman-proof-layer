@@ -56,6 +56,9 @@ const ASSETS = {
   insurance: "/manus-storage/bierman-autism-insurance-horizon-bcbs-new-jersey_8162212b.webp",
   videoPoster: "/manus-storage/bierman-ramsey-video-poster_28eb470d.jpg",
   video: "/manus-storage/bierman-ramsey-aba-therapy-overview_e3501ef2.mp4",
+  // Clinical leadership headshots — public Bierman team images; pilot use only; final production use requires Bierman approval
+  hillaryGenovese: "/manus-storage/bierman-team-hillary-genovese_19abd385.webp",
+  victoriaVerdun: "/manus-storage/bierman-team-victoria-verdun_4dbdee42.webp",
 };
 
 const LOCATION = {
@@ -912,236 +915,299 @@ export default function Home() {
       </section>
 
       {/* Education to Action — GSC opportunity: connect informational intent to local service pages */}
-      <section className="py-16 bg-white border-t border-slate-100">
+      <section className="py-20 border-t border-slate-100" style={{ background: "linear-gradient(180deg, #f8fffe 0%, #ffffff 100%)" }}>
         <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-10">
-            <div className="text-teal-600 text-sm font-bold uppercase tracking-widest mb-2">Understanding Autism Support</div>
-            <h2 className="text-3xl font-bold text-[#1a2b47]">Understanding Autism Support Near Ramsey</h2>
-            <p className="text-slate-500 mt-3 max-w-2xl mx-auto">
-              Families often start with questions about autism, ASD, diagnosis, and therapy options. This section connects those questions to local support available near Ramsey and Bergen County.
+          <div className="max-w-2xl mb-12">
+            <div className="inline-block bg-teal-50 border border-teal-200 text-teal-700 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4">Parent Resource Pathway</div>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1a2b47] leading-tight">Understanding Autism Support Near Ramsey</h2>
+            <p className="text-slate-500 mt-4 text-base leading-relaxed">
+              Families often start with questions before they start services. These resources connect common questions to local support available in Bergen County.
             </p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
             {[
               {
                 title: "What is ASD?",
-                copy: "Autism spectrum disorder, or ASD, describes developmental differences that can affect communication, social interaction, behavior, and learning. Every child's support needs are different.",
+                copy: "ASD describes developmental differences affecting communication, social interaction, behavior, and learning. Every child's support needs are unique.",
+                accent: "#0d9488",
+                bg: "#f0fdfa",
+                url: "https://www.biermanautism.com/autism-101/",
+                linkLabel: "Autism 101",
                 icon: (
-                  <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" aria-hidden="true">
-                    <circle cx="24" cy="24" r="22" fill="#ccfbf1" />
-                    <path d="M24 14a8 8 0 100 16 8 8 0 000-16z" stroke="#0d9488" strokeWidth="2.5"/>
-                    <path d="M24 22v5M24 19v.5" stroke="#0d9488" strokeWidth="2.5" strokeLinecap="round"/>
-                  </svg>
-                ),
-              },
-              {
-                title: "What does ABA therapy support?",
-                copy: "ABA therapy uses individualized goals and structured support to help children build communication, daily living, social, and learning skills.",
-                icon: (
-                  <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" aria-hidden="true">
-                    <circle cx="24" cy="24" r="22" fill="#ccfbf1" />
-                    <path d="M16 32c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke="#0d9488" strokeWidth="2.5" strokeLinecap="round"/>
-                    <circle cx="24" cy="18" r="5" stroke="#0d9488" strokeWidth="2.5"/>
-                  </svg>
-                ),
-              },
-              {
-                title: "Can autism be cured?",
-                copy: "Autism is not something to \"cure.\" Support focuses on helping each child build skills, independence, communication, and confidence over time.",
-                icon: (
-                  <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" aria-hidden="true">
-                    <circle cx="24" cy="24" r="22" fill="#ccfbf1" />
-                    <path d="M16 28l5-5 3 3 8-8" stroke="#0d9488" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                ),
-              },
-              {
-                title: "When should families ask about support?",
-                copy: "Families often seek guidance when they have questions about communication, behavior, routines, developmental milestones, or therapy options near them.",
-                icon: (
-                  <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" aria-hidden="true">
-                    <circle cx="24" cy="24" r="22" fill="#ccfbf1" />
-                    <circle cx="24" cy="24" r="8" stroke="#0d9488" strokeWidth="2.5"/>
-                    <path d="M24 20v4l3 2" stroke="#0d9488" strokeWidth="2" strokeLinecap="round"/>
-                  </svg>
-                ),
-              },
-              {
-                title: "ASD vs. Autism: What's the difference?",
-                copy: "ASD (Autism Spectrum Disorder) is the current clinical term. 'Autism' is widely used in everyday language. Both refer to the same spectrum of developmental differences.",
-                icon: (
-                  <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" aria-hidden="true">
-                    <circle cx="24" cy="24" r="22" fill="#ccfbf1" />
-                    <path d="M16 24h16M24 16l8 8-8 8" stroke="#0d9488" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <svg viewBox="0 0 40 40" fill="none" className="w-8 h-8" aria-hidden="true">
+                    <circle cx="20" cy="20" r="18" fill="#ccfbf1"/>
+                    <path d="M20 12a6 6 0 100 12 6 6 0 000-12z" stroke="#0d9488" strokeWidth="2"/>
+                    <path d="M20 18v4M20 15.5v.5" stroke="#0d9488" strokeWidth="2" strokeLinecap="round"/>
                   </svg>
                 ),
               },
               {
                 title: "What is Level 1 Autism?",
-                copy: "Level 1 autism (formerly Asperger's) describes individuals who require some support. GSC data shows strong search demand for this topic, indicating families are actively seeking clarity.",
+                copy: "Level 1 autism describes individuals who benefit from some support. Families searching this topic are often seeking clarity on next steps.",
+                accent: "#0d9488",
+                bg: "#f0fdfa",
+                url: "https://www.biermanautism.com/resources/blog/autism-level-1/",
+                linkLabel: "Level 1 Autism Guide",
                 icon: (
-                  <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" aria-hidden="true">
-                    <circle cx="24" cy="24" r="22" fill="#ccfbf1" />
-                    <path d="M18 32l6-16 6 16M20 27h8" stroke="#0d9488" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <svg viewBox="0 0 40 40" fill="none" className="w-8 h-8" aria-hidden="true">
+                    <circle cx="20" cy="20" r="18" fill="#ccfbf1"/>
+                    <path d="M14 28l6-14 6 14M16 23h8" stroke="#0d9488" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                ),
+              },
+              {
+                title: "ASD vs. Autism",
+                copy: "ASD is the current clinical term. 'Autism' is widely used in everyday language. Both refer to the same spectrum of developmental differences.",
+                accent: "#0d9488",
+                bg: "#f0fdfa",
+                url: "https://www.biermanautism.com/resources/blog/asd-vs-autism/",
+                linkLabel: "ASD vs Autism",
+                icon: (
+                  <svg viewBox="0 0 40 40" fill="none" className="w-8 h-8" aria-hidden="true">
+                    <circle cx="20" cy="20" r="18" fill="#ccfbf1"/>
+                    <path d="M12 20h16M20 13l7 7-7 7" stroke="#0d9488" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                ),
+              },
+              {
+                title: "Can autism be cured?",
+                copy: "Support focuses on helping each child build skills, independence, communication, and confidence — not on 'curing' autism.",
+                accent: "#0d9488",
+                bg: "#f0fdfa",
+                url: "https://www.biermanautism.com/autism-101/can-autism-be-cured/",
+                linkLabel: "Learn More",
+                icon: (
+                  <svg viewBox="0 0 40 40" fill="none" className="w-8 h-8" aria-hidden="true">
+                    <circle cx="20" cy="20" r="18" fill="#ccfbf1"/>
+                    <path d="M13 23l4-4 3 3 7-7" stroke="#0d9488" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                ),
+              },
+              {
+                title: "How ABA supports communication",
+                copy: "ABA therapy uses individualized goals and structured support to help children build communication, daily living, social, and learning skills.",
+                accent: "#0d9488",
+                bg: "#f0fdfa",
+                url: "https://www.biermanautism.com/services/aba-therapy/",
+                linkLabel: "ABA Therapy Services",
+                icon: (
+                  <svg viewBox="0 0 40 40" fill="none" className="w-8 h-8" aria-hidden="true">
+                    <circle cx="20" cy="20" r="18" fill="#ccfbf1"/>
+                    <path d="M12 16h16v8a2 2 0 01-2 2H14l-3 3v-3a2 2 0 01-1-2v-6a2 2 0 012-2z" stroke="#0d9488" strokeWidth="2" strokeLinejoin="round"/>
+                    <path d="M16 21h8" stroke="#0d9488" strokeWidth="1.5" strokeLinecap="round"/>
+                  </svg>
+                ),
+              },
+              {
+                title: "When to ask about support",
+                copy: "Families often seek guidance when they have questions about communication, behavior, routines, or developmental milestones. Starting the conversation early matters.",
+                accent: "#0d9488",
+                bg: "#f0fdfa",
+                url: LOCATION.intakeUrl,
+                linkLabel: "Start in Ramsey",
+                icon: (
+                  <svg viewBox="0 0 40 40" fill="none" className="w-8 h-8" aria-hidden="true">
+                    <circle cx="20" cy="20" r="18" fill="#ccfbf1"/>
+                    <circle cx="20" cy="20" r="7" stroke="#0d9488" strokeWidth="2"/>
+                    <path d="M20 17v3l2 2" stroke="#0d9488" strokeWidth="1.5" strokeLinecap="round"/>
                   </svg>
                 ),
               },
             ].map((card) => (
-              <div key={card.title} className="bg-white border border-teal-100 rounded-3xl p-6 flex flex-col gap-4 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200">
-                <div>{card.icon}</div>
-                <h3 className="font-bold text-[#1a2b47] text-sm">{card.title}</h3>
+              <div key={card.title} className="group bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 flex flex-col gap-3">
+                <div className="flex items-center gap-3 mb-1">
+                  {card.icon}
+                  <h3 className="font-bold text-[#1a2b47] text-sm leading-snug">{card.title}</h3>
+                </div>
                 <p className="text-slate-500 text-sm leading-relaxed flex-1">{card.copy}</p>
+                <a
+                  href={card.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-teal-600 font-semibold text-xs hover:text-teal-800 transition-colors mt-1"
+                >
+                  {card.linkLabel} <span aria-hidden="true">→</span>
+                </a>
               </div>
             ))}
           </div>
-          {/* Resource links — internal linking opportunity from educational content to NJ service pages */}
-          <div className="bg-teal-50 border border-teal-100 rounded-2xl p-6">
-            <div className="text-teal-700 text-xs font-bold uppercase tracking-widest mb-3">Resources &amp; Next Steps</div>
-            <div className="flex flex-wrap gap-3">
-              {[
-                { label: "Autism 101", url: "https://www.biermanautism.com/autism-101/", note: "" },
-                { label: "Level 1 Autism", url: "https://www.biermanautism.com/resources/blog/autism-level-1/", note: "" },
-                { label: "ASD vs Autism", url: "https://www.biermanautism.com/resources/blog/asd-vs-autism/", note: "" },
-                { label: "Can Autism Be Cured?", url: "https://www.biermanautism.com/autism-101/can-autism-be-cured/", note: "" },
-                { label: "Caregiver Training", url: "https://www.biermanautism.com/resources/caregiver-training/", note: "" },
-                { label: "ABA Therapy Services", url: "https://www.biermanautism.com/services/aba-therapy/", note: "" },
-                { label: "Start Services in Ramsey", url: LOCATION.intakeUrl, note: "" },
-              ].map((link) => (
-                <a
-                  key={link.label}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 bg-white border border-teal-200 hover:border-teal-400 hover:bg-teal-50 text-teal-700 font-medium px-4 py-2 rounded-xl text-sm transition-colors shadow-sm"
-                >
-                  {link.label} <span aria-hidden="true">→</span>
-                </a>
-              ))}
-            </div>
-            <p className="text-slate-400 text-xs mt-3">Resource URLs link to existing biermanautism.com content. Confirm all URLs are live before production use.</p>
+          {/* Resource strip */}
+          <div className="flex flex-wrap items-center gap-3 pt-6 border-t border-slate-100">
+            <span className="text-slate-400 text-xs font-semibold uppercase tracking-wide mr-1">Quick links:</span>
+            {[
+              { label: "Autism 101", url: "https://www.biermanautism.com/autism-101/" },
+              { label: "Level 1 Autism", url: "https://www.biermanautism.com/resources/blog/autism-level-1/" },
+              { label: "ASD vs Autism", url: "https://www.biermanautism.com/resources/blog/asd-vs-autism/" },
+              { label: "Can Autism Be Cured?", url: "https://www.biermanautism.com/autism-101/can-autism-be-cured/" },
+              { label: "Caregiver Training", url: "https://www.biermanautism.com/resources/caregiver-training/" },
+              { label: "ABA Therapy Services", url: "https://www.biermanautism.com/services/aba-therapy/" },
+            ].map((link) => (
+              <a key={link.label} href={link.url} target="_blank" rel="noopener noreferrer"
+                className="text-teal-700 text-xs font-medium hover:underline underline-offset-2">
+                {link.label}
+              </a>
+            ))}
+            <span className="text-slate-200 mx-1">|</span>
+            <p className="text-slate-400 text-xs">All URLs link to existing biermanautism.com content. Confirm before production use.</p>
           </div>
         </div>
       </section>
 
       {/* Support for Families at Home — Caregiver Training section */}
       {/* GSC opportunity: caregiver training topics show demand around at-home support, functional communication, building independence, behavior support */}
-      <section className="py-16 bg-white border-t border-slate-100">
+      <section className="py-20 border-t border-slate-100" style={{ background: "linear-gradient(135deg, #f0fdfa 0%, #ecfdf5 50%, #f8fffe 100%)" }}>
         <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-10">
-            <div className="text-teal-600 text-sm font-bold uppercase tracking-widest mb-2">Caregiver Support</div>
-            <h2 className="text-3xl font-bold text-[#1a2b47]">Support for Families at Home</h2>
-            <p className="text-slate-500 mt-3 max-w-2xl mx-auto">
-              Care does not stop when a child leaves the clinic. Bierman's caregiver training resources help families better understand communication, daily routines, independence, behavior support, and transitions between therapy and school.
-            </p>
-          </div>
-          <div className="grid sm:grid-cols-3 gap-6 mb-8">
-            {[
-              {
-                title: "Functional Communication",
-                copy: "Learn how caregiver strategies can support children in expressing needs, building communication routines, and reducing frustration at home.",
-                icon: (
-                  <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" aria-hidden="true">
-                    <circle cx="24" cy="24" r="22" fill="#ccfbf1" />
-                    <path d="M14 18h20v10a2 2 0 01-2 2H16l-4 4v-4a2 2 0 01-2-2V20a2 2 0 012-2z" stroke="#0d9488" strokeWidth="2.5" strokeLinejoin="round"/>
-                    <path d="M19 24h10" stroke="#0d9488" strokeWidth="2" strokeLinecap="round"/>
-                  </svg>
-                ),
-              },
-              {
-                title: "Building Independence",
-                copy: "Explore practical ways families can support daily living skills, routines, and independence outside the therapy setting.",
-                icon: (
-                  <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" aria-hidden="true">
-                    <circle cx="24" cy="24" r="22" fill="#ccfbf1" />
-                    <path d="M24 14v8l5 3" stroke="#0d9488" strokeWidth="2.5" strokeLinecap="round"/>
-                    <circle cx="24" cy="24" r="10" stroke="#0d9488" strokeWidth="2.5"/>
-                  </svg>
-                ),
-              },
-              {
-                title: "Managing Behaviors at Home",
-                copy: "Access guidance on understanding behavior, creating supportive routines, and working with your child's care team.",
-                icon: (
-                  <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" aria-hidden="true">
-                    <circle cx="24" cy="24" r="22" fill="#ccfbf1" />
-                    <path d="M16 28l5-5 3 3 8-8" stroke="#0d9488" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                ),
-              },
-            ].map((card) => (
-              <div key={card.title} className="bg-white border border-teal-100 rounded-3xl p-6 flex flex-col gap-4 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200">
-                <div>{card.icon}</div>
-                <h3 className="font-bold text-[#1a2b47] text-sm">{card.title}</h3>
-                <p className="text-slate-500 text-sm leading-relaxed flex-1">{card.copy}</p>
-                <a
-                  href="https://www.biermanautism.com/resources/caregiver-training/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-teal-600 font-semibold text-xs hover:text-teal-800 transition-colors mt-auto"
-                >
-                  Caregiver Training Resources <span aria-hidden="true">→</span>
-                </a>
-              </div>
-            ))}
-          </div>
-          <div className="text-center">
-            <a
-              href="https://www.biermanautism.com/resources/caregiver-training/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white font-semibold px-6 py-3 rounded-xl text-sm transition-colors shadow-sm"
-            >
-              Explore Caregiver Training Resources <span aria-hidden="true">→</span>
-            </a>
+          <div className="flex flex-col lg:flex-row gap-12 items-start">
+            {/* Left: heading + CTA */}
+            <div className="lg:w-80 flex-shrink-0">
+              <div className="inline-block bg-white border border-teal-200 text-teal-700 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4">Caregiver Support</div>
+              <h2 className="text-3xl font-bold text-[#1a2b47] leading-tight mb-4">Support for Families at Home</h2>
+              <p className="text-slate-500 text-sm leading-relaxed mb-6">
+                Care does not stop when a child leaves the clinic. Bierman's caregiver training resources help families understand communication, daily routines, independence, and behavior support.
+              </p>
+              <a
+                href="https://www.biermanautism.com/resources/caregiver-training/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white font-semibold px-5 py-3 rounded-xl text-sm transition-colors shadow-sm"
+              >
+                Caregiver Training Resources <span aria-hidden="true">→</span>
+              </a>
+            </div>
+            {/* Right: 4 topic cards */}
+            <div className="flex-1 grid sm:grid-cols-2 gap-4">
+              {[
+                {
+                  title: "Functional Communication",
+                  copy: "Support children in expressing needs, building communication routines, and reducing frustration at home.",
+                  color: "#0d9488",
+                  lightBg: "#ccfbf1",
+                  icon: (
+                    <svg viewBox="0 0 36 36" fill="none" className="w-7 h-7" aria-hidden="true">
+                      <path d="M6 10h24v12a2 2 0 01-2 2H10l-5 5v-5a2 2 0 01-1-2V12a2 2 0 012-2z" stroke="#0d9488" strokeWidth="2" strokeLinejoin="round" fill="#ccfbf1"/>
+                      <path d="M12 18h12" stroke="#0d9488" strokeWidth="1.5" strokeLinecap="round"/>
+                    </svg>
+                  ),
+                },
+                {
+                  title: "Building Independence",
+                  copy: "Support daily living skills, routines, and independence outside the therapy setting.",
+                  color: "#0d9488",
+                  lightBg: "#ccfbf1",
+                  icon: (
+                    <svg viewBox="0 0 36 36" fill="none" className="w-7 h-7" aria-hidden="true">
+                      <circle cx="18" cy="18" r="14" fill="#ccfbf1" stroke="#0d9488" strokeWidth="2"/>
+                      <path d="M18 12v6l4 2" stroke="#0d9488" strokeWidth="2" strokeLinecap="round"/>
+                    </svg>
+                  ),
+                },
+                {
+                  title: "Managing Behaviors at Home",
+                  copy: "Understand behavior, create supportive routines, and work alongside your child's care team.",
+                  color: "#0d9488",
+                  lightBg: "#ccfbf1",
+                  icon: (
+                    <svg viewBox="0 0 36 36" fill="none" className="w-7 h-7" aria-hidden="true">
+                      <circle cx="18" cy="18" r="14" fill="#ccfbf1"/>
+                      <path d="M11 21l4-4 3 3 7-7" stroke="#0d9488" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  ),
+                },
+                {
+                  title: "School & Routine Transitions",
+                  copy: "Navigate transitions between therapy, school, and home routines with guidance from Bierman's clinical team.",
+                  color: "#0d9488",
+                  lightBg: "#ccfbf1",
+                  icon: (
+                    <svg viewBox="0 0 36 36" fill="none" className="w-7 h-7" aria-hidden="true">
+                      <circle cx="18" cy="18" r="14" fill="#ccfbf1"/>
+                      <path d="M12 22l6-8 6 8" stroke="#0d9488" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M15 22h6" stroke="#0d9488" strokeWidth="1.5" strokeLinecap="round"/>
+                    </svg>
+                  ),
+                },
+              ].map((card) => (
+                <div key={card.title} className="bg-white rounded-2xl p-5 shadow-sm border border-white hover:shadow-md transition-all duration-200 flex gap-4 items-start">
+                  <div className="flex-shrink-0 mt-0.5">{card.icon}</div>
+                  <div>
+                    <h3 className="font-bold text-[#1a2b47] text-sm mb-1">{card.title}</h3>
+                    <p className="text-slate-500 text-xs leading-relaxed">{card.copy}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Clinical Leadership — Victoria Verdun, Ph.D., BCBA-D, LBA */}
-      {/* No face photo — Pilot mascot icon used per design spec */}
-      {/* Do not imply they are the Ramsey clinic director — NJ regional role only */}
-      <section className="py-14" style={{ background: "linear-gradient(180deg, #f8fffe 0%, #f0fdfa 100%)" }}>
+      {/* Clinical Leadership — Victoria Verdun, Ph.D., BCBA-D, LBA + Hillary Genovese, M.A., BCBA */}
+      {/* ASSET APPROVAL NOTE: Public Bierman team images used in pilot; final production use requires Bierman approval */}
+      {/* Do not imply they are the Ramsey clinic directors — NJ regional role only */}
+      <section className="py-20 bg-[#1a2b47]">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-8">
-            <div className="text-teal-600 text-sm font-bold uppercase tracking-widest mb-2">Clinical Leadership</div>
-            <h2 className="text-3xl font-bold text-[#1a2b47]">Clinical Leadership Supporting New Jersey Families</h2>
-          </div>
-          <p className="text-slate-500 text-center max-w-2xl mx-auto mb-8 text-sm">
-            Bierman's New Jersey centers are supported by experienced clinical leaders who help guide care quality, staff development, and family-centered service delivery across the region.
-          </p>
-          <div className="max-w-3xl mx-auto grid sm:grid-cols-2 gap-6">
-            {[
-              {
-                name: "Victoria Verdun, Ph.D., BCBA-D, LBA",
-                title: "Director of Clinical Excellence, New Jersey",
-                tags: ["ABA Therapy", "Clinical Excellence", "BCBA Supervision", "Caregiver Training"],
-              },
-              {
-                name: "Hillary Genovese, M.A., BCBA",
-                title: "Director of Services, New Jersey",
-                tags: ["ABA Therapy", "Service Delivery", "BCBA Supervision", "New Jersey"],
-              },
-            ].map((person) => (
-              <div key={person.name} className="bg-white border border-teal-100 rounded-3xl p-8 shadow-sm flex flex-col sm:flex-row gap-6 items-start">
-                {/* Initials avatar — no face photo per spec */}
-                <div className="flex-shrink-0">
-                  <div className="w-16 h-16 rounded-2xl bg-teal-600 flex items-center justify-center">
-                    <span className="text-white font-bold text-xl" aria-hidden="true">
-                      {person.name.split(" ").slice(0, 2).map((n: string) => n[0]).join("")}
-                    </span>
-                  </div>
-                </div>
-                <div className="flex-1">
-                  <div className="font-bold text-[#1a2b47] text-base">{person.name}</div>
-                  <div className="text-teal-600 font-semibold text-sm mb-3">{person.title}</div>
-                  <div className="flex flex-wrap gap-2">
-                    {person.tags.map((tag: string) => (
-                      <span key={tag} className="bg-teal-50 border border-teal-100 text-teal-700 text-xs font-medium px-3 py-1 rounded-full">{tag}</span>
-                    ))}
-                  </div>
-                </div>
+          <div className="flex flex-col lg:flex-row gap-12 items-center">
+            {/* Left: heading */}
+            <div className="lg:w-96 flex-shrink-0">
+              <div className="inline-block bg-teal-500/20 border border-teal-400/30 text-teal-300 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4">New Jersey Clinical Leadership</div>
+              <h2 className="text-3xl font-bold text-white leading-tight mb-4">The Team Behind Your Child's Care</h2>
+              <p className="text-slate-300 text-sm leading-relaxed">
+                Bierman's New Jersey centers are supported by experienced clinical leaders who guide care quality, staff development, and family-centered service delivery across the region.
+              </p>
+              <div className="mt-6 flex items-center gap-2">
+                <img src={ASSETS.mascot} alt="Pilot the Penguin — Bierman mascot" className="w-10 h-10 object-contain" />
+                <span className="text-teal-300 text-xs font-medium">Bierman Autism Centers · New Jersey</span>
               </div>
-            ))}
+            </div>
+            {/* Right: portrait cards */}
+            <div className="flex-1 grid sm:grid-cols-2 gap-6">
+              {[
+                {
+                  name: "Victoria Verdun",
+                  credentials: "Ph.D., BCBA-D, LBA",
+                  title: "Director of Clinical Excellence",
+                  region: "New Jersey",
+                  photo: ASSETS.victoriaVerdun,
+                  alt: "Victoria Verdun, Ph.D., BCBA-D, LBA — Director of Clinical Excellence, New Jersey, Bierman Autism Centers",
+                  tags: ["Clinical Excellence", "BCBA Supervision", "Caregiver Training", "ABA Therapy"],
+                },
+                {
+                  name: "Hillary Genovese",
+                  credentials: "M.A., BCBA",
+                  title: "Director of Services",
+                  region: "New Jersey",
+                  photo: ASSETS.hillaryGenovese,
+                  alt: "Hillary Genovese, M.A., BCBA — Director of Services, New Jersey, Bierman Autism Centers",
+                  tags: ["Service Delivery", "BCBA Supervision", "ABA Therapy", "New Jersey"],
+                },
+              ].map((person) => (
+                <div key={person.name} className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/8 transition-all duration-200">
+                  {/* Portrait */}
+                  <div className="relative">
+                    <img
+                      src={person.photo}
+                      alt={person.alt}
+                      className="w-full aspect-square object-cover object-top"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#1a2b47]/80 via-transparent to-transparent" />
+                    <div className="absolute bottom-3 left-4 right-4">
+                      <div className="text-white font-bold text-base leading-tight">{person.name}</div>
+                      <div className="text-teal-300 text-xs font-semibold">{person.credentials}</div>
+                    </div>
+                  </div>
+                  {/* Details */}
+                  <div className="p-5">
+                    <div className="text-slate-300 text-sm font-semibold mb-1">{person.title}</div>
+                    <div className="text-slate-400 text-xs mb-4">{person.region}</div>
+                    <div className="flex flex-wrap gap-1.5">
+                      {person.tags.map((tag: string) => (
+                        <span key={tag} className="bg-teal-500/15 border border-teal-400/20 text-teal-300 text-xs px-2.5 py-0.5 rounded-full">{tag}</span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
