@@ -230,6 +230,198 @@ const FAQS = [
   },
 ];
 
+// ─── GBP Review Data ──────────────────────────────────────────────────────────
+// Source: Google Business Profile — public reviews, Bierman Autism Centers — Ramsey, NJ
+// Sourced May 2026. Used for proof-layer review purposes only.
+const GBP_REVIEWS = [
+  {
+    slug: "ambar-arias",
+    name: "Ambar Arias",
+    meta: "Local Guide · 31 reviews",
+    date: "8 weeks ago",
+    stars: 5,
+    text: "If I could give this center 10 stars, I would!! My son has been here for a little over a year, and I am beyond thankful for all the help he has received. I would like to thank all of the therapists, aides, and clinical directors who contributed to my son's progress and positive evolution. I would highly recommend this center to anyone who is looking to get their child more support with therapies. It has personally been one of the best decisions I've made for my son's ADS journey.",
+    initials: "AA",
+    avatarColor: "#ea580c",
+    theme: "progress",
+  },
+  {
+    slug: "sohayb-stiti",
+    name: "Sohayb Stiti",
+    meta: "Local Guide · 17 reviews",
+    date: "13 weeks ago",
+    stars: 5,
+    text: "I would like to express my gratitude to Dr. Catherine Lark, who was incredibly helpful during our son's assessment. She was professional, kind, and very knowledgeable. She took the time to explain everything clearly and truly listened to our concerns as parents. We felt supported and confident throughout the process.",
+    initials: "SS",
+    avatarColor: "#7c3aed",
+    theme: "clinical",
+  },
+  {
+    slug: "kim-sedlacek",
+    name: "Kim Sedlacek",
+    meta: "Local Guide · 13 reviews",
+    date: "41 weeks ago",
+    stars: 5,
+    text: "The Practice Manager, Kelsey, and all the Behavior Technicians are very knowledgeable and caring. They are making a huge difference for the children they serve.",
+    initials: "KS",
+    avatarColor: "#0d9488",
+    theme: "staff",
+  },
+  {
+    slug: "margarita-morales",
+    name: "Margarita Morales",
+    meta: "6 reviews",
+    date: "8 weeks ago",
+    stars: 5,
+    text: "Staff was great! Nice experience! Thank you",
+    initials: "MM",
+    avatarColor: "#2563eb",
+    theme: "environment",
+  },
+  {
+    slug: "anthony-siciliano",
+    name: "Anthony Siciliano",
+    meta: "Local Guide · 33 reviews",
+    date: "8 weeks ago",
+    stars: 5,
+    text: "Went here for a public event — nice, clean center and friendly staff :)",
+    initials: "AS",
+    avatarColor: "#16a34a",
+    theme: "environment",
+  },
+  {
+    slug: "nancy-passano",
+    name: "Nancy Passano",
+    meta: "5 reviews",
+    date: "Mar 10, 2025",
+    stars: 5,
+    text: "Amazing experience at the Reptile Encounter — our son loved seeing and touching all the reptiles. Such a great family event!",
+    initials: "NP",
+    avatarColor: "#db2777",
+    theme: "community",
+  },
+];
+
+const TRUNCATE_THRESHOLD = 160;
+
+function StarRating({ count }: { count: number }) {
+  return (
+    <div className="flex gap-0.5" aria-label={`${count} out of 5 stars`}>
+      {Array.from({ length: 5 }).map((_, i) => (
+        <svg
+          key={i}
+          viewBox="0 0 20 20"
+          fill={i < count ? "#f59e0b" : "none"}
+          stroke={i < count ? "#f59e0b" : "#d1d5db"}
+          strokeWidth="1.5"
+          className="w-4 h-4"
+          aria-hidden="true"
+        >
+          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+      ))}
+    </div>
+  );
+}
+
+function GoogleBadge() {
+  return (
+    <div className="flex items-center gap-1.5">
+      <svg viewBox="0 0 24 24" className="w-4 h-4 flex-shrink-0" aria-hidden="true">
+        <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+        <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+        <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/>
+        <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+      </svg>
+      <span className="text-slate-400 text-xs">Posted on Google</span>
+    </div>
+  );
+}
+
+function GBPReviewCard({ review }: { review: typeof GBP_REVIEWS[0] }) {
+  const [expanded, setExpanded] = useState(false);
+  const isLong = review.text.length > TRUNCATE_THRESHOLD;
+  const displayText = isLong && !expanded
+    ? review.text.slice(0, TRUNCATE_THRESHOLD).trimEnd() + "\u2026"
+    : review.text;
+
+  return (
+    <article
+      className="flex flex-col bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-200 p-6"
+      itemScope
+      itemType="https://schema.org/Review"
+    >
+      {/* Avatar + Name row */}
+      <div className="flex items-center gap-3 mb-4">
+        <div
+          className="w-11 h-11 rounded-full flex items-center justify-center text-white text-sm font-bold flex-shrink-0 select-none"
+          style={{ backgroundColor: review.avatarColor }}
+          aria-hidden="true"
+        >
+          {review.initials}
+        </div>
+        <div className="min-w-0">
+          <p className="font-semibold text-[#1a2b47] text-sm leading-tight truncate" itemProp="author" itemScope itemType="https://schema.org/Person">
+            <span itemProp="name">{review.name}</span>
+          </p>
+          <p className="text-slate-400 text-xs mt-0.5 truncate">{review.meta}</p>
+        </div>
+      </div>
+
+      {/* Stars + date */}
+      <div className="flex items-center gap-3 mb-4">
+        <div itemProp="reviewRating" itemScope itemType="https://schema.org/Rating">
+          <meta itemProp="ratingValue" content={String(review.stars)} />
+          <meta itemProp="bestRating" content="5" />
+          <StarRating count={review.stars} />
+        </div>
+        <span className="text-slate-400 text-xs">{review.date}</span>
+      </div>
+
+      {/* Review text — grows to fill available space */}
+      <div className="flex-1">
+        <blockquote className="text-slate-600 text-sm leading-relaxed" itemProp="reviewBody">
+          {displayText}
+        </blockquote>
+        {isLong && (
+          <button
+            type="button"
+            onClick={() => setExpanded(!expanded)}
+            className="mt-2 text-teal-600 text-xs font-semibold hover:text-teal-700 focus:outline-none focus:underline transition-colors"
+          >
+            {expanded ? "Show less" : "Read more"}
+          </button>
+        )}
+      </div>
+
+      {/* Footer */}
+      <div className="mt-5 pt-4 border-t border-slate-100">
+        <GoogleBadge />
+      </div>
+    </article>
+  );
+}
+
+function GBPReviewGrid() {
+  // Featured review (longest, most detailed) + 5 supporting
+  const [featured, ...rest] = GBP_REVIEWS;
+  return (
+    <div className="space-y-5">
+      {/* Featured review — full width on mobile, spans 2 cols on lg */}
+      <div className="grid lg:grid-cols-3 gap-5">
+        <div className="lg:col-span-1">
+          <GBPReviewCard review={featured} />
+        </div>
+        <div className="lg:col-span-2 grid sm:grid-cols-2 gap-5 content-start">
+          {rest.map((r) => (
+            <GBPReviewCard key={r.slug} review={r} />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // Dismiss button — subtle, accessible, keyboard-focusable
 function DismissBtn({ onDismiss, label = "Dismiss notice" }: { onDismiss: () => void; label?: string }) {
   return (
@@ -899,63 +1091,17 @@ export default function Home() {
             Source: Gemini GBP Review Evidence Report, May 2026.
           </p>
 
-          {/* Real GBP Reviews — 5 public Google reviews, screenshots sourced May 2026 */}
+          {/* Real GBP Reviews — 6 public Google reviews, HTML/CSS native cards, sourced May 2026 */}
           <div className="mt-14">
-            <div className="text-center mb-8">
+            <div className="text-center mb-10">
               <div className="text-teal-600 text-sm font-bold uppercase tracking-widest mb-2">Google Reviews</div>
               <h3 className="text-2xl font-bold text-[#1a2b47]">What Families Are Saying</h3>
+              <p className="text-slate-500 text-sm mt-2 max-w-xl mx-auto">
+                Real reviews from families at Bierman Autism Centers — Ramsey, NJ.
+              </p>
             </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              <div className="rounded-2xl overflow-hidden shadow-md">
-                <img
-                  src={ASSETS.reviewAmbar}
-                  alt="Google review by Ambar Arias — Bierman Autism Centers Ramsey NJ"
-                  className="w-full h-auto"
-                  loading="lazy"
-                />
-              </div>
-              <div className="rounded-2xl overflow-hidden shadow-md">
-                <img
-                  src={ASSETS.reviewMargarita}
-                  alt="Google review by Margarita Morales — Bierman Autism Centers Ramsey NJ"
-                  className="w-full h-auto"
-                  loading="lazy"
-                />
-              </div>
-              <div className="rounded-2xl overflow-hidden shadow-md">
-                <img
-                  src={ASSETS.reviewAnthony}
-                  alt="Google review by Anthony Siciliano — Bierman Autism Centers Ramsey NJ"
-                  className="w-full h-auto"
-                  loading="lazy"
-                />
-              </div>
-              <div className="rounded-2xl overflow-hidden shadow-md">
-                <img
-                  src={ASSETS.reviewSohayb}
-                  alt="Google review by Sohayb Stiti — Bierman Autism Centers Ramsey NJ"
-                  className="w-full h-auto"
-                  loading="lazy"
-                />
-              </div>
-              <div className="rounded-2xl overflow-hidden shadow-md">
-                <img
-                  src={ASSETS.reviewKim}
-                  alt="Google review by Kim Sedlacek — Bierman Autism Centers Ramsey NJ"
-                  className="w-full h-auto"
-                  loading="lazy"
-                />
-              </div>
-              <div className="rounded-2xl overflow-hidden shadow-md">
-                <img
-                  src={ASSETS.reviewNancy}
-                  alt="Google review by Nancy Passano — Bierman Autism Centers Ramsey NJ"
-                  className="w-full h-auto"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-            <p className="text-center text-slate-400 text-xs mt-6">
+            <GBPReviewGrid />
+            <p className="text-center text-slate-400 text-xs mt-8">
               Reviews sourced from Google Business Profile — public. Displayed for proof-layer review purposes.
             </p>
           </div>
