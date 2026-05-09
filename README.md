@@ -52,13 +52,14 @@ This proof layer turns that problem into a structured, documented, scalable syst
 
 | Metric | Value |
 |---|---|
-| Items detected | 13 |
-| Valid items | 11 (prior clean state) / targeting 13 valid |
-| Invalid items | 6 Review nodes — `itemReviewed` fix applied in v16/v17 |
-| Groups | Breadcrumbs, FAQ, Local businesses, Organization, Review snippets, Videos |
-| Last tested | May 9, 2026 |
+| Items detected | 12 |
+| Valid items | 12 |
+| Invalid items | 0 |
+| Critical issues | 0 |
+| Groups | Breadcrumbs, FAQ, Local businesses, Organization, Review snippets (7), Videos |
+| Last tested | May 9, 2026 — confirmed clean |
 
-See [`docs/SCHEMA_STRATEGY.md`](docs/SCHEMA_STRATEGY.md) for full schema architecture and Rich Results status.
+See [`docs/SCHEMA_STRATEGY.md`](docs/SCHEMA_STRATEGY.md) for full schema architecture and [`docs/evidence/05-rich-results-baseline.md`](docs/evidence/05-rich-results-baseline.md) for the full progression from baseline to current state.
 
 ---
 
@@ -108,6 +109,26 @@ This proof layer operates under strict production isolation:
 
 ---
 
+## Evidence Trail
+
+This proof layer was built from a documented audit trail. Every major architectural, content, and schema decision is traceable to a specific evidence source. See [`docs/evidence/00-evidence-index.md`](docs/evidence/00-evidence-index.md) for the master evidence map covering: live site audit findings, GBP data, GSC-informed query analysis, Rich Results Test progression, schema validation log, review evidence, URL strategy findings, tracking/privacy findings, and the full decision log.
+
+| Evidence File | What It Covers |
+|---|---|
+| [`00-evidence-index.md`](docs/evidence/00-evidence-index.md) | Master evidence map — all sources, findings, and build decisions |
+| [`01-current-site-audit.md`](docs/evidence/01-current-site-audit.md) | 10 current site findings tied to proof-layer improvements |
+| [`02-location-matrix-findings.md`](docs/evidence/02-location-matrix-findings.md) | Matrix v3 status, discrepancies, source-of-truth rules |
+| [`03-gbp-findings.md`](docs/evidence/03-gbp-findings.md) | 33 verified profiles, NAP findings, review evidence, directions |
+| [`04-gsc-query-findings.md`](docs/evidence/04-gsc-query-findings.md) | GSC-informed query opportunities (directional) |
+| [`05-rich-results-baseline.md`](docs/evidence/05-rich-results-baseline.md) | Production baseline vs. proof layer Rich Results progression |
+| [`06-schema-validation-log.md`](docs/evidence/06-schema-validation-log.md) | 26-node entity graph, validation milestones, known warnings |
+| [`07-review-evidence.md`](docs/evidence/07-review-evidence.md) | Review selection, exclusion criteria, schema rules |
+| [`08-url-strategy-findings.md`](docs/evidence/08-url-strategy-findings.md) | Current URL pattern, pilot recommendation, migration path |
+| [`09-tracking-privacy-findings.md`](docs/evidence/09-tracking-privacy-findings.md) | Production tracking concerns, zero-tracking proof layer, future recommendations |
+| [`10-decision-log.md`](docs/evidence/10-decision-log.md) | Chronological log of 12 major decisions with evidence and alternatives |
+
+---
+
 ## Documentation Index
 
 | File | Purpose |
@@ -130,6 +151,7 @@ This proof layer operates under strict production isolation:
 | [`docs/BUILD_NOTES.md`](docs/BUILD_NOTES.md) | Technical framework, components, asset paths |
 | [`docs/ROADMAP.md`](docs/ROADMAP.md) | 8-phase scaling roadmap |
 | [`docs/ACQUISITION_READINESS.md`](docs/ACQUISITION_READINESS.md) | Acquisition-readiness framing and value summary |
+| [`docs/CLIENT_CONFIRMATION_QUESTIONS_DELIVERABLE.md`](docs/CLIENT_CONFIRMATION_QUESTIONS_DELIVERABLE.md) | Client-ready confirmation questions document (21 questions) |
 
 ---
 

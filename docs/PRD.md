@@ -37,6 +37,20 @@ This proof layer turns the gap into a documented system. It is acquisition-relev
 
 ---
 
+## Evidence Trail
+
+Every decision in this PRD is backed by documented evidence. The full evidence trail is in [`docs/evidence/`](evidence/). Key sources:
+
+| Evidence File | What It Proves |
+|---|---|
+| [`01-current-site-audit.md`](evidence/01-current-site-audit.md) | 10 documented gaps in the current production site that this system addresses |
+| [`03-gbp-findings.md`](evidence/03-gbp-findings.md) | 33 verified GBP profiles, NAP discrepancies, review availability |
+| [`05-rich-results-baseline.md`](evidence/05-rich-results-baseline.md) | Production baseline (3 valid groups) vs. proof layer (12 valid items, 6 groups) |
+| [`06-schema-validation-log.md`](evidence/06-schema-validation-log.md) | 26-node entity graph, all validation milestones, dual schema conflict resolution |
+| [`10-decision-log.md`](evidence/10-decision-log.md) | 12 major decisions with evidence, alternatives considered, and current status |
+
+---
+
 ## Problem Statement
 
 Bierman's current location pages (`/location/slug/`) have the following documented issues:
