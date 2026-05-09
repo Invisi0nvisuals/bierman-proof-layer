@@ -73,6 +73,16 @@ This reframing shaped every major PRD requirement:
 | Ramsey and Piscataway validated as Tier 1 pilot candidates | Ramsey-first build; Piscataway queued as Phase 2 comparison |
 | Pilot should focus on review generation, UTM tracking, CallRail/HubSpot QA, CTA/form location context | Pilot tasks documented in `ROADMAP.md` and `CLIENT_CONFIRMATION_QUESTIONS.md` |
 
+---
+
+## Operating System
+
+The proof layer is not only a page prototype. It is the output of a repeatable operating system designed to convert source data into location-page architecture, schema/entity structure, content modules, QA artifacts, and scaling rules.
+
+The operating system governs how research, build execution, schema validation, evidence capture, and documentation are coordinated across the project. It defines 10 reusable workflows (A–J), 8 approval gates, and a clear boundary between deliverables that transfer with the repo and internal methods that remain proprietary unless separately agreed.
+
+See [`docs/OPERATING_SYSTEM.md`](OPERATING_SYSTEM.md) for the full operating model documentation.
+
 The full audit summary is in [`docs/evidence/11-business-impact-audit-summary.md`](evidence/11-business-impact-audit-summary.md). The source document is in [`docs/evidence/source-artifacts/seo-business-impact-audit-addendum.md`](evidence/source-artifacts/seo-business-impact-audit-addendum.md).
 
 ---

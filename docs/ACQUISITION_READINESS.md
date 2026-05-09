@@ -110,3 +110,13 @@ These five issues are not reasons to discount the business. They are documented,
 This proof layer is acquisition-ready infrastructure documentation. It demonstrates a scalable system, exposes technical debt honestly, provides a clear implementation roadmap, and gives any stakeholder the information they need to evaluate, scope, and execute the next phase — without commissioning a new discovery engagement.
 
 That is the difference between a redesign pitch and a source-of-truth system.
+
+---
+
+## Operating System
+
+The proof layer was produced using a controlled multi-agent operating model. The operating system documents how the build was executed, what workflows were used, what approval gates governed each phase, and what transfers to Bierman versus what remains internal to the operating team.
+
+For any stakeholder conducting acquisition review, the operating system answers the question: *"Could this be repeated for the other 32 locations?"* The answer is yes — and the operating system documents exactly how.
+
+See [`OPERATING_SYSTEM.md`](OPERATING_SYSTEM.md) for the full operating model, workflow inventory, approval gates, and deliverables-vs-internal-methods table.

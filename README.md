@@ -151,7 +151,14 @@ This proof layer was built from a documented audit trail. Every major architectu
 | [`docs/BUILD_NOTES.md`](docs/BUILD_NOTES.md) | Technical framework, components, asset paths |
 | [`docs/ROADMAP.md`](docs/ROADMAP.md) | 8-phase scaling roadmap |
 | [`docs/ACQUISITION_READINESS.md`](docs/ACQUISITION_READINESS.md) | Acquisition-readiness framing and value summary |
-| [`docs/CLIENT_CONFIRMATION_QUESTIONS_DELIVERABLE.md`](docs/CLIENT_CONFIRMATION_QUESTIONS_DELIVERABLE.md) | Client-ready confirmation questions document (21 questions) |
+| [`docs/OPERATING_SYSTEM.md`](docs/OPERATING_SYSTEM.md) | Operating model, workflow inventory, approval gates, deliverables vs. internal methods |
+| [`docs/CLIENT_CONFIRMATION_QUESTIONS_DELIVERABLE.md`](docs/CLIENT_CONFIRMATION_QUESTIONS_DELIVERABLE.md) | Client-ready confirmation questions document (26 questions) |
+
+---
+
+## Operating System
+
+This project was built with a controlled multi-agent operating model for research, QA, build execution, schema validation, and evidence governance. The operating model documents 10 reusable workflows (A–J), 8 approval gates, and a full deliverables-vs-internal-methods inventory. See [`docs/OPERATING_SYSTEM.md`](docs/OPERATING_SYSTEM.md).
 
 ---
 
