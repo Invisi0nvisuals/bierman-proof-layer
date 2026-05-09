@@ -63,12 +63,13 @@ const ASSETS = {
   themeBcbaGuidance: "/manus-storage/theme-card-bcba-guidance_f4421e19.png",
   themeFamilyPartnership: "/manus-storage/theme-card-family-partnership_7fd858a1.png",
   themeProgressFocused: "/manus-storage/theme-card-progress-focused_1582d40e.png",
-  // GBP review screenshots — real public Google reviews, sourced May 2026
-  reviewAmbar: "/manus-storage/review-ambar-arias_7151450c.png",
-  reviewMargarita: "/manus-storage/review-margarita-morales_dceda657.png",
-  reviewAnthony: "/manus-storage/review-anthony-siciliano_30aab7a4.png",
-  reviewSohayb: "/manus-storage/review-sohayb-stiti_6628fc5a.png",
-  reviewKim: "/manus-storage/review-kim-sedlacek_0b838f1d.png",
+  // GBP review cards — generated clean cards (no Google UI chrome), sourced from public GBP reviews May 2026
+  reviewAmbar: "/manus-storage/review-card-ambar-arias_177ebd2e.png",
+  reviewMargarita: "/manus-storage/review-card-margarita-morales_daa459c7.png",
+  reviewAnthony: "/manus-storage/review-card-anthony-siciliano_3154ff04.png",
+  reviewSohayb: "/manus-storage/review-card-sohayb-stiti_2dcabb38.png",
+  reviewKim: "/manus-storage/review-card-kim-sedlacek_cebe096c.png",
+  reviewNancy: "/manus-storage/review-card-nancy-passano_8e1e75d6.png",
 };
 
 const LOCATION = {
@@ -945,9 +946,17 @@ export default function Home() {
                   loading="lazy"
                 />
               </div>
+              <div className="rounded-2xl overflow-hidden shadow-md">
+                <img
+                  src={ASSETS.reviewNancy}
+                  alt="Google review by Nancy Passano — Bierman Autism Centers Ramsey NJ"
+                  className="w-full h-auto"
+                  loading="lazy"
+                />
+              </div>
             </div>
             <p className="text-center text-slate-400 text-xs mt-6">
-              Reviews sourced from Google Business Profile — public. Displayed as-is for proof-layer review purposes.
+              Reviews sourced from Google Business Profile — public. Displayed for proof-layer review purposes.
             </p>
           </div>
         </div>
