@@ -59,6 +59,16 @@ const ASSETS = {
   // Clinical leadership headshots — public Bierman team images; pilot use only; final production use requires Bierman approval
   hillaryGenovese: "/manus-storage/bierman-team-hillary-genovese_19abd385.webp",
   victoriaVerdun: "/manus-storage/bierman-team-victoria-verdun_4dbdee42.webp",
+  // Theme card images — AI-generated, Bierman-style, uploaded to CDN May 2026
+  themeBcbaGuidance: "/manus-storage/theme-card-bcba-guidance_f4421e19.png",
+  themeFamilyPartnership: "/manus-storage/theme-card-family-partnership_7fd858a1.png",
+  themeProgressFocused: "/manus-storage/theme-card-progress-focused_1582d40e.png",
+  // GBP review screenshots — real public Google reviews, sourced May 2026
+  reviewAmbar: "/manus-storage/review-ambar-arias_7151450c.png",
+  reviewMargarita: "/manus-storage/review-margarita-morales_dceda657.png",
+  reviewAnthony: "/manus-storage/review-anthony-siciliano_30aab7a4.png",
+  reviewSohayb: "/manus-storage/review-sohayb-stiti_6628fc5a.png",
+  reviewKim: "/manus-storage/review-kim-sedlacek_0b838f1d.png",
 };
 
 const LOCATION = {
@@ -854,63 +864,92 @@ export default function Home() {
             <div className="mb-8" />
           )}
 
-          {/* 3 Theme Cards — no fake names, no star ratings, no GBP quotes */}
+          {/* 3 Theme Card Images — cards have padding/rounded corners baked in; neutral container only */}
           <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                icon: (
-                  <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" aria-hidden="true">
-                    <circle cx="24" cy="24" r="22" fill="#ccfbf1" />
-                    <circle cx="24" cy="20" r="6" stroke="#0d9488" strokeWidth="2.5" />
-                    <path d="M14 36c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="#0d9488" strokeWidth="2.5" strokeLinecap="round" />
-                    <path d="M32 18l2 2 4-4" stroke="#f97316" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                ),
-                title: "Supportive BCBA Guidance",
-                copy: "Families consistently value hands-on guidance from clinical team members and BCBAs throughout the care journey.",
-              },
-              {
-                icon: (
-                  <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" aria-hidden="true">
-                    <circle cx="24" cy="24" r="22" fill="#ccfbf1" />
-                    <path d="M16 30c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke="#0d9488" strokeWidth="2.5" strokeLinecap="round" />
-                    <circle cx="24" cy="18" r="5" stroke="#0d9488" strokeWidth="2.5" />
-                    <path d="M10 34c0-3.314 2.686-6 6-6" stroke="#0d9488" strokeWidth="2" strokeLinecap="round" strokeDasharray="2 2" />
-                    <path d="M38 34c0-3.314-2.686-6-6-6" stroke="#0d9488" strokeWidth="2" strokeLinecap="round" strokeDasharray="2 2" />
-                  </svg>
-                ),
-                title: "Family Partnership",
-                copy: "Parents often highlight clear communication and feeling known by the care team.",
-              },
-              {
-                icon: (
-                  <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" aria-hidden="true">
-                    <circle cx="24" cy="24" r="22" fill="#ccfbf1" />
-                    <path d="M14 34l6-8 5 4 5-10 4 6" stroke="#0d9488" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                    <circle cx="36" cy="16" r="4" fill="#ccfbf1" stroke="#f97316" strokeWidth="2" />
-                    <path d="M36 14v2.5l1.5 1" stroke="#f97316" strokeWidth="1.5" strokeLinecap="round" />
-                  </svg>
-                ),
-                title: "Progress-Focused Support",
-                copy: "Bierman's care model emphasizes individualized goals, structured support, and steady progress over time.",
-              },
-            ].map((theme) => (
-              <div
-                key={theme.title}
-                className="bg-white border border-teal-100 rounded-3xl p-7 flex flex-col gap-4 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
-              >
-                <div>{theme.icon}</div>
-                <h3 className="font-bold text-[#1a2b47] text-base">{theme.title}</h3>
-                <p className="text-slate-500 text-sm leading-relaxed">{theme.copy}</p>
-              </div>
-            ))}
+            <div className="overflow-hidden rounded-2xl shadow-sm bg-transparent">
+              <img
+                src={ASSETS.themeBcbaGuidance}
+                alt="Supportive BCBA Guidance — families value hands-on clinical team communication at Bierman Ramsey"
+                className="w-full h-auto object-contain"
+                loading="lazy"
+              />
+            </div>
+            <div className="overflow-hidden rounded-2xl shadow-sm bg-transparent">
+              <img
+                src={ASSETS.themeFamilyPartnership}
+                alt="Family Partnership — parents highlight clear communication and feeling known by the Bierman care team"
+                className="w-full h-auto object-contain"
+                loading="lazy"
+              />
+            </div>
+            <div className="overflow-hidden rounded-2xl shadow-sm bg-transparent">
+              <img
+                src={ASSETS.themeProgressFocused}
+                alt="Progress-Focused Support — individualized goals and steady progress at Bierman Autism Centers Ramsey NJ"
+                className="w-full h-auto object-contain"
+                loading="lazy"
+              />
+            </div>
           </div>
 
           {/* Source attribution — always visible, not dismissible */}
           <p className="text-center text-slate-400 text-xs mt-8">
-            Themes derived from public GBP review evidence and Bierman corporate testimonials. Not direct Google reviews.
+            Themes derived from public GBP review evidence and Bierman corporate testimonials.
             Source: Gemini GBP Review Evidence Report, May 2026.
           </p>
+
+          {/* Real GBP Reviews — 5 public Google reviews, screenshots sourced May 2026 */}
+          <div className="mt-14">
+            <div className="text-center mb-8">
+              <div className="text-teal-600 text-sm font-bold uppercase tracking-widest mb-2">Google Reviews</div>
+              <h3 className="text-2xl font-bold text-[#1a2b47]">What Families Are Saying</h3>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              <div className="rounded-2xl overflow-hidden shadow-md">
+                <img
+                  src={ASSETS.reviewAmbar}
+                  alt="Google review by Ambar Arias — Bierman Autism Centers Ramsey NJ"
+                  className="w-full h-auto"
+                  loading="lazy"
+                />
+              </div>
+              <div className="rounded-2xl overflow-hidden shadow-md">
+                <img
+                  src={ASSETS.reviewMargarita}
+                  alt="Google review by Margarita Morales — Bierman Autism Centers Ramsey NJ"
+                  className="w-full h-auto"
+                  loading="lazy"
+                />
+              </div>
+              <div className="rounded-2xl overflow-hidden shadow-md">
+                <img
+                  src={ASSETS.reviewAnthony}
+                  alt="Google review by Anthony Siciliano — Bierman Autism Centers Ramsey NJ"
+                  className="w-full h-auto"
+                  loading="lazy"
+                />
+              </div>
+              <div className="rounded-2xl overflow-hidden shadow-md">
+                <img
+                  src={ASSETS.reviewSohayb}
+                  alt="Google review by Sohayb Stiti — Bierman Autism Centers Ramsey NJ"
+                  className="w-full h-auto"
+                  loading="lazy"
+                />
+              </div>
+              <div className="rounded-2xl overflow-hidden shadow-md">
+                <img
+                  src={ASSETS.reviewKim}
+                  alt="Google review by Kim Sedlacek — Bierman Autism Centers Ramsey NJ"
+                  className="w-full h-auto"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <p className="text-center text-slate-400 text-xs mt-6">
+              Reviews sourced from Google Business Profile — public. Displayed as-is for proof-layer review purposes.
+            </p>
+          </div>
         </div>
       </section>
 
