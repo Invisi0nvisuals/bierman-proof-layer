@@ -163,6 +163,7 @@
               "closes": "18:00"
             }
           ],
+          "hasMap": "https://www.google.com/maps/place/Bierman+Autism+Centers+-+Ramsey/",
           "parentOrganization": { "@id": "https://bierman-proof-layer.manus.space/#organization" },
           "sameAs": [
             "https://www.biermanautism.com/location/ramsey/"
@@ -432,6 +433,30 @@
       ]
     }
     </script>
+
+    <!-- DATA LAYER DOCUMENTATION — directions_click event (proof-layer planning only, no live tracking)
+         Safe event: directions_click
+         Allowed parameters:
+           location_name   (e.g. "Ramsey, NJ")
+           location_slug   (e.g. "ramsey-nj")
+           city            (e.g. "Ramsey")
+           state           (e.g. "NJ")
+           cta_location    (e.g. "plan-your-visit-card" | "map-section" | "mobile-sticky")
+           map_provider    (e.g. "google-maps")
+         Disallowed: user precise location, name, email, phone, child details, diagnosis, form values
+         Implementation: GTM custom event trigger — DO NOT add live tracking to this proof-layer environment.
+
+         RAMSEY NAP DISCREPANCY FLAG (3 phone values observed — needs Bierman confirmation):
+           Proof-layer NAP:          (201) 596-8104
+           Gemini GBP review report: (201) 308-3735
+           Gemini directions report: (201) 928-5245
+         Status: Do not update proof-layer NAP until Bierman confirms the correct number.
+
+         PISCATAWAY NAP DISCREPANCY FLAG (for future Piscataway build):
+           Directions report:  200 Centennial Ave, Piscataway, NJ 08854 / (732) 426-5470
+           Matrix v3 (prior):  280 Centennial Avenue, Piscataway, NJ 08854 / (732) 479-7225
+         Status: Needs confirmation from Bierman before Piscataway build.
+    -->
 
     <!-- ============================================================
          CANONICAL / OG URL — self-referencing proof-layer URL

@@ -223,6 +223,11 @@ export default function Home() {
   const [reviewsNoticeVisible, setReviewsNoticeVisible] = useState(true);
   const [phoneNoticeVisible, setPhoneNoticeVisible] = useState(true);
   const [hoursNoticeVisible, setHoursNoticeVisible] = useState(true);
+  const [visitCardNoticeVisible, setVisitCardNoticeVisible] = useState(true);
+  // Piscataway NAP discrepancy flag — for future Piscataway build reference
+  // Directions report: 200 Centennial Ave, Piscataway, NJ 08854 / (732) 426-5470
+  // Matrix v3 previously used: 280 Centennial Avenue, Piscataway, NJ 08854 / (732) 479-7225
+  // Status: Needs confirmation from Bierman before Piscataway build
 
   useEffect(() => {
     // Detect ?preview=clean
@@ -241,6 +246,7 @@ export default function Home() {
     if (sessionStorage.getItem("pl_reviews_notice_dismissed") === "1") setReviewsNoticeVisible(false);
     if (sessionStorage.getItem("pl_phone_notice_dismissed") === "1") setPhoneNoticeVisible(false);
     if (sessionStorage.getItem("pl_hours_notice_dismissed") === "1") setHoursNoticeVisible(false);
+    if (sessionStorage.getItem("pl_visit_card_dismissed") === "1") setVisitCardNoticeVisible(false);
   }, []);
 
   const dismissBanner = () => {
@@ -262,6 +268,10 @@ export default function Home() {
   const dismissHoursNotice = () => {
     setHoursNoticeVisible(false);
     sessionStorage.setItem("pl_hours_notice_dismissed", "1");
+  };
+  const dismissVisitCardNotice = () => {
+    setVisitCardNoticeVisible(false);
+    sessionStorage.setItem("pl_visit_card_dismissed", "1");
   };
 
   // Nav top offset: 32px when banner visible, 0 when hidden
@@ -537,6 +547,46 @@ export default function Home() {
       {/* Map + Location Details */}
       <section className="py-16" style={{ background: "linear-gradient(180deg, #fef9f0 0%, #fff 100%)" }}>
         <div className="max-w-6xl mx-auto px-4">
+
+          {/* Plan Your Visit card — above the 2-col grid */}
+          <div className="mb-10 bg-teal-50 border border-teal-100 rounded-2xl p-6 flex flex-col sm:flex-row gap-6 items-start">
+            <div className="flex-shrink-0 bg-teal-100 rounded-xl p-3">
+              <svg viewBox="0 0 32 32" fill="none" className="w-7 h-7 text-teal-600" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+                <path d="M16 3a9 9 0 019 9c0 6-9 17-9 17S7 18 7 12a9 9 0 019-9z"/>
+                <circle cx="16" cy="12" r="3"/>
+              </svg>
+            </div>
+            <div className="flex-1">
+              <div className="text-teal-700 text-xs font-bold uppercase tracking-widest mb-1">Plan Your Visit</div>
+              <p className="text-[#1a2b47] font-semibold text-sm mb-2">
+                Planning a visit to the Ramsey center? Use the directions link below for the confirmed address and suite information before your appointment or tour.
+              </p>
+              <div className="text-slate-600 text-sm space-y-1 mb-3">
+                <div><span className="font-medium text-[#1a2b47]">Address:</span> {LOCATION.address}, {LOCATION.city}, {LOCATION.state} {LOCATION.zip}</div>
+                <div><span className="font-medium text-[#1a2b47]">Suite:</span> Suite 203 — enter through the main building entrance</div>
+                {!isCleanPreview && visitCardNoticeVisible ? (
+                  <div className="flex items-start gap-1.5 bg-amber-50 border border-amber-200 rounded-lg px-2.5 py-1.5 mt-1">
+                    <svg viewBox="0 0 12 12" fill="none" className="w-3 h-3 text-amber-500 flex-shrink-0 mt-0.5" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+                      <circle cx="6" cy="6" r="5"/><path d="M6 4v2.5M6 8v.3" strokeLinecap="round"/>
+                    </svg>
+                    <span className="text-amber-700 text-xs flex-1">Parking / arrival details to be confirmed by Bierman. Nearby landmark details pending client confirmation.</span>
+                    <DismissBtn onDismiss={dismissVisitCardNotice} label="Dismiss visit card notice" />
+                  </div>
+                ) : (
+                  <div className="text-slate-400 text-xs">Parking and landmark details pending Bierman confirmation.</div>
+                )}
+              </div>
+              <a
+                href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(LOCATION.address + ", " + LOCATION.city + ", " + LOCATION.state + " " + LOCATION.zip)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white font-semibold px-5 py-2.5 rounded-xl text-sm transition-colors shadow-sm"
+              >
+                Get Directions to Ramsey →
+              </a>
+            </div>
+          </div>
+
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div>
               <div className="text-teal-600 text-sm font-bold uppercase tracking-widest mb-2">Location & Directions</div>
@@ -573,7 +623,11 @@ export default function Home() {
                             <svg viewBox="0 0 12 12" fill="none" className="w-3 h-3 text-amber-500 flex-shrink-0" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
                               <circle cx="6" cy="6" r="5"/><path d="M6 4v2.5M6 8v.3" strokeLinecap="round"/>
                             </svg>
-                            <span className="text-amber-700 text-xs">GBP discrepancy: report shows (201) 308-3735 — confirm before production</span>
+                            <span className="text-amber-700 text-xs">
+                          NAP discrepancy — 3 phone values observed across sources:<br />
+                          Proof-layer NAP: (201) 596-8104 · GBP review report: (201) 308-3735 · Directions report: (201) 928-5245<br />
+                          Confirm correct number with Bierman before production.
+                        </span>
                             <DismissBtn onDismiss={dismissPhoneNotice} label="Dismiss phone discrepancy notice" />
                           </div>
                         )}
@@ -1065,6 +1119,56 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* Mobile sticky action row — 3 high-intent CTAs, visible only on small screens */}
+      {/* Wayfinding behavior is a high-intent local action. Sticky row reduces friction for mobile visitors. */}
+      <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-white border-t border-slate-200 shadow-lg">
+        <div className="flex items-stretch">
+          <a
+            href={LOCATION.intakeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 flex flex-col items-center justify-center gap-0.5 py-3 bg-orange-500 hover:bg-orange-600 text-white text-xs font-semibold transition-colors"
+          >
+            <svg viewBox="0 0 20 20" fill="none" className="w-4 h-4" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+              <path d="M10 2a8 8 0 100 16A8 8 0 0010 2z"/>
+              <path d="M10 7v6M7 10h6" strokeLinecap="round"/>
+            </svg>
+            Request Services
+          </a>
+          <a
+            href={`tel:${LOCATION.phone}`}
+            className="flex-1 flex flex-col items-center justify-center gap-0.5 py-3 bg-teal-600 hover:bg-teal-700 text-white text-xs font-semibold transition-colors border-x border-teal-700"
+          >
+            <svg viewBox="0 0 20 20" fill="none" className="w-4 h-4" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+              <path d="M3 5a2 2 0 012-2h2l2 4-1.5 1.5a11 11 0 005 5L14 12l4 2v2a2 2 0 01-2 2C7.163 18 2 12.837 2 7a2 2 0 012-2z"/>
+            </svg>
+            Call
+          </a>
+          <a
+            href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(LOCATION.address + ", " + LOCATION.city + ", " + LOCATION.state + " " + LOCATION.zip)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 flex flex-col items-center justify-center gap-0.5 py-3 bg-slate-700 hover:bg-slate-800 text-white text-xs font-semibold transition-colors"
+          >
+            <svg viewBox="0 0 20 20" fill="none" className="w-4 h-4" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+              <path d="M10 2a6 6 0 016 6c0 4-6 10-6 10S4 12 4 8a6 6 0 016-6z"/>
+              <circle cx="10" cy="8" r="2"/>
+            </svg>
+            Directions
+          </a>
+        </div>
+        {/* Proof-layer note — mobile sticky CTA is a UX pattern test, not a live form */}
+        {!isCleanPreview && (
+          <div className="bg-slate-50 border-t border-slate-100 text-center text-slate-400 text-xs py-1">
+            Mobile CTA row — proof-layer UX test · No tracking
+          </div>
+        )}
+      </div>
+
+      {/* Mobile sticky row spacer — prevents footer from being hidden behind sticky bar */}
+      <div className="h-16 md:hidden" aria-hidden="true" />
+
     </div>
   );
 }
