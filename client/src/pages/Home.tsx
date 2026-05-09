@@ -186,6 +186,14 @@ const FAQS = [
     q: "Does Bierman Ramsey offer diagnostic evaluations for autism?",
     a: "Yes. Bierman Ramsey offers comprehensive diagnostic evaluations to help families understand their child's developmental profile and determine appropriate next steps for support and therapy.",
   },
+  {
+    q: "Does Bierman serve families in Bergen County?",
+    a: "Yes. The Ramsey clinic is located in Bergen County and serves families throughout Bergen County, Passaic County, and surrounding New Jersey communities including Mahwah, Ridgewood, Paramus, and nearby towns.",
+  },
+  {
+    q: "How do I start autism services near me in Ramsey, NJ?",
+    a: "Contact the Ramsey center directly or submit an intake request online. A member of our team will reach out to discuss your child's needs, verify insurance coverage, and guide you through next steps.",
+  },
 ];
 
 // Dismiss button — subtle, accessible, keyboard-focusable
@@ -213,6 +221,8 @@ export default function Home() {
   const [bannerVisible, setBannerVisible] = useState(true);
   const [videoNoticeVisible, setVideoNoticeVisible] = useState(true);
   const [reviewsNoticeVisible, setReviewsNoticeVisible] = useState(true);
+  const [phoneNoticeVisible, setPhoneNoticeVisible] = useState(true);
+  const [hoursNoticeVisible, setHoursNoticeVisible] = useState(true);
 
   useEffect(() => {
     // Detect ?preview=clean
@@ -229,6 +239,8 @@ export default function Home() {
     if (sessionStorage.getItem("pl_banner_dismissed") === "1") setBannerVisible(false);
     if (sessionStorage.getItem("pl_video_notice_dismissed") === "1") setVideoNoticeVisible(false);
     if (sessionStorage.getItem("pl_reviews_notice_dismissed") === "1") setReviewsNoticeVisible(false);
+    if (sessionStorage.getItem("pl_phone_notice_dismissed") === "1") setPhoneNoticeVisible(false);
+    if (sessionStorage.getItem("pl_hours_notice_dismissed") === "1") setHoursNoticeVisible(false);
   }, []);
 
   const dismissBanner = () => {
@@ -242,6 +254,14 @@ export default function Home() {
   const dismissReviewsNotice = () => {
     setReviewsNoticeVisible(false);
     sessionStorage.setItem("pl_reviews_notice_dismissed", "1");
+  };
+  const dismissPhoneNotice = () => {
+    setPhoneNoticeVisible(false);
+    sessionStorage.setItem("pl_phone_notice_dismissed", "1");
+  };
+  const dismissHoursNotice = () => {
+    setHoursNoticeVisible(false);
+    sessionStorage.setItem("pl_hours_notice_dismissed", "1");
   };
 
   // Nav top offset: 32px when banner visible, 0 when hidden
@@ -548,12 +568,13 @@ export default function Home() {
                         {/* Gemini GBP Report (May 2026) listed: (201) 308-3735 */}
                         {/* Matrix/proof-layer NAP uses: (201) 596-8104 */}
                         {/* Status: Needs confirmation from Bierman before production */}
-                        {!isCleanPreview && (
+                        {!isCleanPreview && phoneNoticeVisible && (
                           <div className="mt-1.5 inline-flex items-center gap-1.5 bg-amber-50 border border-amber-200 rounded-lg px-2.5 py-1">
                             <svg viewBox="0 0 12 12" fill="none" className="w-3 h-3 text-amber-500 flex-shrink-0" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
                               <circle cx="6" cy="6" r="5"/><path d="M6 4v2.5M6 8v.3" strokeLinecap="round"/>
                             </svg>
                             <span className="text-amber-700 text-xs">GBP discrepancy: report shows (201) 308-3735 — confirm before production</span>
+                            <DismissBtn onDismiss={dismissPhoneNotice} label="Dismiss phone discrepancy notice" />
                           </div>
                         )}
                       </>
@@ -571,6 +592,15 @@ export default function Home() {
                       <>
                         <span className="text-slate-600">Monday – Friday: 8:00 AM – 6:00 PM</span>
                         <div className="text-slate-400 text-xs mt-0.5">Hours pending client confirmation</div>
+                        {!isCleanPreview && hoursNoticeVisible && (
+                          <div className="mt-1 inline-flex items-center gap-1.5 bg-amber-50 border border-amber-200 rounded-lg px-2.5 py-1">
+                            <svg viewBox="0 0 12 12" fill="none" className="w-3 h-3 text-amber-500 flex-shrink-0" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+                              <circle cx="6" cy="6" r="5"/><path d="M6 4v2.5M6 8v.3" strokeLinecap="round"/>
+                            </svg>
+                            <span className="text-amber-700 text-xs">Hours pending Bierman confirmation before production</span>
+                            <DismissBtn onDismiss={dismissHoursNotice} label="Dismiss hours notice" />
+                          </div>
+                        )}
                       </>
                     ),
                   },
@@ -804,6 +834,133 @@ export default function Home() {
             Themes derived from public GBP review evidence and Bierman corporate testimonials. Not direct Google reviews.
             Source: Gemini GBP Review Evidence Report, May 2026.
           </p>
+        </div>
+      </section>
+
+      {/* Education to Action — GSC opportunity: connect informational intent to local service pages */}
+      <section className="py-16 bg-white border-t border-slate-100">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-10">
+            <div className="text-teal-600 text-sm font-bold uppercase tracking-widest mb-2">Understanding Autism Support</div>
+            <h2 className="text-3xl font-bold text-[#1a2b47]">Understanding Autism Support Near Ramsey</h2>
+            <p className="text-slate-500 mt-3 max-w-2xl mx-auto">
+              Families often start with questions about autism, ASD, diagnosis, and therapy options. This section connects those questions to local support available near Ramsey and Bergen County.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+            {[
+              {
+                title: "What is ASD?",
+                copy: "Autism spectrum disorder, or ASD, describes developmental differences that can affect communication, social interaction, behavior, and learning. Every child's support needs are different.",
+                icon: (
+                  <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" aria-hidden="true">
+                    <circle cx="24" cy="24" r="22" fill="#ccfbf1" />
+                    <path d="M24 14a8 8 0 100 16 8 8 0 000-16z" stroke="#0d9488" strokeWidth="2.5"/>
+                    <path d="M24 22v5M24 19v.5" stroke="#0d9488" strokeWidth="2.5" strokeLinecap="round"/>
+                  </svg>
+                ),
+              },
+              {
+                title: "What does ABA therapy support?",
+                copy: "ABA therapy uses individualized goals and structured support to help children build communication, daily living, social, and learning skills.",
+                icon: (
+                  <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" aria-hidden="true">
+                    <circle cx="24" cy="24" r="22" fill="#ccfbf1" />
+                    <path d="M16 32c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke="#0d9488" strokeWidth="2.5" strokeLinecap="round"/>
+                    <circle cx="24" cy="18" r="5" stroke="#0d9488" strokeWidth="2.5"/>
+                  </svg>
+                ),
+              },
+              {
+                title: "Can autism be cured?",
+                copy: "Autism is not something to \"cure.\" Support focuses on helping each child build skills, independence, communication, and confidence over time.",
+                icon: (
+                  <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" aria-hidden="true">
+                    <circle cx="24" cy="24" r="22" fill="#ccfbf1" />
+                    <path d="M16 28l5-5 3 3 8-8" stroke="#0d9488" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                ),
+              },
+              {
+                title: "When should families ask about support?",
+                copy: "Families often seek guidance when they have questions about communication, behavior, routines, developmental milestones, or therapy options near them.",
+                icon: (
+                  <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" aria-hidden="true">
+                    <circle cx="24" cy="24" r="22" fill="#ccfbf1" />
+                    <circle cx="24" cy="24" r="8" stroke="#0d9488" strokeWidth="2.5"/>
+                    <path d="M24 20v4l3 2" stroke="#0d9488" strokeWidth="2" strokeLinecap="round"/>
+                  </svg>
+                ),
+              },
+            ].map((card) => (
+              <div key={card.title} className="bg-white border border-teal-100 rounded-3xl p-6 flex flex-col gap-4 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200">
+                <div>{card.icon}</div>
+                <h3 className="font-bold text-[#1a2b47] text-sm">{card.title}</h3>
+                <p className="text-slate-500 text-sm leading-relaxed flex-1">{card.copy}</p>
+              </div>
+            ))}
+          </div>
+          {/* Resource links — internal linking opportunity from educational content to NJ service pages */}
+          <div className="bg-teal-50 border border-teal-100 rounded-2xl p-6">
+            <div className="text-teal-700 text-xs font-bold uppercase tracking-widest mb-3">Resources &amp; Next Steps</div>
+            <div className="flex flex-wrap gap-3">
+              {[
+                { label: "Learn about Level 1 Autism", url: "https://www.biermanautism.com/resources/blog/autism-level-1/", note: "" },
+                { label: "ASD vs Autism", url: "https://www.biermanautism.com/resources/blog/asd-vs-autism/", note: "" },
+                { label: "Can Autism Be Cured?", url: "https://www.biermanautism.com/autism-101/can-autism-be-cured/", note: "" },
+                { label: "ABA Therapy Services", url: "https://www.biermanautism.com/services/aba-therapy/", note: "" },
+                { label: "Start Services in Ramsey", url: LOCATION.intakeUrl, note: "" },
+              ].map((link) => (
+                <a
+                  key={link.label}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 bg-white border border-teal-200 hover:border-teal-400 hover:bg-teal-50 text-teal-700 font-medium px-4 py-2 rounded-xl text-sm transition-colors shadow-sm"
+                >
+                  {link.label} <span aria-hidden="true">→</span>
+                </a>
+              ))}
+            </div>
+            <p className="text-slate-400 text-xs mt-3">Resource URLs link to existing biermanautism.com content. Confirm all URLs are live before production use.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Clinical Leadership — Victoria Verdun, Ph.D., BCBA-D, LBA */}
+      {/* No face photo — Pilot mascot icon used per design spec */}
+      {/* Do not imply she is the Ramsey clinic director — NJ regional role only */}
+      <section className="py-14" style={{ background: "linear-gradient(180deg, #f8fffe 0%, #f0fdfa 100%)" }}>
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-8">
+            <div className="text-teal-600 text-sm font-bold uppercase tracking-widest mb-2">Clinical Leadership</div>
+            <h2 className="text-3xl font-bold text-[#1a2b47]">Clinical Leadership Supporting New Jersey Families</h2>
+          </div>
+          <div className="max-w-2xl mx-auto">
+            <div className="bg-white border border-teal-100 rounded-3xl p-8 shadow-sm flex flex-col sm:flex-row gap-6 items-start">
+              {/* Pilot mascot icon — no face photo per spec */}
+              <div className="flex-shrink-0">
+                <div className="w-20 h-20 rounded-2xl bg-teal-50 border border-teal-100 flex items-center justify-center overflow-hidden">
+                  <img src={ASSETS.mascot} alt="Bierman clinical leadership icon" className="w-16 h-16 object-contain" />
+                </div>
+              </div>
+              <div className="flex-1">
+                <div className="font-bold text-[#1a2b47] text-lg">Victoria Verdun, Ph.D., BCBA-D, LBA</div>
+                <div className="text-teal-600 font-semibold text-sm mb-3">Director of Clinical Excellence, New Jersey</div>
+                <p className="text-slate-600 text-sm leading-relaxed mb-4">
+                  Bierman's New Jersey centers are supported by experienced clinical leaders who help guide care quality, staff development, and family-centered service delivery across the region.
+                </p>
+                <div className="text-slate-500 text-xs leading-relaxed">
+                  <span className="font-semibold text-slate-600">Role:</span> Supports clinical quality, care standards, and regional service delivery for Bierman's New Jersey centers.
+                </div>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {["ABA Therapy", "Clinical Excellence", "BCBA Supervision", "New Jersey"].map((tag) => (
+                    <span key={tag} className="bg-teal-50 border border-teal-100 text-teal-700 text-xs font-medium px-3 py-1 rounded-full">{tag}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

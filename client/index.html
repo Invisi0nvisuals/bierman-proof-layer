@@ -82,7 +82,17 @@
           "about": { "@id": "https://bierman-proof-layer.manus.space/#localbusiness" },
           "mainEntity": { "@id": "https://bierman-proof-layer.manus.space/#localbusiness" },
           "breadcrumb": { "@id": "https://bierman-proof-layer.manus.space/#breadcrumb" },
-          "primaryImageOfPage": { "@id": "https://bierman-proof-layer.manus.space/#image-facility" }
+          "primaryImageOfPage": { "@id": "https://bierman-proof-layer.manus.space/#image-facility" },
+          "mentions": [
+            { "@type": "MedicalCondition", "name": "Autism Spectrum Disorder" },
+            { "@type": "MedicalTherapy", "name": "Applied Behavior Analysis" },
+            { "@type": "MedicalTherapy", "name": "ABA Therapy" },
+            { "@type": "MedicalTherapy", "name": "Speech-Language Therapy" },
+            { "@type": "MedicalTherapy", "name": "Occupational Therapy" },
+            { "@type": "MedicalProcedure", "name": "Diagnostic Evaluation for Autism" },
+            { "@type": "AdministrativeArea", "name": "Bergen County" },
+            { "@type": "City", "name": "Ramsey, NJ" }
+          ]
         },
 
         {
@@ -296,7 +306,7 @@
           "name": "Inside Our Ramsey, NJ Autism Center (A Safe & Fun Tour for Parents)",
           "description": "A parent-facing tour of the Bierman Autism Centers Ramsey, NJ clinic. Shows the therapy environment, spaces, and what families can expect when visiting the center.",
           "thumbnailUrl": "https://i.ytimg.com/vi/dhHxU3o0p0o/hqdefault.jpg",
-          "uploadDate": "2023-10-19",
+          "uploadDate": "2023-10-19T00:00:00+00:00",
           "embedUrl": "https://www.youtube.com/embed/dhHxU3o0p0o",
           "contentUrl": "https://www.youtube.com/watch?v=dhHxU3o0p0o",
           "url": "https://www.youtube.com/watch?v=dhHxU3o0p0o",
@@ -379,8 +389,44 @@
                 "@type": "Answer",
                 "text": "Yes. Bierman Ramsey offers comprehensive diagnostic evaluations to help families understand their child's developmental profile and determine appropriate next steps for support and therapy."
               }
+            },
+            {
+              "@type": "Question",
+              "name": "Does Bierman serve families in Bergen County?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. The Ramsey clinic is located in Bergen County and serves families throughout Bergen County, Passaic County, and surrounding New Jersey communities including Mahwah, Ridgewood, Paramus, and nearby towns."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do I start autism services near me in Ramsey, NJ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Contact the Ramsey center directly or submit an intake request online. A member of our team will reach out to discuss your child's needs, verify insurance coverage, and guide you through next steps."
+              }
             }
           ]
+        },
+
+        {
+          "@type": "Person",
+          "@id": "https://bierman-proof-layer.manus.space/#person-verdun",
+          "name": "Victoria Verdun",
+          "honorificSuffix": "Ph.D., BCBA-D, LBA",
+          "jobTitle": "Director of Clinical Excellence, New Jersey",
+          "worksFor": { "@id": "https://bierman-proof-layer.manus.space/#organization" },
+          "knowsAbout": [
+            "Applied Behavior Analysis",
+            "Autism Spectrum Disorder",
+            "Clinical Excellence",
+            "BCBA Supervision",
+            "ABA Therapy for Children"
+          ],
+          "areaServed": {
+            "@type": "State",
+            "name": "New Jersey"
+          }
         }
 
       ]
