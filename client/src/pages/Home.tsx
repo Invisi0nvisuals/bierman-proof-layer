@@ -694,18 +694,17 @@ export default function Home() {
       <section className="py-16 bg-slate-50">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <div className="text-teal-600 text-sm font-bold uppercase tracking-widest mb-2">See ABA Therapy in Action</div>
-          <h2 className="text-3xl font-bold text-[#1a2b47] mb-3">ABA Therapy at Bierman Ramsey</h2>
-          <p className="text-slate-500 mb-8">Watch how our team works with children in a supportive, structured environment.</p>
-          <div className="rounded-3xl overflow-hidden shadow-xl border border-slate-200">
-            <video
-              src={ASSETS.video}
-              poster={ASSETS.videoPoster}
-              controls
-              muted
-              preload="none"
-              playsInline
-              aria-label="ABA therapy overview at Bierman Autism Centers Ramsey, New Jersey"
-              style={{ width: "100%", display: "block" }}
+          <h2 className="text-3xl font-bold text-[#1a2b47] mb-3">See ABA Therapy at Bierman Ramsey</h2>
+          <p className="text-slate-500 mb-8">A parent-facing tour of our Ramsey, NJ clinic — what families can expect when they visit.</p>
+          <div className="rounded-3xl overflow-hidden shadow-xl border border-slate-200" style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}>
+            <iframe
+              src="https://www.youtube.com/embed/dhHxU3o0p0o"
+              title="Inside Our Ramsey, NJ Autism Center (A Safe & Fun Tour for Parents)"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              referrerPolicy="strict-origin-when-cross-origin"
+              aria-label="YouTube video: Inside Our Ramsey, NJ Autism Center — a parent-facing tour"
+              style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: 0 }}
             />
           </div>
           {videoNoticeVisible && (
