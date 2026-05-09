@@ -1,0 +1,9 @@
+# Bierman Autism Centers — Proof Layer (Manus test environment)
+# This is a development/validation environment only.
+# Not the production Bierman site (biermanautism.com).
+# Open for Google Rich Results Test, Schema Markup Validator, and crawler validation.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://bierman-proof-layer.manus.space/sitemap.xml

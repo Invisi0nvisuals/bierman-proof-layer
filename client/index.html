@@ -22,8 +22,10 @@
 
     <title>ABA Therapy in Ramsey, NJ | Bierman Autism Centers</title>
 
-    <!-- Robots: default = noindex/nofollow. Overridden to index/follow by ?schema=test script below. -->
-    <meta id="meta-robots" name="robots" content="noindex, nofollow" />
+    <!-- Robots: index/follow — open for Google Rich Results Test, Schema Markup Validator, and crawler validation.
+         This is the Manus proof-layer test environment only. Not production. Not biermanautism.com.
+         Safety guardrails remain: no GTM, no GA4, no tracking, no live forms, no patient data. -->
+    <meta id="meta-robots" name="robots" content="index, follow" />
 
     <!-- Canonical: set dynamically by schema-mode script below -->
     <link id="link-canonical" rel="canonical" href="https://bierman-proof-layer.manus.space/" />
@@ -378,34 +380,16 @@
     </script>
 
     <!-- ============================================================
-         SCHEMA TEST MODE — ?schema=test
-         When present: robots = index, follow + self-referencing canonical
-         Default (no param): robots = noindex, nofollow
-         noindex/nofollow is the safe default for all other sessions.
+         CANONICAL / OG URL — self-referencing proof-layer URL
+         Never points to biermanautism.com production.
          ============================================================ -->
     <script>
       (function() {
-        var params = new URLSearchParams(window.location.search);
-        var schemaMode = params.get('schema') === 'test';
         var baseUrl = 'https://bierman-proof-layer.manus.space/';
-
-        // Robots meta
-        var metaRobots = document.getElementById('meta-robots');
-        if (metaRobots) {
-          metaRobots.setAttribute('content', schemaMode ? 'index, follow' : 'noindex, nofollow');
-        }
-
-        // Canonical — self-referencing proof-layer URL (never points to production)
         var linkCanonical = document.getElementById('link-canonical');
-        if (linkCanonical) {
-          linkCanonical.setAttribute('href', baseUrl + (schemaMode ? '?schema=test' : ''));
-        }
-
-        // OG URL — match canonical
+        if (linkCanonical) { linkCanonical.setAttribute('href', baseUrl); }
         var ogUrl = document.getElementById('og-url');
-        if (ogUrl) {
-          ogUrl.setAttribute('content', baseUrl + (schemaMode ? '?schema=test' : ''));
-        }
+        if (ogUrl) { ogUrl.setAttribute('content', baseUrl); }
       })();
     </script>
 
