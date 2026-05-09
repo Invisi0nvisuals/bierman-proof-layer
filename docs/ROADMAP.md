@@ -139,13 +139,46 @@ This phase includes:
 
 ---
 
+## Audit-Informed Pilot Tasks (Phase 1–2)
+
+The SEO Business Impact Audit updated the pilot task list for Ramsey and Piscataway. These tasks are in addition to the page build work and require Bierman approval before implementation:
+
+| Task | Location | Requires Approval | Evidence |
+|---|---|---|---|
+| Initiate aggressive review generation | Piscataway (4 reviews) | Yes — process must be approved | Audit: review-to-demand gap |
+| Add location-specific UTMs to GBP website links | Ramsey + Piscataway | Yes — GBP edit access required | Audit: GBP UTM absence |
+| Confirm CallRail phone routing for each location | Ramsey + Piscataway | Yes — CallRail access required | Audit: 6,419-call gap |
+| Add appointment URL to GBP profiles | Ramsey + Piscataway | Yes — GBP edit access required | Audit: appointment URL absence |
+| Validate CTA and form paths for location context | Ramsey + Piscataway | Yes — form/CMS access required | Audit: center-level outcome gap |
+| Automate and QA CallRail → HubSpot real-time mapping | Network-wide | Yes — CRM access required | Audit: 6,419-call gap |
+
+---
+
+## Second-Wave Location Candidates (Post-Pilot)
+
+Based on the audit's GBP Pass 2 review and business context, the following locations are prioritized for the next wave after the Ramsey/Piscataway pilot:
+
+| Location | State | Reason | Priority |
+|---|---|---|---|
+| West Orange | NJ | 758 GBP interactions, 1 review — highest review-to-demand gap in NJ | High |
+| Princeton | NJ | 737 GBP interactions, 3 reviews — strong non-branded call activity | High |
+| Berkeley Heights | NJ | 703 GBP interactions, 133 calls — ideal for attribution validation | High |
+| Eatontown | NJ | Strongest visible non-branded capture — ideal for content/SEO learning | Medium |
+| Canal Winchester | OH | Review-gap profile with active demand | Medium |
+| Massachusetts locations | MA | Broader market candidates based on strategic business priorities | Medium |
+| North Carolina locations | NC | Broader market candidates based on strategic business priorities | Medium |
+
+These locations should be built after the Ramsey/Piscataway pilot produces measurable data. The pilot data will validate the architecture and provide a performance baseline before second-wave investment.
+
+---
+
 ## Roadmap Summary
 
 | Phase | Scope | Status | Prerequisite |
 |---|---|---|---|
 | 1 | Ramsey master proof | Active | — |
 | 2 | Piscataway, NJ | Pending | Phone/address confirmed |
-| 3 | New Jersey cluster | Planned | Phase 2 complete |
+| 3 | New Jersey cluster (incl. West Orange, Princeton, Berkeley Heights, Eatontown) | Planned | Phase 2 complete |
 | 4 | All 33+ verified locations | Planned | Phase 3 complete |
 | 5 | Service-to-location hub pages | Planned | Phase 4 complete |
 | 6 | Caregiver/resource internal linking | Planned | Phase 5 complete |

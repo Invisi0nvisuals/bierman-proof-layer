@@ -133,6 +133,32 @@ This array should be updated to match the GBP service area definition if Bierman
 
 ---
 
+## GBP as an Off-Website Conversion Surface
+
+The SEO Business Impact Audit and HubSpot/CallRail Attribution Addendum confirmed that GBP is not simply a citation source — it is an active conversion surface where a significant portion of Bierman's local demand is resolved without a website visit.
+
+Key findings from the audit that are directly relevant to GBP alignment strategy:
+
+- **Google My Business drove 221 active clients all-time** with a 25.8% active rate — the single highest-converting channel in the CRM analysis.
+- **GMB drove approximately 67% of all tracked CallRail calls** (14,032 of 21,089 calls over 12 months).
+- **Calls and direction requests routinely bypass the website.** A parent who finds the Ramsey GBP profile and calls directly never appears in GA4 or GTM. They may appear in CallRail if the GBP phone number is a tracked number, but the CallRail-to-HubSpot integration has a documented 6,419-call gap.
+- **Appointment URLs are absent** from most GBP profiles. This means the GBP profile does not provide a direct path to the intake form — a missed conversion opportunity.
+- **GBP website links lack location-specific UTM parameters.** Clicks from GBP to the website are not currently attributable to a specific location in GA4.
+
+**Implications for the proof layer and pilot:**
+
+| Gap | Recommended Action | Requires Bierman Approval |
+|---|---|---|
+| GBP website links lack UTMs | Add `?utm_source=gbp&utm_medium=local&utm_campaign=ramsey-nj` to GBP website link | Yes — GBP edit access required |
+| Appointment URLs absent | Add intake form URL as GBP appointment URL | Yes — GBP edit access required |
+| GBP phone not confirmed as CallRail tracked number | Confirm whether GBP phone is a CallRail number or a direct line | Yes — requires CallRail account access |
+| Calls/directions bypass website attribution | Treat GBP calls and directions as local-intent signals, not automatically as leads | No — documentation only |
+| GBP actions need CallRail/HubSpot reconciliation | Pilot should include CallRail/HubSpot QA as a first-wave task | Yes — requires CRM access |
+
+These actions are documented in `CLIENT_CONFIRMATION_QUESTIONS.md` and `ROADMAP.md`. None of them should be implemented without explicit Bierman approval.
+
+---
+
 ## Confirmation Process Before Production
 
 Before any location page is deployed to production, the following GBP alignment checks must be completed:

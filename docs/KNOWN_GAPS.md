@@ -164,3 +164,61 @@ Nothing in this document is a blocker for the proof layer itself — the proof l
 **Impact:** Low. The proof layer URL is not linked from any production page and is not in the biermanautism.com sitemap.  
 **Resolution:** Confirm with Bierman whether the proof layer should be publicly crawlable for validation purposes or switched back to noindex after Rich Results Test is complete.  
 **Status:** Pending Bierman decision.
+
+---
+
+## Audit-Informed Gaps (Added May 2026)
+
+The SEO Business Impact Audit and HubSpot/CallRail Attribution Addendum identified the following gaps that are not currently documented in the proof layer but are directly relevant to the pilot and production deployment.
+
+### CallRail → HubSpot Real-Time Integration Gap
+
+**Issue:** The audit identified a 6,419-call gap between CallRail (21,089 calls tracked) and HubSpot-tagged contacts (7,085 with phone attribution). The retroactive reconciliation of 326 active clients demonstrates that the gap is real and material.  
+**Impact:** High. Center-level outcome tracking is not possible without a reliable real-time integration. A buyer evaluating marketing ROI will undercount the contribution of local search and GBP.  
+**Resolution:** Bierman/agency to audit the GTM → CallRail → HubSpot pipeline and implement real-time field mapping before the pilot measurement phase begins.  
+**Status:** Unresolved. Requires CRM and CallRail access.
+
+---
+
+### GBP Website Links Lack Location-Specific UTM Parameters
+
+**Issue:** GBP website links for all locations point to the biermanautism.com homepage or a generic location URL without UTM parameters. Clicks from GBP to the website are not attributable to a specific location in GA4.  
+**Impact:** High. Without UTMs, GBP-driven website traffic is reported as "direct" or "organic" in GA4, not as "local" or "gbp." Center-level attribution is impossible.  
+**Resolution:** Add `?utm_source=gbp&utm_medium=local&utm_campaign={location-slug}` to the GBP website link for each location. Requires GBP edit access.  
+**Status:** Unresolved. Requires Bierman approval and GBP edit access.
+
+---
+
+### Appointment URLs Absent from GBP Profiles
+
+**Issue:** Most GBP profiles do not have an appointment URL set. This means the GBP profile does not provide a direct path to the intake form — a missed conversion opportunity for caregivers who find the profile but do not click through to the website.  
+**Impact:** Medium-High. GBP appointment URLs are a direct conversion surface. Their absence means demand that resolves at the GBP level never enters the intake funnel.  
+**Resolution:** Add the intake form URL as the GBP appointment URL for each location. Requires GBP edit access.  
+**Status:** Unresolved. Requires Bierman approval and GBP edit access.
+
+---
+
+### GBP Phone Numbers Not Confirmed as CallRail Tracked Numbers
+
+**Issue:** It is not confirmed whether the phone numbers on GBP profiles are CallRail tracked numbers or direct lines. If they are direct lines, calls from GBP are not tracked in CallRail and do not appear in HubSpot.  
+**Impact:** High. If GBP phones are not CallRail numbers, the 6,419-call gap is partially explained by untracked GBP calls. This is a measurement gap, not just an attribution gap.  
+**Resolution:** Bierman/agency to confirm whether GBP phone numbers are CallRail tracked numbers for Ramsey and Piscataway. If not, evaluate whether to replace with CallRail numbers.  
+**Status:** Unresolved. Requires CallRail account access.
+
+---
+
+### Review Generation Process Not Systematized
+
+**Issue:** Several high-visibility GBP profiles have near-zero review counts relative to their interaction volume (West Orange: 758 interactions, 1 review; Princeton: 737 interactions, 3 reviews). There is no documented systematic review generation process.  
+**Impact:** High. Review depth is a local ranking signal and a conversion trust signal. The gap between interaction volume and review count suggests that demand exists but is not being captured.  
+**Resolution:** Bierman to approve and implement a systematic review generation process for the pilot locations. The process must comply with Google's review policies (no incentivized reviews, no review gating).  
+**Status:** Unresolved. Requires Bierman approval of the review generation process.
+
+---
+
+### Center-Level Outcome Tracking Not Possible
+
+**Issue:** The CRM data is aggregate. Bierman cannot currently answer: "How many new patients started at Ramsey in the last 12 months as a result of organic search?" The data-layer event taxonomy in `DATA_LAYER_SPEC.md` is designed to address this, but it has not been implemented.  
+**Impact:** High. Without center-level outcome tracking, the pilot cannot produce the measurement data needed to justify Phase 3+ investment.  
+**Resolution:** Implement the data-layer event taxonomy in GTM for the pilot locations before the pilot measurement phase begins. Requires GTM and GA4 access.  
+**Status:** Unresolved. Requires Bierman/agency GTM access and approval.

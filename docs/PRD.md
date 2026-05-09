@@ -48,6 +48,32 @@ Every decision in this PRD is backed by documented evidence. The full evidence t
 | [`05-rich-results-baseline.md`](evidence/05-rich-results-baseline.md) | Production baseline (3 valid groups) vs. proof layer (12 valid items, 6 groups) |
 | [`06-schema-validation-log.md`](evidence/06-schema-validation-log.md) | 26-node entity graph, all validation milestones, dual schema conflict resolution |
 | [`10-decision-log.md`](evidence/10-decision-log.md) | 12 major decisions with evidence, alternatives considered, and current status |
+| [`11-business-impact-audit-summary.md`](evidence/11-business-impact-audit-summary.md) | SEO Business Impact Audit + HubSpot/CallRail addendum — CRM evidence, GBP off-website conversion, review-to-demand gap, pilot rationale |
+| [`source-artifacts/seo-business-impact-audit-addendum.md`](evidence/source-artifacts/seo-business-impact-audit-addendum.md) | Full audit addendum source document |
+| [`source-artifacts/bierman-location-data-matrix-v3.xlsx`](evidence/source-artifacts/bierman-location-data-matrix-v3.xlsx) | 32-location data matrix — source of truth for location data model |
+
+---
+
+## Business Impact Audit Evidence
+
+The proof layer was directly informed by the SEO Business Impact Audit and its HubSpot/CallRail Attribution Addendum (May 2026), prepared by Alex Rodriguez / MFGSEO LLC. The audit shifted the project away from a simple technical SEO or redesign framing and toward a **location-level visibility-to-inquiry-to-client system**.
+
+The audit's downstream CRM data established that Bierman's acquisition engine is already functional: combined search channels drove 513 all-time active clients, and Google My Business alone drove 221 active clients with a 25.8% active rate. The primary gaps are not in visibility — they are in conversion, attribution, and location-level governance.
+
+This reframing shaped every major PRD requirement:
+
+| Audit Finding | PRD Requirement It Drove |
+|---|---|
+| GBP is an off-website conversion surface; calls and directions bypass the website | Directions/Plan Your Visit module; `directions_click` and `phone_click` data-layer events |
+| Review-to-demand gap at West Orange (1 review), Princeton (3 reviews), Piscataway (4 reviews) | Review module as a first-class feature; Review schema with `reviewBody` and `AggregateRating` |
+| 6,419-call gap between CallRail (21,089 calls) and HubSpot-tagged contacts (7,085) | Location-specific data-layer event taxonomy preserving `location_name`, `location_state`, `location_city` |
+| GBP website links lack location-specific UTM parameters | GBP alignment strategy; UTM pattern documented for pilot implementation |
+| Appointment URLs absent from most GBP profiles | CTA architecture includes intake link; appointment URL gap documented as pilot task |
+| Center-level outcome data not segmented by location | Matrix-driven LOCATION constant; atomic location template for per-location measurement |
+| Ramsey and Piscataway validated as Tier 1 pilot candidates | Ramsey-first build; Piscataway queued as Phase 2 comparison |
+| Pilot should focus on review generation, UTM tracking, CallRail/HubSpot QA, CTA/form location context | Pilot tasks documented in `ROADMAP.md` and `CLIENT_CONFIRMATION_QUESTIONS.md` |
+
+The full audit summary is in [`docs/evidence/11-business-impact-audit-summary.md`](evidence/11-business-impact-audit-summary.md). The source document is in [`docs/evidence/source-artifacts/seo-business-impact-audit-addendum.md`](evidence/source-artifacts/seo-business-impact-audit-addendum.md).
 
 ---
 

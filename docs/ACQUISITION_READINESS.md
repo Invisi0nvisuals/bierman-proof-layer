@@ -85,6 +85,26 @@ These are not failures of the system. They are documented open items with clear 
 
 ---
 
+## Why the Audit Matters in Acquisition Context
+
+The SEO Business Impact Audit and HubSpot/CallRail Attribution Addendum are not supplementary materials. They are the strategic foundation that separates this project from a front-end presentation exercise.
+
+For a buyer or stakeholder conducting due diligence, the audit exposes five operational and data-governance issues that have direct implications for valuation, integration risk, and post-acquisition performance:
+
+**Attribution model definitions are incomplete.** The audit identified a 6,419-call gap between CallRail (21,089 calls) and HubSpot-tagged contacts (7,085). This means that a significant portion of Bierman's inbound call volume is not currently attributable to a specific channel, campaign, or location in the CRM. A buyer who relies on HubSpot data to evaluate marketing ROI will undercount the contribution of local search and GBP by a material amount.
+
+**Real-time CallRail/HubSpot integration is leaky.** The retroactive reconciliation of 326 active clients demonstrates operational sophistication, but it also demonstrates that the real-time integration is not reliable. A buyer inheriting this infrastructure will need to invest in tightening the GTM → CallRail → HubSpot pipeline before center-level outcome tracking is possible.
+
+**GBP profile governance is inconsistent.** The audit confirmed 33 verified GBP profiles, but also identified duplicate profiles (Broad Ripple), ambiguous location names (Avon/Avondale), and profiles with severe review gaps relative to their interaction volume (West Orange: 758 interactions, 1 review). Inconsistent GBP governance creates attribution risk, local ranking risk, and brand consistency risk — all of which are relevant in a multi-location healthcare acquisition.
+
+**Review depth does not match demand.** Several high-visibility profiles have near-zero review counts. This is a conversion bottleneck that is measurable, addressable, and currently unaddressed. A buyer who understands local search will recognize this as an immediate, low-cost opportunity — but also as evidence that the current operational model does not include a systematic review generation process.
+
+**Center-level outcome tracking does not exist.** The CRM data is aggregate. Bierman cannot currently answer the question: "How many new patients started at Ramsey in the last 12 months as a result of organic search?" This is not a criticism of the current team — it is a structural gap in the data infrastructure. The proof layer's data-layer event taxonomy and location-specific attribution architecture are designed to create the foundation for answering that question.
+
+These five issues are not reasons to discount the business. They are documented, addressable gaps with clear resolution paths. A buyer who understands them can price them accurately, plan for them operationally, and execute against them systematically. The proof layer provides the documentation, architecture, and pilot framework to do exactly that.
+
+---
+
 ## Summary
 
 This proof layer is acquisition-ready infrastructure documentation. It demonstrates a scalable system, exposes technical debt honestly, provides a clear implementation roadmap, and gives any stakeholder the information they need to evaluate, scope, and execute the next phase — without commissioning a new discovery engagement.

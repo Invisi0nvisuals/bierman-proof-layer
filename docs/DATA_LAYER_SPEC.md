@@ -14,6 +14,18 @@ The taxonomy is designed for implementation via Google Tag Manager with GA4 as t
 
 ---
 
+## Why This Taxonomy Exists: Audit Evidence
+
+The SEO Business Impact Audit identified a **6,419-call gap** between CallRail (21,089 calls tracked) and HubSpot-tagged contacts (7,085 with phone attribution). This gap is the primary evidence that the current real-time integration between GTM, CallRail, and HubSpot is leaky — and that center-level outcome tracking is not currently possible without retroactive reconciliation.
+
+The data-layer event taxonomy in this document is designed to address the root cause of that gap: the absence of location context in the tracking infrastructure. Every event in this taxonomy includes `location_name`, `location_slug`, `city`, and `state` parameters. When these events are implemented and the CallRail/HubSpot integration is tightened, the location-level data will be available for real-time reconciliation — not just retroactive matching.
+
+The audit also confirmed that GBP actions (calls, direction requests) routinely bypass the website entirely. The `phone_click` and `directions_click` events are specifically designed to capture local intent signals that are currently invisible in GA4 and GTM. They do not replace CallRail call tracking — they complement it by capturing the intent signal at the moment a user decides to call or navigate.
+
+The data-layer spec is designed to preserve location context without collecting PHI or PII. Every parameter on the allowed list is a behavioral or contextual signal. Every parameter on the disallowed list is a user identity or clinical data field. This distinction is not optional — it is the architectural boundary that makes this taxonomy safe for a healthcare provider.
+
+---
+
 ## Guiding Principles
 
 1. **Behavioral signals only.** Track what users do on the page, not who they are.

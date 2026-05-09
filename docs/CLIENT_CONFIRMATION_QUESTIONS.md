@@ -163,28 +163,65 @@ This would require a planned redirect strategy and coordination with the current
 
 ---
 
+## 11. Attribution and Tracking (High — Audit-Informed)
+
+🟡 **Are the phone numbers on GBP profiles CallRail tracked numbers or direct lines?**
+
+The SEO Business Impact Audit identified a 6,419-call gap between CallRail and HubSpot. If GBP phone numbers are direct lines (not CallRail numbers), calls from GBP are not tracked. Please confirm whether the GBP phone numbers for Ramsey and Piscataway are CallRail tracked numbers.
+
+---
+
+🟡 **Can we add location-specific UTM parameters to the GBP website links for Ramsey and Piscataway?**
+
+Currently, clicks from GBP to the website are not attributable to a specific location in GA4. Adding `?utm_source=gbp&utm_medium=local&utm_campaign={location-slug}` to the GBP website link would enable center-level attribution. This requires GBP edit access. Please confirm approval and provide GBP access if approved.
+
+---
+
+🟡 **Can we add the intake form URL as the appointment URL on the Ramsey and Piscataway GBP profiles?**
+
+Most GBP profiles do not have an appointment URL set. Adding the intake form URL as the appointment URL creates a direct conversion path for caregivers who find the profile. This requires GBP edit access. Please confirm approval.
+
+---
+
+🟡 **Is there an approved process for systematically requesting Google reviews from families at the pilot locations?**
+
+Several high-visibility GBP profiles have very few reviews relative to their interaction volume. A systematic, policy-compliant review generation process (no incentivized reviews, no review gating) could significantly improve local visibility and conversion. Please confirm whether Bierman has an approved process, or whether one needs to be developed.
+
+---
+
+🟡 **Can we get access to GTM and GA4 to implement location-specific event tracking for the pilot?**
+
+The data-layer event taxonomy in `DATA_LAYER_SPEC.md` requires GTM implementation to produce center-level outcome data from the pilot. Without this, the pilot cannot measure whether the new architecture improves inquiry rates at the location level. Please confirm who manages GTM/GA4 and what the access process is.
+
+---
+
 ## Summary Table
 
 | # | Question | Priority | Status |
 |---|---|---|---|
 | 1 | Ramsey canonical phone | 🔴 Critical | Unresolved |
 | 2 | Piscataway canonical phone | 🔴 Critical | Unresolved |
-| 3 | Network phone confirmation | 🟡 High | Unresolved |
-| 4 | Location count (32 vs 33) | 🟡 High | Unresolved |
-| 5 | Avon vs Avondale | 🟡 High | Unresolved |
-| 6 | Brooklyn Park status | 🟡 High | Unresolved |
-| 7 | Broad Ripple duplicate GBP | 🟡 High | Unresolved |
-| 8 | Piscataway address | 🔴 Critical | Unresolved |
+| 3 | Piscataway address | 🔴 Critical | Unresolved |
+| 4 | Network phone confirmation | 🟡 High | Unresolved |
+| 5 | Location count (32 vs 33) | 🟡 High | Unresolved |
+| 6 | Avon vs Avondale | 🟡 High | Unresolved |
+| 7 | Brooklyn Park status | 🟡 High | Unresolved |
+| 8 | Broad Ripple duplicate GBP | 🟡 High | Unresolved |
 | 9 | Team headshot approval | 🟡 High | Pending |
 | 10 | Video usage approval | 🟡 High | Pending |
 | 11 | Review usage approval | 🟡 High | Pending |
 | 12 | Ramsey insurance list | 🟡 High | Unresolved |
 | 13 | Insurance varies by location | 🟡 High | Unresolved |
-| 14 | Ramsey hours | 🟢 Standard | Unresolved |
-| 15 | Hours vary by location | 🟢 Standard | Unresolved |
-| 16 | Clinical leaders current | 🟢 Standard | Unresolved |
-| 17 | Clinical leaders on all pages | 🟢 Standard | Unresolved |
-| 18 | Pilot subdomain interest | 🟢 Standard | Pending |
-| 19 | DNS process for pilot | 🟢 Standard | Pending |
-| 20 | Caregiver resources on pages | 🟢 Standard | Unresolved |
-| 21 | Future migration interest | 🟢 Standard | Pending |
+| 14 | GBP phones — CallRail tracked? | 🟡 High | Unresolved |
+| 15 | GBP UTM parameters approval | 🟡 High | Unresolved |
+| 16 | GBP appointment URL approval | 🟡 High | Unresolved |
+| 17 | Review generation process | 🟡 High | Unresolved |
+| 18 | GTM/GA4 access for pilot | 🟡 High | Unresolved |
+| 19 | Ramsey hours | 🟢 Standard | Unresolved |
+| 20 | Hours vary by location | 🟢 Standard | Unresolved |
+| 21 | Clinical leaders current | 🟢 Standard | Unresolved |
+| 22 | Clinical leaders on all pages | 🟢 Standard | Unresolved |
+| 23 | Pilot subdomain interest | 🟢 Standard | Pending |
+| 24 | DNS process for pilot | 🟢 Standard | Pending |
+| 25 | Caregiver resources on pages | 🟢 Standard | Unresolved |
+| 26 | Future migration interest | 🟢 Standard | Pending |
