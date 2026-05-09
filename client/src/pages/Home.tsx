@@ -348,8 +348,6 @@ function GBPReviewCard({ review }: { review: typeof GBP_REVIEWS[0] }) {
   return (
     <article
       className="flex flex-col bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-200 p-6"
-      itemScope
-      itemType="https://schema.org/Review"
     >
       {/* Avatar + Name row */}
       <div className="flex items-center gap-3 mb-4">
@@ -361,8 +359,8 @@ function GBPReviewCard({ review }: { review: typeof GBP_REVIEWS[0] }) {
           {review.initials}
         </div>
         <div className="min-w-0">
-          <p className="font-semibold text-[#1a2b47] text-sm leading-tight truncate" itemProp="author" itemScope itemType="https://schema.org/Person">
-            <span itemProp="name">{review.name}</span>
+          <p className="font-semibold text-[#1a2b47] text-sm leading-tight truncate">
+            {review.name}
           </p>
           <p className="text-slate-400 text-xs mt-0.5 truncate">{review.meta}</p>
         </div>
@@ -370,9 +368,7 @@ function GBPReviewCard({ review }: { review: typeof GBP_REVIEWS[0] }) {
 
       {/* Stars + date */}
       <div className="flex items-center gap-3 mb-4">
-        <div itemProp="reviewRating" itemScope itemType="https://schema.org/Rating">
-          <meta itemProp="ratingValue" content={String(review.stars)} />
-          <meta itemProp="bestRating" content="5" />
+        <div>
           <StarRating count={review.stars} />
         </div>
         <span className="text-slate-400 text-xs">{review.date}</span>
@@ -380,7 +376,7 @@ function GBPReviewCard({ review }: { review: typeof GBP_REVIEWS[0] }) {
 
       {/* Review text — grows to fill available space */}
       <div className="flex-1">
-        <blockquote className="text-slate-600 text-sm leading-relaxed" itemProp="reviewBody">
+        <blockquote className="text-slate-600 text-sm leading-relaxed">
           {displayText}
         </blockquote>
         {isLong && (
