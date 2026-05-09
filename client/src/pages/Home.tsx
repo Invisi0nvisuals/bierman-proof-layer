@@ -1,6 +1,6 @@
-/**
+/*
  * Bierman Autism Centers — Proof Layer
- * Ramsey, NJ Location Page — Visual Redesign v2
+ * Ramsey, NJ Location Page — Visual Redesign v3
  *
  * Design: Warm pediatric healthcare — family-centered, light, and welcoming
  * - Warm off-white / light aqua backgrounds (no heavy dark navy dominance)
@@ -11,7 +11,18 @@
  *
  * PROOF LAYER — NOT PRODUCTION
  * noindex, nofollow | No tracking | No live forms | No patient data
+ *
+ * DISMISSIBLE NOTICES:
+ * - Top banner: sessionStorage key "pl_banner_dismissed"
+ * - Video notice: sessionStorage key "pl_video_notice_dismissed"
+ * - Reviews notice: sessionStorage key "pl_reviews_notice_dismissed"
+ *
+ * PREVIEW MODE:
+ * ?preview=clean hides all proof-layer banners and inline notices.
+ * noindex/nofollow and all safety guardrails remain active in all modes.
+ * Review cards in clean mode show neutral skeleton architecture (no fake text).
  */
+import { useState, useEffect } from "react";
 
 // All image assets — normalized and served from Manus CDN
 // Source: biermanautism.com/wp-content/uploads/ (read-only download, no hotlinks)
@@ -161,17 +172,78 @@ const FAQS = [
   },
 ];
 
+// Dismiss button — subtle, accessible, keyboard-focusable
+function DismissBtn({ onDismiss, label = "Dismiss notice" }: { onDismiss: () => void; label?: string }) {
+  return (
+    <button
+      type="button"
+      onClick={onDismiss}
+      aria-label={label}
+      className="ml-3 flex-shrink-0 text-current opacity-50 hover:opacity-100 focus:opacity-100 focus:outline-none focus:ring-2 focus:ring-current rounded transition-opacity"
+      style={{ lineHeight: 1 }}
+    >
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className="w-3.5 h-3.5" aria-hidden="true">
+        <path d="M3 3l10 10M13 3L3 13" />
+      </svg>
+    </button>
+  );
+}
+
 export default function Home() {
+  // --- Preview mode: ?preview=clean ---
+  const [isCleanPreview, setIsCleanPreview] = useState(false);
+
+  // --- Dismissible notice state (sessionStorage-backed) ---
+  const [bannerVisible, setBannerVisible] = useState(true);
+  const [videoNoticeVisible, setVideoNoticeVisible] = useState(true);
+  const [reviewsNoticeVisible, setReviewsNoticeVisible] = useState(true);
+
+  useEffect(() => {
+    // Detect ?preview=clean
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("preview") === "clean") {
+      setIsCleanPreview(true);
+      // In clean mode, suppress all notices automatically
+      setBannerVisible(false);
+      setVideoNoticeVisible(false);
+      setReviewsNoticeVisible(false);
+      return;
+    }
+    // Restore dismissed state from sessionStorage
+    if (sessionStorage.getItem("pl_banner_dismissed") === "1") setBannerVisible(false);
+    if (sessionStorage.getItem("pl_video_notice_dismissed") === "1") setVideoNoticeVisible(false);
+    if (sessionStorage.getItem("pl_reviews_notice_dismissed") === "1") setReviewsNoticeVisible(false);
+  }, []);
+
+  const dismissBanner = () => {
+    setBannerVisible(false);
+    sessionStorage.setItem("pl_banner_dismissed", "1");
+  };
+  const dismissVideoNotice = () => {
+    setVideoNoticeVisible(false);
+    sessionStorage.setItem("pl_video_notice_dismissed", "1");
+  };
+  const dismissReviewsNotice = () => {
+    setReviewsNoticeVisible(false);
+    sessionStorage.setItem("pl_reviews_notice_dismissed", "1");
+  };
+
+  // Nav top offset: 32px when banner visible, 0 when hidden
+  const navTop = bannerVisible ? "32px" : "0px";
+
   return (
     <div className="min-h-screen bg-white font-sans">
 
-      {/* Proof Layer Banner — slim, calm, unobtrusive */}
-      <div className="bg-slate-100 border-b border-slate-200 text-slate-500 text-center py-1.5 px-4 text-xs font-medium sticky top-0 z-50">
-        Proof Layer · Development Review Environment · noindex · nofollow · No tracking · No patient data
-      </div>
+      {/* Proof Layer Banner — dismissible, sessionStorage-backed */}
+      {bannerVisible && (
+        <div className="bg-slate-100 border-b border-slate-200 text-slate-500 py-1.5 px-4 text-xs font-medium sticky top-0 z-50 flex items-center justify-center gap-2">
+          <span>Proof Layer · Development Review Environment · noindex · nofollow · No tracking · No patient data</span>
+          <DismissBtn onDismiss={dismissBanner} />
+        </div>
+      )}
 
       {/* Navigation — lighter treatment */}
-      <nav className="bg-white border-b border-slate-200 sticky top-[32px] z-40 shadow-sm">
+      <nav className="bg-white border-b border-slate-200 z-40 shadow-sm" style={{ position: "sticky", top: navTop }}>
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img src={ASSETS.logo} alt="Bierman Autism Centers 20th Anniversary" className="h-10 w-auto" />
@@ -608,14 +680,17 @@ export default function Home() {
               style={{ width: "100%", display: "block" }}
             />
           </div>
-          <div className="mt-4 inline-flex items-center gap-2 bg-amber-50 border border-amber-200 rounded-xl px-5 py-2.5">
-            <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4 text-amber-500 flex-shrink-0" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
-              <circle cx="8" cy="8" r="7"/><path d="M8 5v3M8 11v.5" strokeLinecap="round"/>
-            </svg>
-            <p className="text-amber-700 text-sm">
-              Video usage rights and identifiable-person review required before production use.
-            </p>
-          </div>
+          {videoNoticeVisible && (
+            <div className="mt-4 inline-flex items-center gap-2 bg-amber-50 border border-amber-200 rounded-xl px-5 py-2.5">
+              <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4 text-amber-500 flex-shrink-0" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+                <circle cx="8" cy="8" r="7"/><path d="M8 5v3M8 11v.5" strokeLinecap="round"/>
+              </svg>
+              <p className="text-amber-700 text-sm">
+                Video usage rights and identifiable-person review required before production use.
+              </p>
+              <DismissBtn onDismiss={dismissVideoNotice} label="Dismiss video notice" />
+            </div>
+          )}
         </div>
       </section>
 
@@ -626,11 +701,19 @@ export default function Home() {
             <div className="text-teal-600 text-sm font-bold uppercase tracking-widest mb-2">Local Review Architecture</div>
             <h2 className="text-3xl font-bold text-[#1a2b47]">Example Review Layout — Ramsey</h2>
           </div>
-          <div className="bg-slate-50 border border-slate-200 rounded-2xl px-6 py-3 text-center mb-8 max-w-2xl mx-auto">
-            <p className="text-slate-500 text-sm">
-              This module shows how live GBP reviews would be displayed. Cards below are layout examples only — not real reviews.
-            </p>
-          </div>
+          {/* Notice: shown unless dismissed or in clean preview */}
+          {!isCleanPreview && (
+            <div className="bg-slate-50 border border-slate-200 rounded-2xl px-6 py-3 text-center mb-8 max-w-2xl mx-auto flex items-center justify-center gap-2">
+              <p className="text-slate-500 text-sm">
+                This module shows how live GBP reviews would be displayed. Cards below are layout examples only — not real reviews.
+              </p>
+              {reviewsNoticeVisible && (
+                <DismissBtn onDismiss={dismissReviewsNotice} label="Dismiss reviews notice" />
+              )}
+            </div>
+          )}
+
+          {/* Review cards: skeleton-only in clean preview (no fake author labels) */}
           <div className="grid md:grid-cols-3 gap-6">
             {[
               { author: "Parent, Bergen County", rating: 5 },
@@ -638,25 +721,35 @@ export default function Home() {
               { author: "Parent, Passaic County", rating: 5 },
             ].map((review, i) => (
               <div key={i} className="bg-slate-50 border border-slate-200 rounded-3xl p-6 relative">
-                {/* Blurred placeholder text */}
-                <div className="text-amber-400 text-lg mb-3">{"★".repeat(review.rating)}</div>
+                {/* Star rating */}
+                <div className="text-amber-400 text-lg mb-3">{"\u2605".repeat(review.rating)}</div>
+                {/* Blurred placeholder text bars */}
                 <div className="space-y-2 mb-4">
                   <div className="h-3 bg-slate-200 rounded-full w-full blur-[2px]" />
                   <div className="h-3 bg-slate-200 rounded-full w-5/6 blur-[2px]" />
                   <div className="h-3 bg-slate-200 rounded-full w-4/5 blur-[2px]" />
                   <div className="h-3 bg-slate-200 rounded-full w-3/4 blur-[2px]" />
                 </div>
-                <div className="text-slate-400 text-sm">— {review.author}</div>
-                {/* Clear label */}
-                <div className="absolute top-3 right-3 bg-slate-200 text-slate-500 text-xs font-semibold px-2 py-0.5 rounded-md">
-                  Example
-                </div>
+                {/* Author label: shown in default mode, hidden in clean preview */}
+                {!isCleanPreview && (
+                  <div className="text-slate-400 text-sm">— {review.author}</div>
+                )}
+                {/* Example badge: always visible when fake content is shown */}
+                {!isCleanPreview && (
+                  <div className="absolute top-3 right-3 bg-slate-200 text-slate-500 text-xs font-semibold px-2 py-0.5 rounded-md">
+                    Example
+                  </div>
+                )}
               </div>
             ))}
           </div>
-          <p className="text-center text-slate-400 text-xs mt-6">
-            Live GBP reviews to be reviewed and approved by Bierman before production use.
-          </p>
+
+          {/* Footer note: shown unless in clean preview */}
+          {!isCleanPreview && (
+            <p className="text-center text-slate-400 text-xs mt-6">
+              Live GBP reviews to be reviewed and approved by Bierman before production use.
+            </p>
+          )}
         </div>
       </section>
 
