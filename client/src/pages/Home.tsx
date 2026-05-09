@@ -170,6 +170,22 @@ const FAQS = [
     q: "What is ABA therapy and how does it help children with autism?",
     a: "Applied Behavior Analysis (ABA) is a scientifically validated approach that uses structured techniques to teach skills and reduce challenging behaviors. It is individualized to each child's goals and delivered by trained therapists.",
   },
+  {
+    q: "Is ABA therapy available near Ramsey, NJ?",
+    a: "Yes. Bierman Autism Centers operates a clinic in Ramsey, NJ at 500 N Franklin Tpke, Ste 203, providing ABA therapy to families in Bergen County, Passaic County, and surrounding communities including Mahwah, Ridgewood, and Paramus.",
+  },
+  {
+    q: "Does Bierman Ramsey offer speech therapy for children with autism?",
+    a: "Yes. Speech-language therapy is available at the Ramsey location. Bierman's speech-language services support children in developing communication skills, including verbal language and social communication.",
+  },
+  {
+    q: "Does Bierman Ramsey offer occupational therapy for children with autism?",
+    a: "Yes. Occupational therapy is available at the Ramsey clinic. Services focus on fine motor skills, sensory processing, and building daily living independence in a supportive environment.",
+  },
+  {
+    q: "Does Bierman Ramsey offer diagnostic evaluations for autism?",
+    a: "Yes. Bierman Ramsey offers comprehensive diagnostic evaluations to help families understand their child's developmental profile and determine appropriate next steps for support and therapy.",
+  },
 ];
 
 // Dismiss button — subtle, accessible, keyboard-focusable

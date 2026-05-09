@@ -15,6 +15,9 @@
          No CallRail · No Birdeye · No UserWay · No live forms
          No patient data · No production changes
          Production remains untouched: biermanautism.com/location/ramsey/
+         Schema QA note: This crawlable mode exists only to validate
+         the proof-layer architecture. It does not mean the page is
+         production, approved, or migrated.
          ============================================================ -->
 
     <title>ABA Therapy in Ramsey, NJ | Bierman Autism Centers</title>
@@ -52,25 +55,49 @@
     <meta name="twitter:image:alt" content="Bierman Autism Centers — Ramsey, NJ clinic interior" />
 
     <!-- ============================================================
-         STRUCTURED DATA — JSON-LD
-         Schema QA note: This crawlable mode exists only to validate
-         the proof-layer architecture. It does not mean the page is
-         production, approved, or migrated.
+         STRUCTURED DATA — EXPANDED ENTITY GRAPH — JSON-LD
+         Types: WebPage, MedicalClinic/LocalBusiness, Organization,
+                BreadcrumbList, FAQPage (9 Q&As), 4 Service nodes,
+                4 ImageObject nodes, VideoObject (partial — uploadDate omitted)
+         No AggregateRating · No Review schema · No fake data
          ============================================================ -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
+
+        {
+          "@type": "WebPage",
+          "@id": "https://bierman-proof-layer.manus.space/#webpage",
+          "name": "ABA Therapy in Ramsey, NJ | Bierman Autism Centers",
+          "url": "https://bierman-proof-layer.manus.space/",
+          "description": "Bierman Autism Centers in Ramsey, NJ provides individualized ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism. Serving Bergen County and surrounding New Jersey communities.",
+          "inLanguage": "en-US",
+          "isPartOf": { "@id": "https://bierman-proof-layer.manus.space/#website" },
+          "about": { "@id": "https://bierman-proof-layer.manus.space/#localbusiness" },
+          "mainEntity": { "@id": "https://bierman-proof-layer.manus.space/#localbusiness" },
+          "breadcrumb": { "@id": "https://bierman-proof-layer.manus.space/#breadcrumb" },
+          "primaryImageOfPage": { "@id": "https://bierman-proof-layer.manus.space/#image-facility" }
+        },
+
+        {
+          "@type": "WebSite",
+          "@id": "https://bierman-proof-layer.manus.space/#website",
+          "name": "Bierman Autism Centers — Proof Layer",
+          "url": "https://bierman-proof-layer.manus.space/",
+          "publisher": { "@id": "https://bierman-proof-layer.manus.space/#organization" }
+        },
+
         {
           "@type": ["LocalBusiness", "MedicalClinic"],
           "@id": "https://bierman-proof-layer.manus.space/#localbusiness",
           "name": "Bierman Autism Centers — Ramsey",
           "alternateName": "Bierman Autism Centers Ramsey NJ",
-          "description": "Bierman Autism Centers in Ramsey, NJ provides individualized ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism.",
+          "description": "Bierman Autism Centers in Ramsey, NJ provides individualized ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism. Serving Bergen County and surrounding New Jersey communities.",
           "url": "https://bierman-proof-layer.manus.space/",
           "telephone": "(201) 596-8104",
-          "image": "https://bierman-proof-layer.manus.space/manus-storage/bierman-autism-new-jersey-ramsey-facility-main_296feafd.webp",
-          "logo": "https://bierman-proof-layer.manus.space/manus-storage/bierman-logo-anniversary-20_3f19246b.webp",
+          "image": { "@id": "https://bierman-proof-layer.manus.space/#image-facility" },
+          "logo": { "@id": "https://bierman-proof-layer.manus.space/#image-logo" },
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "500 N Franklin Tpke, Ste 203",
@@ -85,23 +112,31 @@
             "longitude": -74.1441
           },
           "areaServed": [
-            {
-              "@type": "AdministrativeArea",
-              "name": "Bergen County, NJ"
-            },
-            {
-              "@type": "AdministrativeArea",
-              "name": "Passaic County, NJ"
-            }
+            { "@type": "AdministrativeArea", "name": "Bergen County, NJ" },
+            { "@type": "AdministrativeArea", "name": "Passaic County, NJ" },
+            { "@type": "City", "name": "Ramsey, NJ" },
+            { "@type": "City", "name": "Mahwah, NJ" },
+            { "@type": "City", "name": "Ridgewood, NJ" },
+            { "@type": "City", "name": "Paramus, NJ" }
+          ],
+          "medicalSpecialty": "Pediatric",
+          "knowsAbout": [
+            "Applied Behavior Analysis",
+            "Autism Spectrum Disorder",
+            "Speech-Language Therapy",
+            "Occupational Therapy",
+            "Diagnostic Evaluation for Autism",
+            "ABA Therapy for Children",
+            "Early Intervention Autism Services"
           ],
           "hasOfferCatalog": {
             "@type": "OfferCatalog",
-            "name": "Autism Support Services — Ramsey",
+            "name": "Autism Support Services — Ramsey, NJ",
             "itemListElement": [
-              { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "ABA Therapy" } },
-              { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Speech-Language Therapy" } },
-              { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Occupational Therapy" } },
-              { "@type": "Offer", "itemOffered": { "@type": "DiagnosticProcedure", "name": "Diagnostic Evaluation" } }
+              { "@type": "Offer", "itemOffered": { "@id": "https://bierman-proof-layer.manus.space/#service-aba" } },
+              { "@type": "Offer", "itemOffered": { "@id": "https://bierman-proof-layer.manus.space/#service-speech" } },
+              { "@type": "Offer", "itemOffered": { "@id": "https://bierman-proof-layer.manus.space/#service-ot" } },
+              { "@type": "Offer", "itemOffered": { "@id": "https://bierman-proof-layer.manus.space/#service-diagnostic" } }
             ]
           },
           "openingHoursSpecification": [
@@ -112,46 +147,153 @@
               "closes": "18:00"
             }
           ],
-          "parentOrganization": {
-            "@type": "Organization",
-            "@id": "https://www.biermanautism.com/#organization",
-            "name": "Bierman Autism Centers",
-            "url": "https://www.biermanautism.com/"
-          },
+          "parentOrganization": { "@id": "https://bierman-proof-layer.manus.space/#organization" },
           "sameAs": [
             "https://www.biermanautism.com/location/ramsey/"
           ]
         },
+
+        {
+          "@type": "Organization",
+          "@id": "https://bierman-proof-layer.manus.space/#organization",
+          "name": "Bierman Autism Centers",
+          "url": "https://www.biermanautism.com/",
+          "logo": { "@id": "https://bierman-proof-layer.manus.space/#image-logo" },
+          "sameAs": [
+            "https://www.biermanautism.com/",
+            "https://www.facebook.com/BiermanAutismCenters/",
+            "https://www.linkedin.com/company/bierman-autism-centers/",
+            "https://www.instagram.com/biermanautismcenters/"
+          ],
+          "subOrganization": { "@id": "https://bierman-proof-layer.manus.space/#localbusiness" }
+        },
+
         {
           "@type": "BreadcrumbList",
           "@id": "https://bierman-proof-layer.manus.space/#breadcrumb",
           "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Bierman Autism Centers",
-              "item": "https://bierman-proof-layer.manus.space/"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Locations",
-              "item": "https://bierman-proof-layer.manus.space/"
-            },
-            {
-              "@type": "ListItem",
-              "position": 3,
-              "name": "New Jersey",
-              "item": "https://bierman-proof-layer.manus.space/"
-            },
-            {
-              "@type": "ListItem",
-              "position": 4,
-              "name": "Ramsey",
-              "item": "https://bierman-proof-layer.manus.space/"
-            }
+            { "@type": "ListItem", "position": 1, "name": "Bierman Autism Centers", "item": "https://bierman-proof-layer.manus.space/" },
+            { "@type": "ListItem", "position": 2, "name": "Locations", "item": "https://bierman-proof-layer.manus.space/" },
+            { "@type": "ListItem", "position": 3, "name": "New Jersey", "item": "https://bierman-proof-layer.manus.space/" },
+            { "@type": "ListItem", "position": 4, "name": "Ramsey", "item": "https://bierman-proof-layer.manus.space/" }
           ]
         },
+
+        {
+          "@type": "Service",
+          "@id": "https://bierman-proof-layer.manus.space/#service-aba",
+          "name": "ABA Therapy",
+          "serviceType": "Applied Behavior Analysis Therapy",
+          "description": "Individualized Applied Behavior Analysis (ABA) therapy for children with autism. Bierman's ABA program uses evidence-based techniques to build communication, social, and daily living skills.",
+          "url": "https://bierman-proof-layer.manus.space/",
+          "provider": { "@id": "https://bierman-proof-layer.manus.space/#localbusiness" },
+          "areaServed": [
+            { "@type": "AdministrativeArea", "name": "Bergen County, NJ" },
+            { "@type": "AdministrativeArea", "name": "Passaic County, NJ" }
+          ],
+          "audience": { "@type": "PeopleAudience", "audienceType": "Children with autism spectrum disorder" }
+        },
+
+        {
+          "@type": "Service",
+          "@id": "https://bierman-proof-layer.manus.space/#service-speech",
+          "name": "Speech-Language Therapy",
+          "serviceType": "Speech-Language Pathology",
+          "description": "Speech-language therapy at Bierman Ramsey supports children with autism in developing communication skills, including verbal language, augmentative communication, and social language.",
+          "url": "https://bierman-proof-layer.manus.space/",
+          "provider": { "@id": "https://bierman-proof-layer.manus.space/#localbusiness" },
+          "areaServed": [
+            { "@type": "AdministrativeArea", "name": "Bergen County, NJ" },
+            { "@type": "AdministrativeArea", "name": "Passaic County, NJ" }
+          ],
+          "audience": { "@type": "PeopleAudience", "audienceType": "Children with autism spectrum disorder" }
+        },
+
+        {
+          "@type": "Service",
+          "@id": "https://bierman-proof-layer.manus.space/#service-ot",
+          "name": "Occupational Therapy",
+          "serviceType": "Pediatric Occupational Therapy",
+          "description": "Occupational therapy at Bierman Ramsey helps children with autism develop fine motor skills, sensory processing, and daily living independence in a structured, supportive environment.",
+          "url": "https://bierman-proof-layer.manus.space/",
+          "provider": { "@id": "https://bierman-proof-layer.manus.space/#localbusiness" },
+          "areaServed": [
+            { "@type": "AdministrativeArea", "name": "Bergen County, NJ" },
+            { "@type": "AdministrativeArea", "name": "Passaic County, NJ" }
+          ],
+          "audience": { "@type": "PeopleAudience", "audienceType": "Children with autism spectrum disorder" }
+        },
+
+        {
+          "@type": "Service",
+          "@id": "https://bierman-proof-layer.manus.space/#service-diagnostic",
+          "name": "Diagnostic Evaluation",
+          "serviceType": "Autism Diagnostic Evaluation",
+          "description": "Comprehensive diagnostic evaluations at Bierman Ramsey help families understand their child's developmental profile and determine appropriate next steps for support and therapy.",
+          "url": "https://bierman-proof-layer.manus.space/",
+          "provider": { "@id": "https://bierman-proof-layer.manus.space/#localbusiness" },
+          "areaServed": [
+            { "@type": "AdministrativeArea", "name": "Bergen County, NJ" },
+            { "@type": "AdministrativeArea", "name": "Passaic County, NJ" }
+          ],
+          "audience": { "@type": "PeopleAudience", "audienceType": "Children and families seeking autism diagnosis" }
+        },
+
+        {
+          "@type": "ImageObject",
+          "@id": "https://bierman-proof-layer.manus.space/#image-facility",
+          "contentUrl": "https://bierman-proof-layer.manus.space/manus-storage/bierman-autism-new-jersey-ramsey-facility-main_296feafd.webp",
+          "url": "https://bierman-proof-layer.manus.space/manus-storage/bierman-autism-new-jersey-ramsey-facility-main_296feafd.webp",
+          "caption": "Bierman Autism Centers — Ramsey, NJ clinic interior",
+          "description": "Interior view of the Bierman Autism Centers Ramsey, NJ clinic, showing a warm and welcoming pediatric therapy environment.",
+          "representativeOfPage": true,
+          "width": 1200,
+          "height": 800
+        },
+
+        {
+          "@type": "ImageObject",
+          "@id": "https://bierman-proof-layer.manus.space/#image-logo",
+          "contentUrl": "https://bierman-proof-layer.manus.space/manus-storage/bierman-logo-anniversary-20_3f19246b.webp",
+          "url": "https://bierman-proof-layer.manus.space/manus-storage/bierman-logo-anniversary-20_3f19246b.webp",
+          "caption": "Bierman Autism Centers 20th Anniversary Logo",
+          "description": "Official Bierman Autism Centers 20th Anniversary horizontal logo.",
+          "width": 320,
+          "height": 112
+        },
+
+        {
+          "@type": "ImageObject",
+          "@id": "https://bierman-proof-layer.manus.space/#image-aba-service",
+          "contentUrl": "https://bierman-proof-layer.manus.space/manus-storage/bierman-service-aba-therapy-card_d7ddabc1.webp",
+          "url": "https://bierman-proof-layer.manus.space/manus-storage/bierman-service-aba-therapy-card_d7ddabc1.webp",
+          "caption": "ABA Therapy at Bierman Autism Centers Ramsey, NJ",
+          "description": "A therapist working one-on-one with a child in an ABA therapy session at Bierman Autism Centers.",
+          "width": 800,
+          "height": 533
+        },
+
+        {
+          "@type": "ImageObject",
+          "@id": "https://bierman-proof-layer.manus.space/#image-ot-service",
+          "contentUrl": "https://bierman-proof-layer.manus.space/manus-storage/bierman-service-occupational-therapy-card_2cffd7a2.webp",
+          "url": "https://bierman-proof-layer.manus.space/manus-storage/bierman-service-occupational-therapy-card_2cffd7a2.webp",
+          "caption": "Occupational Therapy at Bierman Autism Centers Ramsey, NJ",
+          "description": "A child participating in an occupational therapy activity at Bierman Autism Centers.",
+          "width": 800,
+          "height": 533
+        },
+
+        {
+          "@type": "VideoObject",
+          "@id": "https://bierman-proof-layer.manus.space/#video-aba-overview",
+          "name": "ABA Therapy Overview — Bierman Autism Centers",
+          "description": "An overview of ABA therapy services at Bierman Autism Centers, showing how therapists work with children in a structured, supportive environment.",
+          "thumbnailUrl": "https://bierman-proof-layer.manus.space/manus-storage/bierman-ramsey-video-poster_28eb470d.jpg",
+          "contentUrl": "https://bierman-proof-layer.manus.space/manus-storage/bierman-ramsey-aba-therapy-overview_e3501ef2.mp4",
+          "publisher": { "@id": "https://bierman-proof-layer.manus.space/#organization" }
+        },
+
         {
           "@type": "FAQPage",
           "@id": "https://bierman-proof-layer.manus.space/#faq",
@@ -195,9 +337,42 @@
                 "@type": "Answer",
                 "text": "Applied Behavior Analysis (ABA) is a scientifically validated approach that uses structured techniques to teach skills and reduce challenging behaviors. It is individualized to each child's goals and delivered by trained therapists."
               }
+            },
+            {
+              "@type": "Question",
+              "name": "Is ABA therapy available near Ramsey, NJ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Bierman Autism Centers operates a clinic in Ramsey, NJ at 500 N Franklin Tpke, Ste 203, providing ABA therapy to families in Bergen County, Passaic County, and surrounding communities including Mahwah, Ridgewood, and Paramus."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does Bierman Ramsey offer speech therapy for children with autism?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Speech-language therapy is available at the Ramsey location. Bierman's speech-language services support children in developing communication skills, including verbal language and social communication."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does Bierman Ramsey offer occupational therapy for children with autism?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Occupational therapy is available at the Ramsey clinic. Services focus on fine motor skills, sensory processing, and building daily living independence in a supportive environment."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does Bierman Ramsey offer diagnostic evaluations for autism?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Bierman Ramsey offers comprehensive diagnostic evaluations to help families understand their child's developmental profile and determine appropriate next steps for support and therapy."
+              }
             }
           ]
         }
+
       ]
     }
     </script>
@@ -212,7 +387,6 @@
       (function() {
         var params = new URLSearchParams(window.location.search);
         var schemaMode = params.get('schema') === 'test';
-        var previewMode = params.get('preview') === 'clean';
         var baseUrl = 'https://bierman-proof-layer.manus.space/';
 
         // Robots meta
