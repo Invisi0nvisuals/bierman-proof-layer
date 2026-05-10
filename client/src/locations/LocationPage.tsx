@@ -27,6 +27,7 @@
 import { useState, useEffect, useMemo } from "react";
 import { Link } from "wouter";
 import { Helmet } from "react-helmet-async";
+import { PILOT_VIDEO } from "./types";
 import type { LocationData, LocationReview, LocationFaq } from "./types";
 import HealthcareDisclaimer from "@/components/HealthcareDisclaimer";
 import { buildLocationSchema } from "./schema";
@@ -577,27 +578,28 @@ export function LocationPage({ data }: LocationPageProps) {
         </div>
       </section>
 
-      {/* Video Section */}
+      {/* Video Section — Meet Pilot the Penguin */}
       <section className="py-16 bg-slate-50">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div className="text-teal-600 text-sm font-bold uppercase tracking-widest mb-2">See ABA Therapy in Action</div>
-          <h2 className="text-3xl font-bold text-[#1a2b47] mb-3">See ABA Therapy at Bierman {address.city}</h2>
-          <p className="text-slate-500 mb-8">A parent-facing tour of our {address.city}, {address.state} clinic — what families can expect when they visit.</p>
+          <div className="text-teal-600 text-sm font-bold uppercase tracking-widest mb-2">Meet Pilot the Penguin</div>
+          <h2 className="text-3xl font-bold text-[#1a2b47] mb-3">A Gentle Story About Curiosity, Belonging, and Growth</h2>
+          <p className="text-slate-500 mb-2 max-w-2xl mx-auto">Pilot the Penguin is a calming animated story created to celebrate curiosity, emotional safety, and the many different ways children learn, rest, and grow.</p>
+          <p className="text-slate-400 text-sm mb-8 max-w-2xl mx-auto">For families exploring support, Pilot’s journey offers a soft, sensory-friendly introduction to Bierman’s belief that progress begins with trust, understanding, and belonging.</p>
           <div className="rounded-3xl overflow-hidden shadow-xl border border-slate-200" style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}>
             <iframe
-              src={`https://www.youtube.com/embed/${youtubeId}`}
-              title={data.videoTitle}
+              src={PILOT_VIDEO.embedUrl}
+              title={PILOT_VIDEO.title}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
               referrerPolicy="strict-origin-when-cross-origin"
-              aria-label={`YouTube video: ${data.videoTitle}`}
+              aria-label={`YouTube video: ${PILOT_VIDEO.title}`}
               style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: 0 }}
             />
           </div>
           {!isCleanPreview && videoNoticeVisible && (
             <div className="mt-4 inline-flex items-center gap-2 bg-amber-50 border border-amber-200 rounded-xl px-5 py-2.5">
               <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4 text-amber-500 flex-shrink-0" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><circle cx="8" cy="8" r="7"/><path d="M8 5v3M8 11v.5" strokeLinecap="round"/></svg>
-              <p className="text-amber-700 text-sm">Video usage rights and identifiable-person review required before production use.</p>
+              <p className="text-amber-700 text-sm">Final brand/legal review required before production use.</p>
               <DismissBtn onDismiss={() => dismiss("video_notice_dismissed", setVideoNoticeVisible, false)} label="Dismiss video notice" />
             </div>
           )}

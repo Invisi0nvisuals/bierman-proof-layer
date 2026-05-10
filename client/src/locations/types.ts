@@ -13,6 +13,24 @@
  *   4. Done — no other files need to change.
  */
 
+// ─── Shared Pilot Video ─────────────────────────────────────────────────────
+// Single source of truth for the Pilot the Penguin video used across all location pages.
+// To update the video globally, change only this object.
+
+export const PILOT_VIDEO = {
+  youtubeId: "NqgaoaQ09QQ",
+  title: "Meet Pilot the Penguin",
+  description:
+    "Pilot the Penguin is a calming animated story about curiosity, belonging, emotional safety, and the many ways children learn, rest, and grow.",
+  embedUrl: "https://www.youtube.com/embed/NqgaoaQ09QQ",
+  watchUrl: "https://www.youtube.com/watch?v=NqgaoaQ09QQ",
+  thumbnailUrl: "https://img.youtube.com/vi/NqgaoaQ09QQ/maxresdefault.jpg",
+  thumbnailFallback: "https://img.youtube.com/vi/NqgaoaQ09QQ/hqdefault.jpg",
+  /** Confirmed upload date from YouTube metadata */
+  uploadDate: "2026-05-10T00:00:00+00:00",
+  duration: "PT2M9S",
+} as const;
+
 // ─── Core NAP + Geo ───────────────────────────────────────────────────────────
 
 export interface LocationAddress {

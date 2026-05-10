@@ -22,6 +22,7 @@
  * replaced with script tags that call this utility in a production build.
  */
 
+import { PILOT_VIDEO } from "./types";
 import type { LocationData } from "./types";
 
 // ─── Shared constants ─────────────────────────────────────────────────────────
@@ -63,7 +64,7 @@ function calcAggregateRating(data: LocationData) {
 // ─── Main builder ─────────────────────────────────────────────────────────────
 
 export function buildLocationSchema(data: LocationData): string {
-  const { schema, address, geo, phone, openingHours, youtubeId } = data;
+  const { schema, address, geo, phone, openingHours } = data;
   const base = schema.baseId.replace(/\/$/, ""); // strip trailing slash for @id fragments
 
   const rating = calcAggregateRating(data);
@@ -206,16 +207,20 @@ export function buildLocationSchema(data: LocationData): string {
     })),
   };
 
-  // ── VideoObject node ────────────────────────────────────────────────────────
+  // ── VideoObject node (shared Pilot the Penguin video) ──────────────────────────────────────────────────────────────────
+  // @id is page-scoped using #pilot-video to prevent cross-page @id collisions.
+  // All data comes from the shared PILOT_VIDEO constant in types.ts.
   const videoNode = {
     "@type": "VideoObject",
-    "@id": `${base}/#video`,
-    name: data.videoTitle,
-    description: data.videoDescription,
-    embedUrl: `https://www.youtube.com/embed/${youtubeId}`,
-    contentUrl: `https://www.youtube.com/watch?v=${youtubeId}`,
-    thumbnailUrl: `https://i.ytimg.com/vi/${youtubeId}/maxresdefault.jpg`,
-    uploadDate: schema.videoUploadDate ?? "2023-01-01T00:00:00+00:00",
+    "@id": `${base}/#pilot-video`,
+    name: PILOT_VIDEO.title,
+    description: PILOT_VIDEO.description,
+    embedUrl: PILOT_VIDEO.embedUrl,
+    contentUrl: PILOT_VIDEO.watchUrl,
+    thumbnailUrl: PILOT_VIDEO.thumbnailUrl,
+    uploadDate: PILOT_VIDEO.uploadDate,
+    duration: PILOT_VIDEO.duration,
+    mainEntityOfPage: { "@id": `${base}/#webpage` },
     publisher: { "@id": ORG_ID },
   };
 
