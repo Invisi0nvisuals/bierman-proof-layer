@@ -7,6 +7,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import { LocationPage } from "./locations/LocationPage";
 import { ramseyData } from "./locations/data/ramsey";
 import { piscatawayData } from "./locations/data/piscataway";
+import { westOrangeData } from "./locations/data/west-orange";
 
 function Router() {
   return (
@@ -17,6 +18,8 @@ function Router() {
       <Route path={"/locations/nj/ramsey/"} component={() => <LocationPage data={ramseyData} />} />
       {/* Piscataway location page */}
       <Route path={"/locations/nj/piscataway/"} component={() => <LocationPage data={piscatawayData} />} />
+      {/* West Orange location page */}
+      <Route path={"/locations/nj/west-orange/"} component={() => <LocationPage data={westOrangeData} />} />
       {/* 404 */}
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}

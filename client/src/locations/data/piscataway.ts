@@ -138,7 +138,7 @@ export const piscatawayData: LocationData = {
   // ── Nearby ────────────────────────────────────────────────────────────────
   nearby: [
     { name: "Ramsey, NJ", url: "/locations/nj/ramsey/" },
-    { name: "West Orange, NJ", url: "#" },
+    { name: "West Orange, NJ", url: "/locations/nj/west-orange/" },
     { name: "Princeton, NJ", url: "#" },
     { name: "Cranford, NJ", url: "#" },
     { name: "Parsippany, NJ", url: "#" },
