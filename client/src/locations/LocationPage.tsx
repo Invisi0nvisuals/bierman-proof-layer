@@ -279,7 +279,6 @@ export function LocationPage({ data }: LocationPageProps) {
         <title>{data.schema.pageTitle}</title>
         <meta name="description" content={data.schema.pageDescription} />
         <link rel="canonical" href={data.schema.pageUrl} />
-        <meta name="robots" content="noindex, nofollow" />
         <script type="application/ld+json">{schemaJson}</script>
       </Helmet>
 
@@ -583,8 +582,7 @@ export function LocationPage({ data }: LocationPageProps) {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <div className="text-teal-600 text-sm font-bold uppercase tracking-widest mb-2">Meet Pilot the Penguin</div>
           <h2 className="text-3xl font-bold text-[#1a2b47] mb-3">A Gentle Story About Curiosity, Belonging, and Growth</h2>
-          <p className="text-slate-500 mb-2 max-w-2xl mx-auto">Pilot the Penguin is a calming animated story created to celebrate curiosity, emotional safety, and the many different ways children learn, rest, and grow.</p>
-          <p className="text-slate-400 text-sm mb-8 max-w-2xl mx-auto">For families exploring support, Pilot’s journey offers a soft, sensory-friendly introduction to Bierman’s belief that progress begins with trust, understanding, and belonging.</p>
+          <p className="text-slate-500 mb-8 max-w-2xl mx-auto">A calming animated story about curiosity, belonging, and the many ways children learn, rest, and grow — created for families exploring support.</p>
           <div className="rounded-3xl overflow-hidden shadow-xl border border-slate-200" style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}>
             <iframe
               src={PILOT_VIDEO.embedUrl}
