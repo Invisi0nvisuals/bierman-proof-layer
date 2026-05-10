@@ -129,6 +129,14 @@ export interface LocationData {
   /** Full entity name for schema, e.g. "Bierman Autism Centers — Piscataway" */
   entityName: string;
 
+  /**
+   * If true, renders a "Coming Soon" badge and adjusts CTA copy.
+   * Flip to false when the location opens.
+   */
+  comingSoon?: boolean;
+  /** Label shown in the Coming Soon badge, e.g. "Coming Summer 2026" */
+  comingSoonLabel?: string;
+
   // ── NAP ───────────────────────────────────────────────────────────────────
   address: LocationAddress;
   phone: string;

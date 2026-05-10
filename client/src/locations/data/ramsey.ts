@@ -190,9 +190,9 @@ export const ramseyData: LocationData = {
   nearby: [
     { name: "Piscataway, NJ", url: "/locations/nj/piscataway/" },
     { name: "West Orange, NJ", url: "/locations/nj/west-orange/" },
-    { name: "Princeton, NJ", url: "#" },
-    { name: "Cranford, NJ", url: "#" },
-    { name: "Parsippany, NJ", url: "#" },
+    { name: "Princeton, NJ", url: "/locations/nj/princeton/" },
+    { name: "Cranford, NJ", url: "/locations/nj/cranford/" },
+    { name: "Parsippany, NJ", url: "/locations/nj/parsippany/" },
     { name: "All 33 Locations \u2192", url: "#" },
   ],
 

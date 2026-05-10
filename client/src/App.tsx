@@ -8,18 +8,26 @@ import { LocationPage } from "./locations/LocationPage";
 import { ramseyData } from "./locations/data/ramsey";
 import { piscatawayData } from "./locations/data/piscataway";
 import { westOrangeData } from "./locations/data/west-orange";
+import { princetonData } from "./locations/data/princeton";
+import { cranfordData } from "./locations/data/cranford";
+import { parsippanyData } from "./locations/data/parsippany";
+import { berkeleyHeightsData } from "./locations/data/berkeley-heights";
+import { eatontownData } from "./locations/data/eatontown";
 
 function Router() {
   return (
     <Switch>
       {/* Root — renders Ramsey as the default proof-layer entry point */}
       <Route path={"/"} component={() => <LocationPage data={ramseyData} />} />
-      {/* Ramsey location page */}
+      {/* ── NJ Location Pages ─────────────────────────────────────────────── */}
       <Route path={"/locations/nj/ramsey/"} component={() => <LocationPage data={ramseyData} />} />
-      {/* Piscataway location page */}
       <Route path={"/locations/nj/piscataway/"} component={() => <LocationPage data={piscatawayData} />} />
-      {/* West Orange location page */}
       <Route path={"/locations/nj/west-orange/"} component={() => <LocationPage data={westOrangeData} />} />
+      <Route path={"/locations/nj/princeton/"} component={() => <LocationPage data={princetonData} />} />
+      <Route path={"/locations/nj/cranford/"} component={() => <LocationPage data={cranfordData} />} />
+      <Route path={"/locations/nj/parsippany/"} component={() => <LocationPage data={parsippanyData} />} />
+      <Route path={"/locations/nj/berkeley-heights/"} component={() => <LocationPage data={berkeleyHeightsData} />} />
+      <Route path={"/locations/nj/eatontown/"} component={() => <LocationPage data={eatontownData} />} />
       {/* 404 */}
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}

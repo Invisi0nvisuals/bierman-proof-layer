@@ -151,9 +151,9 @@ export const westOrangeData: LocationData = {
   nearby: [
     { name: "Ramsey, NJ", url: "/locations/nj/ramsey/" },
     { name: "Piscataway, NJ", url: "/locations/nj/piscataway/" },
-    { name: "Princeton, NJ", url: "#" },
-    { name: "Cranford, NJ", url: "#" },
-    { name: "Parsippany, NJ", url: "#" },
+    { name: "Princeton, NJ", url: "/locations/nj/princeton/" },
+    { name: "Cranford, NJ", url: "/locations/nj/cranford/" },
+    { name: "Parsippany, NJ", url: "/locations/nj/parsippany/" },
     { name: "All 33 Locations \u2192", url: "#" },
   ],
 
