@@ -13,6 +13,9 @@ import { cranfordData } from "./locations/data/cranford";
 import { parsippanyData } from "./locations/data/parsippany";
 import { berkeleyHeightsData } from "./locations/data/berkeley-heights";
 import { eatontownData } from "./locations/data/eatontown";
+import PrivacyPolicy from "@/pages/PrivacyPolicy";
+import TermsOfUse from "@/pages/TermsOfUse";
+import Accessibility from "@/pages/Accessibility";
 
 function Router() {
   return (
@@ -28,6 +31,10 @@ function Router() {
       <Route path={"/locations/nj/parsippany/"} component={() => <LocationPage data={parsippanyData} />} />
       <Route path={"/locations/nj/berkeley-heights/"} component={() => <LocationPage data={berkeleyHeightsData} />} />
       <Route path={"/locations/nj/eatontown/"} component={() => <LocationPage data={eatontownData} />} />
+      {/* ── Legal Pages ───────────────────────────────────────────────────── */}
+      <Route path={"/privacy-policy/"} component={PrivacyPolicy} />
+      <Route path={"/terms-of-use/"} component={TermsOfUse} />
+      <Route path={"/accessibility/"} component={Accessibility} />
       {/* 404 */}
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}

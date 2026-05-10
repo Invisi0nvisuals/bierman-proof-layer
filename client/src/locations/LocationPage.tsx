@@ -25,7 +25,9 @@
  */
 
 import { useState, useEffect } from "react";
+import { Link } from "wouter";
 import type { LocationData, LocationReview, LocationFaq } from "./types";
+import HealthcareDisclaimer from "@/components/HealthcareDisclaimer";
 
 // ─── Shared static assets (same for all NJ locations) ────────────────────────
 
@@ -521,6 +523,7 @@ export function LocationPage({ data }: LocationPageProps) {
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="eager"
+                  referrerPolicy="no-referrer-when-downgrade"
                   title={`Bierman Autism Centers ${address.city} ${address.state} location map`}
                   aria-label={`Map showing location of Bierman Autism Centers in ${address.city}, ${address.state}`}
                 />
@@ -824,10 +827,24 @@ export function LocationPage({ data }: LocationPageProps) {
               </div>
             </div>
           </div>
-          <div className="border-t border-white/10 pt-6">
-            <div className="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
-              <p className="text-white/40 text-xs leading-relaxed">
-                <strong className="text-white/60">Proof Layer:</strong> Production-safe development environment for Bierman Autism Centers. noindex · nofollow · No tracking · No patient data collected. Does not affect the live production website.
+          {/* Healthcare Disclaimer */}
+          <HealthcareDisclaimer variant="footer" />
+
+          {/* Legal trust row */}
+          <div className="border-t border-white/10 pt-6 mt-2">
+            <div className="flex flex-wrap items-center justify-between gap-4">
+              <div className="flex flex-wrap gap-4 text-xs text-white/40">
+                <Link href="/privacy-policy/" className="hover:text-white/70 transition-colors">Privacy Policy</Link>
+                <span className="text-white/20">·</span>
+                <Link href="/terms-of-use/" className="hover:text-white/70 transition-colors">Terms of Use</Link>
+                <span className="text-white/20">·</span>
+                <Link href="/accessibility/" className="hover:text-white/70 transition-colors">Accessibility</Link>
+              </div>
+              <p className="text-white/30 text-xs">© {new Date().getFullYear()} Bierman Autism Centers. All rights reserved.</p>
+            </div>
+            <div className="mt-4 bg-white/5 border border-white/10 rounded-xl p-3 text-center">
+              <p className="text-white/30 text-xs leading-relaxed">
+                <strong className="text-white/50">Proof-layer environment:</strong> No patient data collected · No cookies or tracking active · noindex · nofollow · Does not affect the live production website at biermanautism.com
               </p>
             </div>
           </div>
