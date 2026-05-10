@@ -1,0 +1,865 @@
+/*
+ * Bierman Autism Centers — Proof Layer
+ * Generic Location Page Renderer
+ *
+ * Design: Warm pediatric healthcare — family-centered, light, and welcoming
+ * - Warm off-white / light aqua backgrounds (no heavy dark navy dominance)
+ * - Soft teal (#0d9488) brand accent
+ * - Warm orange (#f97316) CTA
+ * - Navy (#1a2b47) used sparingly for headings and footer only
+ * - Rounded cards, generous whitespace, playful-but-polished SVG icons
+ *
+ * PROOF LAYER — NOT PRODUCTION
+ * noindex, nofollow | No tracking | No live forms | No patient data
+ *
+ * USAGE:
+ *   import { LocationPage } from "@/locations/LocationPage";
+ *   import { ramseyData } from "@/locations/data/ramsey";
+ *   <LocationPage data={ramseyData} />
+ *
+ * To add a new location:
+ *   1. Create client/src/locations/data/{slug}.ts
+ *   2. Export a LocationData object
+ *   3. Add a route in App.tsx: <Route path="/locations/nj/{slug}/" component={() => <LocationPage data={myData} />} />
+ *   4. Done — no other files need to change.
+ */
+
+import { useState, useEffect } from "react";
+import type { LocationData, LocationReview, LocationFaq } from "./types";
+
+// ─── Shared static assets (same for all NJ locations) ────────────────────────
+
+const TRUST_BADGES = [
+  { src: "/manus-storage/bierman-trust-group-of-year-2022_866c3645.webp", alt: "Group of the Year 2022 Award" },
+  { src: "/manus-storage/bierman-trust-bacb-ace-provider_f1995271.webp", alt: "BACB ACE Authorized Continuing Education Provider" },
+  { src: "/manus-storage/bierman-trust-casp-member_7cc1f427.webp", alt: "CASP — Council of Autism Service Providers Member" },
+];
+
+const INSURANCE_LOGOS = [
+  { src: "/manus-storage/bierman-insurance-aetna_f6d238ed.webp", alt: "Aetna health insurance — accepted at Bierman Autism Centers" },
+  { src: "/manus-storage/bierman-insurance-ambetter_34baba91.webp", alt: "Ambetter health insurance — accepted at Bierman Autism Centers" },
+  { src: "/manus-storage/bierman-insurance-carelon_4a70fbdd.webp", alt: "Carelon health insurance — accepted at Bierman Autism Centers" },
+  { src: "/manus-storage/bierman-insurance-cigna_1c21165d.webp", alt: "Cigna health insurance — accepted at Bierman Autism Centers" },
+  { src: "/manus-storage/bierman-insurance-compsych_657fa980.webp", alt: "ComPsych health insurance — accepted at Bierman Autism Centers" },
+  { src: "/manus-storage/bierman-insurance-meritain-health_bc730b51.webp", alt: "Meritain Health insurance — accepted at Bierman Autism Centers" },
+  { src: "/manus-storage/bierman-insurance-surest_3872fe70.webp", alt: "Surest health insurance — accepted at Bierman Autism Centers" },
+  { src: "/manus-storage/bierman-insurance-umr_9c11ff1b.webp", alt: "UMR health insurance — accepted at Bierman Autism Centers" },
+  { src: "/manus-storage/bierman-insurance-united-healthcare_0b5b310b.webp", alt: "United Healthcare — accepted at Bierman Autism Centers" },
+];
+
+const SHARED_ASSETS = {
+  logo: "/manus-storage/bierman-logo-anniversary-20_3f19246b.webp",
+  mascot: "/manus-storage/bierman-brand-nj-penguin-accent_64e9cbdd.webp",
+  insurance: "/manus-storage/bierman-autism-insurance-horizon-bcbs-new-jersey_8162212b.webp",
+  themeBcbaGuidance: "/manus-storage/theme-card-bcba-guidance_f4421e19.png",
+  themeFamilyPartnership: "/manus-storage/theme-card-family-partnership_7fd858a1.png",
+  themeProgressFocused: "/manus-storage/theme-card-progress-focused_1582d40e.png",
+};
+
+const STANDARD_SERVICES = [
+  {
+    title: "ABA Therapy",
+    desc: "Applied Behavior Analysis — individualized, evidence-based therapy designed to build communication, social, and daily living skills.",
+    img: "/manus-storage/bierman-service-aba-therapy-card_d7ddabc1.webp",
+    icon: <IconABA />,
+  },
+  {
+    title: "Speech-Language Therapy",
+    desc: "Targeted speech and language support to help children communicate more effectively and confidently.",
+    img: "https://d2xsxph8kpxj0f.cloudfront.net/91389010/QxDhxTcSVFBCVe6sC7dKv5/bierman-service-speech-language-therapy-card-U56PgjdAJCh3qfqqeXDCyK.webp",
+    icon: <IconSpeech />,
+  },
+  {
+    title: "Occupational Therapy",
+    desc: "Sensory integration, fine motor skills, and daily living activities to support independence and engagement.",
+    img: "/manus-storage/bierman-service-occupational-therapy-card_2cffd7a2.webp",
+    icon: <IconOT />,
+  },
+  {
+    title: "Diagnostic Evaluation",
+    desc: "Comprehensive autism diagnostic evaluations by licensed clinicians, with results and recommendations for families.",
+    img: "https://d2xsxph8kpxj0f.cloudfront.net/91389010/QxDhxTcSVFBCVe6sC7dKv5/bierman-service-diagnostic-evaluation-card-7MEyR3pXUm3dwqH5E9PnMK.webp",
+    icon: <IconDiag />,
+  },
+];
+
+// ─── SVG Icons ────────────────────────────────────────────────────────────────
+
+function IconABA() {
+  return (
+    <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" aria-hidden="true">
+      <circle cx="24" cy="24" r="22" fill="#ccfbf1" />
+      <path d="M16 32c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke="#0d9488" strokeWidth="2.5" strokeLinecap="round"/>
+      <circle cx="24" cy="18" r="5" stroke="#0d9488" strokeWidth="2.5"/>
+      <path d="M20 26l-4 6M28 26l4 6" stroke="#0d9488" strokeWidth="2" strokeLinecap="round"/>
+    </svg>
+  );
+}
+
+function IconSpeech() {
+  return (
+    <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" aria-hidden="true">
+      <circle cx="24" cy="24" r="22" fill="#ccfbf1" />
+      <path d="M14 20c0-5.523 4.477-10 10-10s10 4.477 10 10c0 4.418-2.86 8.166-6.857 9.497L26 34h-4l-.857-4.503C17.146 28.166 14 24.418 14 20z" stroke="#0d9488" strokeWidth="2.5" strokeLinejoin="round"/>
+      <path d="M20 20h8M20 24h5" stroke="#0d9488" strokeWidth="2" strokeLinecap="round"/>
+    </svg>
+  );
+}
+
+function IconOT() {
+  return (
+    <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" aria-hidden="true">
+      <circle cx="24" cy="24" r="22" fill="#ccfbf1" />
+      <path d="M18 28c0-3.314 2.686-6 6-6s6 2.686 6 6v4H18v-4z" stroke="#0d9488" strokeWidth="2.5" strokeLinejoin="round"/>
+      <circle cx="24" cy="18" r="3.5" stroke="#0d9488" strokeWidth="2.5"/>
+      <path d="M14 36h20" stroke="#0d9488" strokeWidth="2" strokeLinecap="round"/>
+      <path d="M14 28h2M32 28h2" stroke="#0d9488" strokeWidth="2" strokeLinecap="round"/>
+    </svg>
+  );
+}
+
+function IconDiag() {
+  return (
+    <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" aria-hidden="true">
+      <circle cx="24" cy="24" r="22" fill="#ccfbf1" />
+      <rect x="14" y="13" width="20" height="24" rx="3" stroke="#0d9488" strokeWidth="2.5"/>
+      <path d="M19 20h10M19 25h10M19 30h6" stroke="#0d9488" strokeWidth="2" strokeLinecap="round"/>
+      <circle cx="32" cy="32" r="5" fill="#ccfbf1" stroke="#f97316" strokeWidth="2"/>
+      <path d="M32 30v4M30 32h4" stroke="#f97316" strokeWidth="1.5" strokeLinecap="round"/>
+    </svg>
+  );
+}
+
+// ─── Sub-components ───────────────────────────────────────────────────────────
+
+function StarRating({ count }: { count: number }) {
+  return (
+    <div className="flex gap-0.5" aria-label={`${count} out of 5 stars`}>
+      {Array.from({ length: 5 }).map((_, i) => (
+        <svg key={i} viewBox="0 0 20 20" fill={i < count ? "#f59e0b" : "none"} stroke={i < count ? "#f59e0b" : "#d1d5db"} strokeWidth="1.5" className="w-4 h-4" aria-hidden="true">
+          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+      ))}
+    </div>
+  );
+}
+
+function GoogleBadge() {
+  return (
+    <div className="flex items-center gap-1.5">
+      <svg viewBox="0 0 24 24" className="w-4 h-4 flex-shrink-0" aria-hidden="true">
+        <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+        <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+        <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/>
+        <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+      </svg>
+      <span className="text-slate-400 text-xs">Posted on Google</span>
+    </div>
+  );
+}
+
+function DismissBtn({ onDismiss, label = "Dismiss notice" }: { onDismiss: () => void; label?: string }) {
+  return (
+    <button type="button" onClick={onDismiss} aria-label={label} className="ml-3 flex-shrink-0 text-current opacity-50 hover:opacity-100 focus:opacity-100 focus:outline-none focus:ring-2 focus:ring-current rounded transition-opacity" style={{ lineHeight: 1 }}>
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className="w-3.5 h-3.5" aria-hidden="true">
+        <path d="M3 3l10 10M13 3L3 13" />
+      </svg>
+    </button>
+  );
+}
+
+const TRUNCATE_THRESHOLD = 160;
+
+function GBPReviewCard({ review }: { review: LocationReview }) {
+  const [expanded, setExpanded] = useState(false);
+  const isLong = review.text.length > TRUNCATE_THRESHOLD;
+  const displayText = isLong && !expanded ? review.text.slice(0, TRUNCATE_THRESHOLD).trimEnd() + "\u2026" : review.text;
+
+  return (
+    <article className="flex flex-col bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-200 p-6">
+      <div className="flex items-center gap-3 mb-4">
+        <div className="w-11 h-11 rounded-full flex items-center justify-center text-white text-sm font-bold flex-shrink-0 select-none" style={{ backgroundColor: review.avatarColor }} aria-hidden="true">
+          {review.initials}
+        </div>
+        <div className="min-w-0">
+          <p className="font-semibold text-[#1a2b47] text-sm leading-tight truncate">{review.name}</p>
+          <p className="text-slate-400 text-xs mt-0.5 truncate">{review.meta}</p>
+        </div>
+      </div>
+      <div className="flex items-center gap-3 mb-4">
+        <StarRating count={review.stars} />
+        <span className="text-slate-400 text-xs">{review.date}</span>
+      </div>
+      <div className="flex-1">
+        <blockquote className="text-slate-600 text-sm leading-relaxed">{displayText}</blockquote>
+        {isLong && (
+          <button type="button" onClick={() => setExpanded(!expanded)} className="mt-2 text-teal-600 text-xs font-semibold hover:text-teal-700 focus:outline-none focus:underline transition-colors">
+            {expanded ? "Show less" : "Read more"}
+          </button>
+        )}
+      </div>
+      <div className="mt-5 pt-4 border-t border-slate-100">
+        <GoogleBadge />
+      </div>
+    </article>
+  );
+}
+
+function FAQItem({ faq, index }: { faq: LocationFaq; index: number }) {
+  return (
+    <details key={index} className="border border-slate-200 rounded-2xl overflow-hidden group bg-white hover:border-teal-200 transition-colors">
+      <summary className="flex items-center justify-between px-6 py-4 cursor-pointer font-semibold text-[#1a2b47] hover:bg-teal-50/50 transition-colors list-none text-sm">
+        {faq.q}
+        <span className="text-teal-500 ml-4 flex-shrink-0 text-xl group-open:rotate-45 transition-transform duration-200">+</span>
+      </summary>
+      <div className="px-6 pb-5 text-slate-600 leading-relaxed border-t border-slate-100 pt-4 text-sm">
+        {faq.a}
+      </div>
+    </details>
+  );
+}
+
+// ─── Main Component ───────────────────────────────────────────────────────────
+
+interface LocationPageProps {
+  data: LocationData;
+}
+
+export function LocationPage({ data }: LocationPageProps) {
+  const { address, phone, intakeUrl, gbpUrl, mapEmbedUrl, youtubeId, displayName, entityName, heroDescription, insuranceText, reviews, faqs, nearby, clinicalLeadership, assets } = data;
+
+  // Session-storage keys scoped to location slug to prevent cross-location bleed
+  const sk = (key: string) => `pl_${key}_${data.slug}`;
+
+  const [isCleanPreview, setIsCleanPreview] = useState(false);
+  const [bannerVisible, setBannerVisible] = useState(true);
+  const [videoNoticeVisible, setVideoNoticeVisible] = useState(true);
+  const [reviewsNoticeVisible, setReviewsNoticeVisible] = useState(true);
+  const [phoneNoticeVisible, setPhoneNoticeVisible] = useState(true);
+  const [hoursNoticeVisible, setHoursNoticeVisible] = useState(true);
+  const [visitCardNoticeVisible, setVisitCardNoticeVisible] = useState(true);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("preview") === "clean") {
+      setIsCleanPreview(true);
+      setBannerVisible(false);
+      setVideoNoticeVisible(false);
+      setReviewsNoticeVisible(false);
+      return;
+    }
+    if (sessionStorage.getItem(sk("banner_dismissed")) === "1") setBannerVisible(false);
+    if (sessionStorage.getItem(sk("video_notice_dismissed")) === "1") setVideoNoticeVisible(false);
+    if (sessionStorage.getItem(sk("reviews_notice_dismissed")) === "1") setReviewsNoticeVisible(false);
+    if (sessionStorage.getItem(sk("phone_notice_dismissed")) === "1") setPhoneNoticeVisible(false);
+    if (sessionStorage.getItem(sk("hours_notice_dismissed")) === "1") setHoursNoticeVisible(false);
+    if (sessionStorage.getItem(sk("visit_card_dismissed")) === "1") setVisitCardNoticeVisible(false);
+  }, [data.slug]);
+
+  const dismiss = (key: string, setter: (v: boolean) => void, val: boolean) => {
+    sessionStorage.setItem(sk(key), "1");
+    setter(val);
+  };
+
+  const navTop = bannerVisible ? "32px" : "0px";
+  const mapsDirectionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(`${address.street}, ${address.city}, ${address.state} ${address.zip}`)}`;
+
+  return (
+    <div className="min-h-screen bg-white font-sans">
+
+      {/* Proof Layer Banner */}
+      {bannerVisible && (
+        <div className="bg-slate-100 border-b border-slate-200 text-slate-500 py-1.5 px-4 text-xs font-medium sticky top-0 z-50 flex items-center justify-center gap-2">
+          <span>Proof Layer · Development Review Environment · noindex · nofollow · No tracking · No patient data</span>
+          <DismissBtn onDismiss={() => dismiss("banner_dismissed", setBannerVisible, false)} label="Dismiss proof layer banner" />
+        </div>
+      )}
+
+      {/* Navigation */}
+      <nav className="bg-white border-b border-slate-200 z-40 shadow-sm" style={{ position: "sticky", top: navTop }}>
+        <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <img src={SHARED_ASSETS.logo} alt="Bierman Autism Centers 20th Anniversary" className="h-10 w-auto" />
+            <div className="hidden md:flex items-center gap-2">
+              <span className="text-slate-300 text-sm">|</span>
+              <span className="text-slate-500 text-sm">{address.city}, {address.state}</span>
+            </div>
+          </div>
+          <div className="flex items-center gap-3">
+            <a href={`tel:${phone}`} className="hidden md:block text-slate-600 hover:text-teal-700 text-sm font-medium transition-colors">{phone}</a>
+            <a href={intakeUrl} target="_blank" rel="noopener noreferrer" className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-4 py-2 rounded-lg text-sm transition-colors shadow-sm">
+              Request Services
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      {/* Hero */}
+      <section className="py-16 md:py-24" style={{ background: "linear-gradient(135deg, #f0fdfa 0%, #e0f7f4 40%, #fef9f0 100%)" }}>
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="max-w-2xl">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="inline-flex items-center gap-1.5 bg-teal-100 text-teal-700 text-xs font-semibold px-3 py-1 rounded-full">
+                <svg viewBox="0 0 16 16" fill="currentColor" className="w-3 h-3" aria-hidden="true"><path d="M8 1a5 5 0 100 10A5 5 0 008 1zm0 1.5a3.5 3.5 0 110 7 3.5 3.5 0 010-7zM8 14a1 1 0 100-2 1 1 0 000 2z"/></svg>
+                {address.city}, {address.state}
+              </span>
+              <span className="text-slate-400 text-xs">{address.county}</span>
+            </div>
+            <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-5 text-[#1a2b47]">
+              ABA Therapy in<br />{address.city}, {address.state === "NJ" ? "New Jersey" : address.state}
+            </h1>
+            <p className="text-slate-600 text-lg mb-8 leading-relaxed">{heroDescription}</p>
+            <div className="flex flex-col sm:flex-row gap-4 mb-10">
+              <a href={intakeUrl} target="_blank" rel="noopener noreferrer" className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-2xl text-lg transition-colors text-center shadow-md">
+                Request Services in {address.city}
+              </a>
+              <a href={`tel:${phone}`} className="border-2 border-teal-300 hover:border-teal-500 bg-white hover:bg-teal-50 text-teal-700 font-semibold px-8 py-4 rounded-2xl text-lg transition-colors text-center">
+                {phone}
+              </a>
+            </div>
+            {/* GBP NAP Card */}
+            <div className="bg-white border border-teal-200 rounded-2xl p-5 inline-block shadow-sm">
+              <div className="flex items-start gap-3">
+                <div className="bg-teal-100 rounded-full p-1.5 mt-0.5">
+                  <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4 text-teal-600" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M13 6.5a5 5 0 11-10 0 5 5 0 0110 0z"/><path d="M6 6.5l1.5 1.5L10 4.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                </div>
+                <div>
+                  <div className="text-teal-700 text-xs font-bold uppercase tracking-widest mb-1">GBP Verified Location</div>
+                  <div className="text-[#1a2b47] font-semibold text-sm">{entityName}</div>
+                  <div className="text-slate-500 text-sm">{address.street}, {address.city}, {address.state} {address.zip}</div>
+                  <div className="text-slate-500 text-sm">{phone}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trust Bar */}
+      <section className="bg-teal-600 text-white py-3.5">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="flex flex-wrap justify-center md:justify-between items-center gap-3 text-sm font-medium">
+            {["✓ Evidence-Based ABA Therapy", "✓ Insurance Accepted", "✓ BCBA-Supervised Programs", "✓ 20 Years of Experience", `✓ Serving ${address.county}`].map((item) => (
+              <span key={item} className="text-white/90">{item}</span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Credential Badges */}
+      <section className="bg-white border-b border-slate-100 py-6">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="flex flex-wrap justify-center items-center gap-6">
+            {TRUST_BADGES.map((badge) => (
+              <div key={badge.alt} className="flex items-center justify-center" style={{ height: "64px" }}>
+                <img src={badge.src} alt={badge.alt} style={{ maxHeight: "56px", width: "auto", objectFit: "contain" }} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Facility Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="order-1 md:order-none">
+              <div className="relative">
+                <img
+                  src={assets.facility}
+                  alt={assets.facilityAlt ?? `Bierman Autism Centers ${address.city}, ${address.state} — clinic interior`}
+                  className="rounded-3xl shadow-2xl w-full object-cover"
+                  style={{ minHeight: "320px", maxHeight: "480px" }}
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    target.style.display = "none";
+                    const fallback = target.nextElementSibling as HTMLElement;
+                    if (fallback) fallback.style.display = "flex";
+                  }}
+                />
+                <div className="rounded-3xl bg-gradient-to-br from-teal-50 to-aqua-100 items-center justify-center hidden" style={{ minHeight: "320px", background: "linear-gradient(135deg, #e0f7f4, #f0fdfa)" }}>
+                  <div className="text-center p-8">
+                    <div className="text-6xl mb-4">🏥</div>
+                    <div className="text-teal-700 font-semibold">{address.city} Clinic Photo</div>
+                    <div className="text-slate-400 text-sm mt-1">Image pending upload confirmation</div>
+                  </div>
+                </div>
+                <div className="absolute -bottom-5 -right-4 bg-white rounded-2xl shadow-lg p-3 flex items-center gap-2 border border-teal-100">
+                  <img src={SHARED_ASSETS.mascot} alt="Pilot the Penguin mascot" className="h-12 w-auto" />
+                  <div>
+                    <div className="text-[#1a2b47] font-semibold text-xs">Pilot the Penguin</div>
+                    <div className="text-slate-400 text-xs">Bierman's friendly guide</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="pt-4 md:pt-0">
+              <div className="text-teal-600 text-sm font-bold uppercase tracking-widest mb-2">Our {address.city} Clinic</div>
+              <h2 className="text-3xl font-bold text-[#1a2b47] mb-4">A Welcoming Environment for Every Child</h2>
+              <p className="text-slate-600 leading-relaxed mb-4">
+                Our {address.city} center is designed to be a safe, engaging, and supportive space for children and families. Every aspect of our clinic — from the therapy rooms to the waiting areas — is built with the needs of children with autism in mind.
+              </p>
+              <p className="text-slate-600 leading-relaxed mb-6">
+                Our clinical team includes Board Certified Behavior Analysts (BCBAs), Registered Behavior Technicians (RBTs), speech-language pathologists, and occupational therapists working collaboratively on each child's individualized plan.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a href={intakeUrl} target="_blank" rel="noopener noreferrer" className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-xl transition-colors text-center text-sm">
+                  Request Services in {address.city}
+                </a>
+                <a href={`tel:${phone}`} className="border border-teal-300 hover:bg-teal-50 text-teal-700 font-semibold px-6 py-3 rounded-xl transition-colors text-center text-sm">
+                  {phone}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section className="py-16" style={{ background: "linear-gradient(180deg, #f8fffe 0%, #f0fdfa 100%)" }}>
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <div className="text-teal-600 text-sm font-bold uppercase tracking-widest mb-2">Services at {address.city}</div>
+            <h2 className="text-3xl font-bold text-[#1a2b47]">Comprehensive Autism Support Services</h2>
+            <p className="text-slate-500 mt-3 max-w-2xl mx-auto">Each service is individualized to your child's goals and delivered by licensed, experienced clinicians.</p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {STANDARD_SERVICES.map((svc) => (
+              <div key={svc.title} className="bg-white border border-teal-100 rounded-3xl overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200">
+                {svc.img ? (
+                  <div className="relative">
+                    <img src={svc.img} alt={svc.title} className="w-full h-40 object-cover" />
+                    <div className="absolute top-3 left-3 bg-white/90 rounded-xl p-1.5 shadow-sm">{svc.icon}</div>
+                  </div>
+                ) : (
+                  <div className="w-full h-40 flex flex-col items-center justify-center bg-teal-50">{svc.icon}</div>
+                )}
+                <div className="p-5">
+                  <h3 className="font-bold text-[#1a2b47] text-base mb-2">{svc.title}</h3>
+                  <p className="text-slate-500 text-sm leading-relaxed">{svc.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Insurance */}
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="text-teal-600 text-sm font-bold uppercase tracking-widest mb-2">Insurance</div>
+              <h2 className="text-3xl font-bold text-[#1a2b47] mb-4">Insurance Accepted at {address.city}</h2>
+              <p className="text-slate-600 leading-relaxed mb-6">{insuranceText}</p>
+              {!isCleanPreview && phoneNoticeVisible && (
+                <div className="bg-amber-50 border border-amber-200 rounded-xl px-4 py-3 flex items-start gap-2 mb-4">
+                  <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><circle cx="8" cy="8" r="7"/><path d="M8 5v3M8 11v.5" strokeLinecap="round"/></svg>
+                  <p className="text-amber-700 text-xs">Phone number requires confirmation with Bierman before production use.</p>
+                  <DismissBtn onDismiss={() => dismiss("phone_notice_dismissed", setPhoneNoticeVisible, false)} />
+                </div>
+              )}
+              <img src={SHARED_ASSETS.insurance} alt="Horizon BCBS NJ — accepted at Bierman Autism Centers" className="rounded-2xl shadow-sm w-full max-w-xs object-contain" style={{ maxHeight: "80px" }} />
+            </div>
+            <div>
+              <div className="grid grid-cols-3 gap-4">
+                {INSURANCE_LOGOS.map((logo) => (
+                  <div key={logo.alt} className="bg-slate-50 rounded-xl p-3 flex items-center justify-center border border-slate-100" style={{ height: "72px" }}>
+                    <img src={logo.src} alt={logo.alt.replace("Bierman Autism Centers", `Bierman Autism Centers ${address.city}`)} className="max-h-10 w-auto object-contain" />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Directions */}
+      <section className="py-16 bg-slate-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            <div>
+              <div className="text-teal-600 text-sm font-bold uppercase tracking-widest mb-2">Location & Directions</div>
+              <h2 className="text-3xl font-bold text-[#1a2b47] mb-4">Find Us in {address.city}</h2>
+              <div className="bg-white border border-teal-100 rounded-2xl p-6 shadow-sm mb-6">
+                <div className="space-y-3 text-sm">
+                  <div className="flex items-start gap-3">
+                    <svg viewBox="0 0 20 20" fill="none" className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><path d="M10 2a6 6 0 016 6c0 4-6 10-6 10S4 12 4 8a6 6 0 016-6z"/><circle cx="10" cy="8" r="2"/></svg>
+                    <div>
+                      <div className="font-semibold text-[#1a2b47]">{entityName}</div>
+                      <div className="text-slate-500">{address.street}</div>
+                      <div className="text-slate-500">{address.city}, {address.state} {address.zip}</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <svg viewBox="0 0 20 20" fill="none" className="w-5 h-5 text-teal-600 flex-shrink-0" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><path d="M3 5a2 2 0 012-2h2l2 4-1.5 1.5a11 11 0 005 5L14 12l4 2v2a2 2 0 01-2 2C7.163 18 2 12.837 2 7a2 2 0 012-2z"/></svg>
+                    <a href={`tel:${phone}`} className="text-teal-700 font-semibold hover:underline">{phone}</a>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <svg viewBox="0 0 20 20" fill="none" className="w-5 h-5 text-teal-600 flex-shrink-0" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><circle cx="10" cy="10" r="8"/><path d="M10 6v4l3 3" strokeLinecap="round"/></svg>
+                    <span className="text-slate-600">{data.hoursDisplay}</span>
+                  </div>
+                </div>
+              </div>
+              {!isCleanPreview && hoursNoticeVisible && (
+                <div className="bg-amber-50 border border-amber-200 rounded-xl px-4 py-3 flex items-start gap-2 mb-4">
+                  <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><circle cx="8" cy="8" r="7"/><path d="M8 5v3M8 11v.5" strokeLinecap="round"/></svg>
+                  <p className="text-amber-700 text-xs">Hours require confirmation with Bierman before production use.</p>
+                  <DismissBtn onDismiss={() => dismiss("hours_notice_dismissed", setHoursNoticeVisible, false)} />
+                </div>
+              )}
+              <a href={mapsDirectionsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white font-semibold px-6 py-3 rounded-xl text-sm transition-colors shadow-sm">
+                Get Directions →
+              </a>
+            </div>
+            <div>
+              <div className="rounded-3xl overflow-hidden shadow-xl border border-slate-100" style={{ height: "380px" }}>
+                <iframe
+                  src={mapEmbedUrl}
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="eager"
+                  title={`Bierman Autism Centers ${address.city} ${address.state} location map`}
+                  aria-label={`Map showing location of Bierman Autism Centers in ${address.city}, ${address.state}`}
+                />
+              </div>
+              <p className="text-slate-400 text-xs mt-2 text-center">Confirm coordinates match GBP-verified address before production</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Getting Started */}
+      <section className="py-16" style={{ background: "linear-gradient(135deg, #0d9488 0%, #0f766e 100%)" }}>
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <div className="text-teal-200 text-sm font-bold uppercase tracking-widest mb-2">Getting Started</div>
+            <h2 className="text-3xl font-bold text-white">How to Begin Services at {address.city}</h2>
+            <p className="text-teal-100/80 mt-3 max-w-2xl mx-auto">Our intake process is designed to be straightforward and supportive for families.</p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { step: "01", title: "Submit a Request", desc: "Complete our intake request form. A team member will contact you within 1–2 business days." },
+              { step: "02", title: "Insurance Verification", desc: "We verify your insurance coverage and explain your benefits before any commitment." },
+              { step: "03", title: "Initial Consultation", desc: "Meet with our clinical team to discuss your child's needs and goals." },
+              { step: "04", title: "Begin Services", desc: "Your child's individualized program begins with ongoing family collaboration." },
+            ].map((item) => (
+              <div key={item.step} className="bg-white/15 backdrop-blur-sm rounded-3xl p-6 border border-white/20">
+                <div className="text-orange-300 font-bold text-3xl mb-3 font-mono">{item.step}</div>
+                <h3 className="font-bold text-white text-base mb-2">{item.title}</h3>
+                <p className="text-teal-100/80 text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <a href={intakeUrl} target="_blank" rel="noopener noreferrer" className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-10 py-4 rounded-2xl text-lg transition-colors inline-block shadow-lg">
+              Start the Process →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Video Section */}
+      <section className="py-16 bg-slate-50">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <div className="text-teal-600 text-sm font-bold uppercase tracking-widest mb-2">See ABA Therapy in Action</div>
+          <h2 className="text-3xl font-bold text-[#1a2b47] mb-3">See ABA Therapy at Bierman {address.city}</h2>
+          <p className="text-slate-500 mb-8">A parent-facing tour of our {address.city}, {address.state} clinic — what families can expect when they visit.</p>
+          <div className="rounded-3xl overflow-hidden shadow-xl border border-slate-200" style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}>
+            <iframe
+              src={`https://www.youtube.com/embed/${youtubeId}`}
+              title={data.videoTitle}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              referrerPolicy="strict-origin-when-cross-origin"
+              aria-label={`YouTube video: ${data.videoTitle}`}
+              style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: 0 }}
+            />
+          </div>
+          {!isCleanPreview && videoNoticeVisible && (
+            <div className="mt-4 inline-flex items-center gap-2 bg-amber-50 border border-amber-200 rounded-xl px-5 py-2.5">
+              <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4 text-amber-500 flex-shrink-0" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><circle cx="8" cy="8" r="7"/><path d="M8 5v3M8 11v.5" strokeLinecap="round"/></svg>
+              <p className="text-amber-700 text-sm">Video usage rights and identifiable-person review required before production use.</p>
+              <DismissBtn onDismiss={() => dismiss("video_notice_dismissed", setVideoNoticeVisible, false)} label="Dismiss video notice" />
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Review Themes */}
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-4">
+            <div className="text-teal-600 text-sm font-bold uppercase tracking-widest mb-2">What Families Value</div>
+            <h2 className="text-3xl font-bold text-[#1a2b47]">What Families Value at {address.city}</h2>
+            <p className="text-slate-500 mt-3 max-w-2xl mx-auto text-sm leading-relaxed">
+              Public review evidence and Bierman testimonial themes suggest families value supportive communication, BCBA guidance, and a child-centered environment.
+            </p>
+          </div>
+          {!isCleanPreview && reviewsNoticeVisible && (
+            <div className="bg-slate-50 border border-slate-200 rounded-2xl px-6 py-3 text-center mb-8 max-w-2xl mx-auto flex items-center justify-center gap-2">
+              <p className="text-slate-500 text-sm">Review themes are based on public review evidence and Bierman testimonial patterns. Final review copy requires Bierman approval before production use.</p>
+              <DismissBtn onDismiss={() => dismiss("reviews_notice_dismissed", setReviewsNoticeVisible, false)} label="Dismiss review themes notice" />
+            </div>
+          )}
+          {!isCleanPreview && !reviewsNoticeVisible && <div className="mb-8" />}
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              { src: SHARED_ASSETS.themeBcbaGuidance, alt: `Supportive BCBA Guidance — families value hands-on clinical team communication at Bierman ${address.city}` },
+              { src: SHARED_ASSETS.themeFamilyPartnership, alt: `Family Partnership — parents highlight clear communication and feeling known by the Bierman care team` },
+              { src: SHARED_ASSETS.themeProgressFocused, alt: `Progress-Focused Support — individualized goals and steady progress at Bierman Autism Centers ${address.city} ${address.state}` },
+            ].map((card) => (
+              <div key={card.alt} className="overflow-hidden rounded-2xl shadow-sm bg-transparent">
+                <img src={card.src} alt={card.alt} className="w-full h-auto object-contain" loading="lazy" />
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-slate-400 text-xs mt-8">Themes derived from public GBP review evidence and Bierman corporate testimonials. Source: Gemini GBP Review Evidence Report, May 2026.</p>
+
+          {/* Real GBP Reviews */}
+          <div className="mt-14">
+            <div className="text-center mb-10">
+              <div className="text-teal-600 text-sm font-bold uppercase tracking-widest mb-2">Google Reviews</div>
+              <h3 className="text-2xl font-bold text-[#1a2b47]">What Families Are Saying</h3>
+              <p className="text-slate-500 text-sm mt-2 max-w-xl mx-auto">Real reviews from families at {entityName}.</p>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {reviews.map((r) => <GBPReviewCard key={r.slug} review={r} />)}
+            </div>
+            <p className="text-center text-slate-400 text-xs mt-8">Reviews sourced from Google Business Profile — public. Displayed for proof-layer review purposes.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Education to Action */}
+      <section className="py-20 border-t border-slate-100" style={{ background: "linear-gradient(180deg, #f8fffe 0%, #ffffff 100%)" }}>
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="max-w-2xl mb-12">
+            <div className="inline-block bg-teal-50 border border-teal-200 text-teal-700 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4">Parent Resource Pathway</div>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1a2b47] leading-tight">Understanding Autism Support Near {address.city}</h2>
+            <p className="text-slate-500 mt-4 text-base leading-relaxed">
+              Families often start with questions before they start services. These resources connect common questions to local support available in {address.county}.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
+            {[
+              { title: "What is ABA Therapy?", copy: "ABA therapy uses structured, evidence-based techniques to build communication, social, and daily living skills in children with autism.", url: "https://www.biermanautism.com/services/aba-therapy/", linkLabel: "Learn about ABA →", icon: <IconABA /> },
+              { title: "What is ASD?", copy: "Autism Spectrum Disorder (ASD) describes a range of developmental differences. Understanding your child's profile is the first step toward the right support.", url: "https://www.biermanautism.com/autism-101/", linkLabel: "Autism 101 →", icon: <IconDiag /> },
+              { title: "What is Level 1 Autism?", copy: "Level 1 autism (formerly Asperger's) describes individuals who require some support. Many families search for clarity on what this means for their child.", url: "https://www.biermanautism.com/resources/blog/autism-level-1/", linkLabel: "Level 1 Autism →", icon: <IconSpeech /> },
+              { title: "Can Autism Be Cured?", copy: "Autism is not something to cure. Support focuses on helping each child build skills, independence, and confidence over time.", url: "https://www.biermanautism.com/autism-101/can-autism-be-cured/", linkLabel: "Read more →", icon: <IconOT /> },
+              { title: "Caregiver Training", copy: "Bierman offers caregiver training resources to help families support communication, daily routines, and behavior management at home.", url: "https://www.biermanautism.com/resources/caregiver-training/", linkLabel: "Caregiver resources →", icon: <IconABA /> },
+              { title: "ASD vs Autism", copy: "Many families ask whether ASD and autism are the same thing. This resource explains the terminology and what it means for your child's care.", url: "https://www.biermanautism.com/resources/blog/asd-vs-autism/", linkLabel: "ASD vs Autism →", icon: <IconDiag /> },
+            ].map((card) => (
+              <div key={card.title} className="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col gap-2">
+                <div className="flex items-center gap-3 mb-1">
+                  {card.icon}
+                  <h3 className="font-bold text-[#1a2b47] text-sm leading-snug">{card.title}</h3>
+                </div>
+                <p className="text-slate-500 text-sm leading-relaxed flex-1">{card.copy}</p>
+                <a href={card.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-teal-600 font-semibold text-xs hover:text-teal-800 transition-colors mt-1">
+                  {card.linkLabel} <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            ))}
+          </div>
+          <div className="flex flex-wrap items-center gap-3 pt-6 border-t border-slate-100">
+            <span className="text-slate-400 text-xs font-semibold uppercase tracking-wide mr-1">Quick links:</span>
+            {[
+              { label: "Autism 101", url: "https://www.biermanautism.com/autism-101/" },
+              { label: "Level 1 Autism", url: "https://www.biermanautism.com/resources/blog/autism-level-1/" },
+              { label: "ASD vs Autism", url: "https://www.biermanautism.com/resources/blog/asd-vs-autism/" },
+              { label: "Can Autism Be Cured?", url: "https://www.biermanautism.com/autism-101/can-autism-be-cured/" },
+              { label: "Caregiver Training", url: "https://www.biermanautism.com/resources/caregiver-training/" },
+              { label: "ABA Therapy Services", url: "https://www.biermanautism.com/services/aba-therapy/" },
+            ].map((link) => (
+              <a key={link.label} href={link.url} target="_blank" rel="noopener noreferrer" className="text-teal-700 text-xs font-medium hover:underline underline-offset-2">{link.label}</a>
+            ))}
+            <span className="text-slate-200 mx-1">|</span>
+            <p className="text-slate-400 text-xs">All URLs link to existing biermanautism.com content. Confirm before production use.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Caregiver Training */}
+      <section className="py-20 border-t border-slate-100" style={{ background: "linear-gradient(135deg, #f0fdfa 0%, #ecfdf5 50%, #f8fffe 100%)" }}>
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="flex flex-col lg:flex-row gap-12 items-start">
+            <div className="lg:w-80 flex-shrink-0">
+              <div className="inline-block bg-white border border-teal-200 text-teal-700 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4">Caregiver Support</div>
+              <h2 className="text-3xl font-bold text-[#1a2b47] leading-tight mb-4">Support for Families at Home</h2>
+              <p className="text-slate-500 text-sm leading-relaxed mb-6">Care does not stop when a child leaves the clinic. Bierman's caregiver training resources help families understand communication, daily routines, independence, and behavior support.</p>
+              <a href="https://www.biermanautism.com/resources/caregiver-training/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white font-semibold px-5 py-3 rounded-xl text-sm transition-colors shadow-sm">
+                Caregiver Training Resources <span aria-hidden="true">→</span>
+              </a>
+            </div>
+            <div className="flex-1 grid sm:grid-cols-2 gap-4">
+              {[
+                { title: "Functional Communication", copy: "Support children in expressing needs, building communication routines, and reducing frustration at home." },
+                { title: "Building Independence", copy: "Support daily living skills, routines, and independence outside the therapy setting." },
+                { title: "Managing Behaviors at Home", copy: "Understand behavior, create supportive routines, and work alongside your child's care team." },
+                { title: "School & Routine Transitions", copy: "Navigate transitions between therapy, school, and home routines with guidance from Bierman's clinical team." },
+              ].map((card) => (
+                <div key={card.title} className="bg-white rounded-2xl p-5 shadow-sm border border-white hover:shadow-md transition-all duration-200 flex gap-4 items-start">
+                  <div className="flex-shrink-0 mt-0.5">
+                    <svg viewBox="0 0 36 36" fill="none" className="w-7 h-7" aria-hidden="true"><circle cx="18" cy="18" r="14" fill="#ccfbf1" stroke="#0d9488" strokeWidth="2"/><path d="M11 21l4-4 3 3 7-7" stroke="#0d9488" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-[#1a2b47] text-sm mb-1">{card.title}</h3>
+                    <p className="text-slate-500 text-xs leading-relaxed">{card.copy}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Clinical Leadership */}
+      <section className="py-20 bg-[#1a2b47]">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="flex flex-col lg:flex-row gap-12 items-center">
+            <div className="lg:w-96 flex-shrink-0">
+              <div className="inline-block bg-teal-500/20 border border-teal-400/30 text-teal-300 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4">New Jersey Clinical Leadership</div>
+              <h2 className="text-3xl font-bold text-white leading-tight mb-4">The Team Behind Your Child's Care</h2>
+              <p className="text-slate-300 text-sm leading-relaxed">Bierman's New Jersey centers are supported by experienced clinical leaders who guide care quality, staff development, and family-centered service delivery across the region.</p>
+              <div className="mt-6 flex items-center gap-2">
+                <img src={SHARED_ASSETS.mascot} alt="Pilot the Penguin — Bierman mascot" className="w-10 h-10 object-contain" />
+                <span className="text-teal-300 text-xs font-medium">Bierman Autism Centers · New Jersey</span>
+              </div>
+            </div>
+            <div className="flex-1 grid sm:grid-cols-2 gap-6">
+              {clinicalLeadership.map((person) => (
+                <div key={person.name} className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/8 transition-all duration-200">
+                  <div className="relative">
+                    <img src={person.headshot} alt={`${person.name}, ${person.credentials} — ${person.role}, Bierman Autism Centers`} className="w-full aspect-square object-cover object-top" loading="lazy" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#1a2b47]/80 via-transparent to-transparent" />
+                    <div className="absolute bottom-3 left-4 right-4">
+                      <div className="text-white font-bold text-base leading-tight">{person.name}</div>
+                      <div className="text-teal-300 text-xs font-semibold">{person.credentials}</div>
+                    </div>
+                  </div>
+                  <div className="p-5">
+                    <div className="text-slate-300 text-sm font-semibold mb-1">{person.role.split(" · ")[0]}</div>
+                    <div className="text-slate-400 text-xs mb-4">{person.role.split(" · ")[1] ?? "New Jersey"}</div>
+                    <div className="flex flex-wrap gap-1.5">
+                      {person.tags.map((tag) => (
+                        <span key={tag} className="bg-teal-500/15 border border-teal-400/20 text-teal-300 text-xs px-2.5 py-0.5 rounded-full">{tag}</span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Nearby Locations */}
+      <section className="py-12 border-y border-slate-100" style={{ background: "linear-gradient(180deg, #f8fffe 0%, #f0fdfa 100%)" }}>
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-8">
+            <div className="text-teal-600 text-sm font-bold uppercase tracking-widest mb-2">Other New Jersey Locations</div>
+            <h2 className="text-2xl font-bold text-[#1a2b47]">More Bierman Centers Near You</h2>
+          </div>
+          <div className="flex flex-wrap justify-center gap-3">
+            {nearby.map((loc) => (
+              <a key={loc.name} href={loc.url} className="bg-white border border-teal-200 hover:border-teal-400 hover:bg-teal-50 text-[#1a2b47] font-medium px-5 py-2.5 rounded-xl text-sm transition-colors shadow-sm">
+                📍 {loc.name}
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 bg-white">
+        <div className="max-w-3xl mx-auto px-4">
+          <div className="text-center mb-10">
+            <div className="text-teal-600 text-sm font-bold uppercase tracking-widest mb-2">FAQ</div>
+            <h2 className="text-3xl font-bold text-[#1a2b47]">Frequently Asked Questions</h2>
+          </div>
+          <div className="space-y-3">
+            {faqs.map((faq, i) => <FAQItem key={i} faq={faq} index={i} />)}
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-16" style={{ background: "linear-gradient(135deg, #f0fdfa 0%, #e0f7f4 50%, #fef9f0 100%)" }}>
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#1a2b47]">Ready to Get Started in {address.city}?</h2>
+          <p className="text-slate-600 text-lg mb-8 max-w-2xl mx-auto">
+            Take the first step toward individualized autism support for your child. Our {address.city} team is here to guide your family through every stage of the process.
+          </p>
+          <a href={intakeUrl} target="_blank" rel="noopener noreferrer" className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-12 py-5 rounded-2xl text-xl transition-colors inline-block shadow-lg">
+            Request Services in {address.city} →
+          </a>
+          <p className="text-slate-400 text-xs mt-5">CTA routes to existing production intake system — production intake untouched by this proof layer.</p>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-[#1a2b47] text-white py-12">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <img src={SHARED_ASSETS.logo} alt="Bierman Autism Centers 20th Anniversary" className="h-12 w-auto mb-4" />
+              <p className="text-white/60 text-sm leading-relaxed">Bierman Autism Centers provides evidence-based ABA therapy and autism support services across 33 verified locations.</p>
+            </div>
+            <div>
+              <div className="font-bold text-white mb-3">{address.city} Location</div>
+              <div className="text-white/60 text-sm space-y-1">
+                <div>{address.street}</div>
+                <div>{address.city}, {address.state} {address.zip}</div>
+                <div><a href={`tel:${phone}`} className="hover:text-white transition-colors">{phone}</a></div>
+                <div className="text-white/40 text-xs mt-2">GBP Verified · {address.county}</div>
+              </div>
+            </div>
+            <div>
+              <div className="font-bold text-white mb-3">Services</div>
+              <div className="text-white/60 text-sm space-y-1">
+                {STANDARD_SERVICES.map((s) => <div key={s.title}>{s.title}</div>)}
+              </div>
+            </div>
+          </div>
+          <div className="border-t border-white/10 pt-6">
+            <div className="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
+              <p className="text-white/40 text-xs leading-relaxed">
+                <strong className="text-white/60">Proof Layer:</strong> Production-safe development environment for Bierman Autism Centers. noindex · nofollow · No tracking · No patient data collected. Does not affect the live production website.
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      {/* Mobile sticky action row */}
+      <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-white border-t border-slate-200 shadow-lg">
+        <div className="flex items-stretch">
+          <a href={intakeUrl} target="_blank" rel="noopener noreferrer" className="flex-1 flex flex-col items-center justify-center gap-0.5 py-3 bg-orange-500 hover:bg-orange-600 text-white text-xs font-semibold transition-colors">
+            <svg viewBox="0 0 20 20" fill="none" className="w-4 h-4" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><path d="M10 2a8 8 0 100 16A8 8 0 0010 2z"/><path d="M10 7v6M7 10h6" strokeLinecap="round"/></svg>
+            Request Services
+          </a>
+          <a href={`tel:${phone}`} className="flex-1 flex flex-col items-center justify-center gap-0.5 py-3 bg-teal-600 hover:bg-teal-700 text-white text-xs font-semibold transition-colors border-x border-teal-700">
+            <svg viewBox="0 0 20 20" fill="none" className="w-4 h-4" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><path d="M3 5a2 2 0 012-2h2l2 4-1.5 1.5a11 11 0 005 5L14 12l4 2v2a2 2 0 01-2 2C7.163 18 2 12.837 2 7a2 2 0 012-2z"/></svg>
+            Call
+          </a>
+          <a href={mapsDirectionsUrl} target="_blank" rel="noopener noreferrer" className="flex-1 flex flex-col items-center justify-center gap-0.5 py-3 bg-slate-700 hover:bg-slate-800 text-white text-xs font-semibold transition-colors">
+            <svg viewBox="0 0 20 20" fill="none" className="w-4 h-4" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><path d="M10 2a6 6 0 016 6c0 4-6 10-6 10S4 12 4 8a6 6 0 016-6z"/><circle cx="10" cy="8" r="2"/></svg>
+            Directions
+          </a>
+        </div>
+        {!isCleanPreview && (
+          <div className="bg-slate-50 border-t border-slate-100 text-center text-slate-400 text-xs py-1">
+            Mobile CTA row — proof-layer UX test · No tracking
+          </div>
+        )}
+      </div>
+
+      {/* Mobile sticky row spacer */}
+      <div className="h-16 md:hidden" aria-hidden="true" />
+
+    </div>
+  );
+}

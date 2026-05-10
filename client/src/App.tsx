@@ -4,16 +4,20 @@ import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import Home from "./pages/Home";
-import Piscataway from "./pages/Piscataway";
-
+import { LocationPage } from "./locations/LocationPage";
+import { ramseyData } from "./locations/data/ramsey";
+import { piscatawayData } from "./locations/data/piscataway";
 
 function Router() {
   return (
     <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/locations/nj/ramsey/"} component={Home} />
-      <Route path={"/locations/nj/piscataway/"} component={Piscataway} />
+      {/* Root — renders Ramsey as the default proof-layer entry point */}
+      <Route path={"/"} component={() => <LocationPage data={ramseyData} />} />
+      {/* Ramsey location page */}
+      <Route path={"/locations/nj/ramsey/"} component={() => <LocationPage data={ramseyData} />} />
+      {/* Piscataway location page */}
+      <Route path={"/locations/nj/piscataway/"} component={() => <LocationPage data={piscatawayData} />} />
+      {/* 404 */}
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
