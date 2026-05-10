@@ -86,7 +86,7 @@ const LOCATION = {
 };
 
 const NEARBY = [
-  { name: "Piscataway, NJ", url: "#" },
+  { name: "Piscataway, NJ", url: "/locations/nj/piscataway/" },
   { name: "West Orange, NJ", url: "#" },
   { name: "Princeton, NJ", url: "#" },
   { name: "Cranford, NJ", url: "#" },
