@@ -399,20 +399,13 @@ function GBPReviewCard({ review }: { review: typeof GBP_REVIEWS[0] }) {
 }
 
 function GBPReviewGrid() {
-  // Featured review (longest, most detailed) + 5 supporting
-  const [featured, ...rest] = GBP_REVIEWS;
   return (
     <div className="space-y-5">
-      {/* Featured review — full width on mobile, spans 2 cols on lg */}
-      <div className="grid lg:grid-cols-3 gap-5">
-        <div className="lg:col-span-1">
-          <GBPReviewCard review={featured} />
-        </div>
-        <div className="lg:col-span-2 grid sm:grid-cols-2 gap-5 content-start">
-          {rest.map((r) => (
-            <GBPReviewCard key={r.slug} review={r} />
-          ))}
-        </div>
+
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {GBP_REVIEWS.map((r) => (
+          <GBPReviewCard key={r.slug} review={r} />
+        ))}
       </div>
     </div>
   );
