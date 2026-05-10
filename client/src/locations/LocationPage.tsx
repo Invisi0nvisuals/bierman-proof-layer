@@ -24,10 +24,12 @@
  *   4. Done — no other files need to change.
  */
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Link } from "wouter";
+import { Helmet } from "react-helmet-async";
 import type { LocationData, LocationReview, LocationFaq } from "./types";
 import HealthcareDisclaimer from "@/components/HealthcareDisclaimer";
+import { buildLocationSchema } from "./schema";
 
 // ─── Shared static assets (same for all NJ locations) ────────────────────────
 
@@ -266,8 +268,19 @@ export function LocationPage({ data }: LocationPageProps) {
   const navTop = bannerVisible ? "32px" : "0px";
   const mapsDirectionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(`${address.street}, ${address.city}, ${address.state} ${address.zip}`)}`;
 
+  // Build per-route JSON-LD schema — memoized so it only recomputes when data changes
+  const schemaJson = useMemo(() => buildLocationSchema(data), [data]);
+
   return (
     <div className="min-h-screen bg-white font-sans">
+      {/* Per-route JSON-LD schema — injected dynamically so only this location's schema is present */}
+      <Helmet>
+        <title>{data.schema.pageTitle}</title>
+        <meta name="description" content={data.schema.pageDescription} />
+        <link rel="canonical" href={data.schema.pageUrl} />
+        <meta name="robots" content="noindex, nofollow" />
+        <script type="application/ld+json">{schemaJson}</script>
+      </Helmet>
 
       {/* Proof Layer Banner */}
       {bannerVisible && (
