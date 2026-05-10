@@ -1171,7 +1171,7 @@ export default function Home() {
                 copy: "ABA therapy uses individualized goals and structured support to help children build communication, daily living, social, and learning skills.",
                 accent: "#0d9488",
                 bg: "#f0fdfa",
-                url: "https://www.biermanautism.com/services/aba-therapy/",
+                url: "https://www.biermanautism.com/aba-therapy-services/",
                 linkLabel: "ABA Therapy Services",
                 icon: (
                   <svg viewBox="0 0 40 40" fill="none" className="w-8 h-8" aria-hidden="true">
@@ -1223,7 +1223,7 @@ export default function Home() {
               { label: "ASD vs Autism", url: "https://www.biermanautism.com/resources/blog/asd-vs-autism/" },
               { label: "Can Autism Be Cured?", url: "https://www.biermanautism.com/autism-101/can-autism-be-cured/" },
               { label: "Caregiver Training", url: "https://www.biermanautism.com/resources/caregiver-training/" },
-              { label: "ABA Therapy Services", url: "https://www.biermanautism.com/services/aba-therapy/" },
+              { label: "ABA Therapy Services", url: "https://www.biermanautism.com/aba-therapy-services/" },
             ].map((link) => (
               <a key={link.label} href={link.url} target="_blank" rel="noopener noreferrer"
                 className="text-teal-700 text-xs font-medium hover:underline underline-offset-2">

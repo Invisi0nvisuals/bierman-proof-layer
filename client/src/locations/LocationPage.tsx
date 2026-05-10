@@ -645,7 +645,7 @@ export function LocationPage({ data }: LocationPageProps) {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
             {[
-              { title: "What is ABA Therapy?", copy: "ABA therapy uses structured, evidence-based techniques to build communication, social, and daily living skills in children with autism.", url: "https://www.biermanautism.com/services/aba-therapy/", linkLabel: "Learn about ABA →", icon: <IconABA /> },
+              { title: "What is ABA Therapy?", copy: "ABA therapy uses structured, evidence-based techniques to build communication, social, and daily living skills in children with autism.", url: "https://www.biermanautism.com/aba-therapy-services/", linkLabel: "Learn about ABA →", icon: <IconABA /> },
               { title: "What is ASD?", copy: "Autism Spectrum Disorder (ASD) describes a range of developmental differences. Understanding your child's profile is the first step toward the right support.", url: "https://www.biermanautism.com/autism-101/", linkLabel: "Autism 101 →", icon: <IconDiag /> },
               { title: "What is Level 1 Autism?", copy: "Level 1 autism (formerly Asperger's) describes individuals who require some support. Many families search for clarity on what this means for their child.", url: "https://www.biermanautism.com/resources/blog/autism-level-1/", linkLabel: "Level 1 Autism →", icon: <IconSpeech /> },
               { title: "Can Autism Be Cured?", copy: "Autism is not something to cure. Support focuses on helping each child build skills, independence, and confidence over time.", url: "https://www.biermanautism.com/autism-101/can-autism-be-cured/", linkLabel: "Read more →", icon: <IconOT /> },
@@ -672,7 +672,7 @@ export function LocationPage({ data }: LocationPageProps) {
               { label: "ASD vs Autism", url: "https://www.biermanautism.com/resources/blog/asd-vs-autism/" },
               { label: "Can Autism Be Cured?", url: "https://www.biermanautism.com/autism-101/can-autism-be-cured/" },
               { label: "Caregiver Training", url: "https://www.biermanautism.com/resources/caregiver-training/" },
-              { label: "ABA Therapy Services", url: "https://www.biermanautism.com/services/aba-therapy/" },
+              { label: "ABA Therapy Services", url: "https://www.biermanautism.com/aba-therapy-services/" },
             ].map((link) => (
               <a key={link.label} href={link.url} target="_blank" rel="noopener noreferrer" className="text-teal-700 text-xs font-medium hover:underline underline-offset-2">{link.label}</a>
             ))}
