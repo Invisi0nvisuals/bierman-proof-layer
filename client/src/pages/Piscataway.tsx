@@ -9,7 +9,7 @@
  * - Navy (#1a2b47) used sparingly for headings and footer only
  *
  * PROOF LAYER — NOT PRODUCTION
- * noindex, nofollow | No tracking | No live forms | No patient data
+ * Open for crawling and indexation | No tracking | No live forms | No patient data
  *
  * VARIABLE SWAPS FROM RAMSEY TEMPLATE (9):
  * 1. location name: Piscataway, NJ
@@ -362,7 +362,7 @@ export default function Piscataway() {
       {/* Proof Layer Banner */}
       {!isCleanPreview && !bannerDismissed && (
         <div className="bg-[#1a2b47] text-white text-xs py-2.5 px-4 flex items-center justify-center gap-3 text-center" style={{ minHeight: "40px" }}>
-          <span>Proof Layer · Development Review Environment · noindex · nofollow · No tracking · No patient data</span>
+          <span>Proof Layer · Development Review Environment · Open for crawling · No tracking · No patient data</span>
           <DismissBtn onDismiss={dismissBanner} />
         </div>
       )}
@@ -891,7 +891,7 @@ export default function Piscataway() {
             <div className="text-xs space-y-1.5">
               <div className="text-slate-300 font-semibold text-sm mb-2">Proof Layer Notice</div>
               <div>This page is a development proof layer.</div>
-              <div>noindex · nofollow · No tracking · No patient data</div>
+              <div>Open for crawling and indexation · No tracking · No patient data</div>
               <div>Not affiliated with or replacing biermanautism.com</div>
               <div className="pt-2">
                 <a href="/" className="text-teal-400 hover:text-teal-300 transition-colors">← Ramsey Location</a>
