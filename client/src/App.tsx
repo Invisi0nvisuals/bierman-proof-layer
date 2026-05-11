@@ -23,7 +23,7 @@ function Router() {
   return (
     <Switch>
       {/* Root — renders Ramsey as the default proof-layer entry point */}
-      <Route path={"/"} component={() => <LocationPage data={ramseyData} />} />
+      <Route path={"/"} component={NJHub} />
       {/* ── NJ Location Pages ─────────────────────────────────────────────── */}
       <Route path={"/locations/nj/ramsey/"} component={() => <LocationPage data={ramseyData} />} />
       <Route path={"/locations/nj/piscataway/"} component={() => <LocationPage data={piscatawayData} />} />
@@ -34,7 +34,7 @@ function Router() {
       <Route path={"/locations/nj/berkeley-heights/"} component={() => <LocationPage data={berkeleyHeightsData} />} />
       <Route path={"/locations/nj/eatontown/"} component={() => <LocationPage data={eatontownData} />} />
       {/* ── Legal Pages ───────────────────────────────────────────────────── */}
-      <Route path={"/locations/nj/"} component={NJHub} />
+      <Route path={"/locations/nj/"} component={NJHub} /> {/* alias — canonical points to / */}
       <Route path={"/privacy-policy/"} component={PrivacyPolicy} />
       <Route path={"/terms-of-use/"} component={TermsOfUse} />
       <Route path={"/accessibility/"} component={Accessibility} />

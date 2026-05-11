@@ -33,7 +33,7 @@ import type { LocationData } from "@/locations/types";
 // ── Shared assets ─────────────────────────────────────────────────────────────
 const LOGO = "/manus-storage/bierman-logo-20th-anniversary_7f3b9e21.webp";
 const INTAKE_URL = "https://www.biermanautism.com/start-now/";
-const PAGE_URL = "https://bierman-proof-layer.manus.space/locations/nj/";
+const PAGE_URL = "https://bierman-proof-layer.manus.space/";
 
 // ── Location registry ─────────────────────────────────────────────────────────
 // Ordered by county cluster for geographic coherence
@@ -80,8 +80,7 @@ function buildNJHubSchema(): string {
         "@id": `${PAGE_URL}#breadcrumb`,
         itemListElement: [
           { "@type": "ListItem", position: 1, name: "Home", item: "https://bierman-proof-layer.manus.space/" },
-          { "@type": "ListItem", position: 2, name: "Locations", item: "https://bierman-proof-layer.manus.space/locations/" },
-          { "@type": "ListItem", position: 3, name: "New Jersey", item: PAGE_URL },
+          { "@type": "ListItem", position: 2, name: "New Jersey ABA Therapy Locations", item: PAGE_URL },
         ],
       },
       {
@@ -214,6 +213,7 @@ export default function NJHub() {
           name="description"
           content="Bierman Autism Centers operates 8 New Jersey locations providing ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism. Find a location near you."
         />
+        {/* Canonical: / is the root hub. /locations/nj/ is an alias that also points here. */}
         <link rel="canonical" href={PAGE_URL} />
         <meta name="robots" content="index, follow" />
         <script type="application/ld+json">{buildNJHubSchema()}</script>
