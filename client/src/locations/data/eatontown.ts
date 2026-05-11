@@ -142,7 +142,7 @@ export const eatontownData: LocationData = {
     { name: "Berkeley Heights, NJ", url: "/locations/nj/berkeley-heights/" },
     { name: "Cranford, NJ", url: "/locations/nj/cranford/" },
     { name: "West Orange, NJ", url: "/locations/nj/west-orange/" },
-    { name: "All 33 Locations →", url: "#" },
+    { name: "All 33 Locations →", url: "/" },
   ],
 
   // ── Clinical Leadership ───────────────────────────────────────────────────

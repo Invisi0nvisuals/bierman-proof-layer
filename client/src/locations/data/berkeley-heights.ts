@@ -142,7 +142,7 @@ export const berkeleyHeightsData: LocationData = {
     { name: "Parsippany, NJ", url: "/locations/nj/parsippany/" },
     { name: "Princeton, NJ", url: "/locations/nj/princeton/" },
     { name: "Piscataway, NJ", url: "/locations/nj/piscataway/" },
-    { name: "All 33 Locations →", url: "#" },
+    { name: "All 33 Locations →", url: "/" },
   ],
 
   // ── Clinical Leadership ───────────────────────────────────────────────────
