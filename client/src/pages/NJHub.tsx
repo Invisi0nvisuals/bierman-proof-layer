@@ -95,24 +95,6 @@ function buildNJHubSchema(): string {
           position: idx + 1,
           name: loc.entityName,
           url: loc.schema.pageUrl,
-          item: {
-            "@type": ["LocalBusiness", "MedicalClinic"],
-            name: loc.entityName,
-            url: loc.schema.pageUrl,
-            telephone: loc.phone,
-            image: loc.assets?.facility
-              ? `https://bierman-proof-layer.manus.space${loc.assets.facility}`
-              : LOGO_FULL,
-            priceRange: "$$",
-            address: {
-              "@type": "PostalAddress",
-              streetAddress: loc.address.street,
-              addressLocality: loc.address.city,
-              addressRegion: loc.address.state,
-              postalCode: loc.address.zip,
-              addressCountry: "US",
-            },
-          },
         })),
       },
     ],
