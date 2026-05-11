@@ -31,7 +31,7 @@ import { parsippanyData } from "@/locations/data/parsippany";
 import type { LocationData } from "@/locations/types";
 
 // ── Shared assets ─────────────────────────────────────────────────────────────
-const LOGO = "/manus-storage/bierman-logo-20th-anniversary_7f3b9e21.webp";
+const LOGO = "/manus-storage/bierman-logo-anniversary-20_3f19246b.webp";
 const INTAKE_URL = "https://www.biermanautism.com/start-now/";
 const PAGE_URL = "https://bierman-proof-layer.manus.space/";
 
