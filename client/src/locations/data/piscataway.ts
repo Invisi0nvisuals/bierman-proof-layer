@@ -219,14 +219,16 @@ export const piscatawayData: LocationData = {
     "Princeton", "West Windsor", "Plainsboro", "East Windsor",
   ],
 
+  // visitLogistics: Verbatim from biermanautism.com/location/piscataway/ — "Accessible Location" bullet (May 2026)
   visitLogistics: {
     parking: "Free parking",
     accessibility: "Wheelchair accessible",
-    landmarks: "Located on Centennial Ave",
+    landmarks: "Near major landmarks",
   },
 
+  // schoolRelationships: Verbatim from biermanautism.com/location/piscataway/ — "Why Choose" section (May 2026)
   schoolRelationships:
-    "Works with Piscataway Community Schools and surrounding area districts to support learner transitions.",
+    "Working relationships with Piscataway Community Schools and area districts",
 
   communityLinks: {
     facebookGroup: "https://www.facebook.com/groups/1428401534785409/",

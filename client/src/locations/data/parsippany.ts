@@ -245,14 +245,14 @@ export const parsippanyData: LocationData = {
     "Summit", "New Providence", "Berkeley Heights",
   ],
 
+  // visitLogistics: Verbatim from biermanautism.com/location/parsippany-nj/ — "Accessible Location" bullet (May 2026)
+  // Note: Coming Soon — no parking/accessibility listed yet; only highway access confirmed
   visitLogistics: {
-    parking: "On-site parking",
-    accessibility: "Wheelchair accessible",
-    landmarks: "Located directly off US-46, minutes from I-80 and I-287",
+    landmarks: "Directly off US-46 and minutes from I-80 and I-287",
   },
 
-  schoolRelationships:
-    "Plans to work with Parsippany-Troy Hills, Morris Plains, Hanover Township, East Hanover, Montville, Denville, and Morristown area districts to support continuity of services.",
+  // schoolRelationships: undefined — Coming Soon page does not yet have school district section (May 2026)
+  // schoolRelationships: undefined,
 
   communityLinks: {
     facebookGroup: "https://www.facebook.com/groups/1428401534785409/",

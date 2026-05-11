@@ -274,15 +274,16 @@ export const ramseyData: LocationData = {
   ],
 
   // visitLogistics: Confirmed from production page "Why Choose" section
+  // visitLogistics: Verbatim from biermanautism.com/location/ramsey/ — "Accessible Location" bullet (May 2026)
   visitLogistics: {
     parking: "Free parking",
     accessibility: "Wheelchair accessible",
-    landmarks: "Located off N Franklin Turnpike",
+    landmarks: "Near major landmarks",
   },
 
-  // schoolRelationships: Language from production page "Why Choose" section
+  // schoolRelationships: Verbatim from biermanautism.com/location/ramsey/ — "Why Choose" section (May 2026)
   schoolRelationships:
-    "Works with Ramsey Community Schools and surrounding area districts to support learner transitions.",
+    "Working relationships with Ramsey Community Schools and area districts",
 
   // communityLinks: Verified URLs from production page footer section
   communityLinks: {

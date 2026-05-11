@@ -234,14 +234,16 @@ export const cranfordData: LocationData = {
     "Chatham", "Madison", "Florham Park",
   ],
 
+  // visitLogistics: Verbatim from biermanautism.com/location/cranford-nj/ — "Accessible Location" bullet (May 2026)
   visitLogistics: {
-    parking: "On-site parking",
+    parking: "Free parking",
     accessibility: "Wheelchair accessible",
-    landmarks: "Located on Jackson Drive, accessible from Garden State Parkway, Route 22, and I-78",
+    landmarks: "Near major landmarks",
   },
 
+  // schoolRelationships: Verbatim from biermanautism.com/location/cranford-nj/ — "Why Choose" section (May 2026)
   schoolRelationships:
-    "Works with Cranford Public Schools, Westfield, Clark, Scotch Plains-Fanwood, and Union area districts to support continuity of services.",
+    "Working relationships with Cranford Public Schools and area districts",
 
   communityLinks: {
     facebookGroup: "https://www.facebook.com/groups/1428401534785409/",

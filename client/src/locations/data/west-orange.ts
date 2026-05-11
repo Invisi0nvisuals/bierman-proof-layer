@@ -233,14 +233,16 @@ export const westOrangeData: LocationData = {
     "Montclair", "Clifton", "Passaic", "Paterson", "Wayne",
   ],
 
+  // visitLogistics: Verbatim from biermanautism.com/location/west-orange-nj/ — "Accessible Location" bullet (May 2026)
   visitLogistics: {
     parking: "Free parking",
     accessibility: "Wheelchair accessible",
-    landmarks: "Located on Executive Drive",
+    landmarks: "Near major landmarks",
   },
 
+  // schoolRelationships: Verbatim from biermanautism.com/location/west-orange-nj/ — "Why Choose" section (May 2026)
   schoolRelationships:
-    "Works with West Orange Community Schools and surrounding area districts to support learner transitions.",
+    "Working relationships with West Orange Community Schools and area districts",
 
   communityLinks: {
     facebookGroup: "https://www.facebook.com/groups/1428401534785409/",

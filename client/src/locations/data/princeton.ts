@@ -219,14 +219,16 @@ export const princetonData: LocationData = {
     "Pennington", "Lambertville", "Flemington",
   ],
 
+  // visitLogistics: Verbatim from biermanautism.com/location/princeton-nj/ — "Accessible Location" bullet (May 2026)
   visitLogistics: {
     parking: "Free parking",
     accessibility: "Wheelchair accessible",
-    landmarks: "Located on Alexander Rd",
+    landmarks: "Near major landmarks",
   },
 
+  // schoolRelationships: Verbatim from biermanautism.com/location/princeton-nj/ — "Why Choose" section (May 2026)
   schoolRelationships:
-    "Works with Princeton Community Schools and surrounding area districts to support learner transitions.",
+    "Working relationships with Princeton Public Schools and area districts",
 
   communityLinks: {
     facebookGroup: "https://www.facebook.com/groups/1428401534785409/",
