@@ -15,6 +15,7 @@ import { parsippanyData } from "./locations/data/parsippany";
 import { berkeleyHeightsData } from "./locations/data/berkeley-heights";
 import { eatontownData } from "./locations/data/eatontown";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
+import NJHub from "@/pages/NJHub";
 import TermsOfUse from "@/pages/TermsOfUse";
 import Accessibility from "@/pages/Accessibility";
 
@@ -33,6 +34,7 @@ function Router() {
       <Route path={"/locations/nj/berkeley-heights/"} component={() => <LocationPage data={berkeleyHeightsData} />} />
       <Route path={"/locations/nj/eatontown/"} component={() => <LocationPage data={eatontownData} />} />
       {/* ── Legal Pages ───────────────────────────────────────────────────── */}
+      <Route path={"/locations/nj/"} component={NJHub} />
       <Route path={"/privacy-policy/"} component={PrivacyPolicy} />
       <Route path={"/terms-of-use/"} component={TermsOfUse} />
       <Route path={"/accessibility/"} component={Accessibility} />
