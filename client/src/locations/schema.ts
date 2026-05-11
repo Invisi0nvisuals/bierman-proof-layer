@@ -64,7 +64,7 @@ function calcAggregateRating(data: LocationData) {
 // ─── Main builder ─────────────────────────────────────────────────────────────
 
 export function buildLocationSchema(data: LocationData): string {
-  const { schema, address, geo, phone, openingHours } = data;
+  const { schema, address, geo, phone, openingHours, assets } = data;
   const base = schema.baseId.replace(/\/$/, ""); // strip trailing slash for @id fragments
 
   const rating = calcAggregateRating(data);
@@ -107,6 +107,10 @@ export function buildLocationSchema(data: LocationData): string {
     description: schema.pageDescription,
     url: schema.pageUrl,
     telephone: phone,
+    image: assets?.facility
+      ? `https://bierman-proof-layer.manus.space${assets.facility}`
+      : "https://bierman-proof-layer.manus.space/manus-storage/bierman-logo-anniversary-20_3f19246b.webp",
+    priceRange: "$$",
     address: {
       "@type": "PostalAddress",
       streetAddress: address.street,

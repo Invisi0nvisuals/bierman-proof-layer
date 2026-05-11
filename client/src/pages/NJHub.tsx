@@ -32,6 +32,7 @@ import type { LocationData } from "@/locations/types";
 
 // ── Shared assets ─────────────────────────────────────────────────────────────
 const LOGO = "/manus-storage/bierman-logo-anniversary-20_3f19246b.webp";
+const LOGO_FULL = "https://bierman-proof-layer.manus.space/manus-storage/bierman-logo-anniversary-20_3f19246b.webp";
 const INTAKE_URL = "https://www.biermanautism.com/start-now/";
 const PAGE_URL = "https://bierman-proof-layer.manus.space/";
 
@@ -99,6 +100,10 @@ function buildNJHubSchema(): string {
             name: loc.entityName,
             url: loc.schema.pageUrl,
             telephone: loc.phone,
+            image: loc.assets?.facility
+              ? `https://bierman-proof-layer.manus.space${loc.assets.facility}`
+              : LOGO_FULL,
+            priceRange: "$$",
             address: {
               "@type": "PostalAddress",
               streetAddress: loc.address.street,
