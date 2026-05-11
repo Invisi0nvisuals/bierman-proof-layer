@@ -577,6 +577,40 @@ export function LocationPage({ data }: LocationPageProps) {
         </div>
       </section>
 
+      {/* Safety & Security */}
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <div className="text-teal-600 text-sm font-bold uppercase tracking-widest mb-2">Safety &amp; Security</div>
+            <h2 className="text-3xl font-bold text-[#1a2b47] mb-4">Safety systems designed to give families peace of mind</h2>
+            <p className="text-slate-500 max-w-3xl mx-auto text-base leading-relaxed">
+              Families deserve to know that safety is supported by clear systems, trained teams, and thoughtful center procedures. Bierman's centers are designed with secure access, staff readiness, clinical safeguards, and family-facing transparency in mind.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
+            {[
+              { icon: "🔒", title: "Secure Access", desc: "Electronic access control and visitor check-in procedures help ensure that only authorized individuals enter the center." },
+              { icon: "✅", title: "Verified Pick-Up", desc: "A strict pick-up verification process helps ensure children are released only to approved caregivers." },
+              { icon: "📹", title: "Recorded Oversight", desc: "Secure, recorded video surveillance in key areas adds transparency and supports the ability to review and respond to concerns." },
+              { icon: "🩺", title: "Prepared Teams", desc: "Team members receive CPR, First Aid, and Safety-Care training within their first two weeks, with ongoing training throughout their careers." },
+              { icon: "🧼", title: "Health &amp; Hygiene", desc: "Cleaning and infection-prevention practices help keep centers healthy and ready for learning." },
+              { icon: "🚨", title: "Emergency Readiness", desc: "Teams regularly practice safety drills and follow established emergency response procedures." },
+              { icon: "🔍", title: "Screened Staff", desc: "Team members complete pre-employment screening and clearance processes." },
+              { icon: "💙", title: "Clinical Safety Practices", desc: "Evidence-based, compassionate care supports each learner in a secure, well-structured setting." },
+            ].map((item) => (
+              <div key={item.title} className="bg-slate-50 rounded-2xl p-5 border border-slate-100">
+                <div className="text-2xl mb-3">{item.icon}</div>
+                <h3 className="font-bold text-[#1a2b47] text-sm mb-2" dangerouslySetInnerHTML={{ __html: item.title }} />
+                <p className="text-slate-500 text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: item.desc }} />
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-slate-500 text-sm max-w-2xl mx-auto italic">
+            Safety isn't just a protocol. It's a promise. Every layer of protection is designed to support each child's well-being, progress, and family peace of mind.
+          </p>
+        </div>
+      </section>
+
       {/* Video Section — Meet Pilot the Penguin */}
       <section className="py-16 bg-slate-50">
         <div className="max-w-4xl mx-auto px-4 text-center">
