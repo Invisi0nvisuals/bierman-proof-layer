@@ -178,13 +178,73 @@ export const cranfordData: LocationData = {
     pageDescription:
       "Bierman Autism Centers in Cranford, NJ provides individualized ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism. Serving Union County and surrounding New Jersey communities.",
     videoUploadDate: "2023-10-19T00:00:00+00:00",
+    // areaServed: Verified from biermanautism.com/location/cranford-nj/ — "Counties Served" section (May 2026)
     areaServed: [
       { type: "AdministrativeArea", name: "Union County, NJ" },
       { type: "AdministrativeArea", name: "Essex County, NJ" },
+      { type: "AdministrativeArea", name: "Middlesex County, NJ" },
+      { type: "AdministrativeArea", name: "Somerset County, NJ" },
+      { type: "AdministrativeArea", name: "Morris County, NJ" },
       { type: "City", name: "Cranford, NJ" },
       { type: "City", name: "Westfield, NJ" },
       { type: "City", name: "Clark, NJ" },
       { type: "City", name: "Scotch Plains, NJ" },
+      { type: "City", name: "Fanwood, NJ" },
+      { type: "City", name: "Garwood, NJ" },
+      { type: "City", name: "Kenilworth, NJ" },
+      { type: "City", name: "Springfield, NJ" },
+      { type: "City", name: "Mountainside, NJ" },
+      { type: "City", name: "Union, NJ" },
+      { type: "City", name: "Roselle Park, NJ" },
+      { type: "City", name: "Linden, NJ" },
+      { type: "City", name: "Elizabeth, NJ" },
+      { type: "City", name: "Maplewood, NJ" },
+      { type: "City", name: "South Orange, NJ" },
+      { type: "City", name: "Millburn, NJ" },
+      { type: "City", name: "Newark, NJ" },
+      { type: "City", name: "Irvington, NJ" },
+      { type: "City", name: "Livingston, NJ" },
+      { type: "City", name: "Woodbridge, NJ" },
+      { type: "City", name: "Iselin, NJ" },
+      { type: "City", name: "Colonia, NJ" },
+      { type: "City", name: "Edison, NJ" },
+      { type: "City", name: "Metuchen, NJ" },
+      { type: "City", name: "Carteret, NJ" },
+      { type: "City", name: "Watchung, NJ" },
+      { type: "City", name: "Warren, NJ" },
+      { type: "City", name: "Green Brook, NJ" },
+      { type: "City", name: "Bridgewater, NJ" },
+      { type: "City", name: "Basking Ridge, NJ" },
+      { type: "City", name: "Chatham, NJ" },
+      { type: "City", name: "Madison, NJ" },
+      { type: "City", name: "Florham Park, NJ" },
     ],
+  },
+
+  // ── Verified Local Trust Fields ──────────────────────────────────────────────
+  // Source: biermanautism.com/location/cranford-nj/ (May 2026)
+
+  serviceArea: [
+    "Cranford", "Westfield", "Clark", "Scotch Plains", "Fanwood",
+    "Garwood", "Kenilworth", "Springfield", "Mountainside", "Union",
+    "Roselle Park", "Linden", "Elizabeth",
+    "Maplewood", "South Orange", "Millburn", "Newark", "Irvington", "Livingston",
+    "Woodbridge", "Iselin", "Colonia", "Edison", "Metuchen", "Carteret",
+    "Watchung", "Warren", "Green Brook", "Bridgewater", "Basking Ridge",
+    "Chatham", "Madison", "Florham Park",
+  ],
+
+  visitLogistics: {
+    parking: "On-site parking",
+    accessibility: "Wheelchair accessible",
+    landmarks: "Located on Jackson Drive, accessible from Garden State Parkway, Route 22, and I-78",
+  },
+
+  schoolRelationships:
+    "Works with Cranford Public Schools, Westfield, Clark, Scotch Plains-Fanwood, and Union area districts to support continuity of services.",
+
+  communityLinks: {
+    facebookGroup: "https://www.facebook.com/groups/1428401534785409/",
+    eventsUrl: "https://www.biermanautism.com/resources/sensory-friendly-events/",
   },
 };

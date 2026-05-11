@@ -230,13 +230,63 @@ export const ramseyData: LocationData = {
     pageDescription:
       "Bierman Autism Centers in Ramsey, NJ provides individualized ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism. Serving Bergen County and surrounding New Jersey communities.",
     videoUploadDate: "2023-10-19T00:00:00+00:00",
+    // areaServed: Verified from biermanautism.com/location/ramsey/ — "Counties Served" section (May 2026)
     areaServed: [
       { type: "AdministrativeArea", name: "Bergen County, NJ" },
       { type: "AdministrativeArea", name: "Passaic County, NJ" },
+      { type: "AdministrativeArea", name: "Morris County, NJ" },
+      { type: "AdministrativeArea", name: "Sussex County, NJ" },
       { type: "City", name: "Ramsey, NJ" },
       { type: "City", name: "Mahwah, NJ" },
-      { type: "City", name: "Ridgewood, NJ" },
-      { type: "City", name: "Paramus, NJ" },
+      { type: "City", name: "Allendale, NJ" },
+      { type: "City", name: "Saddle River, NJ" },
+      { type: "City", name: "Upper Saddle River, NJ" },
+      { type: "City", name: "Wyckoff, NJ" },
+      { type: "City", name: "Franklin Lakes, NJ" },
+      { type: "City", name: "Ringwood, NJ" },
+      { type: "City", name: "Wanaque, NJ" },
+      { type: "City", name: "Pompton Lakes, NJ" },
+      { type: "City", name: "Oakland, NJ" },
+      { type: "City", name: "Wayne, NJ" },
+      { type: "City", name: "Kinnelon, NJ" },
+      { type: "City", name: "Butler, NJ" },
+      { type: "City", name: "Boonton, NJ" },
+      { type: "City", name: "Mountain Lakes, NJ" },
+      { type: "City", name: "Parsippany, NJ" },
+      { type: "City", name: "Vernon, NJ" },
+      { type: "City", name: "Hamburg, NJ" },
+      { type: "City", name: "Franklin, NJ" },
+      { type: "City", name: "Sparta, NJ" },
+      { type: "City", name: "Andover, NJ" },
     ],
+  },
+
+  // ── Verified Local Trust Fields ────────────────────────────────────────────────────────────────
+  // Source: biermanautism.com/location/ramsey/ (May 2026)
+
+  // serviceArea: All towns listed in the "Counties Served" section
+  serviceArea: [
+    "Ramsey", "Mahwah", "Allendale", "Saddle River", "Upper Saddle River",
+    "Wyckoff", "Franklin Lakes",
+    "Ringwood", "Wanaque", "Pompton Lakes", "Oakland", "Wayne",
+    "Kinnelon", "Butler", "Boonton", "Mountain Lakes", "Parsippany",
+    "Vernon", "Hamburg", "Franklin", "Sparta", "Andover",
+  ],
+
+  // visitLogistics: Confirmed from production page "Why Choose" section
+  visitLogistics: {
+    parking: "Free parking",
+    accessibility: "Wheelchair accessible",
+    landmarks: "Located off N Franklin Turnpike",
+  },
+
+  // schoolRelationships: Language from production page "Why Choose" section
+  schoolRelationships:
+    "Works with Ramsey Community Schools and surrounding area districts to support learner transitions.",
+
+  // communityLinks: Verified URLs from production page footer section
+  communityLinks: {
+    facebookGroup: "https://www.facebook.com/groups/1428401534785409/",
+    eventsUrl: "https://www.biermanautism.com/resources/sensory-friendly-events/",
   },
 };

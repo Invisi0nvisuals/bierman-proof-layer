@@ -178,13 +178,58 @@ export const piscatawayData: LocationData = {
     pageDescription:
       "Bierman Autism Centers in Piscataway, NJ provides individualized ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism. Serving Middlesex County and surrounding New Jersey communities.",
     videoUploadDate: "2023-10-19T00:00:00+00:00",
+    // areaServed: Verified from biermanautism.com/location/piscataway/ — "Counties Served" section (May 2026)
     areaServed: [
       { type: "AdministrativeArea", name: "Middlesex County, NJ" },
       { type: "AdministrativeArea", name: "Somerset County, NJ" },
+      { type: "AdministrativeArea", name: "Union County, NJ" },
+      { type: "AdministrativeArea", name: "Mercer County, NJ" },
       { type: "City", name: "Piscataway, NJ" },
-      { type: "City", name: "Edison, NJ" },
       { type: "City", name: "New Brunswick, NJ" },
+      { type: "City", name: "Edison, NJ" },
+      { type: "City", name: "Woodbridge, NJ" },
+      { type: "City", name: "Perth Amboy, NJ" },
+      { type: "City", name: "Sayreville, NJ" },
       { type: "City", name: "South Plainfield, NJ" },
+      { type: "City", name: "Franklin, NJ" },
+      { type: "City", name: "Somerset, NJ" },
+      { type: "City", name: "Bound Brook, NJ" },
+      { type: "City", name: "Bridgewater, NJ" },
+      { type: "City", name: "Somerville, NJ" },
+      { type: "City", name: "Scotch Plains, NJ" },
+      { type: "City", name: "Fanwood, NJ" },
+      { type: "City", name: "Plainfield, NJ" },
+      { type: "City", name: "Westfield, NJ" },
+      { type: "City", name: "Clark, NJ" },
+      { type: "City", name: "Princeton, NJ" },
+      { type: "City", name: "West Windsor, NJ" },
+      { type: "City", name: "Plainsboro, NJ" },
+      { type: "City", name: "East Windsor, NJ" },
     ],
+  },
+
+  // ── Verified Local Trust Fields ────────────────────────────────────────────────────────────────
+  // Source: biermanautism.com/location/piscataway/ (May 2026)
+
+  serviceArea: [
+    "Piscataway", "New Brunswick", "Edison", "Woodbridge", "Perth Amboy",
+    "Sayreville", "South Plainfield",
+    "Franklin", "Somerset", "Bound Brook", "Bridgewater", "Somerville",
+    "Scotch Plains", "Fanwood", "Plainfield", "Westfield", "Clark",
+    "Princeton", "West Windsor", "Plainsboro", "East Windsor",
+  ],
+
+  visitLogistics: {
+    parking: "Free parking",
+    accessibility: "Wheelchair accessible",
+    landmarks: "Located on Centennial Ave",
+  },
+
+  schoolRelationships:
+    "Works with Piscataway Community Schools and surrounding area districts to support learner transitions.",
+
+  communityLinks: {
+    facebookGroup: "https://www.facebook.com/groups/1428401534785409/",
+    eventsUrl: "https://www.biermanautism.com/resources/sensory-friendly-events/",
   },
 };

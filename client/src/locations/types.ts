@@ -136,6 +136,29 @@ export interface LocationSchemaMetadata {
   additionalKnowsAbout?: string[];
 }
 
+// ─── Visit Logistics ─────────────────────────────────────────────────────────
+// Optional. Populate only with data confirmed from the production page or GBP listing.
+// Do not infer or fabricate parking/accessibility claims.
+
+export interface VisitLogistics {
+  /** e.g. "Free on-site parking" — only if stated on production page */
+  parking?: string;
+  /** e.g. "Wheelchair accessible facility" — only if stated on production page */
+  accessibility?: string;
+  /** e.g. "Located off N Franklin Turnpike" — only if stated on production page */
+  landmarks?: string;
+}
+
+// ─── Community Links ──────────────────────────────────────────────────────────
+// Optional. Verified URLs only — confirm each link is active before populating.
+
+export interface CommunityLinks {
+  /** Verified Facebook group URL for NJ autism community */
+  facebookGroup?: string;
+  /** Verified events page URL */
+  eventsUrl?: string;
+}
+
 // ─── Root LocationData ────────────────────────────────────────────────────────
 
 export interface LocationData {
@@ -199,4 +222,34 @@ export interface LocationData {
 
   // ── Schema ────────────────────────────────────────────────────────────────
   schema: LocationSchemaMetadata;
+
+  // ── Verified Local Trust Fields (Phase 2 — not yet rendered) ─────────────
+  // These fields are typed and available for Phase 3 visible modules.
+  // Populate ONLY with data confirmed from production pages or GBP listings.
+  // Leave undefined if data is unverified — do not use empty strings as placeholders.
+
+  /**
+   * Verified service area towns/cities from production page "Counties Served" section.
+   * Used for display in Phase 3 Service Area module.
+   * Source: biermanautism.com/location/{slug}/ — "Counties Served" section.
+   */
+  serviceArea?: string[];
+
+  /**
+   * Verified logistics from production page "Why Choose" section.
+   * Do not add parking/accessibility unless explicitly stated on the production page.
+   */
+  visitLogistics?: VisitLogistics;
+
+  /**
+   * School relationship language — use only "works with" or "collaborates with" phrasing.
+   * Do not claim official partnerships unless verified in writing.
+   * Source: production page "Why Choose" section only.
+   */
+  schoolRelationships?: string;
+
+  /**
+   * Verified community links — confirm URLs are active before populating.
+   */
+  communityLinks?: CommunityLinks;
 }

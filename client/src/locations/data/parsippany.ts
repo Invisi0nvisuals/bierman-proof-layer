@@ -184,13 +184,78 @@ export const parsippanyData: LocationData = {
     pageDescription:
       "Bierman Autism Centers is opening in Parsippany, NJ in Summer 2026. Pre-register now for ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism in Morris County.",
     videoUploadDate: "2023-10-19T00:00:00+00:00",
+    // areaServed: Verified from biermanautism.com/location/parsippany-nj/ — "Counties Served" section (May 2026)
     areaServed: [
       { type: "AdministrativeArea", name: "Morris County, NJ" },
       { type: "AdministrativeArea", name: "Essex County, NJ" },
+      { type: "AdministrativeArea", name: "Passaic County, NJ" },
+      { type: "AdministrativeArea", name: "Somerset County, NJ" },
+      { type: "AdministrativeArea", name: "Union County, NJ" },
       { type: "City", name: "Parsippany, NJ" },
+      { type: "City", name: "Morris Plains, NJ" },
       { type: "City", name: "Morristown, NJ" },
+      { type: "City", name: "Hanover Township, NJ" },
+      { type: "City", name: "East Hanover, NJ" },
       { type: "City", name: "Denville, NJ" },
+      { type: "City", name: "Mountain Lakes, NJ" },
+      { type: "City", name: "Boonton, NJ" },
       { type: "City", name: "Montville, NJ" },
+      { type: "City", name: "Randolph, NJ" },
+      { type: "City", name: "Roxbury, NJ" },
+      { type: "City", name: "Florham Park, NJ" },
+      { type: "City", name: "Madison, NJ" },
+      { type: "City", name: "Chatham, NJ" },
+      { type: "City", name: "Pequannock, NJ" },
+      { type: "City", name: "Lincoln Park, NJ" },
+      { type: "City", name: "Kinnelon, NJ" },
+      { type: "City", name: "Livingston, NJ" },
+      { type: "City", name: "West Orange, NJ" },
+      { type: "City", name: "Roseland, NJ" },
+      { type: "City", name: "Fairfield, NJ" },
+      { type: "City", name: "Millburn, NJ" },
+      { type: "City", name: "Caldwell, NJ" },
+      { type: "City", name: "Verona, NJ" },
+      { type: "City", name: "Wayne, NJ" },
+      { type: "City", name: "Totowa, NJ" },
+      { type: "City", name: "Little Falls, NJ" },
+      { type: "City", name: "Clifton, NJ" },
+      { type: "City", name: "Pompton Lakes, NJ" },
+      { type: "City", name: "Basking Ridge, NJ" },
+      { type: "City", name: "Bernardsville, NJ" },
+      { type: "City", name: "Bridgewater, NJ" },
+      { type: "City", name: "Summit, NJ" },
+      { type: "City", name: "New Providence, NJ" },
+      { type: "City", name: "Berkeley Heights, NJ" },
     ],
+  },
+
+  // ── Verified Local Trust Fields ──────────────────────────────────────────────
+  // Source: biermanautism.com/location/parsippany-nj/ (May 2026)
+  // Note: comingSoon = true — serviceArea populated for schema readiness only
+
+  serviceArea: [
+    "Parsippany", "Morris Plains", "Morristown", "Hanover Township",
+    "East Hanover", "Denville", "Mountain Lakes", "Boonton", "Montville",
+    "Randolph", "Roxbury", "Florham Park", "Madison", "Chatham",
+    "Pequannock", "Lincoln Park", "Kinnelon",
+    "Livingston", "West Orange", "Roseland", "Fairfield", "Millburn",
+    "Caldwell", "Verona",
+    "Wayne", "Totowa", "Little Falls", "Clifton", "Pompton Lakes",
+    "Basking Ridge", "Bernardsville", "Bridgewater",
+    "Summit", "New Providence", "Berkeley Heights",
+  ],
+
+  visitLogistics: {
+    parking: "On-site parking",
+    accessibility: "Wheelchair accessible",
+    landmarks: "Located directly off US-46, minutes from I-80 and I-287",
+  },
+
+  schoolRelationships:
+    "Plans to work with Parsippany-Troy Hills, Morris Plains, Hanover Township, East Hanover, Montville, Denville, and Morristown area districts to support continuity of services.",
+
+  communityLinks: {
+    facebookGroup: "https://www.facebook.com/groups/1428401534785409/",
+    eventsUrl: "https://www.biermanautism.com/resources/sensory-friendly-events/",
   },
 };

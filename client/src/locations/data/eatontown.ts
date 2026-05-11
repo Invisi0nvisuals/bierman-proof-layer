@@ -178,13 +178,59 @@ export const eatontownData: LocationData = {
     pageDescription:
       "Bierman Autism Centers in Eatontown, NJ provides individualized ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism. Serving Monmouth County and surrounding New Jersey communities.",
     videoUploadDate: "2023-10-19T00:00:00+00:00",
+    // areaServed: Verified from biermanautism.com/location/eatontown-nj/ — "Counties Served" section (May 2026)
     areaServed: [
       { type: "AdministrativeArea", name: "Monmouth County, NJ" },
+      { type: "AdministrativeArea", name: "Middlesex County, NJ" },
       { type: "AdministrativeArea", name: "Ocean County, NJ" },
+      { type: "AdministrativeArea", name: "Mercer County, NJ" },
       { type: "City", name: "Eatontown, NJ" },
       { type: "City", name: "Red Bank, NJ" },
-      { type: "City", name: "Long Branch, NJ" },
+      { type: "City", name: "Shrewsbury, NJ" },
       { type: "City", name: "Tinton Falls, NJ" },
+      { type: "City", name: "Long Branch, NJ" },
+      { type: "City", name: "Asbury Park, NJ" },
+      { type: "City", name: "Neptune, NJ" },
+      { type: "City", name: "Old Bridge, NJ" },
+      { type: "City", name: "Sayreville, NJ" },
+      { type: "City", name: "South Amboy, NJ" },
+      { type: "City", name: "Perth Amboy, NJ" },
+      { type: "City", name: "Edison, NJ" },
+      { type: "City", name: "Lakewood, NJ" },
+      { type: "City", name: "Toms River, NJ" },
+      { type: "City", name: "Brick, NJ" },
+      { type: "City", name: "Point Pleasant, NJ" },
+      { type: "City", name: "Manasquan, NJ" },
+      { type: "City", name: "Hamilton, NJ" },
+      { type: "City", name: "Trenton, NJ" },
+      { type: "City", name: "Princeton, NJ" },
+      { type: "City", name: "Lawrence, NJ" },
+      { type: "City", name: "Hopewell, NJ" },
     ],
+  },
+
+  // ── Verified Local Trust Fields ──────────────────────────────────────────────
+  // Source: biermanautism.com/location/eatontown-nj/ (May 2026)
+
+  serviceArea: [
+    "Eatontown", "Red Bank", "Shrewsbury", "Tinton Falls", "Long Branch",
+    "Asbury Park", "Neptune",
+    "Old Bridge", "Sayreville", "South Amboy", "Perth Amboy", "Edison",
+    "Lakewood", "Toms River", "Brick", "Point Pleasant", "Manasquan",
+    "Hamilton", "Trenton", "Princeton", "Lawrence", "Hopewell",
+  ],
+
+  visitLogistics: {
+    parking: "Free parking",
+    accessibility: "Wheelchair accessible",
+    landmarks: "Located on Christopher Way",
+  },
+
+  schoolRelationships:
+    "Works with Eatontown Community Schools and surrounding area districts to support learner transitions.",
+
+  communityLinks: {
+    facebookGroup: "https://www.facebook.com/groups/1428401534785409/",
+    eventsUrl: "https://www.biermanautism.com/resources/sensory-friendly-events/",
   },
 };

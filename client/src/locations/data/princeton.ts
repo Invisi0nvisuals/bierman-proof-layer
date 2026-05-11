@@ -178,13 +178,58 @@ export const princetonData: LocationData = {
     pageDescription:
       "Bierman Autism Centers in Princeton, NJ provides individualized ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism. Serving Mercer County and surrounding New Jersey communities.",
     videoUploadDate: "2023-10-19T00:00:00+00:00",
+    // areaServed: Verified from biermanautism.com/location/princeton-nj/ — "Counties Served" section (May 2026)
     areaServed: [
       { type: "AdministrativeArea", name: "Mercer County, NJ" },
+      { type: "AdministrativeArea", name: "Middlesex County, NJ" },
       { type: "AdministrativeArea", name: "Somerset County, NJ" },
+      { type: "AdministrativeArea", name: "Hunterdon County, NJ" },
       { type: "City", name: "Princeton, NJ" },
-      { type: "City", name: "Trenton, NJ" },
+      { type: "City", name: "West Windsor, NJ" },
+      { type: "City", name: "Plainsboro, NJ" },
+      { type: "City", name: "East Windsor, NJ" },
       { type: "City", name: "Hamilton, NJ" },
-      { type: "City", name: "Lawrence Township, NJ" },
+      { type: "City", name: "Trenton, NJ" },
+      { type: "City", name: "Lawrence, NJ" },
+      { type: "City", name: "Hopewell, NJ" },
+      { type: "City", name: "South Brunswick, NJ" },
+      { type: "City", name: "North Brunswick, NJ" },
+      { type: "City", name: "Franklin, NJ" },
+      { type: "City", name: "New Brunswick, NJ" },
+      { type: "City", name: "Edison, NJ" },
+      { type: "City", name: "Montgomery, NJ" },
+      { type: "City", name: "Hillsborough, NJ" },
+      { type: "City", name: "Manville, NJ" },
+      { type: "City", name: "Somerville, NJ" },
+      { type: "City", name: "Bridgewater, NJ" },
+      { type: "City", name: "Pennington, NJ" },
+      { type: "City", name: "Lambertville, NJ" },
+      { type: "City", name: "Flemington, NJ" },
     ],
+  },
+
+  // ── Verified Local Trust Fields ──────────────────────────────────────────────
+  // Source: biermanautism.com/location/princeton-nj/ (May 2026)
+
+  serviceArea: [
+    "Princeton", "West Windsor", "Plainsboro", "East Windsor", "Hamilton",
+    "Trenton", "Lawrence", "Hopewell",
+    "South Brunswick", "North Brunswick", "Franklin", "New Brunswick", "Edison",
+    "Montgomery", "Hillsborough", "Manville", "Somerville", "Bridgewater",
+    "Pennington", "Lambertville", "Flemington",
+  ],
+
+  visitLogistics: {
+    parking: "Free parking",
+    accessibility: "Wheelchair accessible",
+    landmarks: "Located on Alexander Rd",
+  },
+
+  schoolRelationships:
+    "Works with Princeton Community Schools and surrounding area districts to support learner transitions.",
+
+  communityLinks: {
+    facebookGroup: "https://www.facebook.com/groups/1428401534785409/",
+    eventsUrl: "https://www.biermanautism.com/resources/sensory-friendly-events/",
   },
 };

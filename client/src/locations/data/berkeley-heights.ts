@@ -178,13 +178,56 @@ export const berkeleyHeightsData: LocationData = {
     pageDescription:
       "Bierman Autism Centers in Berkeley Heights, NJ provides individualized ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism. Serving Union County and surrounding New Jersey communities.",
     videoUploadDate: "2023-10-19T00:00:00+00:00",
+    // areaServed: Verified from biermanautism.com/location/berkeley-heights-nj/ — "Counties Served" section (May 2026)
     areaServed: [
       { type: "AdministrativeArea", name: "Union County, NJ" },
       { type: "AdministrativeArea", name: "Somerset County, NJ" },
+      { type: "AdministrativeArea", name: "Morris County, NJ" },
+      { type: "AdministrativeArea", name: "Essex County, NJ" },
       { type: "City", name: "Berkeley Heights, NJ" },
       { type: "City", name: "Summit, NJ" },
       { type: "City", name: "New Providence, NJ" },
+      { type: "City", name: "Mountainside, NJ" },
+      { type: "City", name: "Scotch Plains, NJ" },
+      { type: "City", name: "Fanwood, NJ" },
       { type: "City", name: "Westfield, NJ" },
+      { type: "City", name: "Watchung, NJ" },
+      { type: "City", name: "Warren, NJ" },
+      { type: "City", name: "Bridgewater, NJ" },
+      { type: "City", name: "Bound Brook, NJ" },
+      { type: "City", name: "Somerville, NJ" },
+      { type: "City", name: "Florham Park, NJ" },
+      { type: "City", name: "Morris Plains, NJ" },
+      { type: "City", name: "Morristown, NJ" },
+      { type: "City", name: "Millburn, NJ" },
+      { type: "City", name: "Maplewood, NJ" },
+      { type: "City", name: "South Orange, NJ" },
+      { type: "City", name: "West Orange, NJ" },
     ],
+  },
+
+  // ── Verified Local Trust Fields ──────────────────────────────────────────────
+  // Source: biermanautism.com/location/berkeley-heights-nj/ (May 2026)
+
+  serviceArea: [
+    "Berkeley Heights", "Summit", "New Providence", "Mountainside",
+    "Scotch Plains", "Fanwood", "Westfield",
+    "Watchung", "Warren", "Bridgewater", "Bound Brook", "Somerville",
+    "Florham Park", "Morris Plains", "Morristown",
+    "Millburn", "Maplewood", "South Orange", "West Orange",
+  ],
+
+  visitLogistics: {
+    parking: "Free parking",
+    accessibility: "Wheelchair accessible",
+    landmarks: "Located on Springfield Ave",
+  },
+
+  schoolRelationships:
+    "Works with Berkeley Heights Community Schools and surrounding area districts to support learner transitions.",
+
+  communityLinks: {
+    facebookGroup: "https://www.facebook.com/groups/1428401534785409/",
+    eventsUrl: "https://www.biermanautism.com/resources/sensory-friendly-events/",
   },
 };

@@ -190,15 +190,60 @@ export const westOrangeData: LocationData = {
     pageDescription:
       "Bierman Autism Centers in West Orange, NJ provides individualized ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism. Serving Essex County, Morris County, Union County, and surrounding New Jersey communities.",
     videoUploadDate: "2023-10-19T00:00:00+00:00",
+    // areaServed: Verified from biermanautism.com/location/west-orange-nj/ — "Counties Served" section (May 2026)
     areaServed: [
       { type: "AdministrativeArea", name: "Essex County, NJ" },
       { type: "AdministrativeArea", name: "Morris County, NJ" },
       { type: "AdministrativeArea", name: "Union County, NJ" },
+      { type: "AdministrativeArea", name: "Passaic County, NJ" },
       { type: "City", name: "West Orange, NJ" },
-      { type: "City", name: "Livingston, NJ" },
+      { type: "City", name: "Orange, NJ" },
+      { type: "City", name: "East Orange, NJ" },
+      { type: "City", name: "South Orange, NJ" },
+      { type: "City", name: "Maplewood, NJ" },
       { type: "City", name: "Millburn, NJ" },
+      { type: "City", name: "Livingston, NJ" },
+      { type: "City", name: "Roseland, NJ" },
       { type: "City", name: "Morristown, NJ" },
+      { type: "City", name: "Madison, NJ" },
+      { type: "City", name: "Chatham, NJ" },
+      { type: "City", name: "Florham Park, NJ" },
+      { type: "City", name: "Morris Plains, NJ" },
       { type: "City", name: "Summit, NJ" },
+      { type: "City", name: "New Providence, NJ" },
+      { type: "City", name: "Berkeley Heights, NJ" },
+      { type: "City", name: "Mountainside, NJ" },
+      { type: "City", name: "Springfield, NJ" },
+      { type: "City", name: "Montclair, NJ" },
+      { type: "City", name: "Clifton, NJ" },
+      { type: "City", name: "Passaic, NJ" },
+      { type: "City", name: "Paterson, NJ" },
+      { type: "City", name: "Wayne, NJ" },
     ],
+  },
+
+  // ── Verified Local Trust Fields ──────────────────────────────────────────────
+  // Source: biermanautism.com/location/west-orange-nj/ (May 2026)
+
+  serviceArea: [
+    "West Orange", "Orange", "East Orange", "South Orange", "Maplewood",
+    "Millburn", "Livingston", "Roseland",
+    "Morristown", "Madison", "Chatham", "Florham Park", "Morris Plains",
+    "Summit", "New Providence", "Berkeley Heights", "Mountainside", "Springfield",
+    "Montclair", "Clifton", "Passaic", "Paterson", "Wayne",
+  ],
+
+  visitLogistics: {
+    parking: "Free parking",
+    accessibility: "Wheelchair accessible",
+    landmarks: "Located on Executive Drive",
+  },
+
+  schoolRelationships:
+    "Works with West Orange Community Schools and surrounding area districts to support learner transitions.",
+
+  communityLinks: {
+    facebookGroup: "https://www.facebook.com/groups/1428401534785409/",
+    eventsUrl: "https://www.biermanautism.com/resources/sensory-friendly-events/",
   },
 };
