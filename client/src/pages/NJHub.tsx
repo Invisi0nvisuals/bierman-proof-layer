@@ -202,14 +202,14 @@ export default function NJHub() {
         />
         {/* Canonical: / is the root hub. /locations/nj/ is an alias that also points here. */}
         <link rel="canonical" href={PAGE_URL} />
-        <meta name="robots" content="noindex, nofollow" />
+        <meta name="robots" content="index, follow" />
         <script type="application/ld+json">{buildNJHubSchema()}</script>
       </Helmet>
 
       {/* Proof Layer Banner */}
       {bannerVisible && (
         <div className="bg-slate-100 border-b border-slate-200 text-slate-500 py-1.5 px-4 text-xs font-medium sticky top-0 z-50 flex items-center justify-center gap-2">
-          <span>Pre-launch Review Environment · Noindex · No tracking · No patient data</span>
+          <span>Pre-launch Review Environment · Crawling Enabled · No tracking · No patient data</span>
           <button
             onClick={dismiss}
             className="ml-2 text-slate-400 hover:text-slate-600 transition-colors"
@@ -458,7 +458,7 @@ export default function NJHub() {
             </div>
             <div className="mt-4 bg-white/5 border border-white/10 rounded-xl p-3 text-center">
               <p className="text-white/30 text-xs leading-relaxed">
-                <strong className="text-white/50">Proof-layer environment:</strong> No patient data collected · No cookies or tracking active · Pre-launch review environment · Noindex · Does not affect the live production website at biermanautism.com
+                <strong className="text-white/50">Proof-layer environment:</strong> No patient data collected · No cookies or tracking active · Pre-launch review environment · Crawling enabled · Does not affect the live production website at biermanautism.com
               </p>
             </div>
           </div>

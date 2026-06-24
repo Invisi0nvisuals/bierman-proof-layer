@@ -1,6 +1,4 @@
-# Bierman Autism Centers — Proof Layer (Development/Negotiation Environment)
-# This environment is not for public indexing.
-# Noindex/nofollow applied during pre-launch negotiation phase.
-# To re-enable crawling after launch approval, restore Allow: / and Sitemap directives.
+# Bierman Autism Centers — NJ Hub Pilot (Pre-Launch Review Environment)
+# Crawling enabled for Rich Results validation and pre-launch review.
 User-agent: *
-Disallow: /
+Allow: /
