@@ -141,8 +141,8 @@ export const cranfordData: LocationData = {
     { name: "West Orange, NJ", url: "/locations/nj/west-orange/" },
     { name: "Princeton, NJ", url: "/locations/nj/princeton/" },
     { name: "Piscataway, NJ", url: "/locations/nj/piscataway/" },
-    { name: "Parsippany, NJ", url: "/locations/nj/parsippany/" },
-    { name: "All 33 Locations →", url: "/" },
+    { name: "Roseland, NJ", url: "/locations/nj/roseland/" },
+    { name: "All 35 Locations →", url: "/" },
   ],
 
   // ── Clinical Leadership ───────────────────────────────────────────────────

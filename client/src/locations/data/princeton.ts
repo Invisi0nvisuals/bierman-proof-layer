@@ -141,8 +141,8 @@ export const princetonData: LocationData = {
     { name: "Cranford, NJ", url: "/locations/nj/cranford/" },
     { name: "Eatontown, NJ", url: "/locations/nj/eatontown/" },
     { name: "Berkeley Heights, NJ", url: "/locations/nj/berkeley-heights/" },
-    { name: "Parsippany, NJ", url: "/locations/nj/parsippany/" },
-    { name: "All 33 Locations →", url: "/" },
+    { name: "Moorestown, NJ", url: "/locations/nj/moorestown/" },
+    { name: "All 35 Locations →", url: "/" },
   ],
 
   // ── Clinical Leadership ───────────────────────────────────────────────────

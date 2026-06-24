@@ -141,8 +141,8 @@ export const eatontownData: LocationData = {
     { name: "Piscataway, NJ", url: "/locations/nj/piscataway/" },
     { name: "Berkeley Heights, NJ", url: "/locations/nj/berkeley-heights/" },
     { name: "Cranford, NJ", url: "/locations/nj/cranford/" },
-    { name: "West Orange, NJ", url: "/locations/nj/west-orange/" },
-    { name: "All 33 Locations →", url: "/" },
+    { name: "Moorestown, NJ", url: "/locations/nj/moorestown/" },
+    { name: "All 35 Locations →", url: "/" },
   ],
 
   // ── Clinical Leadership ───────────────────────────────────────────────────

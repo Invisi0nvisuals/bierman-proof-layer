@@ -147,8 +147,8 @@ export const parsippanyData: LocationData = {
     { name: "Cranford, NJ", url: "/locations/nj/cranford/" },
     { name: "Berkeley Heights, NJ", url: "/locations/nj/berkeley-heights/" },
     { name: "Ramsey, NJ", url: "/locations/nj/ramsey/" },
-    { name: "Princeton, NJ", url: "/locations/nj/princeton/" },
-    { name: "All 33 Locations →", url: "/" },
+    { name: "Roseland, NJ", url: "/locations/nj/roseland/" },
+    { name: "All 35 Locations →", url: "/" },
   ],
 
   // ── Clinical Leadership ───────────────────────────────────────────────────
