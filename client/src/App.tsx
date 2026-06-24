@@ -14,6 +14,8 @@ import { cranfordData } from "./locations/data/cranford";
 import { parsippanyData } from "./locations/data/parsippany";
 import { berkeleyHeightsData } from "./locations/data/berkeley-heights";
 import { eatontownData } from "./locations/data/eatontown";
+import { moorestownData } from "./locations/data/moorestown";
+import { roselandData } from "./locations/data/roseland";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import NJHub from "@/pages/NJHub";
 import TermsOfUse from "@/pages/TermsOfUse";
@@ -33,6 +35,8 @@ function Router() {
       <Route path={"/locations/nj/parsippany/"} component={() => <LocationPage data={parsippanyData} />} />
       <Route path={"/locations/nj/berkeley-heights/"} component={() => <LocationPage data={berkeleyHeightsData} />} />
       <Route path={"/locations/nj/eatontown/"} component={() => <LocationPage data={eatontownData} />} />
+      <Route path={"/locations/nj/moorestown/"} component={() => <LocationPage data={moorestownData} />} />
+      <Route path={"/locations/nj/roseland/"} component={() => <LocationPage data={roselandData} />} />
       {/* ── Legal Pages ───────────────────────────────────────────────────── */}
       <Route path={"/locations/nj/"} component={NJHub} /> {/* alias — canonical points to / */}
       <Route path={"/privacy-policy/"} component={PrivacyPolicy} />

@@ -6,7 +6,7 @@
  * Matches LocationPage visual language exactly.
  *
  * Purpose:
- *   - Internal linking hub for all 8 NJ location pages
+ *   - Internal linking hub for all 10 NJ location pages
  *   - Provides Googlebot a clean crawl entry point for the full NJ cluster
  *   - Injects BreadcrumbList + ItemList schema for the NJ state page
  *
@@ -28,6 +28,8 @@ import { cranfordData } from "@/locations/data/cranford";
 import { berkeleyHeightsData } from "@/locations/data/berkeley-heights";
 import { eatontownData } from "@/locations/data/eatontown";
 import { parsippanyData } from "@/locations/data/parsippany";
+import { moorestownData } from "@/locations/data/moorestown";
+import { roselandData } from "@/locations/data/roseland";
 import type { LocationData } from "@/locations/types";
 
 // ── Shared assets ─────────────────────────────────────────────────────────────
@@ -47,6 +49,8 @@ const NJ_LOCATIONS: LocationData[] = [
   princetonData,
   eatontownData,
   parsippanyData,
+  moorestownData,
+  roselandData,
 ];
 
 // County group labels for visual clustering
@@ -58,6 +62,7 @@ const COUNTY_GROUPS: Record<string, string> = {
   "Mercer County":   "Central NJ — Mercer County",
   "Monmouth County": "Shore — Monmouth County",
   "Morris County":   "Northern NJ — Morris County",
+  "Burlington County": "South Jersey — Burlington County",
 };
 
 // ── Schema builder ────────────────────────────────────────────────────────────
@@ -71,7 +76,7 @@ function buildNJHubSchema(): string {
         name: "ABA Therapy in New Jersey | Bierman Autism Centers",
         url: PAGE_URL,
         description:
-          "Bierman Autism Centers operates 8 New Jersey locations providing ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism.",
+          "Bierman Autism Centers operates 10 New Jersey locations providing ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism.",
         inLanguage: "en-US",
         isPartOf: { "@id": "https://bierman-proof-layer.manus.space/#website" },
         breadcrumb: { "@id": `${PAGE_URL}#breadcrumb` },
@@ -198,7 +203,7 @@ export default function NJHub() {
         <title>ABA Therapy in New Jersey | Bierman Autism Centers</title>
         <meta
           name="description"
-          content="Bierman Autism Centers operates 8 New Jersey locations providing ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism. Find a location near you."
+          content="Bierman Autism Centers operates 10 New Jersey locations providing ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism. Find a location near you."
         />
         {/* Canonical: / is the root hub. /locations/nj/ is an alias that also points here. */}
         <link rel="canonical" href={PAGE_URL} />
