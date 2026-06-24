@@ -40,7 +40,7 @@ export const parsippanyData: LocationData = {
   },
 
   // ── URLs ──────────────────────────────────────────────────────────────────
-  intakeUrl: "https://www.biermanautism.com/start-now/?loc=parsippany-nj",
+  intakeUrl: "https://www.biermanautism.com/start-now/?loc=parsippany-nj&utm_source=local-hub&utm_medium=organic&utm_campaign=nj-pilot&utm_content=parsippany-nj-location-page",
   gbpUrl: "https://maps.app.goo.gl/5MznVvcqg1AkxsJ27",
   mapEmbedUrl:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3015.0!2d-74.4265!3d40.8584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s2001+US-46%2C+Parsippany%2C+NJ+07054!5e0!3m2!1sen!2sus!4v1620000000005",
@@ -148,7 +148,7 @@ export const parsippanyData: LocationData = {
     { name: "Berkeley Heights, NJ", url: "/locations/nj/berkeley-heights/" },
     { name: "Ramsey, NJ", url: "/locations/nj/ramsey/" },
     { name: "Roseland, NJ", url: "/locations/nj/roseland/" },
-    { name: "All 35 Locations →", url: "/" },
+    { name: "All 10 NJ Locations →", url: "/" },
   ],
 
   // ── Clinical Leadership ───────────────────────────────────────────────────

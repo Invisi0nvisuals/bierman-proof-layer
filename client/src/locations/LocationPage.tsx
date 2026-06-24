@@ -24,7 +24,7 @@
  *   4. Done — no other files need to change.
  */
 
-import { useState, useEffect, useMemo } from "react";
+import { useState, useMemo } from "react";
 import { Link } from "wouter";
 import { Helmet } from "react-helmet-async";
 import { PILOT_VIDEO } from "./types";
@@ -232,41 +232,6 @@ interface LocationPageProps {
 
 export function LocationPage({ data }: LocationPageProps) {
   const { address, phone, intakeUrl, gbpUrl, mapEmbedUrl, youtubeId, displayName, entityName, heroDescription, insuranceText, reviews, faqs, nearby, clinicalLeadership, assets } = data;
-
-  // Session-storage keys scoped to location slug to prevent cross-location bleed
-  const sk = (key: string) => `pl_${key}_${data.slug}`;
-
-  const [isCleanPreview, setIsCleanPreview] = useState(false);
-  const [bannerVisible, setBannerVisible] = useState(true);
-  const [videoNoticeVisible, setVideoNoticeVisible] = useState(true);
-  const [reviewsNoticeVisible, setReviewsNoticeVisible] = useState(true);
-  const [phoneNoticeVisible, setPhoneNoticeVisible] = useState(true);
-  const [hoursNoticeVisible, setHoursNoticeVisible] = useState(true);
-  const [visitCardNoticeVisible, setVisitCardNoticeVisible] = useState(true);
-
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    if (params.get("preview") === "clean") {
-      setIsCleanPreview(true);
-      setBannerVisible(false);
-      setVideoNoticeVisible(false);
-      setReviewsNoticeVisible(false);
-      return;
-    }
-    if (sessionStorage.getItem(sk("banner_dismissed")) === "1") setBannerVisible(false);
-    if (sessionStorage.getItem(sk("video_notice_dismissed")) === "1") setVideoNoticeVisible(false);
-    if (sessionStorage.getItem(sk("reviews_notice_dismissed")) === "1") setReviewsNoticeVisible(false);
-    if (sessionStorage.getItem(sk("phone_notice_dismissed")) === "1") setPhoneNoticeVisible(false);
-    if (sessionStorage.getItem(sk("hours_notice_dismissed")) === "1") setHoursNoticeVisible(false);
-    if (sessionStorage.getItem(sk("visit_card_dismissed")) === "1") setVisitCardNoticeVisible(false);
-  }, [data.slug]);
-
-  const dismiss = (key: string, setter: (v: boolean) => void, val: boolean) => {
-    sessionStorage.setItem(sk(key), "1");
-    setter(val);
-  };
-
-  const navTop = bannerVisible ? "32px" : "0px";
   const mapsDirectionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(`${address.street}, ${address.city}, ${address.state} ${address.zip}`)}`;
 
   // Build per-route JSON-LD schema — memoized so it only recomputes when data changes
@@ -283,16 +248,8 @@ export function LocationPage({ data }: LocationPageProps) {
         <script type="application/ld+json">{schemaJson}</script>
       </Helmet>
 
-      {/* Proof Layer Banner */}
-      {bannerVisible && (
-        <div className="bg-slate-100 border-b border-slate-200 text-slate-500 py-1.5 px-4 text-xs font-medium sticky top-0 z-50 flex items-center justify-center gap-2">
-          <span>Pre-launch Review Environment · Crawling Enabled · No tracking · No patient data</span>
-          <DismissBtn onDismiss={() => dismiss("banner_dismissed", setBannerVisible, false)} label="Dismiss proof layer banner" />
-        </div>
-      )}
-
       {/* Navigation */}
-      <nav className="bg-white border-b border-slate-200 z-40 shadow-sm" style={{ position: "sticky", top: navTop }}>
+      <nav className="bg-white border-b border-slate-200 z-40 shadow-sm" style={{ position: "sticky", top: "0px" }}>
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img src={SHARED_ASSETS.logo} alt="Bierman Autism Centers 20th Anniversary" className="h-10 w-auto" />
@@ -468,13 +425,6 @@ export function LocationPage({ data }: LocationPageProps) {
               <div className="text-teal-600 text-sm font-bold uppercase tracking-widest mb-2">Insurance</div>
               <h2 className="text-3xl font-bold text-[#1a2b47] mb-4">Insurance Accepted at {address.city}</h2>
               <p className="text-slate-600 leading-relaxed mb-6">{insuranceText}</p>
-              {!isCleanPreview && phoneNoticeVisible && (
-                <div className="bg-amber-50 border border-amber-200 rounded-xl px-4 py-3 flex items-start gap-2 mb-4">
-                  <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><circle cx="8" cy="8" r="7"/><path d="M8 5v3M8 11v.5" strokeLinecap="round"/></svg>
-                  <p className="text-amber-700 text-xs">Phone number requires confirmation with Bierman before production use.</p>
-                  <DismissBtn onDismiss={() => dismiss("phone_notice_dismissed", setPhoneNoticeVisible, false)} />
-                </div>
-              )}
               <img src={SHARED_ASSETS.insurance} alt="Horizon BCBS NJ — accepted at Bierman Autism Centers" className="rounded-2xl shadow-sm w-full max-w-xs object-contain" style={{ maxHeight: "80px" }} />
             </div>
             <div>
@@ -517,13 +467,6 @@ export function LocationPage({ data }: LocationPageProps) {
                   </div>
                 </div>
               </div>
-              {!isCleanPreview && hoursNoticeVisible && (
-                <div className="bg-amber-50 border border-amber-200 rounded-xl px-4 py-3 flex items-start gap-2 mb-4">
-                  <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><circle cx="8" cy="8" r="7"/><path d="M8 5v3M8 11v.5" strokeLinecap="round"/></svg>
-                  <p className="text-amber-700 text-xs">Hours require confirmation with Bierman before production use.</p>
-                  <DismissBtn onDismiss={() => dismiss("hours_notice_dismissed", setHoursNoticeVisible, false)} />
-                </div>
-              )}
               <a href={mapsDirectionsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white font-semibold px-6 py-3 rounded-xl text-sm transition-colors shadow-sm">
                 Get Directions →
               </a>
@@ -542,8 +485,7 @@ export function LocationPage({ data }: LocationPageProps) {
                   aria-label={`Map showing location of Bierman Autism Centers in ${address.city}, ${address.state}`}
                 />
               </div>
-              <p className="text-slate-400 text-xs mt-2 text-center">Confirm coordinates match GBP-verified address before production</p>
-            </div>
+</div>
           </div>
         </div>
       </section>
@@ -629,13 +571,6 @@ export function LocationPage({ data }: LocationPageProps) {
               style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: 0 }}
             />
           </div>
-          {!isCleanPreview && videoNoticeVisible && (
-            <div className="mt-4 inline-flex items-center gap-2 bg-amber-50 border border-amber-200 rounded-xl px-5 py-2.5">
-              <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4 text-amber-500 flex-shrink-0" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><circle cx="8" cy="8" r="7"/><path d="M8 5v3M8 11v.5" strokeLinecap="round"/></svg>
-              <p className="text-amber-700 text-sm">Final brand/legal review required before production use.</p>
-              <DismissBtn onDismiss={() => dismiss("video_notice_dismissed", setVideoNoticeVisible, false)} label="Dismiss video notice" />
-            </div>
-          )}
         </div>
       </section>
 
@@ -649,13 +584,6 @@ export function LocationPage({ data }: LocationPageProps) {
               Public review evidence and Bierman testimonial themes suggest families value supportive communication, BCBA guidance, and a child-centered environment.
             </p>
           </div>
-          {!isCleanPreview && reviewsNoticeVisible && (
-            <div className="bg-slate-50 border border-slate-200 rounded-2xl px-6 py-3 text-center mb-8 max-w-2xl mx-auto flex items-center justify-center gap-2">
-              <p className="text-slate-500 text-sm">Review themes are based on public review evidence and Bierman testimonial patterns. Final review copy requires Bierman approval before production use.</p>
-              <DismissBtn onDismiss={() => dismiss("reviews_notice_dismissed", setReviewsNoticeVisible, false)} label="Dismiss review themes notice" />
-            </div>
-          )}
-          {!isCleanPreview && !reviewsNoticeVisible && <div className="mb-8" />}
           <div className="grid md:grid-cols-3 gap-6">
             {[
               { src: SHARED_ASSETS.themeBcbaGuidance, alt: `Supportive BCBA Guidance — families value hands-on clinical team communication at Bierman ${address.city}` },
@@ -667,9 +595,7 @@ export function LocationPage({ data }: LocationPageProps) {
               </div>
             ))}
           </div>
-          <p className="text-center text-slate-400 text-xs mt-8">Themes derived from public GBP review evidence and Bierman corporate testimonials. Source: Gemini GBP Review Evidence Report, May 2026.</p>
-
-          {/* Real GBP Reviews */}
+{/* Real GBP Reviews */}
           <div className="mt-14">
             <div className="text-center mb-10">
               <div className="text-teal-600 text-sm font-bold uppercase tracking-widest mb-2">Google Reviews</div>
@@ -679,8 +605,7 @@ export function LocationPage({ data }: LocationPageProps) {
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {reviews.map((r) => <GBPReviewCard key={r.slug} review={r} />)}
             </div>
-            <p className="text-center text-slate-400 text-xs mt-8">Reviews sourced from Google Business Profile — public. Displayed for proof-layer review purposes.</p>
-          </div>
+</div>
         </div>
       </section>
 
@@ -728,8 +653,7 @@ export function LocationPage({ data }: LocationPageProps) {
               <a key={link.label} href={link.url} target="_blank" rel="noopener noreferrer" className="text-teal-700 text-xs font-medium hover:underline underline-offset-2">{link.label}</a>
             ))}
             <span className="text-slate-200 mx-1">|</span>
-            <p className="text-slate-400 text-xs">All URLs link to existing biermanautism.com content. Confirm before production use.</p>
-          </div>
+</div>
         </div>
       </section>
 
@@ -847,8 +771,7 @@ export function LocationPage({ data }: LocationPageProps) {
           <a href={intakeUrl} target="_blank" rel="noopener noreferrer" className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-12 py-5 rounded-2xl text-xl transition-colors inline-block shadow-lg">
             Request Services in {address.city} →
           </a>
-          <p className="text-slate-400 text-xs mt-5">CTA routes to existing production intake system — production intake untouched by this proof layer.</p>
-        </div>
+</div>
       </section>
 
       {/* Footer */}
@@ -890,12 +813,7 @@ export function LocationPage({ data }: LocationPageProps) {
               </div>
               <p className="text-white/30 text-xs">© {new Date().getFullYear()} Bierman Autism Centers. All rights reserved.</p>
             </div>
-            <div className="mt-4 bg-white/5 border border-white/10 rounded-xl p-3 text-center">
-              <p className="text-white/30 text-xs leading-relaxed">
-                <strong className="text-white/50">Proof-layer environment:</strong> No patient data collected · No cookies or tracking active · Pre-launch review environment · Noindex · Does not affect the live production website at biermanautism.com
-              </p>
-            </div>
-          </div>
+</div>
         </div>
       </footer>
 
@@ -915,11 +833,6 @@ export function LocationPage({ data }: LocationPageProps) {
             Directions
           </a>
         </div>
-        {!isCleanPreview && (
-          <div className="bg-slate-50 border-t border-slate-100 text-center text-slate-400 text-xs py-1">
-            Mobile CTA row — proof-layer UX test · No tracking
-          </div>
-        )}
       </div>
 
       {/* Mobile sticky row spacer */}

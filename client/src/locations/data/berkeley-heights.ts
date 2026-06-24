@@ -34,7 +34,7 @@ export const berkeleyHeightsData: LocationData = {
   },
 
   // ── URLs ──────────────────────────────────────────────────────────────────
-  intakeUrl: "https://www.biermanautism.com/start-now/?loc=berkeley-heights-nj",
+  intakeUrl: "https://www.biermanautism.com/start-now/?loc=berkeley-heights-nj&utm_source=local-hub&utm_medium=organic&utm_campaign=nj-pilot&utm_content=berkeley-heights-nj-location-page",
   gbpUrl: "https://maps.app.goo.gl/RrzHDfH2aKM3QNPu8",
   mapEmbedUrl:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.0!2d-74.4354!3d40.6801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s550+Springfield+Ave%2C+Berkeley+Heights%2C+NJ+07922!5e0!3m2!1sen!2sus!4v1620000000003",
@@ -142,7 +142,7 @@ export const berkeleyHeightsData: LocationData = {
     { name: "Parsippany, NJ", url: "/locations/nj/parsippany/" },
     { name: "Princeton, NJ", url: "/locations/nj/princeton/" },
     { name: "Roseland, NJ", url: "/locations/nj/roseland/" },
-    { name: "All 35 Locations →", url: "/" },
+    { name: "All 10 NJ Locations →", url: "/" },
   ],
 
   // ── Clinical Leadership ───────────────────────────────────────────────────

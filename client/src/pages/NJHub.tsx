@@ -14,7 +14,7 @@
  * No hardcoded NAP or address data — everything flows from the data files.
  */
 
-import { useState, useEffect } from "react";
+import { useMemo } from "react";
 import { Link } from "wouter";
 import { Helmet } from "react-helmet-async";
 import HealthcareDisclaimer from "@/components/HealthcareDisclaimer";
@@ -182,18 +182,6 @@ function LocationCard({ loc }: { loc: LocationData }) {
 
 // ── Main component ────────────────────────────────────────────────────────────
 export default function NJHub() {
-  const [bannerVisible, setBannerVisible] = useState(true);
-
-  useEffect(() => {
-    const dismissed = sessionStorage.getItem("nj_hub_banner_dismissed");
-    if (dismissed === "true") setBannerVisible(false);
-  }, []);
-
-  const dismiss = () => {
-    sessionStorage.setItem("nj_hub_banner_dismissed", "true");
-    setBannerVisible(false);
-  };
-
   const openLocations = NJ_LOCATIONS.filter((l) => !l.comingSoon);
   const comingSoonLocations = NJ_LOCATIONS.filter((l) => l.comingSoon);
 
@@ -210,24 +198,7 @@ export default function NJHub() {
         <meta name="robots" content="index, follow" />
         <script type="application/ld+json">{buildNJHubSchema()}</script>
       </Helmet>
-
-      {/* Proof Layer Banner */}
-      {bannerVisible && (
-        <div className="bg-slate-100 border-b border-slate-200 text-slate-500 py-1.5 px-4 text-xs font-medium sticky top-0 z-50 flex items-center justify-center gap-2">
-          <span>Pre-launch Review Environment · Crawling Enabled · No tracking · No patient data</span>
-          <button
-            onClick={dismiss}
-            className="ml-2 text-slate-400 hover:text-slate-600 transition-colors"
-            aria-label="Dismiss banner"
-          >
-            <svg viewBox="0 0 16 16" fill="none" className="w-3.5 h-3.5" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-              <path d="M4 4l8 8M12 4l-8 8" strokeLinecap="round"/>
-            </svg>
-          </button>
-        </div>
-      )}
-
-      {/* Navigation */}
+{/* Navigation */}
       <nav className="bg-white border-b border-slate-200 z-40 shadow-sm sticky top-0">
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -462,9 +433,7 @@ export default function NJHub() {
               <p className="text-white/30 text-xs">© {new Date().getFullYear()} Bierman Autism Centers. All rights reserved.</p>
             </div>
             <div className="mt-4 bg-white/5 border border-white/10 rounded-xl p-3 text-center">
-              <p className="text-white/30 text-xs leading-relaxed">
-                <strong className="text-white/50">Proof-layer environment:</strong> No patient data collected · No cookies or tracking active · Pre-launch review environment · Crawling enabled · Does not affect the live production website at biermanautism.com
-              </p>
+              <p className="text-white/30 text-xs leading-relaxed"></p>
             </div>
           </div>
         </div>

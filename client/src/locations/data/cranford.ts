@@ -34,7 +34,7 @@ export const cranfordData: LocationData = {
   },
 
   // ── URLs ──────────────────────────────────────────────────────────────────
-  intakeUrl: "https://www.biermanautism.com/start-now/?loc=cranford-nj",
+  intakeUrl: "https://www.biermanautism.com/start-now/?loc=cranford-nj&utm_source=local-hub&utm_medium=organic&utm_campaign=nj-pilot&utm_content=cranford-nj-location-page",
   gbpUrl: "https://maps.app.goo.gl/mBJGYojAXJek27WD6",
   mapEmbedUrl:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.0!2d-74.2982!3d40.6576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s65+Jackson+Drive%2C+Cranford%2C+NJ+07016!5e0!3m2!1sen!2sus!4v1620000000002",
@@ -142,7 +142,7 @@ export const cranfordData: LocationData = {
     { name: "Princeton, NJ", url: "/locations/nj/princeton/" },
     { name: "Piscataway, NJ", url: "/locations/nj/piscataway/" },
     { name: "Roseland, NJ", url: "/locations/nj/roseland/" },
-    { name: "All 35 Locations →", url: "/" },
+    { name: "All 10 NJ Locations →", url: "/" },
   ],
 
   // ── Clinical Leadership ───────────────────────────────────────────────────
