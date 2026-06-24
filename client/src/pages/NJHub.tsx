@@ -308,9 +308,9 @@ export default function NJHub() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
-              { value: `${openLocations.length}`, label: "Open NJ Locations" },
-              { value: "7", label: "NJ Counties Served" },
-              { value: "100+", label: "Towns in Service Area" },
+              { value: `${NJ_LOCATIONS.length}`, label: "NJ Locations" },
+              { value: "9", label: "NJ Counties Served" },
+              { value: "150+", label: "Towns in Service Area" },
               { value: "20+", label: "Years Serving Families" },
             ].map((stat) => (
               <div key={stat.label}>
