@@ -281,7 +281,7 @@ export default function NJHub() {
               ABA Therapy in<br />New Jersey
             </h1>
             <p className="text-slate-600 text-lg mb-8 leading-relaxed max-w-2xl">
-              Bierman Autism Centers operates {openLocations.length} New Jersey clinics providing individualized ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism. Find the location nearest to your family.
+              Bierman Autism Centers operates {NJ_LOCATIONS.length} New Jersey locations ({openLocations.length} open, {comingSoonLocations.length} opening Fall 2026) providing individualized ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism. Find the location nearest to your family.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
@@ -418,7 +418,7 @@ export default function NJHub() {
             <div>
               <img src={LOGO} alt="Bierman Autism Centers 20th Anniversary" className="h-12 w-auto mb-4" />
               <p className="text-white/60 text-sm leading-relaxed">
-                Bierman Autism Centers provides evidence-based ABA therapy and autism support services across New Jersey and 33+ locations nationwide.
+                Bierman Autism Centers provides evidence-based ABA therapy and autism support services across New Jersey and 35+ locations nationwide.
               </p>
             </div>
             <div>
