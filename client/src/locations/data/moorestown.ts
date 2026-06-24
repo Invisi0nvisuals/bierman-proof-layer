@@ -35,7 +35,7 @@ export const moorestownData: LocationData = {
   },
 
   // ── URLs ──────────────────────────────────────────────────────────────────
-  intakeUrl: "https://www.biermanautism.com/start-now/?loc=moorestown-nj&utm_source=local-hub&utm_medium=organic&utm_campaign=nj-pilot&utm_content=moorestown-nj-location-page",
+  intakeUrl: "https://www.biermanautism.com/start-now/?loc=moorestown-nj&utm_source=local-hub&utm_medium=referral&utm_campaign=nj-pilot-moorestown",
   gbpUrl: "https://maps.app.goo.gl/wCJ1eqeL74PxBiBW7",
   mapEmbedUrl:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3057.2!2d-74.9488!3d39.9712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s505+Pleasant+Valley+Ave%2C+Moorestown%2C+NJ+08057!5e0!3m2!1sen!2sus!4v1620000000000",

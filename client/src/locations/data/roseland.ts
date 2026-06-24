@@ -37,7 +37,7 @@ export const roselandData: LocationData = {
   },
 
   // ── URLs ──────────────────────────────────────────────────────────────────
-  intakeUrl: "https://www.biermanautism.com/start-now/?loc=roseland-nj&utm_source=local-hub&utm_medium=organic&utm_campaign=nj-pilot&utm_content=roseland-nj-location-page",
+  intakeUrl: "https://www.biermanautism.com/start-now/?loc=roseland-nj&utm_source=local-hub&utm_medium=referral&utm_campaign=nj-pilot-roseland",
   gbpUrl: "https://maps.app.goo.gl/yhdYY5oYzQauMwdq6",
   mapEmbedUrl:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3020.4!2d-74.3021!3d40.8204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s103+Eisenhower+Pkwy%2C+Ste+120%2C+Roseland%2C+NJ+07068!5e0!3m2!1sen!2sus!4v1620000000000",
