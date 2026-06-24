@@ -10,7 +10,7 @@
  * - Rounded cards, generous whitespace, playful-but-polished SVG icons
  *
  * PROOF LAYER — NOT PRODUCTION
- * Pre-launch review environment | Noindex | No tracking | No live forms | No patient data
+ * Pre-launch review environment | Crawling Enabled | No tracking | No live forms | No patient data
  *
  * USAGE:
  *   import { LocationPage } from "@/locations/LocationPage";
@@ -279,13 +279,14 @@ export function LocationPage({ data }: LocationPageProps) {
         <title>{data.schema.pageTitle}</title>
         <meta name="description" content={data.schema.pageDescription} />
         <link rel="canonical" href={data.schema.pageUrl} />
+        <meta name="robots" content="index, follow" />
         <script type="application/ld+json">{schemaJson}</script>
       </Helmet>
 
       {/* Proof Layer Banner */}
       {bannerVisible && (
         <div className="bg-slate-100 border-b border-slate-200 text-slate-500 py-1.5 px-4 text-xs font-medium sticky top-0 z-50 flex items-center justify-center gap-2">
-          <span>Pre-launch Review Environment · Noindex · No tracking · No patient data</span>
+          <span>Pre-launch Review Environment · Crawling Enabled · No tracking · No patient data</span>
           <DismissBtn onDismiss={() => dismiss("banner_dismissed", setBannerVisible, false)} label="Dismiss proof layer banner" />
         </div>
       )}
