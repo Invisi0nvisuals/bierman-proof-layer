@@ -403,9 +403,9 @@ export default function NJHub() {
                   </div>
                 ))}
                 {comingSoonLocations.map((loc) => (
-                  <div key={loc.slug} className="text-white/40">
+                  <Link key={loc.slug} href={`/locations/nj/${loc.slug}/`} className="text-white/40 hover:text-white/70 transition-colors">
                     {loc.address.city}, NJ <span className="text-amber-500/70 text-xs">(Coming Soon)</span>
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>
