@@ -403,9 +403,11 @@ export default function NJHub() {
                   </div>
                 ))}
                 {comingSoonLocations.map((loc) => (
-                  <Link key={loc.slug} href={`/locations/nj/${loc.slug}/`} className="text-white/40 hover:text-white/70 transition-colors">
-                    {loc.address.city}, NJ <span className="text-amber-500/70 text-xs">(Coming Soon)</span>
-                  </Link>
+                  <div key={loc.slug}>
+                    <Link href={`/locations/nj/${loc.slug}/`} className="text-white/40 hover:text-white/70 transition-colors">
+                      {loc.address.city}, NJ
+                    </Link>
+                  </div>
                 ))}
               </div>
             </div>
@@ -432,9 +434,7 @@ export default function NJHub() {
               </div>
               <p className="text-white/30 text-xs">© {new Date().getFullYear()} Bierman Autism Centers. All rights reserved.</p>
             </div>
-            <div className="mt-4 bg-white/5 border border-white/10 rounded-xl p-3 text-center">
-              <p className="text-white/30 text-xs leading-relaxed"></p>
-            </div>
+
           </div>
         </div>
       </footer>
