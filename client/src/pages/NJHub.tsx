@@ -73,7 +73,7 @@ function buildNJHubSchema(): string {
       {
         "@type": "WebPage",
         "@id": `${PAGE_URL}#webpage`,
-        name: "ABA Therapy in New Jersey | Bierman Autism Centers",
+        name: "Comprehensive Autism Services Near Me in New Jersey | Bierman Autism Centers",
         url: PAGE_URL,
         description:
           "Bierman Autism Centers operates 10 New Jersey locations providing ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism.",
@@ -198,7 +198,7 @@ export default function NJHub() {
         <title>ABA Therapy in New Jersey | Bierman Autism Centers</title>
         <meta
           name="description"
-          content="Comprehensive autism support services near you in New Jersey — ABA therapy, speech, OT & diagnostics at 10 locations. BCBA-supervised care. Insurance accepted."
+          content="Comprehensive autism services near you in New Jersey — ABA therapy, speech, OT & diagnostics at 10 locations. BCBA-supervised care. Insurance accepted."
         />
         {/* Canonical: / is the root hub. /locations/nj/ is an alias that also points here. */}
         <link rel="canonical" href={PAGE_URL} />
@@ -256,7 +256,7 @@ export default function NJHub() {
             </div>
 
             <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-5 text-[#1a2b47]">
-              Comprehensive Autism Support<br />Services Near Me in New Jersey
+              Comprehensive Autism Services<br />Near Me in New Jersey
             </h1>
             <p className="text-slate-600 text-lg mb-8 leading-relaxed max-w-2xl">
               Bierman Autism Centers operates {NJ_LOCATIONS.length} New Jersey locations ({openLocations.length} open, {comingSoonLocations.length} opening Fall 2026) providing individualized ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism. Find the location nearest to your family.
