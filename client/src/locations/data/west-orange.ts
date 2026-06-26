@@ -186,9 +186,9 @@ export const westOrangeData: LocationData = {
   schema: {
     pageUrl: "https://bierman-proof-layer.manus.space/locations/nj/west-orange/",
     baseId: "https://bierman-proof-layer.manus.space/locations/nj/west-orange/",
-    pageTitle: "ABA Therapy in West Orange, NJ | Bierman Autism Centers",
+    pageTitle: "ABA Therapy Near Me | West Orange, NJ | Bierman Autism Centers",
     pageDescription:
-      "Bierman Autism Centers in West Orange, NJ provides individualized ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism. Serving Essex County, Morris County, Union County, and surrounding New Jersey communities.",
+      "ABA therapy near West Orange, NJ. Bierman Autism Centers serves Essex County families with evidence-based autism care. BCBA-supervised. Insurance accepted.",
     videoUploadDate: "2023-10-19T00:00:00+00:00",
     // areaServed: Verified from biermanautism.com/location/west-orange-nj/ — "Counties Served" section (May 2026)
     areaServed: [

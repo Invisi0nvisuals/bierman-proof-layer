@@ -178,9 +178,9 @@ export const roselandData: LocationData = {
   schema: {
     pageUrl: "https://bierman-proof-layer.manus.space/locations/nj/roseland/",
     baseId: "https://bierman-proof-layer.manus.space/locations/nj/roseland/",
-    pageTitle: "ABA Therapy in Roseland, NJ | Bierman Autism Centers",
+    pageTitle: "ABA Therapy Near Me | Roseland, NJ | Bierman Autism Centers",
     pageDescription:
-      "Bierman Autism Centers in Roseland, NJ provides individualized ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism. Opening Fall 2026. Serving Essex County and surrounding North Jersey communities.",
+      "ABA therapy, speech, OT & diagnostics coming to Roseland, NJ — Fall 2026. Pre-register now for Essex County families. Bierman Autism Centers.",
     videoUploadDate: "2023-10-19T00:00:00+00:00",
     areaServed: [
       { type: "AdministrativeArea", name: "Essex County, NJ", sameAs: "https://en.wikipedia.org/wiki/Essex_County,_New_Jersey" },

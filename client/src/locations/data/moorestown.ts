@@ -176,9 +176,9 @@ export const moorestownData: LocationData = {
   schema: {
     pageUrl: "https://bierman-proof-layer.manus.space/locations/nj/moorestown/",
     baseId: "https://bierman-proof-layer.manus.space/locations/nj/moorestown/",
-    pageTitle: "ABA Therapy in Moorestown, NJ | Bierman Autism Centers",
+    pageTitle: "ABA Therapy Near Me | Moorestown, NJ | Bierman Autism Centers",
     pageDescription:
-      "Bierman Autism Centers in Moorestown, NJ provides individualized ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism. Opening Fall 2026. Serving Burlington County and surrounding South Jersey communities.",
+      "ABA therapy, speech, OT & diagnostics coming to Moorestown, NJ — Fall 2026. Pre-register now for Burlington County families. Bierman Autism Centers.",
     videoUploadDate: "2023-10-19T00:00:00+00:00",
     areaServed: [
       { type: "AdministrativeArea", name: "Burlington County, NJ", sameAs: "https://en.wikipedia.org/wiki/Burlington_County,_New_Jersey" },

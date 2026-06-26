@@ -174,9 +174,9 @@ export const eatontownData: LocationData = {
   schema: {
     pageUrl: "https://bierman-proof-layer.manus.space/locations/nj/eatontown/",
     baseId: "https://bierman-proof-layer.manus.space/locations/nj/eatontown/",
-    pageTitle: "ABA Therapy in Eatontown, NJ | Bierman Autism Centers",
+    pageTitle: "ABA Therapy Near Me | Eatontown, NJ | Bierman Autism Centers",
     pageDescription:
-      "Bierman Autism Centers in Eatontown, NJ provides individualized ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism. Serving Monmouth County and surrounding New Jersey communities.",
+      "ABA therapy near Eatontown, NJ. Bierman Autism Centers serves Monmouth County families with evidence-based autism care. BCBA-supervised. Insurance accepted.",
     videoUploadDate: "2023-10-19T00:00:00+00:00",
     // areaServed: Verified from biermanautism.com/location/eatontown-nj/ — "Counties Served" section (May 2026)
     areaServed: [

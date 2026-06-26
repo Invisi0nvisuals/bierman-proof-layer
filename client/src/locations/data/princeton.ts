@@ -174,9 +174,9 @@ export const princetonData: LocationData = {
   schema: {
     pageUrl: "https://bierman-proof-layer.manus.space/locations/nj/princeton/",
     baseId: "https://bierman-proof-layer.manus.space/locations/nj/princeton/",
-    pageTitle: "ABA Therapy in Princeton, NJ | Bierman Autism Centers",
+    pageTitle: "ABA Therapy Near Me | Princeton, NJ | Bierman Autism Centers",
     pageDescription:
-      "Bierman Autism Centers in Princeton, NJ provides individualized ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism. Serving Mercer County and surrounding New Jersey communities.",
+      "ABA therapy near Princeton, NJ. Bierman Autism Centers serves Mercer County children with autism. BCBA-supervised, evidence-based care. Insurance accepted.",
     videoUploadDate: "2023-10-19T00:00:00+00:00",
     // areaServed: Verified from biermanautism.com/location/princeton-nj/ — "Counties Served" section (May 2026)
     areaServed: [
