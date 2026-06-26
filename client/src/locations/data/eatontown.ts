@@ -184,7 +184,7 @@ export const eatontownData: LocationData = {
       { type: "AdministrativeArea", name: "Middlesex County, NJ", sameAs: "https://en.wikipedia.org/wiki/Middlesex_County,_New_Jersey" },
       { type: "AdministrativeArea", name: "Ocean County, NJ", sameAs: "https://en.wikipedia.org/wiki/Ocean_County,_New_Jersey" },
       { type: "AdministrativeArea", name: "Mercer County, NJ", sameAs: "https://en.wikipedia.org/wiki/Mercer_County,_New_Jersey" },
-      { type: "City", name: "Eatontown, NJ" },
+      { type: "City", name: "Eatontown, NJ", sameAs: "https://en.wikipedia.org/wiki/Eatontown,_New_Jersey" },
       { type: "City", name: "Red Bank, NJ" },
       { type: "City", name: "Shrewsbury, NJ" },
       { type: "City", name: "Tinton Falls, NJ" },

@@ -184,7 +184,7 @@ export const berkeleyHeightsData: LocationData = {
       { type: "AdministrativeArea", name: "Somerset County, NJ", sameAs: "https://en.wikipedia.org/wiki/Somerset_County,_New_Jersey" },
       { type: "AdministrativeArea", name: "Morris County, NJ", sameAs: "https://en.wikipedia.org/wiki/Morris_County,_New_Jersey" },
       { type: "AdministrativeArea", name: "Essex County, NJ", sameAs: "https://en.wikipedia.org/wiki/Essex_County,_New_Jersey" },
-      { type: "City", name: "Berkeley Heights, NJ" },
+      { type: "City", name: "Berkeley Heights, NJ", sameAs: "https://en.wikipedia.org/wiki/Berkeley_Heights,_New_Jersey" },
       { type: "City", name: "Summit, NJ" },
       { type: "City", name: "New Providence, NJ" },
       { type: "City", name: "Mountainside, NJ" },

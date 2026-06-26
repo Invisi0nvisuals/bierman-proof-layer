@@ -185,7 +185,7 @@ export const cranfordData: LocationData = {
       { type: "AdministrativeArea", name: "Middlesex County, NJ", sameAs: "https://en.wikipedia.org/wiki/Middlesex_County,_New_Jersey" },
       { type: "AdministrativeArea", name: "Somerset County, NJ", sameAs: "https://en.wikipedia.org/wiki/Somerset_County,_New_Jersey" },
       { type: "AdministrativeArea", name: "Morris County, NJ", sameAs: "https://en.wikipedia.org/wiki/Morris_County,_New_Jersey" },
-      { type: "City", name: "Cranford, NJ" },
+      { type: "City", name: "Cranford, NJ", sameAs: "https://en.wikipedia.org/wiki/Cranford,_New_Jersey" },
       { type: "City", name: "Westfield, NJ" },
       { type: "City", name: "Clark, NJ" },
       { type: "City", name: "Scotch Plains, NJ" },

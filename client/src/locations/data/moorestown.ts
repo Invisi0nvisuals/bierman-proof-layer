@@ -185,7 +185,7 @@ export const moorestownData: LocationData = {
       { type: "AdministrativeArea", name: "Camden County, NJ", sameAs: "https://en.wikipedia.org/wiki/Camden_County,_New_Jersey" },
       { type: "AdministrativeArea", name: "Gloucester County, NJ", sameAs: "https://en.wikipedia.org/wiki/Gloucester_County,_New_Jersey" },
       { type: "AdministrativeArea", name: "Mercer County, NJ", sameAs: "https://en.wikipedia.org/wiki/Mercer_County,_New_Jersey" },
-      { type: "City", name: "Moorestown, NJ" },
+      { type: "City", name: "Moorestown, NJ", sameAs: "https://en.wikipedia.org/wiki/Moorestown,_New_Jersey" },
       { type: "City", name: "Mount Laurel, NJ" },
       { type: "City", name: "Maple Shade, NJ" },
       { type: "City", name: "Cinnaminson, NJ" },

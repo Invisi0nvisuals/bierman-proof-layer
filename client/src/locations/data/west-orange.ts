@@ -196,7 +196,7 @@ export const westOrangeData: LocationData = {
       { type: "AdministrativeArea", name: "Morris County, NJ", sameAs: "https://en.wikipedia.org/wiki/Morris_County,_New_Jersey" },
       { type: "AdministrativeArea", name: "Union County, NJ", sameAs: "https://en.wikipedia.org/wiki/Union_County,_New_Jersey" },
       { type: "AdministrativeArea", name: "Passaic County, NJ", sameAs: "https://en.wikipedia.org/wiki/Passaic_County,_New_Jersey" },
-      { type: "City", name: "West Orange, NJ" },
+      { type: "City", name: "West Orange, NJ", sameAs: "https://en.wikipedia.org/wiki/West_Orange,_New_Jersey" },
       { type: "City", name: "Orange, NJ" },
       { type: "City", name: "East Orange, NJ" },
       { type: "City", name: "South Orange, NJ" },

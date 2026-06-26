@@ -184,7 +184,7 @@ export const princetonData: LocationData = {
       { type: "AdministrativeArea", name: "Middlesex County, NJ", sameAs: "https://en.wikipedia.org/wiki/Middlesex_County,_New_Jersey" },
       { type: "AdministrativeArea", name: "Somerset County, NJ", sameAs: "https://en.wikipedia.org/wiki/Somerset_County,_New_Jersey" },
       { type: "AdministrativeArea", name: "Hunterdon County, NJ", sameAs: "https://en.wikipedia.org/wiki/Hunterdon_County,_New_Jersey" },
-      { type: "City", name: "Princeton, NJ" },
+      { type: "City", name: "Princeton, NJ", sameAs: "https://en.wikipedia.org/wiki/Princeton,_New_Jersey" },
       { type: "City", name: "West Windsor, NJ" },
       { type: "City", name: "Plainsboro, NJ" },
       { type: "City", name: "East Windsor, NJ" },
