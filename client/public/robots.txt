@@ -2,3 +2,6 @@
 # Crawling enabled for Rich Results validation and pre-launch review.
 User-agent: *
 Allow: /
+
+Sitemap: https://local.biermanautism.com/sitemap.xml
+ai-instructions: https://local.biermanautism.com/llm.txt
