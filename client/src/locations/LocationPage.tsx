@@ -249,6 +249,8 @@ export function LocationPage({ data }: LocationPageProps) {
         <meta name="description" content={data.schema.pageDescription} />
         <link rel="canonical" href={data.schema.pageUrl} />
         <meta name="robots" content="index, follow" />
+        <meta name="geo.region" content="US-NJ" />
+        <meta name="geo.placename" content={data.address.city} />
         <script type="application/ld+json">{schemaJson}</script>
       </Helmet>
 

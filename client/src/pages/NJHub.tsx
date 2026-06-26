@@ -150,6 +150,13 @@ function LocationCard({ loc }: { loc: LocationData }) {
         {/* Street address */}
         <p className="text-slate-500 text-sm mb-3 leading-snug">{loc.address.street}</p>
 
+        {/* Service line snippet */}
+        <p className="text-xs text-slate-500 mb-3 leading-relaxed">
+          {isComingSoon
+            ? "ABA therapy, speech, OT & diagnostics — opening soon"
+            : "BCBA-supervised ABA therapy, speech, OT & diagnostics"}
+        </p>
+
         {/* Phone */}
         {!isComingSoon && (
           <div className="flex items-center gap-1.5 text-sm text-teal-700 font-medium mb-4">
@@ -249,7 +256,7 @@ export default function NJHub() {
             </div>
 
             <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-5 text-[#1a2b47]">
-              ABA Therapy in<br />New Jersey
+              Comprehensive Autism Support<br />Services Near Me in New Jersey
             </h1>
             <p className="text-slate-600 text-lg mb-8 leading-relaxed max-w-2xl">
               Bierman Autism Centers operates {NJ_LOCATIONS.length} New Jersey locations ({openLocations.length} open, {comingSoonLocations.length} opening Fall 2026) providing individualized ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism. Find the location nearest to your family.
@@ -297,8 +304,8 @@ export default function NJHub() {
       <section className="py-14 md:py-20 bg-slate-50">
         <div className="max-w-6xl mx-auto px-4">
           <div className="mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#1a2b47] mb-2">New Jersey Locations</h2>
-            <p className="text-slate-500 text-base">Select a location to view services, hours, insurance, and directions.</p>
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1a2b47] mb-2">ABA Therapy &amp; Autism Services Near You in New Jersey</h2>
+            <p className="text-slate-500 text-base">Each location offers BCBA-supervised ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations. Select a location to view services, hours, insurance, and directions.</p>
           </div>
 
           {/* Open locations */}
