@@ -63,24 +63,28 @@ const SHARED_ASSETS = {
 
 const STANDARD_SERVICES = [
   {
+    slug: "aba-therapy",
     title: "ABA Therapy",
     desc: "Applied Behavior Analysis — individualized, evidence-based therapy designed to build communication, social, and daily living skills.",
     img: "/manus-storage/bierman-service-aba-therapy-card_d7ddabc1.webp",
     icon: <IconABA />,
   },
   {
+    slug: "speech-therapy",
     title: "Speech-Language Therapy",
     desc: "Targeted speech and language support to help children communicate more effectively and confidently.",
     img: "https://d2xsxph8kpxj0f.cloudfront.net/91389010/QxDhxTcSVFBCVe6sC7dKv5/bierman-service-speech-language-therapy-card-U56PgjdAJCh3qfqqeXDCyK.webp",
     icon: <IconSpeech />,
   },
   {
+    slug: "occupational-therapy",
     title: "Occupational Therapy",
     desc: "Sensory integration, fine motor skills, and daily living activities to support independence and engagement.",
     img: "/manus-storage/bierman-service-occupational-therapy-card_2cffd7a2.webp",
     icon: <IconOT />,
   },
   {
+    slug: "diagnostic-evaluation",
     title: "Diagnostic Evaluation",
     desc: "Comprehensive autism diagnostic evaluations by licensed clinicians, with results and recommendations for families.",
     img: "https://d2xsxph8kpxj0f.cloudfront.net/91389010/QxDhxTcSVFBCVe6sC7dKv5/bierman-service-diagnostic-evaluation-card-7MEyR3pXUm3dwqH5E9PnMK.webp",
@@ -389,7 +393,7 @@ export function LocationPage({ data }: LocationPageProps) {
       </section>
 
       {/* Services */}
-      <section className="py-16" style={{ background: "linear-gradient(180deg, #f8fffe 0%, #f0fdfa 100%)" }}>
+      <section id="services" className="py-16" style={{ background: "linear-gradient(180deg, #f8fffe 0%, #f0fdfa 100%)" }}>
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
             <div className="text-teal-600 text-sm font-bold uppercase tracking-widest mb-2">Services at {address.city}</div>
@@ -398,7 +402,7 @@ export function LocationPage({ data }: LocationPageProps) {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {STANDARD_SERVICES.map((svc) => (
-              <div key={svc.title} className="bg-white border border-teal-100 rounded-3xl overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200">
+              <div id={svc.slug} key={svc.title} className="bg-white border border-teal-100 rounded-3xl overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200">
                 {svc.img ? (
                   <div className="relative">
                     <img src={svc.img} alt={svc.title} className="w-full h-40 object-cover" />
