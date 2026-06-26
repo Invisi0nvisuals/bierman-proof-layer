@@ -41,10 +41,10 @@ const STANDARD_KNOWS_ABOUT = [
 ];
 
 const STANDARD_SERVICES = [
-  { name: "ABA Therapy", type: "MedicalTherapy" as const },
-  { name: "Speech-Language Therapy", type: "MedicalTherapy" as const },
-  { name: "Occupational Therapy", type: "MedicalTherapy" as const },
-  { name: "Diagnostic Evaluation for Autism", type: "MedicalProcedure" as const },
+  { name: "ABA Therapy",                       type: "MedicalTherapy" as const,   slug: "aba-therapy" },
+  { name: "Speech-Language Therapy",           type: "MedicalTherapy" as const,   slug: "speech-therapy" },
+  { name: "Occupational Therapy",              type: "MedicalTherapy" as const,   slug: "occupational-therapy" },
+  { name: "Diagnostic Evaluation for Autism",  type: "MedicalProcedure" as const, slug: "diagnostic-evaluation" },
 ];
 
 // ─── Helper ───────────────────────────────────────────────────────────────────
@@ -137,7 +137,13 @@ export function buildLocationSchema(data: LocationData): string {
       name: `Autism Support Services \u2014 ${address.city}, ${address.state}`,
       itemListElement: STANDARD_SERVICES.map((s) => ({
         "@type": "Offer",
-        itemOffered: { "@type": s.type, name: s.name },
+        itemOffered: {
+          "@type": s.type,
+          "@id": `${base}/#service-${s.slug}`,
+          name: s.name,
+          url: `${base}#${s.slug}`,
+          provider: { "@id": `${base}/#localbusiness` },
+        },
       })),
     },
     openingHours,
