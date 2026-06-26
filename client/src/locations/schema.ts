@@ -127,6 +127,7 @@ export function buildLocationSchema(data: LocationData): string {
     areaServed: schema.areaServed.map((a) => ({
       "@type": a.type,
       name: a.name,
+      ...(a.sameAs ? { sameAs: a.sameAs } : {}),
     })),
     medicalSpecialty: "Pediatric",
     knowsAbout,

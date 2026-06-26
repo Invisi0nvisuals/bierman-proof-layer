@@ -180,11 +180,11 @@ export const piscatawayData: LocationData = {
     videoUploadDate: "2023-10-19T00:00:00+00:00",
     // areaServed: Verified from biermanautism.com/location/piscataway/ — "Counties Served" section (May 2026)
     areaServed: [
-      { type: "AdministrativeArea", name: "Middlesex County, NJ" },
-      { type: "AdministrativeArea", name: "Somerset County, NJ" },
-      { type: "AdministrativeArea", name: "Union County, NJ" },
-      { type: "AdministrativeArea", name: "Mercer County, NJ" },
-      { type: "City", name: "Piscataway, NJ" },
+      { type: "AdministrativeArea", name: "Middlesex County, NJ", sameAs: "https://en.wikipedia.org/wiki/Middlesex_County,_New_Jersey" },
+      { type: "AdministrativeArea", name: "Somerset County, NJ", sameAs: "https://en.wikipedia.org/wiki/Somerset_County,_New_Jersey" },
+      { type: "AdministrativeArea", name: "Union County, NJ", sameAs: "https://en.wikipedia.org/wiki/Union_County,_New_Jersey" },
+      { type: "AdministrativeArea", name: "Mercer County, NJ", sameAs: "https://en.wikipedia.org/wiki/Mercer_County,_New_Jersey" },
+      { type: "City", name: "Piscataway, NJ", sameAs: "https://en.wikipedia.org/wiki/Piscataway,_New_Jersey" },
       { type: "City", name: "New Brunswick, NJ" },
       { type: "City", name: "Edison, NJ" },
       { type: "City", name: "Woodbridge, NJ" },

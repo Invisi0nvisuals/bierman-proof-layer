@@ -131,6 +131,12 @@ export interface LocationSchemaMetadata {
   areaServed: Array<{
     type: "AdministrativeArea" | "City";
     name: string;
+    /**
+     * Optional Wikipedia or Wikidata URL for entity disambiguation.
+     * Emitted as schema.org `sameAs` when present.
+     * Example: "https://en.wikipedia.org/wiki/Bergen_County,_New_Jersey"
+     */
+    sameAs?: string;
   }>;
   /** Additional knowsAbout entries beyond the standard ABA/autism set */
   additionalKnowsAbout?: string[];

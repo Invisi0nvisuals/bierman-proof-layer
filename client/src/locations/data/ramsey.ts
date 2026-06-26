@@ -232,11 +232,11 @@ export const ramseyData: LocationData = {
     videoUploadDate: "2023-10-19T00:00:00+00:00",
     // areaServed: Verified from biermanautism.com/location/ramsey/ — "Counties Served" section (May 2026)
     areaServed: [
-      { type: "AdministrativeArea", name: "Bergen County, NJ" },
-      { type: "AdministrativeArea", name: "Passaic County, NJ" },
-      { type: "AdministrativeArea", name: "Morris County, NJ" },
-      { type: "AdministrativeArea", name: "Sussex County, NJ" },
-      { type: "City", name: "Ramsey, NJ" },
+      { type: "AdministrativeArea", name: "Bergen County, NJ", sameAs: "https://en.wikipedia.org/wiki/Bergen_County,_New_Jersey" },
+      { type: "AdministrativeArea", name: "Passaic County, NJ", sameAs: "https://en.wikipedia.org/wiki/Passaic_County,_New_Jersey" },
+      { type: "AdministrativeArea", name: "Morris County, NJ", sameAs: "https://en.wikipedia.org/wiki/Morris_County,_New_Jersey" },
+      { type: "AdministrativeArea", name: "Sussex County, NJ", sameAs: "https://en.wikipedia.org/wiki/Sussex_County,_New_Jersey" },
+      { type: "City", name: "Ramsey, NJ", sameAs: "https://en.wikipedia.org/wiki/Ramsey,_New_Jersey" },
       { type: "City", name: "Mahwah, NJ" },
       { type: "City", name: "Allendale, NJ" },
       { type: "City", name: "Saddle River, NJ" },

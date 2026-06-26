@@ -180,11 +180,11 @@ export const cranfordData: LocationData = {
     videoUploadDate: "2023-10-19T00:00:00+00:00",
     // areaServed: Verified from biermanautism.com/location/cranford-nj/ — "Counties Served" section (May 2026)
     areaServed: [
-      { type: "AdministrativeArea", name: "Union County, NJ" },
-      { type: "AdministrativeArea", name: "Essex County, NJ" },
-      { type: "AdministrativeArea", name: "Middlesex County, NJ" },
-      { type: "AdministrativeArea", name: "Somerset County, NJ" },
-      { type: "AdministrativeArea", name: "Morris County, NJ" },
+      { type: "AdministrativeArea", name: "Union County, NJ", sameAs: "https://en.wikipedia.org/wiki/Union_County,_New_Jersey" },
+      { type: "AdministrativeArea", name: "Essex County, NJ", sameAs: "https://en.wikipedia.org/wiki/Essex_County,_New_Jersey" },
+      { type: "AdministrativeArea", name: "Middlesex County, NJ", sameAs: "https://en.wikipedia.org/wiki/Middlesex_County,_New_Jersey" },
+      { type: "AdministrativeArea", name: "Somerset County, NJ", sameAs: "https://en.wikipedia.org/wiki/Somerset_County,_New_Jersey" },
+      { type: "AdministrativeArea", name: "Morris County, NJ", sameAs: "https://en.wikipedia.org/wiki/Morris_County,_New_Jersey" },
       { type: "City", name: "Cranford, NJ" },
       { type: "City", name: "Westfield, NJ" },
       { type: "City", name: "Clark, NJ" },

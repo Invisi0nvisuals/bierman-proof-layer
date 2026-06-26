@@ -180,10 +180,10 @@ export const eatontownData: LocationData = {
     videoUploadDate: "2023-10-19T00:00:00+00:00",
     // areaServed: Verified from biermanautism.com/location/eatontown-nj/ — "Counties Served" section (May 2026)
     areaServed: [
-      { type: "AdministrativeArea", name: "Monmouth County, NJ" },
-      { type: "AdministrativeArea", name: "Middlesex County, NJ" },
-      { type: "AdministrativeArea", name: "Ocean County, NJ" },
-      { type: "AdministrativeArea", name: "Mercer County, NJ" },
+      { type: "AdministrativeArea", name: "Monmouth County, NJ", sameAs: "https://en.wikipedia.org/wiki/Monmouth_County,_New_Jersey" },
+      { type: "AdministrativeArea", name: "Middlesex County, NJ", sameAs: "https://en.wikipedia.org/wiki/Middlesex_County,_New_Jersey" },
+      { type: "AdministrativeArea", name: "Ocean County, NJ", sameAs: "https://en.wikipedia.org/wiki/Ocean_County,_New_Jersey" },
+      { type: "AdministrativeArea", name: "Mercer County, NJ", sameAs: "https://en.wikipedia.org/wiki/Mercer_County,_New_Jersey" },
       { type: "City", name: "Eatontown, NJ" },
       { type: "City", name: "Red Bank, NJ" },
       { type: "City", name: "Shrewsbury, NJ" },
