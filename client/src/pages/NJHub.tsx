@@ -198,7 +198,7 @@ export default function NJHub() {
         <title>ABA Therapy in New Jersey | Bierman Autism Centers</title>
         <meta
           name="description"
-          content="Bierman Autism Centers operates 10 New Jersey locations providing ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism. Find a location near you."
+          content="Comprehensive autism support services near you in New Jersey — ABA therapy, speech, OT & diagnostics at 10 locations. BCBA-supervised care. Insurance accepted."
         />
         {/* Canonical: / is the root hub. /locations/nj/ is an alias that also points here. */}
         <link rel="canonical" href={PAGE_URL} />
