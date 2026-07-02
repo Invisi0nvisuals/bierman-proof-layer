@@ -10,9 +10,8 @@
  * Phone: (609) 480-2522
  * County: Morris County (primary)
  *
- * ⚠️  COMING SOON — Summer 2026
- * comingSoon: true — page renders with "Coming Summer 2026" badge.
- * Flip to false when location opens.
+ * Status: OPEN (activated Phase A.3, July 2026)
+ * Previously Coming Summer 2026 — now live.
  */
 
 import type { LocationData } from "../types";
@@ -22,8 +21,7 @@ export const parsippanyData: LocationData = {
   slug: "parsippany",
   displayName: "Parsippany, NJ",
   entityName: "Bierman Autism Centers — Parsippany",
-  comingSoon: true,
-  comingSoonLabel: "Coming Summer 2026",
+  comingSoon: false,
 
   // ── NAP ───────────────────────────────────────────────────────────────────
   address: {
@@ -231,7 +229,7 @@ export const parsippanyData: LocationData = {
 
   // ── Verified Local Trust Fields ──────────────────────────────────────────────
   // Source: biermanautism.com/location/parsippany-nj/ (May 2026)
-  // Note: comingSoon = true — serviceArea populated for schema readiness only
+  // serviceArea populated for schema and local entity coverage
 
   serviceArea: [
     "Parsippany", "Morris Plains", "Morristown", "Hanover Township",
@@ -246,12 +244,12 @@ export const parsippanyData: LocationData = {
   ],
 
   // visitLogistics: Verbatim from biermanautism.com/location/parsippany-nj/ — "Accessible Location" bullet (May 2026)
-  // Note: Coming Soon — no parking/accessibility listed yet; only highway access confirmed
+  // Note: Parking/accessibility details pending site confirmation; highway access confirmed
   visitLogistics: {
     landmarks: "Directly off US-46 and minutes from I-80 and I-287",
   },
 
-  // schoolRelationships: undefined — Coming Soon page does not yet have school district section (May 2026)
+  // schoolRelationships: undefined — school district section pending site confirmation (July 2026)
   // schoolRelationships: undefined,
 
   communityLinks: {

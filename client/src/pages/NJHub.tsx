@@ -396,7 +396,7 @@ export default function NJHub() {
             <div>
               <img src={LOGO} alt="Bierman Autism Centers 20th Anniversary" className="h-12 w-auto mb-4" />
               <p className="text-white/60 text-sm leading-relaxed">
-                Bierman Autism Centers provides evidence-based ABA therapy and autism support services across New Jersey and 35+ locations nationwide.
+                Bierman Autism Centers provides evidence-based ABA therapy and autism support services across New Jersey and 34 locations nationwide.
               </p>
             </div>
             <div>
