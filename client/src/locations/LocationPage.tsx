@@ -92,6 +92,51 @@ const STANDARD_SERVICES = [
   },
 ];
 
+// ─── Service Card Destination URLs (Source of Truth: Bierman_NJ_Service_URL_Matrix.xlsx) ───
+// Only Speech and OT cards link out. ABA and Diagnostic Evaluation remain unlinked.
+// West Orange: both pages returned 404 during validation — skipped per matrix instructions.
+
+const SERVICE_CARD_URLS: Record<string, Record<string, string>> = {
+  "berkeley-heights": {
+    "speech-therapy": "https://www.biermanautism.com/location/berkeley-heights-nj/speech-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=berkeley-heights_speech_therapy",
+    "occupational-therapy": "https://www.biermanautism.com/location/berkeley-heights-nj/occupational-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=berkeley-heights_occupational_therapy",
+  },
+  cranford: {
+    "speech-therapy": "https://www.biermanautism.com/location/cranford-nj/speech-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=cranford_speech_therapy",
+    "occupational-therapy": "https://www.biermanautism.com/location/cranford-nj/occupational-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=cranford_occupational_therapy",
+  },
+  eatontown: {
+    "speech-therapy": "https://www.biermanautism.com/location/eatontown-nj/speech-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=eatontown_speech_therapy",
+    "occupational-therapy": "https://www.biermanautism.com/location/eatontown-nj/occupational-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=eatontown_occupational_therapy",
+  },
+  moorestown: {
+    "speech-therapy": "https://www.biermanautism.com/location/moorestown-nj/speech-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=moorestown_speech_therapy",
+    "occupational-therapy": "https://www.biermanautism.com/location/moorestown-nj/occupational-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=moorestown_occupational_therapy",
+  },
+  parsippany: {
+    "speech-therapy": "https://www.biermanautism.com/location/parsippany-nj/speech-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=parsippany_speech_therapy",
+    "occupational-therapy": "https://www.biermanautism.com/location/parsippany-nj/occupational-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=parsippany_occupational_therapy",
+  },
+  piscataway: {
+    "speech-therapy": "https://www.biermanautism.com/location/piscataway/speech-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=piscataway_speech_therapy",
+    "occupational-therapy": "https://www.biermanautism.com/location/piscataway/occupational-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=piscataway_occupational_therapy",
+  },
+  princeton: {
+    "speech-therapy": "https://www.biermanautism.com/location/princeton-nj/speech-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=princeton_speech_therapy",
+    "occupational-therapy": "https://www.biermanautism.com/location/princeton-nj/occupational-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=princeton_occupational_therapy",
+  },
+  ramsey: {
+    "speech-therapy": "https://www.biermanautism.com/location/ramsey/speech-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=ramsey_speech_therapy",
+    "occupational-therapy": "https://www.biermanautism.com/location/ramsey/occupational-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=ramsey_occupational_therapy",
+  },
+  roseland: {
+    "speech-therapy": "https://www.biermanautism.com/location/roseland-nj/speech-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=roseland_speech_therapy",
+    "occupational-therapy": "https://www.biermanautism.com/location/roseland-nj/occupational-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=roseland_occupational_therapy",
+  },
+  // West Orange: Speech and OT pages both returned HTTP 404 during validation.
+  // Do not add URLs until pages are live on biermanautism.com.
+};
+
 // ─── SVG Icons ────────────────────────────────────────────────────────────────
 
 function IconABA() {
@@ -417,22 +462,46 @@ export function LocationPage({ data }: LocationPageProps) {
             <p className="text-slate-500 mt-3 max-w-2xl mx-auto">Each service is individualized to your child's goals and delivered by licensed, experienced clinicians.</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {STANDARD_SERVICES.map((svc) => (
-              <div id={svc.slug} key={svc.title} className="bg-white border border-teal-100 rounded-3xl overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200">
-                {svc.img ? (
-                  <div className="relative">
-                    <img src={svc.img} alt={svc.title} className="w-full h-40 object-cover" />
-                    <div className="absolute top-3 left-3 bg-white/90 rounded-xl p-1.5 shadow-sm">{svc.icon}</div>
+            {STANDARD_SERVICES.map((svc) => {
+              const cardUrl = SERVICE_CARD_URLS[data.slug]?.[svc.slug];
+              const cardContent = (
+                <>
+                  {svc.img ? (
+                    <div className="relative">
+                      <img src={svc.img} alt={svc.title} className="w-full h-40 object-cover" />
+                      <div className="absolute top-3 left-3 bg-white/90 rounded-xl p-1.5 shadow-sm">{svc.icon}</div>
+                    </div>
+                  ) : (
+                    <div className="w-full h-40 flex flex-col items-center justify-center bg-teal-50">{svc.icon}</div>
+                  )}
+                  <div className="p-5">
+                    <h3 className="font-bold text-[#1a2b47] text-base mb-2">{svc.title}</h3>
+                    <p className="text-slate-500 text-sm leading-relaxed">{svc.desc}</p>
+                    {cardUrl && (
+                      <span className="inline-flex items-center gap-1 text-teal-600 text-xs font-semibold mt-3">
+                        Learn more <span aria-hidden="true">&rarr;</span>
+                      </span>
+                    )}
                   </div>
-                ) : (
-                  <div className="w-full h-40 flex flex-col items-center justify-center bg-teal-50">{svc.icon}</div>
-                )}
-                <div className="p-5">
-                  <h3 className="font-bold text-[#1a2b47] text-base mb-2">{svc.title}</h3>
-                  <p className="text-slate-500 text-sm leading-relaxed">{svc.desc}</p>
+                </>
+              );
+              return cardUrl ? (
+                <a
+                  id={svc.slug}
+                  key={svc.title}
+                  href={cardUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white border border-teal-100 rounded-3xl overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 block"
+                >
+                  {cardContent}
+                </a>
+              ) : (
+                <div id={svc.slug} key={svc.title} className="bg-white border border-teal-100 rounded-3xl overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200">
+                  {cardContent}
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
