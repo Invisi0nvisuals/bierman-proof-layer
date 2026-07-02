@@ -7,7 +7,7 @@
  *
  * NAP status: Confirmed from Bierman website (May 2026)
  * Address: 550 Springfield Ave., Berkeley Heights, NJ 07922
- * Phone: (908) 768-2333
+ * Phone: (908) 493-5270 — Final Public Phone per Launch Readiness Workbook SOT
  * County: Union County (primary)
  */
 
@@ -27,7 +27,7 @@ export const berkeleyHeightsData: LocationData = {
     zip: "07922",
     county: "Union County",
   },
-  phone: "(908) 768-2333",
+  phone: "(908) 493-5270",
   geo: {
     lat: 40.6801,
     lng: -74.4354,

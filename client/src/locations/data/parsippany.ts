@@ -33,7 +33,7 @@ export const parsippanyData: LocationData = {
     zip: "07054",
     county: "Morris County",
   },
-  phone: "(609) 480-2522",
+  phone: "(609) 849-3482",
   geo: {
     lat: 40.8584,
     lng: -74.4265,

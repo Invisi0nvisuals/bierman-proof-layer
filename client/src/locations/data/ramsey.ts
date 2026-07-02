@@ -6,7 +6,7 @@
  * Consumed by LocationPage renderer and buildLocationSchema utility.
  *
  * NAP status: Confirmed from GBP listing (May 2026)
- * Phone note: (201) 596-8104 used here — confirm with Bierman before production
+ * Phone: (201) 928-5245 — Final Public Phone per Launch Readiness Workbook SOT
  * Reviews: 6 real public GBP reviews, sourced May 2026
  */
 
@@ -26,7 +26,7 @@ export const ramseyData: LocationData = {
     zip: "07446",
     county: "Bergen County",
   },
-  phone: "(201) 596-8104",
+  phone: "(201) 928-5245",
   geo: {
     lat: 41.0579,
     lng: -74.1441,

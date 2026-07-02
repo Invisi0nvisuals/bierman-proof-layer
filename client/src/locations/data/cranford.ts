@@ -7,7 +7,7 @@
  *
  * NAP status: Confirmed from Bierman website (May 2026)
  * Address: 65 Jackson Drive, Suite 302, Cranford, NJ 07016
- * Phone: (609) 480-7916
+ * Phone: (609) 798-2428 — Final Public Phone per Launch Readiness Workbook SOT
  * County: Union County (primary)
  */
 
@@ -27,7 +27,7 @@ export const cranfordData: LocationData = {
     zip: "07016",
     county: "Union County",
   },
-  phone: "(609) 480-7916",
+  phone: "(609) 798-2428",
   geo: {
     lat: 40.6576,
     lng: -74.2982,

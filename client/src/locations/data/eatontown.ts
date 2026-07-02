@@ -27,7 +27,7 @@ export const eatontownData: LocationData = {
     zip: "07724",
     county: "Monmouth County",
   },
-  phone: "(732) 639-4723",
+  phone: "(732) 344-4829",
   geo: {
     lat: 40.2926,
     lng: -74.0579,

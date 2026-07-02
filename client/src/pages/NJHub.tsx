@@ -433,11 +433,9 @@ export default function NJHub() {
           <div className="border-t border-white/10 pt-6 mt-2">
             <div className="flex flex-wrap items-center justify-between gap-4">
               <div className="flex flex-wrap gap-4 text-xs text-white/40">
-                <Link href="/privacy-policy/" className="hover:text-white/70 transition-colors">Privacy Policy</Link>
+                <a href="https://www.biermanautism.com/privacy-policy/?utm_source=nj_hub&utm_medium=footer&utm_campaign=local_pilot" className="hover:text-white/70 transition-colors">Privacy Policy</a>
                 <span className="text-white/20">·</span>
-                <Link href="/terms-of-use/" className="hover:text-white/70 transition-colors">Terms of Use</Link>
-                <span className="text-white/20">·</span>
-                <Link href="/accessibility/" className="hover:text-white/70 transition-colors">Accessibility</Link>
+                <a href="https://www.biermanautism.com/terms-of-use/?utm_source=nj_hub&utm_medium=footer&utm_campaign=local_pilot" className="hover:text-white/70 transition-colors">Terms of Use</a>
               </div>
               <p className="text-white/30 text-xs">© {new Date().getFullYear()} Bierman Autism Centers. All rights reserved.</p>
             </div>

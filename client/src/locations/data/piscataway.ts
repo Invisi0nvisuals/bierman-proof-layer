@@ -27,7 +27,7 @@ export const piscatawayData: LocationData = {
     zip: "08854",
     county: "Middlesex County",
   },
-  phone: "(732) 655-2056",
+  phone: "(732) 426-5470",
   geo: {
     lat: 40.5493,
     lng: -74.4774,

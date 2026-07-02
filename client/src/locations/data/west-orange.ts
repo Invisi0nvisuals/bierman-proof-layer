@@ -32,7 +32,7 @@ export const westOrangeData: LocationData = {
     zip: "07052",
     county: "Essex County",
   },
-  phone: "(908) 632-2068",
+  phone: "(908) 529-0336",
   geo: {
     lat: 40.7965,
     lng: -74.2617,

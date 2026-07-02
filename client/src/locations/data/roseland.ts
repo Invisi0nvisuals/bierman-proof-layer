@@ -30,7 +30,7 @@ export const roselandData: LocationData = {
     zip: "07068",
     county: "Essex County",
   },
-  phone: "(800) 931-8113",
+  phone: "(973) 832-1716",
   geo: {
     lat: 40.8204,
     lng: -74.3021,
