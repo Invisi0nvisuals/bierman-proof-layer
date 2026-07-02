@@ -133,8 +133,10 @@ const SERVICE_CARD_URLS: Record<string, Record<string, string>> = {
     "speech-therapy": "https://www.biermanautism.com/location/roseland-nj/speech-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=roseland_speech_therapy",
     "occupational-therapy": "https://www.biermanautism.com/location/roseland-nj/occupational-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=roseland_occupational_therapy",
   },
-  // West Orange: Speech and OT pages both returned HTTP 404 during validation.
-  // Do not add URLs until pages are live on biermanautism.com.
+  "west-orange": {
+    "speech-therapy": "https://www.biermanautism.com/location/west-orange-nj/speech-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=west-orange_speech_therapy",
+    "occupational-therapy": "https://www.biermanautism.com/location/west-orange-nj/occupational-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=west-orange_occupational_therapy",
+  },
 };
 
 // ─── SVG Icons ────────────────────────────────────────────────────────────────
