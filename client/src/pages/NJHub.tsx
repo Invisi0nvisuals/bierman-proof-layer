@@ -65,6 +65,15 @@ const COUNTY_GROUPS: Record<string, string> = {
   "Burlington County": "South Jersey — Burlington County",
 };
 
+// ── Footer Service Navigation (Source of Truth: Bierman_NJ_Final_Service_URL_Matrix_V4.xlsx) ────
+const NJ_HUB_FOOTER_SERVICES: { label: string; url: string }[] = [
+  { label: "ABA Therapy", url: "https://www.biermanautism.com/aba-therapy-services/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=nj_hub_aba_therapy" },
+  { label: "Speech-Language Therapy", url: "https://www.biermanautism.com/autism-therapy-services/speech-therapy-services/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=nj_hub_speech_therapy" },
+  { label: "Occupational Therapy", url: "https://www.biermanautism.com/autism-therapy-services/occupational-therapy-services/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=nj_hub_occupational_therapy" },
+  { label: "Diagnostic Evaluation", url: "https://www.biermanautism.com/autism-testing/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=nj_hub_autism_testing" },
+  { label: "Caregiver Training", url: "https://www.biermanautism.com/resources/caregiver-training/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=nj_hub_caregiver_training" },
+];
+
 // ── Schema builder ────────────────────────────────────────────────────────────
 function buildNJHubSchema(): string {
   const graph = {
@@ -421,8 +430,8 @@ export default function NJHub() {
             <div>
               <div className="font-bold text-white mb-3">Services</div>
               <div className="text-white/60 text-sm space-y-1">
-                {["ABA Therapy", "Speech-Language Therapy", "Occupational Therapy", "Diagnostic Evaluation", "Caregiver Training"].map((s) => (
-                  <div key={s}>{s}</div>
+                {NJ_HUB_FOOTER_SERVICES.map((svc) => (
+                  <div key={svc.label}><a href={svc.url} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">{svc.label}</a></div>
                 ))}
               </div>
             </div>

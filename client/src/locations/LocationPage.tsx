@@ -159,6 +159,96 @@ const SERVICE_CARD_URLS: Record<string, Record<string, string>> = {
   },
 };
 
+// ─── Footer Service Navigation URLs (Source of Truth: Bierman_NJ_Final_Service_URL_Matrix_V4.xlsx) ───
+// All 5 services linked in footer: ABA, Speech, OT, Diagnostic Evaluation, Caregiver Training.
+// URLs use the V4 matrix values exactly as provided.
+
+interface FooterServiceLink {
+  label: string;
+  url: string;
+}
+
+const FOOTER_SERVICE_URLS: Record<string, FooterServiceLink[]> = {
+  "berkeley-heights": [
+    { label: "ABA Therapy", url: "https://www.biermanautism.com/aba-therapy-services/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=berkeley-heights_aba_therapy" },
+    { label: "Speech-Language Therapy", url: "https://www.biermanautism.com/location/berkeley-heights-nj/speech-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=berkeley-heights_speech_therapy" },
+    { label: "Occupational Therapy", url: "https://www.biermanautism.com/location/berkeley-heights-nj/occupational-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=berkeley-heights_occupational_therapy" },
+    { label: "Diagnostic Evaluation", url: "https://www.biermanautism.com/autism-testing/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=berkeley-heights_autism_testing" },
+    { label: "Caregiver Training", url: "https://www.biermanautism.com/resources/caregiver-training/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=berkeley-heights_caregiver_training" },
+  ],
+  cranford: [
+    { label: "ABA Therapy", url: "https://www.biermanautism.com/aba-therapy-services/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=cranford_aba_therapy" },
+    { label: "Speech-Language Therapy", url: "https://www.biermanautism.com/location/cranford-nj/speech-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=cranford_speech_therapy" },
+    { label: "Occupational Therapy", url: "https://www.biermanautism.com/location/cranford-nj/occupational-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=cranford_occupational_therapy" },
+    { label: "Diagnostic Evaluation", url: "https://www.biermanautism.com/autism-testing/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=cranford_autism_testing" },
+    { label: "Caregiver Training", url: "https://www.biermanautism.com/resources/caregiver-training/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=cranford_caregiver_training" },
+  ],
+  eatontown: [
+    { label: "ABA Therapy", url: "https://www.biermanautism.com/aba-therapy-services/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=eatontown_aba_therapy" },
+    { label: "Speech-Language Therapy", url: "https://www.biermanautism.com/location/eatontown-nj/speech-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=eatontown_speech_therapy" },
+    { label: "Occupational Therapy", url: "https://www.biermanautism.com/location/eatontown-nj/occupational-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=eatontown_occupational_therapy" },
+    { label: "Diagnostic Evaluation", url: "https://www.biermanautism.com/autism-testing/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=eatontown_autism_testing" },
+    { label: "Caregiver Training", url: "https://www.biermanautism.com/resources/caregiver-training/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=eatontown_caregiver_training" },
+  ],
+  moorestown: [
+    { label: "ABA Therapy", url: "https://www.biermanautism.com/aba-therapy-services/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=moorestown_aba_therapy" },
+    { label: "Speech-Language Therapy", url: "https://www.biermanautism.com/location/moorestown-nj/speech-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=moorestown_speech_therapy" },
+    { label: "Occupational Therapy", url: "https://www.biermanautism.com/location/moorestown-nj/occupational-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=moorestown_occupational_therapy" },
+    { label: "Diagnostic Evaluation", url: "https://www.biermanautism.com/autism-testing/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=moorestown_autism_testing" },
+    { label: "Caregiver Training", url: "https://www.biermanautism.com/resources/caregiver-training/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=moorestown_caregiver_training" },
+  ],
+  parsippany: [
+    { label: "ABA Therapy", url: "https://www.biermanautism.com/aba-therapy-services/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=parsippany_aba_therapy" },
+    { label: "Speech-Language Therapy", url: "https://www.biermanautism.com/location/parsippany-nj/speech-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=parsippany_speech_therapy" },
+    { label: "Occupational Therapy", url: "https://www.biermanautism.com/location/parsippany-nj/occupational-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=parsippany_occupational_therapy" },
+    { label: "Diagnostic Evaluation", url: "https://www.biermanautism.com/autism-testing/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=parsippany_autism_testing" },
+    { label: "Caregiver Training", url: "https://www.biermanautism.com/resources/caregiver-training/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=parsippany_caregiver_training" },
+  ],
+  piscataway: [
+    { label: "ABA Therapy", url: "https://www.biermanautism.com/aba-therapy-services/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=piscataway_aba_therapy" },
+    { label: "Speech-Language Therapy", url: "https://www.biermanautism.com/location/piscataway-nj/speech-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=piscataway_speech_therapy" },
+    { label: "Occupational Therapy", url: "https://www.biermanautism.com/location/piscataway-nj/occupational-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=piscataway_occupational_therapy" },
+    { label: "Diagnostic Evaluation", url: "https://www.biermanautism.com/autism-testing/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=piscataway_autism_testing" },
+    { label: "Caregiver Training", url: "https://www.biermanautism.com/resources/caregiver-training/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=piscataway_caregiver_training" },
+  ],
+  princeton: [
+    { label: "ABA Therapy", url: "https://www.biermanautism.com/aba-therapy-services/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=princeton_aba_therapy" },
+    { label: "Speech-Language Therapy", url: "https://www.biermanautism.com/location/princeton-nj/speech-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=princeton_speech_therapy" },
+    { label: "Occupational Therapy", url: "https://www.biermanautism.com/location/princeton-nj/occupational-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=princeton_occupational_therapy" },
+    { label: "Diagnostic Evaluation", url: "https://www.biermanautism.com/autism-testing/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=princeton_autism_testing" },
+    { label: "Caregiver Training", url: "https://www.biermanautism.com/resources/caregiver-training/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=princeton_caregiver_training" },
+  ],
+  ramsey: [
+    { label: "ABA Therapy", url: "https://www.biermanautism.com/aba-therapy-services/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=ramsey_aba_therapy" },
+    { label: "Speech-Language Therapy", url: "https://www.biermanautism.com/location/ramsey-nj/speech-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=ramsey_speech_therapy" },
+    { label: "Occupational Therapy", url: "https://www.biermanautism.com/location/ramsey-nj/occupational-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=ramsey_occupational_therapy" },
+    { label: "Diagnostic Evaluation", url: "https://www.biermanautism.com/autism-testing/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=ramsey_autism_testing" },
+    { label: "Caregiver Training", url: "https://www.biermanautism.com/resources/caregiver-training/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=ramsey_caregiver_training" },
+  ],
+  roseland: [
+    { label: "ABA Therapy", url: "https://www.biermanautism.com/aba-therapy-services/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=roseland_aba_therapy" },
+    { label: "Speech-Language Therapy", url: "https://www.biermanautism.com/location/roseland-nj/speech-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=roseland_speech_therapy" },
+    { label: "Occupational Therapy", url: "https://www.biermanautism.com/location/roseland-nj/occupational-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=roseland_occupational_therapy" },
+    { label: "Diagnostic Evaluation", url: "https://www.biermanautism.com/autism-testing/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=roseland_autism_testing" },
+    { label: "Caregiver Training", url: "https://www.biermanautism.com/resources/caregiver-training/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=roseland_caregiver_training" },
+  ],
+  "west-orange": [
+    { label: "ABA Therapy", url: "https://www.biermanautism.com/aba-therapy-services/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=west-orange_aba_therapy" },
+    { label: "Speech-Language Therapy", url: "https://www.biermanautism.com/location/west-orange-nj/speech-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=west-orange_speech_therapy" },
+    { label: "Occupational Therapy", url: "https://www.biermanautism.com/location/west-orange-nj/occupational-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=west-orange_occupational_therapy" },
+    { label: "Diagnostic Evaluation", url: "https://www.biermanautism.com/autism-testing/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=west-orange_autism_testing" },
+    { label: "Caregiver Training", url: "https://www.biermanautism.com/resources/caregiver-training/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=west-orange_caregiver_training" },
+  ],
+  // Fallback for NJ Hub (no location-specific UTM)
+  "_default": [
+    { label: "ABA Therapy", url: "https://www.biermanautism.com/aba-therapy-services/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=nj_hub_aba_therapy" },
+    { label: "Speech-Language Therapy", url: "https://www.biermanautism.com/autism-therapy-services/speech-therapy-services/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=nj_hub_speech_therapy" },
+    { label: "Occupational Therapy", url: "https://www.biermanautism.com/autism-therapy-services/occupational-therapy-services/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=nj_hub_occupational_therapy" },
+    { label: "Diagnostic Evaluation", url: "https://www.biermanautism.com/autism-testing/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=nj_hub_autism_testing" },
+    { label: "Caregiver Training", url: "https://www.biermanautism.com/resources/caregiver-training/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=nj_hub_caregiver_training" },
+  ],
+};
+
 // ─── SVG Icons ────────────────────────────────────────────────────────────────
 
 function IconABA() {
@@ -909,10 +999,9 @@ export function LocationPage({ data }: LocationPageProps) {
             <div>
               <div className="font-bold text-white mb-3">Services</div>
               <div className="text-white/60 text-sm space-y-1">
-                <div><a href="https://www.biermanautism.com/aba-therapy-services/?utm_source=nj_hub&utm_medium=footer&utm_campaign=local_pilot" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">ABA Therapy</a></div>
-                <div><a href="https://www.biermanautism.com/autism-therapy-services/speech-therapy-services/?utm_source=nj_hub&utm_medium=footer&utm_campaign=local_pilot" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Speech-Language Therapy</a></div>
-                <div><a href="https://www.biermanautism.com/autism-therapy-services/occupational-therapy-services/?utm_source=nj_hub&utm_medium=footer&utm_campaign=local_pilot" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Occupational Therapy</a></div>
-                <div>Diagnostic Evaluation</div>
+                {(FOOTER_SERVICE_URLS[data.slug] || FOOTER_SERVICE_URLS["_default"]).map((svc) => (
+                  <div key={svc.label}><a href={svc.url} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">{svc.label}</a></div>
+                ))}
               </div>
             </div>
           </div>
