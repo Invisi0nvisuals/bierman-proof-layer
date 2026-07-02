@@ -92,60 +92,70 @@ const STANDARD_SERVICES = [
   },
 ];
 
-// ─── Service Card Destination URLs (Source of Truth: Bierman_NJ_Service_URL_Matrix_v3.xlsx) ───
-// ABA, Speech, and OT cards link out. Diagnostic Evaluation remains unlinked (no production page).
-// ABA links use the general /aba-therapy-services/ page with location-specific utm_content.
+// ─── Service Card Destination URLs (Source of Truth: Bierman_NJ_Service_URL_Matrix_v3.1.xlsx) ───
+// All 4 service cards link out: ABA, Speech, OT, and Diagnostic Evaluation.
+// ABA links use /aba-therapy-services/; Diagnostic uses /autism-testing/; both with location-specific utm_content.
 
 const SERVICE_CARD_URLS: Record<string, Record<string, string>> = {
   "berkeley-heights": {
     "aba-therapy": "https://www.biermanautism.com/aba-therapy-services/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=berkeley-heights_aba_therapy",
     "speech-therapy": "https://www.biermanautism.com/location/berkeley-heights-nj/speech-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=berkeley-heights_speech_therapy",
     "occupational-therapy": "https://www.biermanautism.com/location/berkeley-heights-nj/occupational-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=berkeley-heights_occupational_therapy",
+    "diagnostic-evaluation": "https://www.biermanautism.com/autism-testing/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=berkeley-heights_autism_testing",
   },
   cranford: {
     "aba-therapy": "https://www.biermanautism.com/aba-therapy-services/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=cranford_aba_therapy",
     "speech-therapy": "https://www.biermanautism.com/location/cranford-nj/speech-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=cranford_speech_therapy",
     "occupational-therapy": "https://www.biermanautism.com/location/cranford-nj/occupational-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=cranford_occupational_therapy",
+    "diagnostic-evaluation": "https://www.biermanautism.com/autism-testing/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=cranford_autism_testing",
   },
   eatontown: {
     "aba-therapy": "https://www.biermanautism.com/aba-therapy-services/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=eatontown_aba_therapy",
     "speech-therapy": "https://www.biermanautism.com/location/eatontown-nj/speech-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=eatontown_speech_therapy",
     "occupational-therapy": "https://www.biermanautism.com/location/eatontown-nj/occupational-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=eatontown_occupational_therapy",
+    "diagnostic-evaluation": "https://www.biermanautism.com/autism-testing/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=eatontown_autism_testing",
   },
   moorestown: {
     "aba-therapy": "https://www.biermanautism.com/aba-therapy-services/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=moorestown_aba_therapy",
     "speech-therapy": "https://www.biermanautism.com/location/moorestown-nj/speech-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=moorestown_speech_therapy",
     "occupational-therapy": "https://www.biermanautism.com/location/moorestown-nj/occupational-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=moorestown_occupational_therapy",
+    "diagnostic-evaluation": "https://www.biermanautism.com/autism-testing/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=moorestown_autism_testing",
   },
   parsippany: {
     "aba-therapy": "https://www.biermanautism.com/aba-therapy-services/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=parsippany_aba_therapy",
     "speech-therapy": "https://www.biermanautism.com/location/parsippany-nj/speech-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=parsippany_speech_therapy",
     "occupational-therapy": "https://www.biermanautism.com/location/parsippany-nj/occupational-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=parsippany_occupational_therapy",
+    "diagnostic-evaluation": "https://www.biermanautism.com/autism-testing/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=parsippany_autism_testing",
   },
   piscataway: {
     "aba-therapy": "https://www.biermanautism.com/aba-therapy-services/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=piscataway_aba_therapy",
     "speech-therapy": "https://www.biermanautism.com/location/piscataway/speech-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=piscataway_speech_therapy",
     "occupational-therapy": "https://www.biermanautism.com/location/piscataway/occupational-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=piscataway_occupational_therapy",
+    "diagnostic-evaluation": "https://www.biermanautism.com/autism-testing/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=piscataway_autism_testing",
   },
   princeton: {
     "aba-therapy": "https://www.biermanautism.com/aba-therapy-services/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=princeton_aba_therapy",
     "speech-therapy": "https://www.biermanautism.com/location/princeton-nj/speech-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=princeton_speech_therapy",
     "occupational-therapy": "https://www.biermanautism.com/location/princeton-nj/occupational-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=princeton_occupational_therapy",
+    "diagnostic-evaluation": "https://www.biermanautism.com/autism-testing/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=princeton_autism_testing",
   },
   ramsey: {
     "aba-therapy": "https://www.biermanautism.com/aba-therapy-services/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=ramsey_aba_therapy",
     "speech-therapy": "https://www.biermanautism.com/location/ramsey/speech-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=ramsey_speech_therapy",
     "occupational-therapy": "https://www.biermanautism.com/location/ramsey/occupational-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=ramsey_occupational_therapy",
+    "diagnostic-evaluation": "https://www.biermanautism.com/autism-testing/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=ramsey_autism_testing",
   },
   roseland: {
     "aba-therapy": "https://www.biermanautism.com/aba-therapy-services/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=roseland_aba_therapy",
     "speech-therapy": "https://www.biermanautism.com/location/roseland-nj/speech-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=roseland_speech_therapy",
     "occupational-therapy": "https://www.biermanautism.com/location/roseland-nj/occupational-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=roseland_occupational_therapy",
+    "diagnostic-evaluation": "https://www.biermanautism.com/autism-testing/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=roseland_autism_testing",
   },
   "west-orange": {
     "aba-therapy": "https://www.biermanautism.com/aba-therapy-services/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=west-orange_aba_therapy",
     "speech-therapy": "https://www.biermanautism.com/location/west-orange-nj/speech-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=west-orange_speech_therapy",
     "occupational-therapy": "https://www.biermanautism.com/location/west-orange-nj/occupational-therapy/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=west-orange_occupational_therapy",
+    "diagnostic-evaluation": "https://www.biermanautism.com/autism-testing/?utm_source=nj_pilot&utm_medium=service_card&utm_campaign=local_service_navigation&utm_content=west-orange_autism_testing",
   },
 };
 
