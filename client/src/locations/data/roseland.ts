@@ -43,8 +43,8 @@ export const roselandData: LocationData = {
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3020.4!2d-74.3021!3d40.8204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s103+Eisenhower+Pkwy%2C+Ste+120%2C+Roseland%2C+NJ+07068!5e0!3m2!1sen!2sus!4v1620000000000",
 
   // ── Hours ─────────────────────────────────────────────────────────────────
-  hoursDisplay: "Monday–Friday, 8:00 AM – 6:00 PM",
-  openingHours: "Mo-Fr 08:00-18:00",
+  hoursDisplay: "Monday–Friday, 8:30 AM – 4:30 PM",
+  openingHours: "Mo-Fr 08:30-16:30",
 
   // ── Video ─────────────────────────────────────────────────────────────────
   youtubeId: "UqMnEBJqFkQ",

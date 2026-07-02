@@ -40,8 +40,8 @@ export const piscatawayData: LocationData = {
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3028.0!2d-74.4774!3d40.5493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s200+Centennial+Ave%2C+Piscataway%2C+NJ+08854!5e0!3m2!1sen!2sus!4v1620000000001",
 
   // ── Hours ─────────────────────────────────────────────────────────────────
-  hoursDisplay: "Monday\u2013Friday, 8:00 AM \u2013 6:00 PM",
-  openingHours: "Mo-Fr 08:00-18:00",
+  hoursDisplay: "Monday\u2013Friday, 8:30 AM \u2013 4:30 PM",
+  openingHours: "Mo-Fr 08:30-16:30",
 
   // ── Video ─────────────────────────────────────────────────────────────────
   youtubeId: "QFufx0pye4U",

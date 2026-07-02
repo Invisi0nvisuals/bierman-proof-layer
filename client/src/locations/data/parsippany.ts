@@ -46,8 +46,8 @@ export const parsippanyData: LocationData = {
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3015.0!2d-74.4265!3d40.8584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s2001+US-46%2C+Parsippany%2C+NJ+07054!5e0!3m2!1sen!2sus!4v1620000000005",
 
   // ── Hours ─────────────────────────────────────────────────────────────────
-  hoursDisplay: "Opening Summer 2026 — Contact us to pre-register",
-  openingHours: "Mo-Fr 08:30-18:00",
+  hoursDisplay: "Monday–Friday, 8:30 AM – 4:30 PM",
+  openingHours: "Mo-Fr 08:30-16:30",
 
   // ── Video ─────────────────────────────────────────────────────────────────
   youtubeId: "QFufx0pye4U",

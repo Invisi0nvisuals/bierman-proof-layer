@@ -40,8 +40,8 @@ export const cranfordData: LocationData = {
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.0!2d-74.2982!3d40.6576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s65+Jackson+Drive%2C+Cranford%2C+NJ+07016!5e0!3m2!1sen!2sus!4v1620000000002",
 
   // ── Hours ─────────────────────────────────────────────────────────────────
-  hoursDisplay: "Monday–Friday, 8:30 AM – 6:00 PM",
-  openingHours: "Mo-Fr 08:30-18:00",
+  hoursDisplay: "Monday–Friday, 8:30 AM – 4:30 PM",
+  openingHours: "Mo-Fr 08:30-16:30",
 
   // ── Video ─────────────────────────────────────────────────────────────────
   youtubeId: "QFufx0pye4U",
