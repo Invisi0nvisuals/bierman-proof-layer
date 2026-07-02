@@ -51,13 +51,13 @@ export const parsippanyData: LocationData = {
   youtubeId: "QFufx0pye4U",
   videoTitle: "Inside a Bierman Autism Center — What to Expect (Parent Tour)",
   videoDescription:
-    "A parent-facing tour of a Bierman Autism Centers clinic. See the therapy spaces, meet the team, and learn about ABA therapy services coming to Parsippany, NJ.",
+    "A parent-facing tour of a Bierman Autism Centers clinic. See the therapy spaces, meet the team, and learn about ABA therapy services at our Parsippany, NJ location.",
 
   // ── Content ───────────────────────────────────────────────────────────────
   heroDescription:
-    "Bierman Autism Centers is opening in Parsippany, NJ in Summer 2026. Our new Morris County clinic will provide individualized ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism.",
+    "Bierman Autism Centers provides individualized ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism in Parsippany, NJ. Our experienced clinical team partners with families to help children build meaningful skills in a supportive, play-based environment.",
   insuranceText:
-    "Bierman Parsippany will accept most major insurance plans including Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others. Contact us now to pre-register and verify your coverage before we open.",
+    "Bierman Parsippany accepts most major insurance plans. We work with families to verify coverage and navigate the insurance process. Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others are accepted.",
 
   // ── Reviews ───────────────────────────────────────────────────────────────
   reviews: [
@@ -106,20 +106,20 @@ export const parsippanyData: LocationData = {
   // ── FAQs ──────────────────────────────────────────────────────────────────
   faqs: [
     {
-      q: "When is the Bierman Autism Centers Parsippany location opening?",
-      a: "The Parsippany clinic is scheduled to open Summer 2026. You can pre-register now so our team can contact you as soon as enrollment begins.",
+      q: "What autism therapy services are available at the Parsippany center?",
+      a: "Bierman Autism Centers in Parsippany offers BCBA-supervised ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism. Services are individualized based on each child's needs and developmental goals.",
     },
     {
       q: "Does Bierman Autism Centers in Parsippany accept insurance?",
-      a: "Yes. Bierman Parsippany will accept most major insurance plans including Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others. Contact us to verify your specific coverage before we open.",
+      a: "Yes. Bierman Parsippany accepts most major insurance plans including Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others. Contact us to verify your specific coverage.",
     },
     {
-      q: "What age groups will the Parsippany center serve?",
-      a: "The Parsippany center will serve children from early intervention age through adolescence. Services will be individualized based on each child's needs and developmental stage.",
+      q: "What age groups does the Parsippany center serve?",
+      a: "The Parsippany center serves children from early intervention age through adolescence. Services are individualized based on each child's needs and developmental stage.",
     },
     {
       q: "Where is the Bierman Autism Centers Parsippany clinic located?",
-      a: "The Parsippany clinic will be located at 2001 US 46, Suite 100, Parsippany, NJ 07054, serving families in Morris County and surrounding areas.",
+      a: "The Parsippany clinic is located at 2001 US 46, Suite 100, Parsippany, NJ 07054, serving families in Morris County and surrounding areas.",
     },
     {
       q: "What is ABA therapy and how does it help children with autism?",
@@ -127,15 +127,15 @@ export const parsippanyData: LocationData = {
     },
     {
       q: "Is ABA therapy available near Parsippany, NJ?",
-      a: "Bierman Autism Centers is opening in Parsippany, NJ at 2001 US 46, Suite 100 in Summer 2026. The clinic will serve families in Morris County, Essex County, and surrounding communities including Morristown, Denville, and Montville.",
+      a: "Yes. Bierman Autism Centers in Parsippany is located at 2001 US 46, Suite 100. The clinic serves families in Morris County, Essex County, and surrounding communities including Morristown, Denville, and Montville.",
     },
     {
-      q: "Will Bierman Parsippany offer speech therapy for children with autism?",
-      a: "Yes. Speech-language therapy will be available at the Parsippany center, delivered by licensed speech-language pathologists as part of a coordinated care plan.",
+      q: "Does Bierman Parsippany offer speech therapy for children with autism?",
+      a: "Yes. Speech-language therapy is available at the Parsippany center, delivered by licensed speech-language pathologists as part of a coordinated care plan.",
     },
     {
-      q: "Will Bierman Parsippany offer occupational therapy?",
-      a: "Yes. Occupational therapy services will be available at the Parsippany location, focusing on sensory integration, fine motor skills, and daily living activities.",
+      q: "Does Bierman Parsippany offer occupational therapy?",
+      a: "Yes. Occupational therapy services are available at the Parsippany location, focusing on sensory integration, fine motor skills, and daily living activities.",
     },
   ],
 
@@ -170,7 +170,7 @@ export const parsippanyData: LocationData = {
   // ── Assets ────────────────────────────────────────────────────────────────
   assets: {
     facility: "/manus-storage/bierman-autism-new-jersey-ramsey-facility-main_296feafd.webp",
-    facilityAlt: "Bierman Autism Centers Parsippany, NJ — coming Summer 2026",
+    facilityAlt: "Bierman Autism Centers Parsippany, NJ — ABA therapy and autism services",
     videoPoster: "/manus-storage/bierman-ramsey-video-poster_28eb470d.jpg",
   },
 
@@ -180,7 +180,7 @@ export const parsippanyData: LocationData = {
     baseId: "https://bierman-proof-layer.manus.space/locations/nj/parsippany/",
     pageTitle: "ABA Therapy Near Me | Parsippany, NJ | Bierman Autism Centers",
     pageDescription:
-      "ABA therapy, speech, OT & diagnostics coming to Parsippany, NJ — Summer 2026. Pre-register now for Morris County families. Bierman Autism Centers.",
+      "ABA therapy, speech-language therapy, occupational therapy, and autism diagnostic evaluations in Parsippany, NJ. Explore evidence-based autism services from Bierman Autism Centers.",
     videoUploadDate: "2023-10-19T00:00:00+00:00",
     // areaServed: Verified from biermanautism.com/location/parsippany-nj/ — "Counties Served" section (May 2026)
     areaServed: [
