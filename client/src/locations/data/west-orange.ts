@@ -154,7 +154,7 @@ export const westOrangeData: LocationData = {
     { name: "Roseland, NJ", url: "/locations/nj/roseland/" },
     { name: "Cranford, NJ", url: "/locations/nj/cranford/" },
     { name: "Parsippany, NJ", url: "/locations/nj/parsippany/" },
-    { name: "All 35 Locations \u2192", url: "/" },
+    { name: "All 10 NJ Locations →", url: "/" },
   ],
 
   // ── Clinical Leadership ───────────────────────────────────────────────────
