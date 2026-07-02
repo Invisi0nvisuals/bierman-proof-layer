@@ -24,7 +24,8 @@
  *   4. Done — no other files need to change.
  */
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
+import { Link } from "wouter";
 import { Helmet } from "react-helmet-async";
 import { PILOT_VIDEO } from "./types";
 import type { LocationData, LocationReview, LocationFaq } from "./types";
@@ -178,6 +179,17 @@ function DismissBtn({ onDismiss, label = "Dismiss notice" }: { onDismiss: () => 
 
 const TRUNCATE_THRESHOLD = 160;
 
+/** Format reviewer name as "First Name + Last Initial." for privacy consistency */
+function formatReviewerName(name: string): string {
+  // Already truncated (e.g., "Maria S.") or single word / pseudonym — return as-is
+  if (name.includes(".") || !name.includes(" ") || name === "Bierman Parent") return name;
+  const parts = name.trim().split(/\s+/);
+  if (parts.length < 2) return name;
+  const firstName = parts[0];
+  const lastInitial = parts[parts.length - 1][0];
+  return `${firstName} ${lastInitial}.`;
+}
+
 function GBPReviewCard({ review }: { review: LocationReview }) {
   const [expanded, setExpanded] = useState(false);
   const isLong = review.text.length > TRUNCATE_THRESHOLD;
@@ -190,7 +202,7 @@ function GBPReviewCard({ review }: { review: LocationReview }) {
           {review.initials}
         </div>
         <div className="min-w-0">
-          <p className="font-semibold text-[#1a2b47] text-sm leading-tight truncate">{review.name}</p>
+          <p className="font-semibold text-[#1a2b47] text-sm leading-tight truncate">{formatReviewerName(review.name)}</p>
           <p className="text-slate-400 text-xs mt-0.5 truncate">{review.meta}</p>
         </div>
       </div>
@@ -237,6 +249,9 @@ export function LocationPage({ data }: LocationPageProps) {
   const { address, phone, intakeUrl, gbpUrl, mapEmbedUrl, youtubeId, displayName, entityName, heroDescription, insuranceText, reviews, faqs, nearby, clinicalLeadership, assets } = data;
   const mapsDirectionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(`${address.street}, ${address.city}, ${address.state} ${address.zip}`)}`;
 
+  // Scroll to top on route change (fixes SPA mid-page landing)
+  useEffect(() => { window.scrollTo(0, 0); }, [data]);
+
   // Build per-route JSON-LD schema — memoized so it only recomputes when data changes
   const schemaJson = useMemo(() => buildLocationSchema(data), [data]);
 
@@ -257,7 +272,7 @@ export function LocationPage({ data }: LocationPageProps) {
       <nav className="bg-white border-b border-slate-200 z-40 shadow-sm" style={{ position: "sticky", top: "0px" }}>
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src={SHARED_ASSETS.logo} alt="Bierman Autism Centers 20th Anniversary" className="h-10 w-auto" />
+            <Link href="/"><img src={SHARED_ASSETS.logo} alt="Bierman Autism Centers 20th Anniversary" className="h-10 w-auto" /></Link>
             <div className="hidden md:flex items-center gap-2">
               <span className="text-slate-300 text-sm">|</span>
               <span className="text-slate-500 text-sm">{address.city}, {address.state}</span>
@@ -490,7 +505,11 @@ export function LocationPage({ data }: LocationPageProps) {
                   aria-label={`Map showing location of Bierman Autism Centers in ${address.city}, ${address.state}`}
                 />
               </div>
-</div>
+              <a href={gbpUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-teal-700 hover:text-teal-800 text-sm font-medium mt-3 transition-colors">
+                <svg viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4" aria-hidden="true"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/></svg>
+                View on Google Maps
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -799,7 +818,10 @@ export function LocationPage({ data }: LocationPageProps) {
             <div>
               <div className="font-bold text-white mb-3">Services</div>
               <div className="text-white/60 text-sm space-y-1">
-                {STANDARD_SERVICES.map((s) => <div key={s.title}>{s.title}</div>)}
+                <div><a href="https://www.biermanautism.com/aba-therapy-services/?utm_source=nj_hub&utm_medium=footer&utm_campaign=local_pilot" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">ABA Therapy</a></div>
+                <div><a href="https://www.biermanautism.com/autism-therapy-services/speech-therapy-services/?utm_source=nj_hub&utm_medium=footer&utm_campaign=local_pilot" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Speech-Language Therapy</a></div>
+                <div><a href="https://www.biermanautism.com/autism-therapy-services/occupational-therapy-services/?utm_source=nj_hub&utm_medium=footer&utm_campaign=local_pilot" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Occupational Therapy</a></div>
+                <div>Diagnostic Evaluation</div>
               </div>
             </div>
           </div>
