@@ -16,10 +16,7 @@ import { berkeleyHeightsData } from "./locations/data/berkeley-heights";
 import { eatontownData } from "./locations/data/eatontown";
 import { moorestownData } from "./locations/data/moorestown";
 import { roselandData } from "./locations/data/roseland";
-import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import NJHub from "@/pages/NJHub";
-import TermsOfUse from "@/pages/TermsOfUse";
-import Accessibility from "@/pages/Accessibility";
 
 function Router() {
   return (
@@ -37,11 +34,8 @@ function Router() {
       <Route path={"/locations/nj/eatontown/"} component={() => <LocationPage data={eatontownData} />} />
       <Route path={"/locations/nj/moorestown/"} component={() => <LocationPage data={moorestownData} />} />
       <Route path={"/locations/nj/roseland/"} component={() => <LocationPage data={roselandData} />} />
-      {/* ── Legal Pages ───────────────────────────────────────────────────── */}
+      {/* ── Aliases ──────────────────────────────────────────────────────── */}
       <Route path={"/locations/nj/"} component={NJHub} /> {/* alias — canonical points to / */}
-      <Route path={"/privacy-policy/"} component={PrivacyPolicy} />
-      <Route path={"/terms-of-use/"} component={TermsOfUse} />
-      <Route path={"/accessibility/"} component={Accessibility} />
       {/* 404 */}
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
