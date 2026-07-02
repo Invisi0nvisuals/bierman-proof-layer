@@ -985,7 +985,7 @@ export function LocationPage({ data }: LocationPageProps) {
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
               <img src={SHARED_ASSETS.logo} alt="Bierman Autism Centers 20th Anniversary" className="h-12 w-auto mb-4" />
-              <p className="text-white/60 text-sm leading-relaxed">Bierman Autism Centers provides evidence-based ABA therapy and autism support services across 34 verified locations.</p>
+              <p className="text-white/60 text-sm leading-relaxed">Bierman Autism Centers provides evidence-based ABA therapy and autism support services for children and families across 34 locations nationwide.</p>
             </div>
             <div>
               <div className="font-bold text-white mb-3">{address.city} Location</div>
