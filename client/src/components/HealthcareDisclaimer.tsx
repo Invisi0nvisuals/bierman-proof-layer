@@ -31,20 +31,20 @@ export default function HealthcareDisclaimer({
 
   if (variant === "inline") {
     return (
-      <div className={`bg-teal-50 border border-teal-200 rounded-xl p-4 ${className}`}>
+      <div className={`bg-brand-teal-50 border border-brand-teal-200 rounded-xl p-4 ${className}`}>
         <div className="flex items-start gap-3">
           <div className="flex-shrink-0 mt-0.5">
-            <svg viewBox="0 0 20 20" fill="none" className="w-4 h-4 text-teal-600" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+            <svg viewBox="0 0 20 20" fill="none" className="w-4 h-4 text-brand-teal" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
               <circle cx="10" cy="10" r="8" />
               <path d="M10 7v4M10 13h.01" strokeLinecap="round" />
             </svg>
           </div>
           <div>
-            <p className="text-teal-800 text-sm font-semibold mb-1">Informational Content</p>
-            <p className="text-teal-700 text-sm leading-relaxed">
+            <p className="text-brand-teal-800 text-sm font-semibold mb-1">Informational Content</p>
+            <p className="text-brand-teal-700 text-sm leading-relaxed">
               The information on this page is provided for educational purposes only. It is not intended as medical advice, clinical diagnosis, or treatment guidance. Families seeking support for their child should speak directly with a qualified healthcare professional or contact Bierman Autism Centers to discuss their child's specific needs.
             </p>
-            <p className="text-teal-600 text-xs mt-2">
+            <p className="text-brand-teal text-xs mt-2">
               If you are experiencing an emergency, call 911 or your local emergency services immediately.
             </p>
           </div>

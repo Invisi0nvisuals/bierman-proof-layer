@@ -2,7 +2,7 @@
  * Bierman Autism Centers — Proof Layer
  * New Jersey Location Hub: /locations/nj/
  *
- * Design system: DM Sans + Source Serif 4, teal/orange/navy (#1a2b47)
+ * Design system: Poppins, brand-teal (#05C3DE) / brand-coral (#EF4E72) / navy (#1a2b47)
  * Matches LocationPage visual language exactly.
  *
  * Purpose:
@@ -128,7 +128,7 @@ function LocationCard({ loc }: { loc: LocationData }) {
         className={`group relative bg-white border rounded-2xl p-5 transition-all duration-200 cursor-pointer
           ${isComingSoon
             ? "border-slate-200 opacity-80 hover:opacity-90"
-            : "border-teal-100 hover:border-teal-300 hover:shadow-md hover:-translate-y-0.5"
+            : "border-brand-teal-100 hover:border-brand-teal-200 hover:shadow-md hover:-translate-y-0.5"
           }`}
       >
         {/* Coming Soon badge */}
@@ -142,7 +142,7 @@ function LocationCard({ loc }: { loc: LocationData }) {
 
         {/* County pill */}
         <div className="flex items-center gap-2 mb-3">
-          <span className="inline-flex items-center gap-1 bg-teal-50 text-teal-600 text-xs font-semibold px-2.5 py-1 rounded-full">
+          <span className="inline-flex items-center gap-1 bg-brand-teal-50 text-brand-teal text-xs font-semibold px-2.5 py-1 rounded-full">
             <svg viewBox="0 0 12 12" fill="currentColor" className="w-2.5 h-2.5" aria-hidden="true">
               <circle cx="6" cy="5" r="2.5"/>
               <path d="M6 1a4 4 0 100 8A4 4 0 006 1zm0 6.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" opacity="0"/>
@@ -152,7 +152,7 @@ function LocationCard({ loc }: { loc: LocationData }) {
         </div>
 
         {/* City + state */}
-        <h2 className="text-lg font-bold text-[#1a2b47] mb-1 group-hover:text-teal-700 transition-colors">
+        <h2 className="text-lg font-bold text-[#1a2b47] mb-1 group-hover:text-brand-teal-700 transition-colors">
           {loc.address.city}, {loc.address.state}
         </h2>
 
@@ -168,7 +168,7 @@ function LocationCard({ loc }: { loc: LocationData }) {
 
         {/* Phone */}
         {!isComingSoon && (
-          <div className="flex items-center gap-1.5 text-sm text-teal-700 font-medium mb-4">
+          <div className="flex items-center gap-1.5 text-sm text-brand-teal-700 font-medium mb-4">
             <svg viewBox="0 0 16 16" fill="none" className="w-3.5 h-3.5" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
               <path d="M3 3.5C3 2.67 3.67 2 4.5 2h1.25l1.5 3.5-1.25.75a7.5 7.5 0 003.75 3.75l.75-1.25L14 10.25V11.5c0 .83-.67 1.5-1.5 1.5C6.04 13 3 9.96 3 3.5z" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
@@ -185,7 +185,7 @@ function LocationCard({ loc }: { loc: LocationData }) {
 
         {/* CTA */}
         <div className={`text-sm font-semibold flex items-center gap-1.5 transition-colors
-          ${isComingSoon ? "text-amber-600" : "text-teal-600 group-hover:text-teal-800"}`}>
+          ${isComingSoon ? "text-amber-600" : "text-brand-teal group-hover:text-brand-teal-800"}`}>
           {isComingSoon ? "Pre-register interest" : "View location"}
           <svg viewBox="0 0 16 16" fill="none" className="w-3.5 h-3.5" stroke="currentColor" strokeWidth="2" aria-hidden="true">
             <path d="M3 8h10M9 4l4 4-4 4" strokeLinecap="round" strokeLinejoin="round"/>
@@ -231,7 +231,7 @@ export default function NJHub() {
               href={INTAKE_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-4 py-2 rounded-lg text-sm transition-colors shadow-sm"
+              className="bg-brand-coral hover:bg-brand-coral/90 text-white font-semibold px-5 py-2.5 rounded-full text-sm tracking-wide transition-colors shadow-sm"
             >
               Request Services
             </a>
@@ -245,17 +245,17 @@ export default function NJHub() {
           {/* Breadcrumb */}
           <nav aria-label="Breadcrumb" className="mb-6">
             <ol className="flex items-center gap-2 text-xs text-slate-400">
-              <li><Link href="/" className="hover:text-teal-600 transition-colors">Home</Link></li>
+              <li><Link href="/" className="hover:text-brand-teal transition-colors">Home</Link></li>
               <li aria-hidden="true" className="text-slate-300">›</li>
               <li><span className="text-slate-500">Locations</span></li>
               <li aria-hidden="true" className="text-slate-300">›</li>
-              <li><span className="text-teal-600 font-semibold">New Jersey</span></li>
+              <li><span className="text-brand-teal font-semibold">New Jersey</span></li>
             </ol>
           </nav>
 
           <div className="max-w-3xl">
             <div className="flex items-center gap-2 mb-4">
-              <span className="inline-flex items-center gap-1.5 bg-teal-100 text-teal-700 text-xs font-semibold px-3 py-1 rounded-full">
+              <span className="inline-flex items-center gap-1.5 bg-brand-teal-100 text-brand-teal-700 text-xs font-semibold px-3 py-1 rounded-full">
                 <svg viewBox="0 0 16 16" fill="currentColor" className="w-3 h-3" aria-hidden="true">
                   <path d="M8 1a5.5 5.5 0 100 11A5.5 5.5 0 008 1zm0 1.5a4 4 0 110 8 4 4 0 010-8z"/>
                 </svg>
@@ -275,13 +275,13 @@ export default function NJHub() {
                 href={INTAKE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-2xl text-lg transition-colors text-center shadow-md"
+                className="bg-brand-coral hover:bg-brand-coral/90 text-white font-semibold px-8 py-4 rounded-full text-lg tracking-wide transition-colors text-center shadow-md"
               >
                 Request Services in NJ
               </a>
               <a
                 href="tel:8009318113"
-                className="border-2 border-teal-300 hover:border-teal-500 bg-white hover:bg-teal-50 text-teal-700 font-semibold px-8 py-4 rounded-2xl text-lg transition-colors text-center"
+                className="border-2 border-brand-teal-200 hover:border-brand-teal bg-white hover:bg-brand-teal-50 text-brand-teal-700 font-semibold px-8 py-4 rounded-full text-lg transition-colors text-center"
               >
                 (800) 931-8113
               </a>
@@ -301,7 +301,7 @@ export default function NJHub() {
               { value: "20+", label: "Years Serving Families" },
             ].map((stat) => (
               <div key={stat.label}>
-                <div className="text-2xl font-bold text-orange-400 mb-0.5">{stat.value}</div>
+                <div className="text-2xl font-bold text-brand-coral mb-0.5">{stat.value}</div>
                 <div className="text-white/60 text-xs font-medium">{stat.label}</div>
               </div>
             ))}
@@ -362,8 +362,8 @@ export default function NJHub() {
                   "Caregiver Training & Family Support",
                 ].map((service) => (
                   <li key={service} className="flex items-center gap-3 text-slate-700">
-                    <span className="w-5 h-5 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0">
-                      <svg viewBox="0 0 12 12" fill="none" className="w-3 h-3 text-teal-600" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                    <span className="w-5 h-5 rounded-full bg-brand-teal-100 flex items-center justify-center flex-shrink-0">
+                      <svg viewBox="0 0 12 12" fill="none" className="w-3 h-3 text-brand-teal" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                         <path d="M2 6l3 3 5-5" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
                     </span>
@@ -380,7 +380,7 @@ export default function NJHub() {
               <div className="space-y-2 text-sm text-slate-500">
                 {["Horizon BCBS NJ", "Aetna", "United Healthcare", "Cigna", "And most major plans"].map((ins) => (
                   <div key={ins} className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-brand-teal flex-shrink-0" />
                     {ins}
                   </div>
                 ))}
@@ -389,7 +389,7 @@ export default function NJHub() {
                 href={INTAKE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 block w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 rounded-xl text-sm text-center transition-colors"
+                className="mt-6 block w-full bg-brand-coral hover:bg-brand-coral/90 text-white font-semibold py-3 rounded-full text-sm tracking-wide text-center transition-colors"
               >
                 Start the Intake Process
               </a>

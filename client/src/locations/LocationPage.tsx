@@ -4,8 +4,8 @@
  *
  * Design: Warm pediatric healthcare — family-centered, light, and welcoming
  * - Warm off-white / light aqua backgrounds (no heavy dark navy dominance)
- * - Soft teal (#0d9488) brand accent
- * - Warm orange (#f97316) CTA
+ * - Soft teal (#05C3DE) brand accent
+ * - Warm orange (#EF4E72) CTA
  * - Navy (#1a2b47) used sparingly for headings and footer only
  * - Rounded cards, generous whitespace, playful-but-polished SVG icons
  *
@@ -255,9 +255,9 @@ function IconABA() {
   return (
     <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" aria-hidden="true">
       <circle cx="24" cy="24" r="22" fill="#ccfbf1" />
-      <path d="M16 32c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke="#0d9488" strokeWidth="2.5" strokeLinecap="round"/>
-      <circle cx="24" cy="18" r="5" stroke="#0d9488" strokeWidth="2.5"/>
-      <path d="M20 26l-4 6M28 26l4 6" stroke="#0d9488" strokeWidth="2" strokeLinecap="round"/>
+      <path d="M16 32c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke="#05C3DE" strokeWidth="2.5" strokeLinecap="round"/>
+      <circle cx="24" cy="18" r="5" stroke="#05C3DE" strokeWidth="2.5"/>
+      <path d="M20 26l-4 6M28 26l4 6" stroke="#05C3DE" strokeWidth="2" strokeLinecap="round"/>
     </svg>
   );
 }
@@ -266,8 +266,8 @@ function IconSpeech() {
   return (
     <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" aria-hidden="true">
       <circle cx="24" cy="24" r="22" fill="#ccfbf1" />
-      <path d="M14 20c0-5.523 4.477-10 10-10s10 4.477 10 10c0 4.418-2.86 8.166-6.857 9.497L26 34h-4l-.857-4.503C17.146 28.166 14 24.418 14 20z" stroke="#0d9488" strokeWidth="2.5" strokeLinejoin="round"/>
-      <path d="M20 20h8M20 24h5" stroke="#0d9488" strokeWidth="2" strokeLinecap="round"/>
+      <path d="M14 20c0-5.523 4.477-10 10-10s10 4.477 10 10c0 4.418-2.86 8.166-6.857 9.497L26 34h-4l-.857-4.503C17.146 28.166 14 24.418 14 20z" stroke="#05C3DE" strokeWidth="2.5" strokeLinejoin="round"/>
+      <path d="M20 20h8M20 24h5" stroke="#05C3DE" strokeWidth="2" strokeLinecap="round"/>
     </svg>
   );
 }
@@ -276,10 +276,10 @@ function IconOT() {
   return (
     <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" aria-hidden="true">
       <circle cx="24" cy="24" r="22" fill="#ccfbf1" />
-      <path d="M18 28c0-3.314 2.686-6 6-6s6 2.686 6 6v4H18v-4z" stroke="#0d9488" strokeWidth="2.5" strokeLinejoin="round"/>
-      <circle cx="24" cy="18" r="3.5" stroke="#0d9488" strokeWidth="2.5"/>
-      <path d="M14 36h20" stroke="#0d9488" strokeWidth="2" strokeLinecap="round"/>
-      <path d="M14 28h2M32 28h2" stroke="#0d9488" strokeWidth="2" strokeLinecap="round"/>
+      <path d="M18 28c0-3.314 2.686-6 6-6s6 2.686 6 6v4H18v-4z" stroke="#05C3DE" strokeWidth="2.5" strokeLinejoin="round"/>
+      <circle cx="24" cy="18" r="3.5" stroke="#05C3DE" strokeWidth="2.5"/>
+      <path d="M14 36h20" stroke="#05C3DE" strokeWidth="2" strokeLinecap="round"/>
+      <path d="M14 28h2M32 28h2" stroke="#05C3DE" strokeWidth="2" strokeLinecap="round"/>
     </svg>
   );
 }
@@ -288,10 +288,10 @@ function IconDiag() {
   return (
     <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" aria-hidden="true">
       <circle cx="24" cy="24" r="22" fill="#ccfbf1" />
-      <rect x="14" y="13" width="20" height="24" rx="3" stroke="#0d9488" strokeWidth="2.5"/>
-      <path d="M19 20h10M19 25h10M19 30h6" stroke="#0d9488" strokeWidth="2" strokeLinecap="round"/>
-      <circle cx="32" cy="32" r="5" fill="#ccfbf1" stroke="#f97316" strokeWidth="2"/>
-      <path d="M32 30v4M30 32h4" stroke="#f97316" strokeWidth="1.5" strokeLinecap="round"/>
+      <rect x="14" y="13" width="20" height="24" rx="3" stroke="#05C3DE" strokeWidth="2.5"/>
+      <path d="M19 20h10M19 25h10M19 30h6" stroke="#05C3DE" strokeWidth="2" strokeLinecap="round"/>
+      <circle cx="32" cy="32" r="5" fill="#ccfbf1" stroke="#EF4E72" strokeWidth="2"/>
+      <path d="M32 30v4M30 32h4" stroke="#EF4E72" strokeWidth="1.5" strokeLinecap="round"/>
     </svg>
   );
 }
@@ -370,7 +370,7 @@ function GBPReviewCard({ review }: { review: LocationReview }) {
       <div className="flex-1">
         <blockquote className="text-slate-600 text-sm leading-relaxed">{displayText}</blockquote>
         {isLong && (
-          <button type="button" onClick={() => setExpanded(!expanded)} className="mt-2 text-teal-600 text-xs font-semibold hover:text-teal-700 focus:outline-none focus:underline transition-colors">
+          <button type="button" onClick={() => setExpanded(!expanded)} className="mt-2 text-brand-teal text-xs font-semibold hover:text-brand-teal-700 focus:outline-none focus:underline transition-colors">
             {expanded ? "Show less" : "Read more"}
           </button>
         )}
@@ -384,10 +384,10 @@ function GBPReviewCard({ review }: { review: LocationReview }) {
 
 function FAQItem({ faq, index }: { faq: LocationFaq; index: number }) {
   return (
-    <details key={index} className="border border-slate-200 rounded-2xl overflow-hidden group bg-white hover:border-teal-200 transition-colors">
-      <summary className="flex items-center justify-between px-6 py-4 cursor-pointer font-semibold text-[#1a2b47] hover:bg-teal-50/50 transition-colors list-none text-sm">
+    <details key={index} className="border border-slate-200 rounded-2xl overflow-hidden group bg-white hover:border-brand-teal-200 transition-colors">
+      <summary className="flex items-center justify-between px-6 py-4 cursor-pointer font-semibold text-[#1a2b47] hover:bg-brand-teal-50/50 transition-colors list-none text-sm">
         {faq.q}
-        <span className="text-teal-500 ml-4 flex-shrink-0 text-xl group-open:rotate-45 transition-transform duration-200">+</span>
+        <span className="text-brand-teal ml-4 flex-shrink-0 text-xl group-open:rotate-45 transition-transform duration-200">+</span>
       </summary>
       <div className="px-6 pb-5 text-slate-600 leading-relaxed border-t border-slate-100 pt-4 text-sm">
         {faq.a}
@@ -436,8 +436,8 @@ export function LocationPage({ data }: LocationPageProps) {
             </div>
           </div>
           <div className="flex items-center gap-3">
-            <a href={`tel:${phone}`} className="hidden md:block text-slate-600 hover:text-teal-700 text-sm font-medium transition-colors">{phone}</a>
-            <a href={intakeUrl} target="_blank" rel="noopener noreferrer" className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-4 py-2 rounded-lg text-sm transition-colors shadow-sm">
+            <a href={`tel:${phone}`} className="hidden md:block text-slate-600 hover:text-brand-teal-700 text-sm font-medium transition-colors">{phone}</a>
+            <a href={intakeUrl} target="_blank" rel="noopener noreferrer" className="bg-brand-coral hover:bg-brand-coral/90 text-white font-semibold px-5 py-2.5 rounded-full text-sm tracking-wide transition-colors shadow-sm">
               Request Services
             </a>
           </div>
@@ -449,7 +449,7 @@ export function LocationPage({ data }: LocationPageProps) {
         <div className="max-w-6xl mx-auto px-4">
           <div className="max-w-2xl">
             <div className="flex items-center gap-2 mb-4">
-              <span className="inline-flex items-center gap-1.5 bg-teal-100 text-teal-700 text-xs font-semibold px-3 py-1 rounded-full">
+              <span className="inline-flex items-center gap-1.5 bg-brand-teal-100 text-brand-teal-700 text-xs font-semibold px-3 py-1 rounded-full">
                 <svg viewBox="0 0 16 16" fill="currentColor" className="w-3 h-3" aria-hidden="true"><path d="M8 1a5 5 0 100 10A5 5 0 008 1zm0 1.5a3.5 3.5 0 110 7 3.5 3.5 0 010-7zM8 14a1 1 0 100-2 1 1 0 000 2z"/></svg>
                 {address.city}, {address.state}
               </span>
@@ -460,21 +460,21 @@ export function LocationPage({ data }: LocationPageProps) {
             </h1>
             <p className="text-slate-600 text-lg mb-8 leading-relaxed">{heroDescription}</p>
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
-              <a href={intakeUrl} target="_blank" rel="noopener noreferrer" className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-2xl text-lg transition-colors text-center shadow-md">
+              <a href={intakeUrl} target="_blank" rel="noopener noreferrer" className="bg-brand-coral hover:bg-brand-coral/90 text-white font-semibold px-8 py-4 rounded-full text-lg tracking-wide transition-colors text-center shadow-md">
                 Request Services in {address.city}
               </a>
-              <a href={`tel:${phone}`} className="border-2 border-teal-300 hover:border-teal-500 bg-white hover:bg-teal-50 text-teal-700 font-semibold px-8 py-4 rounded-2xl text-lg transition-colors text-center">
+              <a href={`tel:${phone}`} className="border-2 border-brand-teal-200 hover:border-brand-teal bg-white hover:bg-brand-teal-50 text-brand-teal-700 font-semibold px-8 py-4 rounded-full text-lg transition-colors text-center">
                 {phone}
               </a>
             </div>
             {/* GBP NAP Card */}
-            <div className="bg-white border border-teal-200 rounded-2xl p-5 inline-block shadow-sm">
+            <div className="bg-white border border-brand-teal-200 rounded-2xl p-5 inline-block shadow-sm">
               <div className="flex items-start gap-3">
-                <div className="bg-teal-100 rounded-full p-1.5 mt-0.5">
-                  <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4 text-teal-600" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M13 6.5a5 5 0 11-10 0 5 5 0 0110 0z"/><path d="M6 6.5l1.5 1.5L10 4.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                <div className="bg-brand-teal-100 rounded-full p-1.5 mt-0.5">
+                  <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4 text-brand-teal" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M13 6.5a5 5 0 11-10 0 5 5 0 0110 0z"/><path d="M6 6.5l1.5 1.5L10 4.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
                 </div>
                 <div>
-                  <div className="text-teal-700 text-xs font-bold uppercase tracking-widest mb-1">GBP Verified Location</div>
+                  <div className="text-brand-teal-700 text-xs font-bold uppercase tracking-widest mb-1">GBP Verified Location</div>
                   <div className="text-[#1a2b47] font-semibold text-sm">{entityName}</div>
                   <div className="text-slate-500 text-sm">{address.street}, {address.city}, {address.state} {address.zip}</div>
                   <div className="text-slate-500 text-sm">{phone}</div>
@@ -486,7 +486,7 @@ export function LocationPage({ data }: LocationPageProps) {
       </section>
 
       {/* Trust Bar */}
-      <section className="bg-teal-600 text-white py-3.5">
+      <section className="bg-brand-teal text-white py-3.5">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex flex-wrap justify-center md:justify-between items-center gap-3 text-sm font-medium">
             {["✓ Evidence-Based ABA Therapy", "✓ Insurance Accepted", "✓ BCBA-Supervised Programs", "✓ 20 Years of Experience", `✓ Serving ${address.county}`].map((item) => (
@@ -527,14 +527,14 @@ export function LocationPage({ data }: LocationPageProps) {
                     if (fallback) fallback.style.display = "flex";
                   }}
                 />
-                <div className="rounded-3xl bg-gradient-to-br from-teal-50 to-aqua-100 items-center justify-center hidden" style={{ minHeight: "320px", background: "linear-gradient(135deg, #e0f7f4, #f0fdfa)" }}>
+                <div className="rounded-3xl bg-gradient-to-br from-brand-teal-50 to-aqua-100 items-center justify-center hidden" style={{ minHeight: "320px", background: "linear-gradient(135deg, #e0f7f4, #f0fdfa)" }}>
                   <div className="text-center p-8">
                     <div className="text-6xl mb-4">🏥</div>
-                    <div className="text-teal-700 font-semibold">{address.city} Clinic Photo</div>
+                    <div className="text-brand-teal-700 font-semibold">{address.city} Clinic Photo</div>
                     <div className="text-slate-400 text-sm mt-1">Image pending upload confirmation</div>
                   </div>
                 </div>
-                <div className="absolute -bottom-5 -right-4 bg-white rounded-2xl shadow-lg p-3 flex items-center gap-2 border border-teal-100">
+                <div className="absolute -bottom-5 -right-4 bg-white rounded-2xl shadow-lg p-3 flex items-center gap-2 border border-brand-teal-100">
                   <img src={SHARED_ASSETS.mascot} alt="Pilot the Penguin mascot" className="h-12 w-auto" />
                   <div>
                     <div className="text-[#1a2b47] font-semibold text-xs">Pilot the Penguin</div>
@@ -544,7 +544,7 @@ export function LocationPage({ data }: LocationPageProps) {
               </div>
             </div>
             <div className="pt-4 md:pt-0">
-              <div className="text-teal-600 text-sm font-bold uppercase tracking-widest mb-2">Our {address.city} Clinic</div>
+              <div className="text-brand-teal text-sm font-bold uppercase tracking-widest mb-2">Our {address.city} Clinic</div>
               <h2 className="text-3xl font-bold text-[#1a2b47] mb-4">A Welcoming Environment for Every Child</h2>
               <p className="text-slate-600 leading-relaxed mb-4">
                 Our {address.city} center is designed to be a safe, engaging, and supportive space for children and families. Every aspect of our clinic — from the therapy rooms to the waiting areas — is built with the needs of children with autism in mind.
@@ -553,10 +553,10 @@ export function LocationPage({ data }: LocationPageProps) {
                 Our clinical team includes Board Certified Behavior Analysts (BCBAs), Registered Behavior Technicians (RBTs), speech-language pathologists, and occupational therapists working collaboratively on each child's individualized plan.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
-                <a href={intakeUrl} target="_blank" rel="noopener noreferrer" className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-xl transition-colors text-center text-sm">
+                <a href={intakeUrl} target="_blank" rel="noopener noreferrer" className="bg-brand-coral hover:bg-brand-coral/90 text-white font-semibold px-6 py-3 rounded-xl transition-colors text-center text-sm">
                   Request Services in {address.city}
                 </a>
-                <a href={`tel:${phone}`} className="border border-teal-300 hover:bg-teal-50 text-teal-700 font-semibold px-6 py-3 rounded-xl transition-colors text-center text-sm">
+                <a href={`tel:${phone}`} className="border border-brand-teal-200 hover:bg-brand-teal-50 text-brand-teal-700 font-semibold px-6 py-3 rounded-full transition-colors text-center text-sm">
                   {phone}
                 </a>
               </div>
@@ -569,7 +569,7 @@ export function LocationPage({ data }: LocationPageProps) {
       <section id="services" className="py-16" style={{ background: "linear-gradient(180deg, #f8fffe 0%, #f0fdfa 100%)" }}>
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
-            <div className="text-teal-600 text-sm font-bold uppercase tracking-widest mb-2">Services at {address.city}</div>
+            <div className="text-brand-teal text-sm font-bold uppercase tracking-widest mb-2">Services at {address.city}</div>
             <h2 className="text-3xl font-bold text-[#1a2b47]">Comprehensive Autism Support Services</h2>
             <p className="text-slate-500 mt-3 max-w-2xl mx-auto">Each service is individualized to your child's goals and delivered by licensed, experienced clinicians.</p>
           </div>
@@ -584,13 +584,13 @@ export function LocationPage({ data }: LocationPageProps) {
                       <div className="absolute top-3 left-3 bg-white/90 rounded-xl p-1.5 shadow-sm">{svc.icon}</div>
                     </div>
                   ) : (
-                    <div className="w-full h-40 flex flex-col items-center justify-center bg-teal-50">{svc.icon}</div>
+                    <div className="w-full h-40 flex flex-col items-center justify-center bg-brand-teal-50">{svc.icon}</div>
                   )}
                   <div className="p-5">
                     <h3 className="font-bold text-[#1a2b47] text-base mb-2">{svc.title}</h3>
                     <p className="text-slate-500 text-sm leading-relaxed">{svc.desc}</p>
                     {cardUrl && (
-                      <span className="inline-flex items-center gap-1 text-teal-600 text-xs font-semibold mt-3">
+                      <span className="inline-flex items-center gap-1 text-brand-teal text-xs font-semibold mt-3">
                         Learn more <span aria-hidden="true">&rarr;</span>
                       </span>
                     )}
@@ -604,12 +604,12 @@ export function LocationPage({ data }: LocationPageProps) {
                   href={cardUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white border border-teal-100 rounded-3xl overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 block"
+                  className="bg-white border border-brand-teal-100 rounded-3xl overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 block"
                 >
                   {cardContent}
                 </a>
               ) : (
-                <div id={svc.slug} key={svc.title} className="bg-white border border-teal-100 rounded-3xl overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200">
+                <div id={svc.slug} key={svc.title} className="bg-white border border-brand-teal-100 rounded-3xl overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200">
                   {cardContent}
                 </div>
               );
@@ -623,7 +623,7 @@ export function LocationPage({ data }: LocationPageProps) {
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="text-teal-600 text-sm font-bold uppercase tracking-widest mb-2">Insurance</div>
+              <div className="text-brand-teal text-sm font-bold uppercase tracking-widest mb-2">Insurance</div>
               <h2 className="text-3xl font-bold text-[#1a2b47] mb-4">Insurance Accepted at {address.city}</h2>
               <p className="text-slate-600 leading-relaxed mb-6">{insuranceText}</p>
               <img src={SHARED_ASSETS.insurance} alt="Horizon BCBS NJ — accepted at Bierman Autism Centers" className="rounded-2xl shadow-sm w-full max-w-xs object-contain" style={{ maxHeight: "80px" }} />
@@ -646,12 +646,12 @@ export function LocationPage({ data }: LocationPageProps) {
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div>
-              <div className="text-teal-600 text-sm font-bold uppercase tracking-widest mb-2">Location & Directions</div>
+              <div className="text-brand-teal text-sm font-bold uppercase tracking-widest mb-2">Location & Directions</div>
               <h2 className="text-3xl font-bold text-[#1a2b47] mb-4">Find Us in {address.city}</h2>
-              <div className="bg-white border border-teal-100 rounded-2xl p-6 shadow-sm mb-6">
+              <div className="bg-white border border-brand-teal-100 rounded-2xl p-6 shadow-sm mb-6">
                 <div className="space-y-3 text-sm">
                   <div className="flex items-start gap-3">
-                    <svg viewBox="0 0 20 20" fill="none" className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><path d="M10 2a6 6 0 016 6c0 4-6 10-6 10S4 12 4 8a6 6 0 016-6z"/><circle cx="10" cy="8" r="2"/></svg>
+                    <svg viewBox="0 0 20 20" fill="none" className="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><path d="M10 2a6 6 0 016 6c0 4-6 10-6 10S4 12 4 8a6 6 0 016-6z"/><circle cx="10" cy="8" r="2"/></svg>
                     <div>
                       <div className="font-semibold text-[#1a2b47]">{entityName}</div>
                       <div className="text-slate-500">{address.street}</div>
@@ -659,16 +659,16 @@ export function LocationPage({ data }: LocationPageProps) {
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
-                    <svg viewBox="0 0 20 20" fill="none" className="w-5 h-5 text-teal-600 flex-shrink-0" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><path d="M3 5a2 2 0 012-2h2l2 4-1.5 1.5a11 11 0 005 5L14 12l4 2v2a2 2 0 01-2 2C7.163 18 2 12.837 2 7a2 2 0 012-2z"/></svg>
-                    <a href={`tel:${phone}`} className="text-teal-700 font-semibold hover:underline">{phone}</a>
+                    <svg viewBox="0 0 20 20" fill="none" className="w-5 h-5 text-brand-teal flex-shrink-0" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><path d="M3 5a2 2 0 012-2h2l2 4-1.5 1.5a11 11 0 005 5L14 12l4 2v2a2 2 0 01-2 2C7.163 18 2 12.837 2 7a2 2 0 012-2z"/></svg>
+                    <a href={`tel:${phone}`} className="text-brand-teal-700 font-semibold hover:underline">{phone}</a>
                   </div>
                   <div className="flex items-center gap-3">
-                    <svg viewBox="0 0 20 20" fill="none" className="w-5 h-5 text-teal-600 flex-shrink-0" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><circle cx="10" cy="10" r="8"/><path d="M10 6v4l3 3" strokeLinecap="round"/></svg>
+                    <svg viewBox="0 0 20 20" fill="none" className="w-5 h-5 text-brand-teal flex-shrink-0" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><circle cx="10" cy="10" r="8"/><path d="M10 6v4l3 3" strokeLinecap="round"/></svg>
                     <span className="text-slate-600">{data.hoursDisplay}</span>
                   </div>
                 </div>
               </div>
-              <a href={mapsDirectionsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white font-semibold px-6 py-3 rounded-xl text-sm transition-colors shadow-sm">
+              <a href={mapsDirectionsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-brand-teal hover:bg-teal-700 text-white font-semibold px-6 py-3 rounded-xl text-sm transition-colors shadow-sm">
                 Get Directions →
               </a>
             </div>
@@ -686,7 +686,7 @@ export function LocationPage({ data }: LocationPageProps) {
                   aria-label={`Map showing location of Bierman Autism Centers in ${address.city}, ${address.state}`}
                 />
               </div>
-              <a href={gbpUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-teal-700 hover:text-teal-800 text-sm font-medium mt-3 transition-colors">
+              <a href={gbpUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-brand-teal-700 hover:text-brand-teal-800 text-sm font-medium mt-3 transition-colors">
                 <svg viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4" aria-hidden="true"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/></svg>
                 View on Google Maps
               </a>
@@ -696,12 +696,12 @@ export function LocationPage({ data }: LocationPageProps) {
       </section>
 
       {/* Getting Started */}
-      <section className="py-16" style={{ background: "linear-gradient(135deg, #0d9488 0%, #0f766e 100%)" }}>
+      <section className="py-16" style={{ background: "linear-gradient(135deg, #05C3DE 0%, #0f766e 100%)" }}>
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
-            <div className="text-teal-200 text-sm font-bold uppercase tracking-widest mb-2">Getting Started</div>
+            <div className="text-brand-teal-200 text-sm font-bold uppercase tracking-widest mb-2">Getting Started</div>
             <h2 className="text-3xl font-bold text-white">How to Begin Services at {address.city}</h2>
-            <p className="text-teal-100/80 mt-3 max-w-2xl mx-auto">Our intake process is designed to be straightforward and supportive for families.</p>
+            <p className="text-brand-teal-100/80 mt-3 max-w-2xl mx-auto">Our intake process is designed to be straightforward and supportive for families.</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
@@ -711,14 +711,14 @@ export function LocationPage({ data }: LocationPageProps) {
               { step: "04", title: "Begin Services", desc: "Your child's individualized program begins with ongoing family collaboration." },
             ].map((item) => (
               <div key={item.step} className="bg-white/15 backdrop-blur-sm rounded-3xl p-6 border border-white/20">
-                <div className="text-orange-300 font-bold text-3xl mb-3 font-mono">{item.step}</div>
+                <div className="text-brand-coral font-bold text-3xl mb-3 font-mono">{item.step}</div>
                 <h3 className="font-bold text-white text-base mb-2">{item.title}</h3>
-                <p className="text-teal-100/80 text-sm leading-relaxed">{item.desc}</p>
+                <p className="text-brand-teal-100/80 text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
           <div className="text-center mt-10">
-            <a href={intakeUrl} target="_blank" rel="noopener noreferrer" className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-10 py-4 rounded-2xl text-lg transition-colors inline-block shadow-lg">
+            <a href={intakeUrl} target="_blank" rel="noopener noreferrer" className="bg-brand-coral hover:bg-brand-coral/90 text-white font-semibold px-10 py-4 rounded-full text-lg tracking-wide transition-colors inline-block shadow-lg">
               Start the Process →
             </a>
           </div>
@@ -729,7 +729,7 @@ export function LocationPage({ data }: LocationPageProps) {
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
-            <div className="text-teal-600 text-sm font-bold uppercase tracking-widest mb-2">Safety &amp; Security</div>
+            <div className="text-brand-teal text-sm font-bold uppercase tracking-widest mb-2">Safety &amp; Security</div>
             <h2 className="text-3xl font-bold text-[#1a2b47] mb-4">Safety systems designed to give families peace of mind</h2>
             <p className="text-slate-500 max-w-3xl mx-auto text-base leading-relaxed">
               Families deserve to know that safety is supported by clear systems, trained teams, and thoughtful center procedures. Bierman's centers are designed with secure access, staff readiness, clinical safeguards, and family-facing transparency in mind.
@@ -762,7 +762,7 @@ export function LocationPage({ data }: LocationPageProps) {
       {/* Video Section — Meet Pilot the Penguin */}
       <section className="py-16 bg-slate-50">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div className="text-teal-600 text-sm font-bold uppercase tracking-widest mb-2">Meet Pilot the Penguin</div>
+          <div className="text-brand-teal text-sm font-bold uppercase tracking-widest mb-2">Meet Pilot the Penguin</div>
           <h2 className="text-3xl font-bold text-[#1a2b47] mb-3">A Gentle Story About Curiosity, Belonging, and Growth</h2>
           <p className="text-slate-500 mb-8 max-w-2xl mx-auto">A calming animated story about curiosity, belonging, and the many ways children learn, rest, and grow — created for families exploring support.</p>
           <div className="rounded-3xl overflow-hidden shadow-xl border border-slate-200" style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}>
@@ -783,7 +783,7 @@ export function LocationPage({ data }: LocationPageProps) {
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-4">
-            <div className="text-teal-600 text-sm font-bold uppercase tracking-widest mb-2">What Families Value</div>
+            <div className="text-brand-teal text-sm font-bold uppercase tracking-widest mb-2">What Families Value</div>
             <h2 className="text-3xl font-bold text-[#1a2b47]">What Families Value at {address.city}</h2>
             <p className="text-slate-500 mt-3 max-w-2xl mx-auto text-sm leading-relaxed">
               Public review evidence and Bierman testimonial themes suggest families value supportive communication, BCBA guidance, and a child-centered environment.
@@ -803,7 +803,7 @@ export function LocationPage({ data }: LocationPageProps) {
 {/* Real GBP Reviews */}
           <div className="mt-14">
             <div className="text-center mb-10">
-              <div className="text-teal-600 text-sm font-bold uppercase tracking-widest mb-2">Google Reviews</div>
+              <div className="text-brand-teal text-sm font-bold uppercase tracking-widest mb-2">Google Reviews</div>
               <h3 className="text-2xl font-bold text-[#1a2b47]">What Families Are Saying</h3>
               <p className="text-slate-500 text-sm mt-2 max-w-xl mx-auto">Real reviews from families at {entityName}.</p>
             </div>
@@ -818,7 +818,7 @@ export function LocationPage({ data }: LocationPageProps) {
       <section className="py-20 border-t border-slate-100" style={{ background: "linear-gradient(180deg, #f8fffe 0%, #ffffff 100%)" }}>
         <div className="max-w-6xl mx-auto px-4">
           <div className="max-w-2xl mb-12">
-            <div className="inline-block bg-teal-50 border border-teal-200 text-teal-700 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4">Parent Resource Pathway</div>
+            <div className="inline-block bg-brand-teal-50 border border-brand-teal-200 text-brand-teal-700 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4">Parent Resource Pathway</div>
             <h2 className="text-3xl md:text-4xl font-bold text-[#1a2b47] leading-tight">Understanding Autism Support Near {address.city}</h2>
             <p className="text-slate-500 mt-4 text-base leading-relaxed">
               Families often start with questions before they start services. These resources connect common questions to local support available in {address.county}.
@@ -839,7 +839,7 @@ export function LocationPage({ data }: LocationPageProps) {
                   <h3 className="font-bold text-[#1a2b47] text-sm leading-snug">{card.title}</h3>
                 </div>
                 <p className="text-slate-500 text-sm leading-relaxed flex-1">{card.copy}</p>
-                <a href={card.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-teal-600 font-semibold text-xs hover:text-teal-800 transition-colors mt-1">
+                <a href={card.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-brand-teal font-semibold text-xs hover:text-brand-teal-800 transition-colors mt-1">
                   {card.linkLabel} <span aria-hidden="true">→</span>
                 </a>
               </div>
@@ -855,7 +855,7 @@ export function LocationPage({ data }: LocationPageProps) {
               { label: "Caregiver Training", url: "https://www.biermanautism.com/resources/caregiver-training/" },
               { label: "ABA Therapy Services", url: "https://www.biermanautism.com/aba-therapy-services/" },
             ].map((link) => (
-              <a key={link.label} href={link.url} target="_blank" rel="noopener noreferrer" className="text-teal-700 text-xs font-medium hover:underline underline-offset-2">{link.label}</a>
+              <a key={link.label} href={link.url} target="_blank" rel="noopener noreferrer" className="text-brand-teal-700 text-xs font-medium hover:underline underline-offset-2">{link.label}</a>
             ))}
             <span className="text-slate-200 mx-1">|</span>
 </div>
@@ -867,10 +867,10 @@ export function LocationPage({ data }: LocationPageProps) {
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-12 items-start">
             <div className="lg:w-80 flex-shrink-0">
-              <div className="inline-block bg-white border border-teal-200 text-teal-700 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4">Caregiver Support</div>
+              <div className="inline-block bg-white border border-brand-teal-200 text-brand-teal-700 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4">Caregiver Support</div>
               <h2 className="text-3xl font-bold text-[#1a2b47] leading-tight mb-4">Support for Families at Home</h2>
               <p className="text-slate-500 text-sm leading-relaxed mb-6">Care does not stop when a child leaves the clinic. Bierman's caregiver training resources help families understand communication, daily routines, independence, and behavior support.</p>
-              <a href="https://www.biermanautism.com/resources/caregiver-training/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white font-semibold px-5 py-3 rounded-xl text-sm transition-colors shadow-sm">
+              <a href="https://www.biermanautism.com/resources/caregiver-training/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-brand-teal hover:bg-teal-700 text-white font-semibold px-5 py-3 rounded-xl text-sm transition-colors shadow-sm">
                 Caregiver Training Resources <span aria-hidden="true">→</span>
               </a>
             </div>
@@ -883,7 +883,7 @@ export function LocationPage({ data }: LocationPageProps) {
               ].map((card) => (
                 <div key={card.title} className="bg-white rounded-2xl p-5 shadow-sm border border-white hover:shadow-md transition-all duration-200 flex gap-4 items-start">
                   <div className="flex-shrink-0 mt-0.5">
-                    <svg viewBox="0 0 36 36" fill="none" className="w-7 h-7" aria-hidden="true"><circle cx="18" cy="18" r="14" fill="#ccfbf1" stroke="#0d9488" strokeWidth="2"/><path d="M11 21l4-4 3 3 7-7" stroke="#0d9488" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                    <svg viewBox="0 0 36 36" fill="none" className="w-7 h-7" aria-hidden="true"><circle cx="18" cy="18" r="14" fill="#ccfbf1" stroke="#05C3DE" strokeWidth="2"/><path d="M11 21l4-4 3 3 7-7" stroke="#05C3DE" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
                   </div>
                   <div>
                     <h3 className="font-bold text-[#1a2b47] text-sm mb-1">{card.title}</h3>
@@ -901,12 +901,12 @@ export function LocationPage({ data }: LocationPageProps) {
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-12 items-center">
             <div className="lg:w-96 flex-shrink-0">
-              <div className="inline-block bg-teal-500/20 border border-teal-400/30 text-teal-300 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4">New Jersey Clinical Leadership</div>
+              <div className="inline-block bg-brand-teal-500/20 border border-teal-400/30 text-brand-teal-200 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4">New Jersey Clinical Leadership</div>
               <h2 className="text-3xl font-bold text-white leading-tight mb-4">The Team Behind Your Child's Care</h2>
               <p className="text-slate-300 text-sm leading-relaxed">Bierman's New Jersey centers are supported by experienced clinical leaders who guide care quality, staff development, and family-centered service delivery across the region.</p>
               <div className="mt-6 flex items-center gap-2">
                 <img src={SHARED_ASSETS.mascot} alt="Pilot the Penguin — Bierman mascot" className="w-10 h-10 object-contain" />
-                <span className="text-teal-300 text-xs font-medium">Bierman Autism Centers · New Jersey</span>
+                <span className="text-brand-teal-200 text-xs font-medium">Bierman Autism Centers · New Jersey</span>
               </div>
             </div>
             <div className="flex-1 grid sm:grid-cols-2 gap-6">
@@ -917,7 +917,7 @@ export function LocationPage({ data }: LocationPageProps) {
                     <div className="absolute inset-0 bg-gradient-to-t from-[#1a2b47]/80 via-transparent to-transparent" />
                     <div className="absolute bottom-3 left-4 right-4">
                       <div className="text-white font-bold text-base leading-tight">{person.name}</div>
-                      <div className="text-teal-300 text-xs font-semibold">{person.credentials}</div>
+                      <div className="text-brand-teal-200 text-xs font-semibold">{person.credentials}</div>
                     </div>
                   </div>
                   <div className="p-5">
@@ -925,7 +925,7 @@ export function LocationPage({ data }: LocationPageProps) {
                     <div className="text-slate-400 text-xs mb-4">{person.role.split(" · ")[1] ?? "New Jersey"}</div>
                     <div className="flex flex-wrap gap-1.5">
                       {person.tags.map((tag) => (
-                        <span key={tag} className="bg-teal-500/15 border border-teal-400/20 text-teal-300 text-xs px-2.5 py-0.5 rounded-full">{tag}</span>
+                        <span key={tag} className="bg-brand-teal-500/15 border border-teal-400/20 text-brand-teal-200 text-xs px-2.5 py-0.5 rounded-full">{tag}</span>
                       ))}
                     </div>
                   </div>
@@ -940,12 +940,12 @@ export function LocationPage({ data }: LocationPageProps) {
       <section className="py-12 border-y border-slate-100" style={{ background: "linear-gradient(180deg, #f8fffe 0%, #f0fdfa 100%)" }}>
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-8">
-            <div className="text-teal-600 text-sm font-bold uppercase tracking-widest mb-2">Other New Jersey Locations</div>
+            <div className="text-brand-teal text-sm font-bold uppercase tracking-widest mb-2">Other New Jersey Locations</div>
             <h2 className="text-2xl font-bold text-[#1a2b47]">More Bierman Centers Near You</h2>
           </div>
           <div className="flex flex-wrap justify-center gap-3">
             {nearby.map((loc) => (
-              <a key={loc.name} href={loc.url} className="bg-white border border-teal-200 hover:border-teal-400 hover:bg-teal-50 text-[#1a2b47] font-medium px-5 py-2.5 rounded-xl text-sm transition-colors shadow-sm">
+              <a key={loc.name} href={loc.url} className="bg-white border border-brand-teal-200 hover:border-teal-400 hover:bg-brand-teal-50 text-[#1a2b47] font-medium px-5 py-2.5 rounded-xl text-sm transition-colors shadow-sm">
                 📍 {loc.name}
               </a>
             ))}
@@ -957,7 +957,7 @@ export function LocationPage({ data }: LocationPageProps) {
       <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-4">
           <div className="text-center mb-10">
-            <div className="text-teal-600 text-sm font-bold uppercase tracking-widest mb-2">FAQ</div>
+            <div className="text-brand-teal text-sm font-bold uppercase tracking-widest mb-2">FAQ</div>
             <h2 className="text-3xl font-bold text-[#1a2b47]">Frequently Asked Questions</h2>
           </div>
           <div className="space-y-3">
@@ -973,7 +973,7 @@ export function LocationPage({ data }: LocationPageProps) {
           <p className="text-slate-600 text-lg mb-8 max-w-2xl mx-auto">
             Take the first step toward individualized autism support for your child. Our {address.city} team is here to guide your family through every stage of the process.
           </p>
-          <a href={intakeUrl} target="_blank" rel="noopener noreferrer" className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-12 py-5 rounded-2xl text-xl transition-colors inline-block shadow-lg">
+          <a href={intakeUrl} target="_blank" rel="noopener noreferrer" className="bg-brand-coral hover:bg-brand-coral/90 text-white font-semibold px-12 py-5 rounded-full text-xl tracking-wide transition-colors inline-block shadow-lg">
             Request Services in {address.city} →
           </a>
 </div>
@@ -1025,11 +1025,11 @@ export function LocationPage({ data }: LocationPageProps) {
       {/* Mobile sticky action row */}
       <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-white border-t border-slate-200 shadow-lg">
         <div className="flex items-stretch">
-          <a href={intakeUrl} target="_blank" rel="noopener noreferrer" className="flex-1 flex flex-col items-center justify-center gap-0.5 py-3 bg-orange-500 hover:bg-orange-600 text-white text-xs font-semibold transition-colors">
+          <a href={intakeUrl} target="_blank" rel="noopener noreferrer" className="flex-1 flex flex-col items-center justify-center gap-0.5 py-3 bg-brand-coral hover:bg-brand-coral/90 text-white text-xs font-semibold transition-colors">
             <svg viewBox="0 0 20 20" fill="none" className="w-4 h-4" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><path d="M10 2a8 8 0 100 16A8 8 0 0010 2z"/><path d="M10 7v6M7 10h6" strokeLinecap="round"/></svg>
             Request Services
           </a>
-          <a href={`tel:${phone}`} className="flex-1 flex flex-col items-center justify-center gap-0.5 py-3 bg-teal-600 hover:bg-teal-700 text-white text-xs font-semibold transition-colors border-x border-teal-700">
+          <a href={`tel:${phone}`} className="flex-1 flex flex-col items-center justify-center gap-0.5 py-3 bg-brand-teal hover:bg-teal-700 text-white text-xs font-semibold transition-colors border-x border-teal-700">
             <svg viewBox="0 0 20 20" fill="none" className="w-4 h-4" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><path d="M3 5a2 2 0 012-2h2l2 4-1.5 1.5a11 11 0 005 5L14 12l4 2v2a2 2 0 01-2 2C7.163 18 2 12.837 2 7a2 2 0 012-2z"/></svg>
             Call
           </a>
