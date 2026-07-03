@@ -34,6 +34,7 @@ import type { LocationData } from "@/locations/types";
 
 // ── Shared assets ─────────────────────────────────────────────────────────────
 const LOGO = "/manus-storage/bierman-logo-anniversary-20_3f19246b.webp";
+const FOOTER_LOGO = "/manus-storage/Main_Logo_All_White_c1738645.png";
 const LOGO_FULL = "https://bierman-proof-layer.manus.space/manus-storage/bierman-logo-anniversary-20_3f19246b.webp";
 const INTAKE_URL = "https://www.biermanautism.com/start-now/";
 const PAGE_URL = "https://bierman-proof-layer.manus.space/";
@@ -403,7 +404,7 @@ export default function NJHub() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
-              <img src={LOGO} alt="Bierman Autism Centers 20th Anniversary" className="h-12 w-auto mb-4" />
+              <img src={FOOTER_LOGO} alt="Bierman Autism Centers" className="h-12 w-auto mb-4" />
               <p className="text-white/60 text-sm leading-relaxed">
                 Bierman Autism Centers provides evidence-based ABA therapy and autism support services for children and families across 34 locations nationwide.
               </p>

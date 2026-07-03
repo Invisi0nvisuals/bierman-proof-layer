@@ -40,22 +40,25 @@ const TRUST_BADGES = [
   { src: "/manus-storage/bierman-trust-casp-member_7cc1f427.webp", alt: "CASP — Council of Autism Service Providers Member" },
 ];
 
+// Insurance logos: Official transparent PNGs from BAC Assets Google Drive
+// Governance: BAC Pilot Design System & Asset Governance v3, Section 3A
 const INSURANCE_LOGOS = [
-  { src: "/manus-storage/bierman-insurance-aetna_f6d238ed.webp", alt: "Aetna health insurance — accepted at Bierman Autism Centers" },
-  { src: "/manus-storage/bierman-insurance-ambetter_34baba91.webp", alt: "Ambetter health insurance — accepted at Bierman Autism Centers" },
-  { src: "/manus-storage/bierman-insurance-carelon_4a70fbdd.webp", alt: "Carelon health insurance — accepted at Bierman Autism Centers" },
-  { src: "/manus-storage/bierman-insurance-cigna_1c21165d.webp", alt: "Cigna health insurance — accepted at Bierman Autism Centers" },
-  { src: "/manus-storage/bierman-insurance-compsych_657fa980.webp", alt: "ComPsych health insurance — accepted at Bierman Autism Centers" },
-  { src: "/manus-storage/bierman-insurance-meritain-health_bc730b51.webp", alt: "Meritain Health insurance — accepted at Bierman Autism Centers" },
-  { src: "/manus-storage/bierman-insurance-surest_3872fe70.webp", alt: "Surest health insurance — accepted at Bierman Autism Centers" },
-  { src: "/manus-storage/bierman-insurance-umr_9c11ff1b.webp", alt: "UMR health insurance — accepted at Bierman Autism Centers" },
-  { src: "/manus-storage/bierman-insurance-united-healthcare_0b5b310b.webp", alt: "United Healthcare — accepted at Bierman Autism Centers" },
+  { src: "/manus-storage/Aetna_0c4a36d1.png", alt: "Aetna health insurance — accepted at Bierman Autism Centers" },
+  { src: "/manus-storage/Ambetter_a83f1a1d.png", alt: "Ambetter health insurance — accepted at Bierman Autism Centers" },
+  { src: "/manus-storage/Carelon_f51ccee7.png", alt: "Carelon health insurance — accepted at Bierman Autism Centers" },
+  { src: "/manus-storage/Cigna_a8c484fc.png", alt: "Cigna health insurance — accepted at Bierman Autism Centers" },
+  { src: "/manus-storage/ComPsych_1964165a.png", alt: "ComPsych health insurance — accepted at Bierman Autism Centers" },
+  { src: "/manus-storage/Meritain_Health_5e00cc81.png", alt: "Meritain Health insurance — accepted at Bierman Autism Centers" },
+  { src: "/manus-storage/Surest_84ec0683.png", alt: "Surest health insurance — accepted at Bierman Autism Centers" },
+  { src: "/manus-storage/UMR_9b626be4.png", alt: "UMR health insurance — accepted at Bierman Autism Centers" },
+  { src: "/manus-storage/UnitedHealthcare_de9ce2b5.png", alt: "United Healthcare — accepted at Bierman Autism Centers" },
 ];
 
 const SHARED_ASSETS = {
   logo: "/manus-storage/bierman-logo-anniversary-20_3f19246b.webp",
+  footerLogo: "/manus-storage/Main_Logo_All_White_c1738645.png",
   mascot: "/manus-storage/bierman-brand-nj-penguin-accent_64e9cbdd.webp",
-  insurance: "/manus-storage/bierman-autism-insurance-horizon-bcbs-new-jersey_8162212b.webp",
+  insurance: "/manus-storage/Horizon_BCBS_New_Jersey_b44b4bea.png",
   themeBcbaGuidance: "/manus-storage/theme-card-bcba-guidance_f4421e19.png",
   themeFamilyPartnership: "/manus-storage/theme-card-family-partnership_7fd858a1.png",
   themeProgressFocused: "/manus-storage/theme-card-progress-focused_1582d40e.png",
@@ -984,7 +987,7 @@ export function LocationPage({ data }: LocationPageProps) {
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
-              <img src={SHARED_ASSETS.logo} alt="Bierman Autism Centers 20th Anniversary" className="h-12 w-auto mb-4" />
+              <img src={SHARED_ASSETS.footerLogo} alt="Bierman Autism Centers" className="h-12 w-auto mb-4" />
               <p className="text-white/60 text-sm leading-relaxed">Bierman Autism Centers provides evidence-based ABA therapy and autism support services for children and families across 34 locations nationwide.</p>
             </div>
             <div>

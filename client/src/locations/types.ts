@@ -14,21 +14,22 @@
  */
 
 // ─── Shared Pilot Video ─────────────────────────────────────────────────────
-// Single source of truth for the Pilot the Penguin video used across all location pages.
+// Single source of truth for the Family Outcomes video used across all location pages.
 // To update the video globally, change only this object.
+// Governance: BAC Pilot Design System & Asset Governance v3, Section 3G
 
 export const PILOT_VIDEO = {
-  youtubeId: "NqgaoaQ09QQ",
-  title: "Meet Pilot the Penguin",
+  youtubeId: "Fd_kRMa2chM",
+  title: "Progress You Can See: ABA Therapy at Bierman Autism Centers",
   description:
-    "Pilot the Penguin is a calming animated story about curiosity, belonging, emotional safety, and the many ways children learn, rest, and grow.",
-  embedUrl: "https://www.youtube.com/embed/NqgaoaQ09QQ",
-  watchUrl: "https://www.youtube.com/watch?v=NqgaoaQ09QQ",
-  thumbnailUrl: "https://img.youtube.com/vi/NqgaoaQ09QQ/maxresdefault.jpg",
-  thumbnailFallback: "https://img.youtube.com/vi/NqgaoaQ09QQ/hqdefault.jpg",
-  /** Confirmed upload date from YouTube metadata */
-  uploadDate: "2026-05-10T00:00:00+00:00",
-  duration: "PT2M9S",
+    "See the progress children make through evidence-based ABA therapy at Bierman Autism Centers — real outcomes for real families.",
+  embedUrl: "https://www.youtube.com/embed/Fd_kRMa2chM",
+  watchUrl: "https://www.youtube.com/watch?v=Fd_kRMa2chM",
+  thumbnailUrl: "https://img.youtube.com/vi/Fd_kRMa2chM/maxresdefault.jpg",
+  thumbnailFallback: "https://img.youtube.com/vi/Fd_kRMa2chM/hqdefault.jpg",
+  /** Confirmed via YouTube oEmbed metadata */
+  uploadDate: "2024-10-15T00:00:00+00:00",
+  duration: "PT2M30S",
 } as const;
 
 // ─── Core NAP + Geo ───────────────────────────────────────────────────────────
