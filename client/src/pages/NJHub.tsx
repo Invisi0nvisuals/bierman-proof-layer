@@ -245,7 +245,7 @@ export default function NJHub() {
         {/* Banner image as background — right-aligned, covers right 60% */}
         <div className="absolute inset-0">
           <img
-            src="/manus-storage/PenguinexplorerwithNewJerseymap_7e2824c8.png"
+            src="/manus-storage/Bierman_Autism_New_Jersey_Desktop_Hero_d89aa41e.png"
             alt=""
             aria-hidden="true"
             className="absolute right-0 top-0 h-full w-auto object-cover object-right"
