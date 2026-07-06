@@ -613,6 +613,7 @@ export function LocationPage({ data }: LocationPageProps) {
               );
             })}
           </div>
+          <p className="text-center text-slate-400 text-xs mt-6">Service availability varies by location. Contact your nearest center for details.</p>
         </div>
       </section>
 
