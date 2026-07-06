@@ -241,34 +241,47 @@ export default function NJHub() {
       </nav>
 
       {/* Hero */}
-      <section className="py-14 md:py-20" style={{ background: "linear-gradient(135deg, #f0fdfa 0%, #e0f7f4 40%, #fef9f0 100%)" }}>
-        <div className="max-w-6xl mx-auto px-4">
+      <section className="relative overflow-hidden" style={{ background: "linear-gradient(90deg, #003B71 0%, #0077B6 50%, #05C3DE 100%)" }}>
+        {/* Banner image as background — right-aligned, covers right 60% */}
+        <div className="absolute inset-0">
+          <img
+            src="/manus-storage/PenguinexplorerwithNewJerseymap_7e2824c8.png"
+            alt=""
+            aria-hidden="true"
+            className="absolute right-0 top-0 h-full w-auto object-cover object-right"
+            style={{ minWidth: "60%" }}
+          />
+          {/* Left fade overlay so text stays readable */}
+          <div className="absolute inset-0" style={{ background: "linear-gradient(90deg, #003B71 0%, #003B71 35%, rgba(0,59,113,0.7) 55%, transparent 80%)" }} />
+        </div>
+
+        <div className="relative max-w-6xl mx-auto px-4 py-14 md:py-20">
           {/* Breadcrumb */}
           <nav aria-label="Breadcrumb" className="mb-6">
-            <ol className="flex items-center gap-2 text-xs text-slate-400">
-              <li><Link href="/" className="hover:text-brand-teal transition-colors">Home</Link></li>
-              <li aria-hidden="true" className="text-slate-300">›</li>
-              <li><span className="text-slate-500">Locations</span></li>
-              <li aria-hidden="true" className="text-slate-300">›</li>
-              <li><span className="text-brand-teal font-semibold">New Jersey</span></li>
+            <ol className="flex items-center gap-2 text-xs text-white/60">
+              <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
+              <li aria-hidden="true" className="text-white/30">›</li>
+              <li><span className="text-white/70">Locations</span></li>
+              <li aria-hidden="true" className="text-white/30">›</li>
+              <li><span className="text-[#05C3DE] font-semibold">New Jersey</span></li>
             </ol>
           </nav>
 
-          <div className="max-w-3xl">
+          <div className="max-w-2xl">
             <div className="flex items-center gap-2 mb-4">
-              <span className="inline-flex items-center gap-1.5 bg-brand-teal-100 text-brand-teal-700 text-xs font-semibold px-3 py-1 rounded-full">
+              <span className="inline-flex items-center gap-1.5 bg-white/15 text-white text-xs font-semibold px-3 py-1 rounded-full border border-white/20">
                 <svg viewBox="0 0 16 16" fill="currentColor" className="w-3 h-3" aria-hidden="true">
                   <path d="M8 1a5.5 5.5 0 100 11A5.5 5.5 0 008 1zm0 1.5a4 4 0 110 8 4 4 0 010-8z"/>
                 </svg>
                 New Jersey
               </span>
-              <span className="text-slate-400 text-xs">{openLocations.length} open locations · {comingSoonLocations.length} coming soon</span>
+              <span className="text-white/50 text-xs">{openLocations.length} open locations · {comingSoonLocations.length} coming soon</span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-5 text-[#1a2b47]">
+            <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-5 text-white">
               Comprehensive Autism Services<br />Near Me in New Jersey
             </h1>
-            <p className="text-slate-600 text-lg mb-8 leading-relaxed max-w-2xl">
+            <p className="text-white/80 text-lg mb-8 leading-relaxed">
               Bierman Autism Centers operates {NJ_LOCATIONS.length} New Jersey locations ({openLocations.length} open, {comingSoonLocations.length} opening Fall 2026) providing individualized ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism. Find the location nearest to your family.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -282,7 +295,7 @@ export default function NJHub() {
               </a>
               <a
                 href="tel:8009318113"
-                className="border-2 border-brand-teal-200 hover:border-brand-teal bg-white hover:bg-brand-teal-50 text-brand-teal-700 font-semibold px-8 py-4 rounded-full text-lg transition-colors text-center"
+                className="border-2 border-white/40 hover:border-white bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-full text-lg transition-colors text-center"
               >
                 (800) 931-8113
               </a>
