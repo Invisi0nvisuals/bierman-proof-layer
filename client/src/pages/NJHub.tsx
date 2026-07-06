@@ -241,18 +241,17 @@ export default function NJHub() {
       </nav>
 
       {/* Hero */}
-      <section className="relative overflow-hidden" style={{ background: "linear-gradient(90deg, #003B71 0%, #0077B6 50%, #05C3DE 100%)" }}>
-        {/* Banner image as background — right-aligned, covers right 60% */}
+      <section className="relative overflow-hidden" style={{ background: "#003B71" }}>
+        {/* Banner image — full background, same image for desktop and mobile */}
         <div className="absolute inset-0">
           <img
-            src="/manus-storage/Bierman_Autism_New_Jersey_Desktop_Hero_d89aa41e.png"
+            src="/manus-storage/Penguinexplorerwithmapdashboard_5cfc078f.png"
             alt=""
             aria-hidden="true"
-            className="absolute right-0 top-0 h-full w-auto object-cover object-right"
-            style={{ minWidth: "60%" }}
+            className="absolute inset-0 w-full h-full object-cover object-right"
           />
           {/* Left fade overlay so text stays readable */}
-          <div className="absolute inset-0" style={{ background: "linear-gradient(90deg, #003B71 0%, #003B71 35%, rgba(0,59,113,0.7) 55%, transparent 80%)" }} />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(90deg, #003B71 0%, #003B71 30%, rgba(0,30,80,0.75) 52%, transparent 75%)" }} />
         </div>
 
         <div className="relative max-w-6xl mx-auto px-4 py-14 md:py-20">
