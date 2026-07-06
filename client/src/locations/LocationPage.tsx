@@ -477,7 +477,7 @@ export function LocationPage({ data }: LocationPageProps) {
                   <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4 text-brand-teal" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M13 6.5a5 5 0 11-10 0 5 5 0 0110 0z"/><path d="M6 6.5l1.5 1.5L10 4.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
                 </div>
                 <div>
-                  <div className="text-brand-teal-700 text-xs font-bold uppercase tracking-widest mb-1">GBP Verified Location</div>
+                  <div className="text-brand-teal-700 text-xs font-bold uppercase tracking-widest mb-1">Verified Bierman Location</div>
                   <div className="text-[#1a2b47] font-semibold text-sm">{entityName}</div>
                   <div className="text-slate-500 text-sm">{address.street}, {address.city}, {address.state} {address.zip}</div>
                   <div className="text-slate-500 text-sm">{phone}</div>
@@ -732,10 +732,10 @@ export function LocationPage({ data }: LocationPageProps) {
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
-            <div className="text-brand-teal text-sm font-bold uppercase tracking-widest mb-2">Safety &amp; Security</div>
-            <h2 className="text-3xl font-bold text-[#1a2b47] mb-4">Safety systems designed to give families peace of mind</h2>
+            <div className="text-brand-teal text-sm font-bold uppercase tracking-widest mb-2">SAFETY &amp; SECURITY</div>
+            <h2 className="text-3xl font-bold text-[#1a2b47] mb-4">Safety Systems Designed to Give Families Peace of Mind</h2>
             <p className="text-slate-500 max-w-3xl mx-auto text-base leading-relaxed">
-              Families deserve to know that safety is supported by clear systems, trained teams, and thoughtful center procedures. Bierman's centers are designed with secure access, staff readiness, clinical safeguards, and family-facing transparency in mind.
+              Families deserve to feel confident that their child's care is supported by secure access, prepared teams, thoughtful clinical safeguards, and clear communication.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
@@ -762,12 +762,12 @@ export function LocationPage({ data }: LocationPageProps) {
         </div>
       </section>
 
-      {/* Video Section — Meet Pilot the Penguin */}
+      {/* Video Section — Family Outcomes */}
       <section className="py-16 bg-slate-50">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div className="text-brand-teal text-sm font-bold uppercase tracking-widest mb-2">Meet Pilot the Penguin</div>
-          <h2 className="text-3xl font-bold text-[#1a2b47] mb-3">A Gentle Story About Curiosity, Belonging, and Growth</h2>
-          <p className="text-slate-500 mb-8 max-w-2xl mx-auto">A calming animated story about curiosity, belonging, and the many ways children learn, rest, and grow — created for families exploring support.</p>
+          <div className="text-brand-teal text-sm font-bold uppercase tracking-widest mb-2">FAMILY OUTCOMES</div>
+          <h2 className="text-3xl font-bold text-[#1a2b47] mb-3">Progress You Can See</h2>
+          <p className="text-slate-500 mb-8 max-w-2xl mx-auto">See how Bierman's individualized approach helps children build skills, confidence, and greater independence—with families supported at every step.</p>
           <div className="rounded-3xl overflow-hidden shadow-xl border border-slate-200" style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}>
             <iframe
               src={PILOT_VIDEO.embedUrl}
@@ -786,10 +786,12 @@ export function LocationPage({ data }: LocationPageProps) {
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-4">
-            <div className="text-brand-teal text-sm font-bold uppercase tracking-widest mb-2">What Families Value</div>
-            <h2 className="text-3xl font-bold text-[#1a2b47]">What Families Value at {address.city}</h2>
+            <div className="text-brand-teal text-sm font-bold uppercase tracking-widest mb-2">WHAT FAMILIES VALUE</div>
+            <h2 className="text-3xl font-bold text-[#1a2b47]">{data.comingSoon ? "What Families Value About Bierman" : `What Families Value at ${address.city}`}</h2>
             <p className="text-slate-500 mt-3 max-w-2xl mx-auto text-sm leading-relaxed">
-              Public review evidence and Bierman testimonial themes suggest families value supportive communication, BCBA guidance, and a child-centered environment.
+              {data.comingSoon
+                ? "Families often highlight clear communication, supportive clinical guidance, and welcoming environments centered around each child."
+                : "Families often highlight clear communication, supportive clinical guidance, and a welcoming environment centered around their child."}
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
@@ -996,7 +998,7 @@ export function LocationPage({ data }: LocationPageProps) {
                 <div>{address.street}</div>
                 <div>{address.city}, {address.state} {address.zip}</div>
                 <div><a href={`tel:${phone}`} className="hover:text-white transition-colors">{phone}</a></div>
-                <div className="text-white/40 text-xs mt-2">GBP Verified · {address.county}</div>
+                <div className="text-white/40 text-xs mt-2">Verified Bierman Location · {address.county}</div>
               </div>
             </div>
             <div>
