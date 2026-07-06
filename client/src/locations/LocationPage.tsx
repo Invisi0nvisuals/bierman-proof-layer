@@ -71,7 +71,6 @@ const STANDARD_SERVICES = [
     desc: "Applied Behavior Analysis — individualized, evidence-based therapy designed to build communication, social, and daily living skills.",
     img: "/manus-storage/ABA-Therapy-Bierman-Autism_0e3cca4a.webp",
     alt: "Bierman therapist supporting a child during an ABA therapy activity",
-    icon: <IconABA />,
   },
   {
     slug: "speech-therapy",
@@ -79,7 +78,6 @@ const STANDARD_SERVICES = [
     desc: "Targeted speech and language support to help children communicate more effectively and confidently.",
     img: "/manus-storage/Speech-Language-Therapy-Bierman-Autism_4e584cfb.webp",
     alt: "Bierman speech-language pathologist working with a child during a communication activity",
-    icon: <IconSpeech />,
   },
   {
     slug: "occupational-therapy",
@@ -87,7 +85,6 @@ const STANDARD_SERVICES = [
     desc: "Sensory integration, fine motor skills, and daily living activities to support independence and engagement.",
     img: "/manus-storage/Occupational-Therapy-Bierman-Autism_65cc6b55.webp",
     alt: "Bierman clinician supporting a child during an occupational therapy activity",
-    icon: <IconOT />,
   },
   {
     slug: "diagnostic-evaluation",
@@ -95,7 +92,6 @@ const STANDARD_SERVICES = [
     desc: "Comprehensive autism diagnostic evaluations by licensed clinicians, with results and recommendations for families.",
     img: "/manus-storage/Diagnostic-Evaluation-Bierman-Autism_338899cf.webp",
     alt: "Bierman clinician using a tablet during a child-focused assessment activity",
-    icon: <IconDiag />,
   },
 ];
 
@@ -585,13 +581,8 @@ export function LocationPage({ data }: LocationPageProps) {
               const cardUrl = SERVICE_CARD_URLS[data.slug]?.[svc.slug];
               const cardContent = (
                 <>
-                  {svc.img ? (
-                    <div className="relative">
-                      <img src={svc.img} alt={svc.title} className="w-full h-40 object-cover" />
-                      <div className="absolute top-3 left-3 bg-white/90 rounded-xl p-1.5 shadow-sm">{svc.icon}</div>
-                    </div>
-                  ) : (
-                    <div className="w-full h-40 flex flex-col items-center justify-center bg-brand-teal-50">{svc.icon}</div>
+                  {svc.img && (
+                    <img src={svc.img} alt={svc.alt ?? svc.title} className="w-full h-40 object-cover" />
                   )}
                   <div className="p-5">
                     <h3 className="font-bold text-[#1a2b47] text-base mb-2">{svc.title}</h3>
