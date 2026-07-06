@@ -40,18 +40,18 @@ const INTAKE_URL = "https://www.biermanautism.com/start-now/";
 const PAGE_URL = "https://bierman-proof-layer.manus.space/";
 
 // ── Location registry ─────────────────────────────────────────────────────────
-// Ordered by county cluster for geographic coherence
+// Ordered alphabetically by city name (per Tiffany review request)
 const NJ_LOCATIONS: LocationData[] = [
-  ramseyData,
-  cranfordData,
   berkeleyHeightsData,
-  westOrangeData,
+  cranfordData,
+  eatontownData,
+  moorestownData,
+  parsippanyData,
   piscatawayData,
   princetonData,
-  eatontownData,
-  parsippanyData,
-  moorestownData,
+  ramseyData,
   roselandData,
+  westOrangeData,
 ];
 
 // County group labels for visual clustering
