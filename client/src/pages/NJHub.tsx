@@ -245,7 +245,7 @@ export default function NJHub() {
         {/* Banner image — full background, same image for desktop and mobile */}
         <div className="absolute inset-0">
           <img
-            src="/manus-storage/Bierman_Autism_New_Jersey_Desktop_Hero_v2_e911e24b.png"
+            src="/manus-storage/bierman-nj-hero-final_4aea9524.png"
             alt=""
             aria-hidden="true"
             className="absolute inset-0 w-full h-full object-cover object-right"
