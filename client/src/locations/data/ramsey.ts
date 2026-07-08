@@ -43,7 +43,7 @@ export const ramseyData: LocationData = {
   openingHours: "Mo-Fr 08:30-16:30",
 
   // ── Video ─────────────────────────────────────────────────────────────────
-  youtubeId: "UqMnEBJqFkQ",
+  youtubeId: "dhHxU3o0p0o",
   videoTitle: "Inside Our Ramsey, NJ Autism Center (A Safe & Fun Tour for Parents)",
   videoDescription:
     "A parent-facing tour of the Bierman Autism Centers clinic in Ramsey, New Jersey. See the therapy spaces, meet the team, and learn about ABA therapy services.",
@@ -221,6 +221,7 @@ export const ramseyData: LocationData = {
     heroImage: "/manus-storage/Ramsey,NJ_f3ab3867.png",
     videoPoster: "/manus-storage/bierman-ramsey-video-poster_28eb470d.jpg",
     videoFile: "/manus-storage/bierman-ramsey-aba-therapy-overview_e3501ef2.mp4",
+    facilityYoutubeId: "dhHxU3o0p0o",
   },
 
   // ── Schema ────────────────────────────────────────────────────────────────

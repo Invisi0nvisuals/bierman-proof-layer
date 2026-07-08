@@ -533,32 +533,49 @@ export function LocationPage({ data }: LocationPageProps) {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="order-1 md:order-none">
               <div className="relative">
-                <img
-                  src={assets.facility}
-                  alt={assets.facilityAlt ?? `Bierman Autism Centers ${address.city}, ${address.state} — clinic interior`}
-                  className="rounded-3xl shadow-2xl w-full object-cover"
-                  style={{ minHeight: "320px", maxHeight: "480px" }}
-                  onError={(e) => {
-                    const target = e.currentTarget;
-                    target.style.display = "none";
-                    const fallback = target.nextElementSibling as HTMLElement;
-                    if (fallback) fallback.style.display = "flex";
-                  }}
-                />
-                <div className="rounded-3xl bg-gradient-to-br from-brand-teal-50 to-aqua-100 items-center justify-center hidden" style={{ minHeight: "320px", background: "linear-gradient(135deg, #e0f7f4, #f0fdfa)" }}>
-                  <div className="text-center p-8">
-                    <div className="text-6xl mb-4">🏥</div>
-                    <div className="text-brand-teal-700 font-semibold">{address.city} Clinic Photo</div>
-                    <div className="text-slate-400 text-sm mt-1">Image pending upload confirmation</div>
+                {assets.facilityYoutubeId ? (
+                  <div className="rounded-3xl overflow-hidden shadow-2xl w-full" style={{ aspectRatio: "16/9" }}>
+                    <iframe
+                      src={`https://www.youtube.com/embed/${assets.facilityYoutubeId}?si=NFjyBt8ZfJJA2gSg`}
+                      title="Bierman Autism Centers location tour"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                      className="w-full h-full"
+                      style={{ display: "block", minHeight: "280px" }}
+                    />
                   </div>
-                </div>
-                <div className="absolute -bottom-5 -right-4 bg-white rounded-2xl shadow-lg p-3 flex items-center gap-2 border border-brand-teal-100">
-                  <img src={SHARED_ASSETS.mascot} alt="Pilot the Penguin mascot" className="h-12 w-auto" />
-                  <div>
-                    <div className="text-[#1a2b47] font-semibold text-xs">Pilot the Penguin</div>
-                    <div className="text-slate-400 text-xs">Bierman's friendly guide</div>
-                  </div>
-                </div>
+                ) : (
+                  <>
+                    <img
+                      src={assets.facility}
+                      alt={assets.facilityAlt ?? `Bierman Autism Centers ${address.city}, ${address.state} — clinic interior`}
+                      className="rounded-3xl shadow-2xl w-full object-cover"
+                      style={{ minHeight: "320px", maxHeight: "480px" }}
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        target.style.display = "none";
+                        const fallback = target.nextElementSibling as HTMLElement;
+                        if (fallback) fallback.style.display = "flex";
+                      }}
+                    />
+                    <div className="rounded-3xl bg-gradient-to-br from-brand-teal-50 to-aqua-100 items-center justify-center hidden" style={{ minHeight: "320px", background: "linear-gradient(135deg, #e0f7f4, #f0fdfa)" }}>
+                      <div className="text-center p-8">
+                        <div className="text-6xl mb-4">🏥</div>
+                        <div className="text-brand-teal-700 font-semibold">{address.city} Clinic Photo</div>
+                        <div className="text-slate-400 text-sm mt-1">Image pending upload confirmation</div>
+                      </div>
+                    </div>
+                    <div className="absolute -bottom-5 -right-4 bg-white rounded-2xl shadow-lg p-3 flex items-center gap-2 border border-brand-teal-100">
+                      <img src={SHARED_ASSETS.mascot} alt="Pilot the Penguin mascot" className="h-12 w-auto" />
+                      <div>
+                        <div className="text-[#1a2b47] font-semibold text-xs">Pilot the Penguin</div>
+                        <div className="text-slate-400 text-xs">Bierman's friendly guide</div>
+                      </div>
+                    </div>
+                  </>
+                )}
               </div>
             </div>
             <div className="pt-4 md:pt-0">

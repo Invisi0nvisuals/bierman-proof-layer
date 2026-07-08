@@ -110,6 +110,8 @@ export interface LocationAssets {
   videoPoster?: string;
   /** Optional: location-specific video file (mp4) */
   videoFile?: string;
+  /** Optional: YouTube video ID to show in place of the facility photo in the Welcoming Environment section */
+  facilityYoutubeId?: string;
 }
 
 // ─── Schema Metadata ─────────────────────────────────────────────────────────
