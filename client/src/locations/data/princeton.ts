@@ -167,6 +167,7 @@ export const princetonData: LocationData = {
   assets: {
     facility: "/manus-storage/bierman-autism-new-jersey-ramsey-facility-main_296feafd.webp",
     facilityAlt: "Bierman Autism Centers Princeton, NJ — clinic interior",
+    heroImage: "/manus-storage/Princeton,NJ_51e4b2dc.png",
     videoPoster: "/manus-storage/bierman-ramsey-video-poster_28eb470d.jpg",
   },
 

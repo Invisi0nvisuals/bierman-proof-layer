@@ -171,6 +171,7 @@ export const parsippanyData: LocationData = {
   assets: {
     facility: "/manus-storage/bierman-autism-new-jersey-ramsey-facility-main_296feafd.webp",
     facilityAlt: "Bierman Autism Centers Parsippany, NJ — ABA therapy and autism services",
+    heroImage: "/manus-storage/Parsippany,NJ_51673ca2.png",
     videoPoster: "/manus-storage/bierman-ramsey-video-poster_28eb470d.jpg",
   },
 

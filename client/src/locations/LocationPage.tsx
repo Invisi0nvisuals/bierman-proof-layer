@@ -448,8 +448,23 @@ export function LocationPage({ data }: LocationPageProps) {
       </nav>
 
       {/* Hero */}
-      <section className="py-16 md:py-24" style={{ background: "linear-gradient(135deg, #f0fdfa 0%, #e0f7f4 40%, #fef9f0 100%)" }}>
-        <div className="max-w-6xl mx-auto px-4">
+      <section
+        className="py-16 md:py-24 relative overflow-hidden"
+        style={assets.heroImage ? { background: "#e8f6fb" } : { background: "linear-gradient(135deg, #f0fdfa 0%, #e0f7f4 40%, #fef9f0 100%)" }}
+      >
+        {assets.heroImage && (
+          <div className="absolute inset-0">
+            <img
+              src={assets.heroImage}
+              alt=""
+              aria-hidden="true"
+              className="absolute inset-0 w-full h-full object-cover object-right"
+            />
+            {/* Left fade so text stays readable */}
+            <div className="absolute inset-0" style={{ background: "linear-gradient(90deg, rgba(232,246,251,1) 0%, rgba(232,246,251,0.92) 35%, rgba(232,246,251,0.4) 60%, transparent 80%)" }} />
+          </div>
+        )}
+        <div className="relative max-w-6xl mx-auto px-4">
           <div className="max-w-2xl">
             <div className="flex items-center gap-2 mb-4">
               <span className="inline-flex items-center gap-1.5 bg-brand-teal-100 text-brand-teal-700 text-xs font-semibold px-3 py-1 rounded-full">

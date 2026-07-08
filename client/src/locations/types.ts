@@ -104,6 +104,8 @@ export interface LocationAssets {
   facility: string;
   /** Optional: facility image alt text override */
   facilityAlt?: string;
+  /** Optional: city-specific hero banner for the page hero section */
+  heroImage?: string;
   /** Optional: location-specific video poster image */
   videoPoster?: string;
   /** Optional: location-specific video file (mp4) */

@@ -168,6 +168,7 @@ export const moorestownData: LocationData = {
   assets: {
     facility: "/manus-storage/bierman-autism-new-jersey-cranford-facility-main_6e1e0a4c.webp",
     facilityAlt: "Bierman Autism Centers Moorestown, NJ — therapy center interior",
+    heroImage: "/manus-storage/Moorestown,NJ_51feb4b9.png",
     videoPoster: "/manus-storage/bierman-ramsey-video-poster_28eb470d.jpg",
     videoFile: "/manus-storage/bierman-ramsey-aba-therapy-overview_e3501ef2.mp4",
   },
