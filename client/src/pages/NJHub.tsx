@@ -308,7 +308,7 @@ export default function NJHub() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex items-center gap-5">
             <img
-              src="/manus-storage/bierman-brand-nj-penguin-accent_64e9cbdd.webp"
+              src="/manus-storage/Penguin-yellow-silhouette_f71d4485.webp"
               alt="Bierman Autism Centers penguin mascot"
               className="h-14 w-auto flex-shrink-0"
             />
