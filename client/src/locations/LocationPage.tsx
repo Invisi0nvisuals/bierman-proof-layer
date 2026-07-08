@@ -939,16 +939,15 @@ export function LocationPage({ data }: LocationPageProps) {
       </section>
 
       {/* Clinical Leadership */}
-      <section className="py-20 bg-[#1a2b47]">
+      <section className="pb-0 pt-20 bg-[#1a2b47] relative overflow-hidden">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-12 items-center">
             <div className="lg:w-96 flex-shrink-0">
               <div className="inline-block bg-brand-teal-500/20 border border-teal-400/30 text-brand-teal-200 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4">New Jersey Clinical Leadership</div>
               <h2 className="text-3xl font-bold text-white leading-tight mb-4">The Team Behind Your Child's Care</h2>
               <p className="text-slate-300 text-sm leading-relaxed">Bierman's New Jersey centers are supported by experienced clinical leaders who guide care quality, staff development, and family-centered service delivery across the region.</p>
-              <div className="mt-6 flex items-center gap-2">
-                <img src={SHARED_ASSETS.mascot} alt="Pilot the Penguin — Bierman mascot" className="w-10 h-10 object-contain" />
-                <span className="text-brand-teal-200 text-xs font-medium">Bierman Autism Centers · New Jersey</span>
+              <div className="mt-8">
+                <img src="/manus-storage/Penguin-silhouette-yellow_1fe3d82e.webp" alt="Bierman Autism Centers penguin mascot" className="w-24 h-auto object-contain" />
               </div>
             </div>
             <div className="flex-1 grid sm:grid-cols-2 gap-6">
@@ -975,6 +974,10 @@ export function LocationPage({ data }: LocationPageProps) {
               ))}
             </div>
           </div>
+        </div>
+        {/* Wave bottom divider */}
+        <div className="w-full mt-12" style={{ lineHeight: 0 }}>
+          <img src="/manus-storage/wave-bottom-white_ed6818f8.webp" alt="" aria-hidden="true" className="w-full block" style={{ display: "block", marginBottom: "-2px" }} />
         </div>
       </section>
 
