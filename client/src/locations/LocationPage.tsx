@@ -43,22 +43,22 @@ const TRUST_BADGES = [
 // Insurance logos: Official transparent PNGs from BAC Assets Google Drive
 // Governance: BAC Pilot Design System & Asset Governance v3, Section 3A
 const INSURANCE_LOGOS = [
-  { src: "/manus-storage/Aetna_0c4a36d1.png", alt: "Aetna health insurance — accepted at Bierman Autism Centers" },
-  { src: "/manus-storage/Ambetter_a83f1a1d.png", alt: "Ambetter health insurance — accepted at Bierman Autism Centers" },
-  { src: "/manus-storage/Carelon_f51ccee7.png", alt: "Carelon health insurance — accepted at Bierman Autism Centers" },
-  { src: "/manus-storage/Cigna_a8c484fc.png", alt: "Cigna health insurance — accepted at Bierman Autism Centers" },
-  { src: "/manus-storage/ComPsych_1964165a.png", alt: "ComPsych health insurance — accepted at Bierman Autism Centers" },
-  { src: "/manus-storage/Meritain_Health_5e00cc81.png", alt: "Meritain Health insurance — accepted at Bierman Autism Centers" },
-  { src: "/manus-storage/Surest_84ec0683.png", alt: "Surest health insurance — accepted at Bierman Autism Centers" },
-  { src: "/manus-storage/UMR_9b626be4.png", alt: "UMR health insurance — accepted at Bierman Autism Centers" },
-  { src: "/manus-storage/UnitedHealthcare_de9ce2b5.png", alt: "United Healthcare — accepted at Bierman Autism Centers" },
+  { src: "/manus-storage/Aetna_0421f0f4.png", alt: "Aetna health insurance — accepted at Bierman Autism Centers" },
+  { src: "/manus-storage/Ambetter_67c39da1.png", alt: "Ambetter health insurance — accepted at Bierman Autism Centers" },
+  { src: "/manus-storage/Carelon_aa456fed.png", alt: "Carelon health insurance — accepted at Bierman Autism Centers" },
+  { src: "/manus-storage/Cigna_61d72b35.png", alt: "Cigna health insurance — accepted at Bierman Autism Centers" },
+  { src: "/manus-storage/ComPsych_70dd536f.png", alt: "ComPsych health insurance — accepted at Bierman Autism Centers" },
+  { src: "/manus-storage/Meritain_Health_979deae1.png", alt: "Meritain Health insurance — accepted at Bierman Autism Centers" },
+  { src: "/manus-storage/Surest_42c5fe5a.png", alt: "Surest health insurance — accepted at Bierman Autism Centers" },
+  { src: "/manus-storage/UMR_c43e5a4b.png", alt: "UMR health insurance — accepted at Bierman Autism Centers" },
+  { src: "/manus-storage/UnitedHealthcare_277c39a3.png", alt: "United Healthcare — accepted at Bierman Autism Centers" },
 ];
 
 const SHARED_ASSETS = {
   logo: "/manus-storage/bierman-logo-anniversary-20_3f19246b.webp",
   footerLogo: "/manus-storage/Main_Logo_All_White_c1738645.png",
   mascot: "/manus-storage/bierman-brand-nj-penguin-accent_64e9cbdd.webp",
-  insurance: "/manus-storage/Horizon_BCBS_New_Jersey_b44b4bea.png",
+  insurance: "/manus-storage/Horizon_BCBS_New_Jersey_0df83934.png",
   themeBcbaGuidance: "/manus-storage/SupportiveBCBAGuidance_6bffed7f.png",
   themeFamilyPartnership: "/manus-storage/FamilyPartnership_0efd3934.png",
   themeProgressFocused: "/manus-storage/Progress-FocusedSupport_20321a51.png",
@@ -660,10 +660,19 @@ export function LocationPage({ data }: LocationPageProps) {
               <img src={SHARED_ASSETS.insurance} alt="Horizon BCBS NJ — accepted at Bierman Autism Centers" className="rounded-2xl shadow-sm w-full max-w-xs object-contain" style={{ maxHeight: "80px" }} />
             </div>
             <div>
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid grid-cols-3 gap-3">
                 {INSURANCE_LOGOS.map((logo) => (
-                  <div key={logo.alt} className="bg-slate-50 rounded-xl p-3 flex items-center justify-center border border-slate-100" style={{ height: "72px" }}>
-                    <img src={logo.src} alt={logo.alt.replace("Bierman Autism Centers", `Bierman Autism Centers ${address.city}`)} className="max-h-10 w-auto object-contain" />
+                  <div
+                    key={logo.alt}
+                    className="bg-slate-50 rounded-xl border border-slate-100 flex items-center justify-center p-3"
+                    style={{ height: "72px" }}
+                  >
+                    <img
+                      src={logo.src}
+                      alt={logo.alt.replace("Bierman Autism Centers", `Bierman Autism Centers ${address.city}`)}
+                      className="object-contain"
+                      style={{ maxHeight: "36px", maxWidth: "100%", width: "auto" }}
+                    />
                   </div>
                 ))}
               </div>
