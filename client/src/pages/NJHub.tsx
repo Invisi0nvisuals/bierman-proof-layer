@@ -254,7 +254,7 @@ export default function NJHub() {
           <div className="absolute inset-0" style={{ background: "linear-gradient(90deg, #003B71 0%, #003B71 30%, rgba(0,30,80,0.75) 52%, transparent 75%)" }} />
         </div>
 
-        <div className="relative max-w-6xl mx-auto px-4 pt-14 md:pt-20 pb-20 md:pb-24">
+        <div className="relative max-w-6xl mx-auto px-4 py-14 md:py-20">
           {/* Breadcrumb */}
           <nav aria-label="Breadcrumb" className="mb-6">
             <ol className="flex items-center gap-2 text-xs text-white/60">
@@ -301,17 +301,24 @@ export default function NJHub() {
             </div>
           </div>
         </div>
-        {/* Wave divider — bottom of hero */}
-        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none" style={{ height: "48px" }}>
-          <img
-            src="/manus-storage/path-111@1x-edited_86974b2d.webp"
-            alt=""
-            aria-hidden="true"
-            className="w-full h-full object-cover object-bottom"
-            style={{ display: "block" }}
-          />
-        </div>
       </section>
+
+      {/* Buffer bar — official site style */}
+      <div className="bg-[#E8F4FB] py-5 border-b border-[#cce4f0]">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="flex items-center gap-5">
+            <img
+              src="/manus-storage/bierman-brand-nj-penguin-accent_64e9cbdd.webp"
+              alt="Bierman Autism Centers penguin mascot"
+              className="h-14 w-auto flex-shrink-0"
+            />
+            <div className="w-px h-10 bg-brand-teal flex-shrink-0" />
+            <p className="text-[#003B71] font-semibold text-base md:text-lg leading-snug">
+              Bierman Autism Centers offers 1:1 center-based autism therapy and screening services across New Jersey for children up to age 9.
+            </p>
+          </div>
+        </div>
+      </div>
 
       {/* Stats bar */}
       <section className="bg-[#003B71] py-6">
@@ -331,17 +338,6 @@ export default function NJHub() {
           </div>
         </div>
       </section>
-
-      {/* Wave divider — bottom of stats bar */}
-      <div className="relative bg-[#003B71]" style={{ height: "48px", marginBottom: "-2px" }}>
-        <img
-          src="/manus-storage/path-100-1x-png-edited2@1x_3f05f3f1.webp"
-          alt=""
-          aria-hidden="true"
-          className="absolute bottom-0 left-0 w-full"
-          style={{ display: "block", height: "48px", objectFit: "cover", objectPosition: "bottom" }}
-        />
-      </div>
 
       {/* Location grid */}
       <section className="py-14 md:py-20 bg-slate-50">
