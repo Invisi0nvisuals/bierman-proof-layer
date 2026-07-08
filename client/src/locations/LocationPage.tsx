@@ -59,9 +59,9 @@ const SHARED_ASSETS = {
   footerLogo: "/manus-storage/Main_Logo_All_White_c1738645.png",
   mascot: "/manus-storage/bierman-brand-nj-penguin-accent_64e9cbdd.webp",
   insurance: "/manus-storage/Horizon_BCBS_New_Jersey_b44b4bea.png",
-  themeBcbaGuidance: "/manus-storage/theme-card-bcba-guidance_f4421e19.png",
-  themeFamilyPartnership: "/manus-storage/theme-card-family-partnership_7fd858a1.png",
-  themeProgressFocused: "/manus-storage/theme-card-progress-focused_1582d40e.png",
+  themeBcbaGuidance: "/manus-storage/SupportiveBCBAGuidance_6bffed7f.png",
+  themeFamilyPartnership: "/manus-storage/FamilyPartnership_0efd3934.png",
+  themeProgressFocused: "/manus-storage/Progress-FocusedSupport_20321a51.png",
 };
 
 const STANDARD_SERVICES = [
