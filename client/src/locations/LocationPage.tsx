@@ -939,7 +939,7 @@ export function LocationPage({ data }: LocationPageProps) {
       </section>
 
       {/* Clinical Leadership */}
-      <section className="pb-0 pt-20 bg-[#1a2b47] relative overflow-hidden">
+      <section className="py-20 bg-[#1a2b47]">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-12 items-center">
             <div className="lg:w-96 flex-shrink-0">
@@ -974,10 +974,6 @@ export function LocationPage({ data }: LocationPageProps) {
               ))}
             </div>
           </div>
-        </div>
-        {/* Wave bottom divider */}
-        <div className="w-full mt-12" style={{ lineHeight: 0 }}>
-          <img src="/manus-storage/wave-bottom-white_ed6818f8.webp" alt="" aria-hidden="true" className="w-full block" style={{ display: "block", marginBottom: "-2px" }} />
         </div>
       </section>
 
