@@ -57,7 +57,7 @@ export const parsippanyData: LocationData = {
   heroDescription:
     "Bierman Autism Centers provides individualized ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism in Parsippany, NJ. Our experienced clinical team partners with families to help children build meaningful skills in a supportive, play-based environment.",
   insuranceText:
-    "Bierman Parsippany accepts most major insurance plans. We work with families to verify coverage and navigate the insurance process. Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others are accepted.",
+    "Bierman Parsippany works with most major insurance providers. Contact our Intake Team to verify your coverage before your first visit. Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others are accepted.",
 
   // ── Reviews ───────────────────────────────────────────────────────────────
   reviews: [
@@ -111,7 +111,7 @@ export const parsippanyData: LocationData = {
     },
     {
       q: "Does Bierman Autism Centers in Parsippany accept insurance?",
-      a: "Yes. Bierman Parsippany accepts most major insurance plans including Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others. Contact us to verify your specific coverage.",
+      a: "Yes. Bierman Parsippany works with most major insurance providers including Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others. Contact us to verify your specific coverage.",
     },
     {
       q: "What age groups does the Parsippany center serve?",

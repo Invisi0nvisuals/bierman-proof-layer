@@ -54,7 +54,7 @@ export const moorestownData: LocationData = {
   heroDescription:
     "Bierman Autism Centers in Moorestown provides individualized ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism. Serving Burlington County, Camden County, and surrounding South Jersey communities.",
   insuranceText:
-    "Bierman Moorestown accepts most major insurance plans. We work with families to verify coverage and navigate the insurance process. Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others are accepted.",
+    "Bierman Moorestown works with most major insurance providers. Contact our Intake Team to verify your coverage before your first visit. Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others are accepted.",
 
   // ── Reviews ───────────────────────────────────────────────────────────────
   // Note: Moorestown is opening Fall 2026. Reviews below are from Bierman NJ centers
@@ -116,7 +116,7 @@ export const moorestownData: LocationData = {
     },
     {
       q: "Does Bierman Moorestown accept insurance?",
-      a: "Yes. Bierman Moorestown accepts most major insurance plans including Horizon BCBS NJ, Aetna, United Healthcare, and Cigna. Our team will help verify your coverage before services begin.",
+      a: "Yes. Bierman Moorestown works with most major insurance providers including Horizon BCBS NJ, Aetna, United Healthcare, and Cigna. Our team will help verify your coverage before services begin.",
     },
     {
       q: "Is the Moorestown center accessible and easy to reach?",

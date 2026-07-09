@@ -187,7 +187,7 @@ function LocationCard({ loc }: { loc: LocationData }) {
         {/* CTA */}
         <div className={`text-sm font-semibold flex items-center gap-1.5 transition-colors
           ${isComingSoon ? "text-amber-600" : "text-brand-teal group-hover:text-brand-teal-800"}`}>
-          {isComingSoon ? "Pre-register interest" : "View location"}
+          {isComingSoon ? "View coming soon details" : "View location"}
           <svg viewBox="0 0 16 16" fill="none" className="w-3.5 h-3.5" stroke="currentColor" strokeWidth="2" aria-hidden="true">
             <path d="M3 8h10M9 4l4 4-4 4" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
@@ -219,9 +219,9 @@ export default function NJHub() {
       <nav className="bg-white border-b border-slate-200 z-40 shadow-sm sticky top-0">
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <Link href="/">
+            <a href="https://www.biermanautism.com/" target="_blank" rel="noopener noreferrer">
               <img src={LOGO} alt="Bierman Autism Centers 20th Anniversary" className="h-10 w-auto cursor-pointer" />
-            </Link>
+            </a>
             <div className="hidden md:flex items-center gap-2">
               <span className="text-slate-300 text-sm">|</span>
               <span className="text-slate-500 text-sm">New Jersey</span>
@@ -405,10 +405,10 @@ export default function NJHub() {
             <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100">
               <h3 className="text-lg font-bold text-[#1a2b47] mb-4">Insurance & Access</h3>
               <p className="text-slate-600 text-sm leading-relaxed mb-5">
-                Bierman New Jersey locations accept most major insurance plans. Our intake team verifies coverage and guides families through the process before the first appointment.
+                Bierman New Jersey locations work with most major insurance providers. Contact our Intake Team to verify your coverage before your first visit.
               </p>
               <div className="space-y-2 text-sm text-slate-500">
-                {["Horizon BCBS NJ", "Aetna", "United Healthcare", "Cigna", "And most major plans"].map((ins) => (
+                {["Horizon BCBS NJ", "Aetna", "United Healthcare", "Cigna", "And other major providers"].map((ins) => (
                   <div key={ins} className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-brand-teal flex-shrink-0" />
                     {ins}

@@ -432,7 +432,7 @@ export function LocationPage({ data }: LocationPageProps) {
       <nav className="bg-white border-b border-slate-200 z-40 shadow-sm" style={{ position: "sticky", top: "0px" }}>
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <Link href="/"><img src={SHARED_ASSETS.logo} alt="Bierman Autism Centers 20th Anniversary" className="h-10 w-auto" /></Link>
+            <a href="https://www.biermanautism.com/" target="_blank" rel="noopener noreferrer"><img src={SHARED_ASSETS.logo} alt="Bierman Autism Centers 20th Anniversary" className="h-10 w-auto" /></a>
             <div className="hidden md:flex items-center gap-2">
               <span className="text-slate-300 text-sm">|</span>
               <span className="text-slate-500 text-sm">{address.city}, {address.state}</span>
@@ -605,7 +605,7 @@ export function LocationPage({ data }: LocationPageProps) {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
             <div className="text-brand-teal text-sm font-bold uppercase tracking-widest mb-2">Services at {address.city}</div>
-            <h2 className="text-3xl font-bold text-[#1a2b47]">Comprehensive Autism Support Services</h2>
+            <h2 className="text-3xl font-bold text-[#1a2b47]">Comprehensive and Focused Autism Support Services</h2>
             <p className="text-slate-500 mt-3 max-w-2xl mx-auto">Each service is individualized to your child's goals and delivered by licensed, experienced clinicians.</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -827,8 +827,8 @@ export function LocationPage({ data }: LocationPageProps) {
             <h2 className="text-3xl font-bold text-[#1a2b47]">{data.comingSoon ? "What Families Value About Bierman" : `What Families Value at ${address.city}`}</h2>
             <p className="text-slate-500 mt-3 max-w-2xl mx-auto text-sm leading-relaxed">
               {data.comingSoon
-                ? "Families often highlight clear communication, supportive clinical guidance, and welcoming environments centered around each child."
-                : "Families often highlight clear communication, supportive clinical guidance, and a welcoming environment centered around their child."}
+                ? "Families consistently share that Bierman's clinical team communicates clearly, responds quickly, and keeps each child at the center of every decision."
+                : "Families consistently share that Bierman's clinical team communicates clearly, responds quickly, and keeps their child at the center of every decision."}
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">

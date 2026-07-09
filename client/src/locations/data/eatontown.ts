@@ -53,7 +53,7 @@ export const eatontownData: LocationData = {
   heroDescription:
     "Bierman Autism Centers in Eatontown provides individualized ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism. Serving Monmouth County and surrounding New Jersey communities.",
   insuranceText:
-    "Bierman Eatontown accepts most major insurance plans. We work with families to verify coverage and navigate the insurance process. Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others are accepted.",
+    "Bierman Eatontown works with most major insurance providers. Contact our Intake Team to verify your coverage before your first visit. Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others are accepted.",
 
   // ── Reviews ───────────────────────────────────────────────────────────────
   reviews: [
@@ -103,7 +103,7 @@ export const eatontownData: LocationData = {
   faqs: [
     {
       q: "Does Bierman Autism Centers in Eatontown accept insurance?",
-      a: "Yes. Bierman Eatontown accepts most major insurance plans including Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others. Contact us to verify your specific coverage.",
+      a: "Yes. Bierman Eatontown works with most major insurance providers including Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others. Contact us to verify your specific coverage.",
     },
     {
       q: "What age groups does the Eatontown center serve?",
