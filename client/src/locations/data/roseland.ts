@@ -56,7 +56,7 @@ export const roselandData: LocationData = {
   heroDescription:
     "Bierman Autism Centers in Roseland provides individualized ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism. Serving Essex County, Morris County, and surrounding North Jersey communities.",
   insuranceText:
-    "Bierman Roseland works with most major insurance providers. Contact our Intake Team to verify your coverage before your first visit. Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others are accepted.",
+    "Bierman Roseland works with a variety of insurance providers. Contact our Intake Team to verify your coverage before your first visit. Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others are accepted.",
 
   // ── Reviews ───────────────────────────────────────────────────────────────
   // Note: Roseland is opening Fall 2026. Reviews below are from Bierman NJ centers
@@ -106,7 +106,7 @@ export const roselandData: LocationData = {
     },
     {
       q: "What services will be available at the Roseland location?",
-      a: "The Roseland center will offer ABA therapy, diagnostic evaluations, speech therapy, and occupational therapy. Services are delivered by BCBA-supervised clinical teams and tailored to each child's individual needs.",
+      a: "The Roseland center will offer ABA therapy, diagnostic evaluations, speech therapy, and occupational therapy. Services are delivered by BCBA-supervised clinical teams and tailored to each child's individual needs. Service availability may vary. Contact our Intake Team to confirm availability at your preferred center.",
     },
     {
       q: "What counties does the Roseland location serve?",
@@ -118,7 +118,7 @@ export const roselandData: LocationData = {
     },
     {
       q: "Does Bierman Roseland accept insurance?",
-      a: "Yes. Bierman Roseland works with most major insurance providers including Horizon BCBS NJ, Aetna, United Healthcare, and Cigna. Our team will help verify your coverage before services begin.",
+      a: "Yes. Bierman Roseland works with a variety of insurance providers, including Horizon BCBS NJ, Aetna, United Healthcare, and Cigna. Our team will help verify your coverage before services begin.",
     },
     {
       q: "Is the Roseland center accessible and easy to reach?",

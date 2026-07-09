@@ -53,7 +53,7 @@ export const piscatawayData: LocationData = {
   heroDescription:
     "Bierman Autism Centers in Piscataway provides individualized ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism. Serving Middlesex County and surrounding New Jersey communities.",
   insuranceText:
-    "Bierman Piscataway works with most major insurance providers. Contact our Intake Team to verify your coverage before your first visit. Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others are accepted.",
+    "Bierman Piscataway works with a variety of insurance providers. Contact our Intake Team to verify your coverage before your first visit. Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others are accepted.",
 
   // ── Reviews ───────────────────────────────────────────────────────────────
   reviews: [
@@ -94,7 +94,7 @@ export const piscatawayData: LocationData = {
       date: "5 days ago",
       stars: 5,
       text: "It was really great! Kids had so much fun! Thanks for organizing this amazing event. Animals were so friendly and staff were so supportive!",
-      initials: "SS",
+      initials: "SP",
       avatarColor: "#16a34a",
     },
   ],
@@ -103,7 +103,7 @@ export const piscatawayData: LocationData = {
   faqs: [
     {
       q: "Does Bierman Autism Centers in Piscataway accept insurance?",
-      a: "Yes. Bierman Piscataway works with most major insurance providers including Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others. Contact us to verify your specific coverage.",
+      a: "Yes. Bierman Piscataway works with a variety of insurance providers, including Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others. Contact us to verify your specific coverage.",
     },
     {
       q: "What age groups does the Piscataway center serve?",
@@ -127,11 +127,11 @@ export const piscatawayData: LocationData = {
     },
     {
       q: "Does Bierman Piscataway offer speech therapy for children with autism?",
-      a: "Yes. Speech-language therapy is available at the Piscataway center, delivered by licensed speech-language pathologists as part of a coordinated care plan.",
+      a: "Yes. Speech-language therapy is available at the Piscataway center, delivered by licensed speech-language pathologists as part of a coordinated care plan. Service availability may vary. Contact our Intake Team to confirm availability at your preferred center.",
     },
     {
       q: "Does Bierman Piscataway offer occupational therapy?",
-      a: "Yes. Occupational therapy services are available at the Piscataway location, focusing on sensory integration, fine motor skills, and daily living activities.",
+      a: "Yes. Occupational therapy services are available at the Piscataway location, focusing on sensory integration, fine motor skills, and daily living activities. Service availability may vary. Contact our Intake Team to confirm availability at your preferred center.",
     },
   ],
 

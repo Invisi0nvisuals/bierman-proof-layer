@@ -671,7 +671,7 @@ export function LocationPage({ data }: LocationPageProps) {
                       src={logo.src}
                       alt={logo.alt.replace("Bierman Autism Centers", `Bierman Autism Centers ${address.city}`)}
                       className="object-contain"
-                      style={{ maxHeight: "36px", maxWidth: "100%", width: "auto" }}
+                      style={{ maxHeight: "36px", maxWidth: "100%", width: "auto", mixBlendMode: "multiply" }}
                     />
                   </div>
                 ))}

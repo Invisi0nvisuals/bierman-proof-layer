@@ -53,7 +53,7 @@ export const eatontownData: LocationData = {
   heroDescription:
     "Bierman Autism Centers in Eatontown provides individualized ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism. Serving Monmouth County and surrounding New Jersey communities.",
   insuranceText:
-    "Bierman Eatontown works with most major insurance providers. Contact our Intake Team to verify your coverage before your first visit. Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others are accepted.",
+    "Bierman Eatontown works with a variety of insurance providers. Contact our Intake Team to verify your coverage before your first visit. Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others are accepted.",
 
   // ── Reviews ───────────────────────────────────────────────────────────────
   reviews: [
@@ -103,7 +103,7 @@ export const eatontownData: LocationData = {
   faqs: [
     {
       q: "Does Bierman Autism Centers in Eatontown accept insurance?",
-      a: "Yes. Bierman Eatontown works with most major insurance providers including Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others. Contact us to verify your specific coverage.",
+      a: "Yes. Bierman Eatontown works with a variety of insurance providers, including Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others. Contact us to verify your specific coverage.",
     },
     {
       q: "What age groups does the Eatontown center serve?",
@@ -127,11 +127,11 @@ export const eatontownData: LocationData = {
     },
     {
       q: "Does Bierman Eatontown offer speech therapy for children with autism?",
-      a: "Yes. Speech-language therapy is available at the Eatontown center, delivered by licensed speech-language pathologists as part of a coordinated care plan.",
+      a: "Yes. Speech-language therapy is available at the Eatontown center, delivered by licensed speech-language pathologists as part of a coordinated care plan. Service availability may vary. Contact our Intake Team to confirm availability at your preferred center.",
     },
     {
       q: "Does Bierman Eatontown offer occupational therapy?",
-      a: "Yes. Occupational therapy services are available at the Eatontown location, focusing on sensory integration, fine motor skills, and daily living activities.",
+      a: "Yes. Occupational therapy services are available at the Eatontown location, focusing on sensory integration, fine motor skills, and daily living activities. Service availability may vary. Contact our Intake Team to confirm availability at your preferred center.",
     },
   ],
 

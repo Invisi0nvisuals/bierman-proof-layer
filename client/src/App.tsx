@@ -1,7 +1,8 @@
+import { useEffect } from "react";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
+import { Route, Switch, useLocation } from "wouter";
 import { HelmetProvider } from "react-helmet-async";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
@@ -18,8 +19,15 @@ import { moorestownData } from "./locations/data/moorestown";
 import { roselandData } from "./locations/data/roseland";
 import NJHub from "@/pages/NJHub";
 
+function ScrollToTop() {
+  const [location] = useLocation();
+  useEffect(() => { window.scrollTo(0, 0); }, [location]);
+  return null;
+}
 function Router() {
   return (
+    <>
+    <ScrollToTop />
     <Switch>
       {/* Root — renders Ramsey as the default proof-layer entry point */}
       <Route path={"/"} component={NJHub} />
@@ -41,6 +49,7 @@ function Router() {
       {/* Final fallback route */}
       <Route component={NotFound} />
     </Switch>
+    </>
   );
 }
 
