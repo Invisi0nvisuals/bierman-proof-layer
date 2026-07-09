@@ -35,7 +35,7 @@ export const eatontownData: LocationData = {
 
   // ── URLs ──────────────────────────────────────────────────────────────────
   intakeUrl: "https://www.biermanautism.com/start-now/?loc=eatontown-nj&utm_source=local-hub&utm_medium=referral&utm_campaign=nj-pilot-eatontown",
-  gbpUrl: "https://maps.app.goo.gl/eatontown-bierman",
+  gbpUrl: "https://maps.app.goo.gl/HKtugPpezT9Z6Q95A",
   mapEmbedUrl:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3047.0!2d-74.0579!3d40.2926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s40+Christopher+Way%2C+Eatontown%2C+NJ+07724!5e0!3m2!1sen!2sus!4v1620000000006",
 

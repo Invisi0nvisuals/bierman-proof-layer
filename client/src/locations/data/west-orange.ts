@@ -40,7 +40,7 @@ export const westOrangeData: LocationData = {
 
   // ── URLs ──────────────────────────────────────────────────────────────────
   intakeUrl: "https://www.biermanautism.com/start-now/?loc=west-orange-nj&utm_source=local-hub&utm_medium=referral&utm_campaign=nj-pilot-west-orange",
-  gbpUrl: "https://www.google.com/maps/place/Bierman+Autism+Centers+-+West+Orange",
+  gbpUrl: "https://maps.app.goo.gl/r2L429RoesW8ELjq5",
   mapEmbedUrl:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.0!2d-74.2617!3d40.7965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3ab428ca5d0af%3A0x1edc5c9c28051cae!2sBierman+Autism+Centers+-+West+Orange!5e0!3m2!1sen!2sus!4v1620000000002",
 
