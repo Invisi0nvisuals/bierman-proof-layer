@@ -34,7 +34,7 @@ export const ramseyData: LocationData = {
 
   // ── URLs ──────────────────────────────────────────────────────────────────
   intakeUrl: "https://www.biermanautism.com/start-now/?loc=ramsey-nj&utm_source=local-hub&utm_medium=referral&utm_campaign=nj-pilot-ramsey",
-  gbpUrl: "https://maps.app.goo.gl/UPTJDj2a6mtFaKju7",
+  gbpUrl: "https://maps.app.goo.gl/3MrbDKvY9nvwFh4Q8",
   mapEmbedUrl:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3013.5!2d-74.1441!3d41.0579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s500+N+Franklin+Tpke%2C+Ramsey%2C+NJ+07446!5e0!3m2!1sen!2sus!4v1620000000000",
 
