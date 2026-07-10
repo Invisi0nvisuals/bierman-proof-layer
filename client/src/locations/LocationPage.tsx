@@ -656,8 +656,7 @@ export function LocationPage({ data }: LocationPageProps) {
             <div>
               <div className="text-brand-teal text-sm font-bold uppercase tracking-widest mb-2">Insurance</div>
               <h2 className="text-3xl font-bold text-[#1a2b47] mb-4">Insurance Accepted at {address.city}</h2>
-              <p className="text-slate-600 leading-relaxed mb-6">{insuranceText}</p>
-              <img src={SHARED_ASSETS.insurance} alt="Horizon BCBS NJ — accepted at Bierman Autism Centers" className="rounded-2xl shadow-sm w-full max-w-xs object-contain" style={{ maxHeight: "80px" }} />
+              <p className="text-slate-600 leading-relaxed">{insuranceText}</p>
             </div>
             <div>
               <div className="grid grid-cols-3 gap-3">
@@ -675,6 +674,18 @@ export function LocationPage({ data }: LocationPageProps) {
                     />
                   </div>
                 ))}
+              </div>
+              <div className="mt-5 text-right">
+                <a
+                  href={`https://www.biermanautism.com/resources/insurance/?utm_source=nj_hub&utm_medium=insurance_cta&utm_campaign=local_pilot&utm_content=${address.city.toLowerCase().replace(/\s+/g, '-')}_insurance`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-brand-teal hover:text-brand-teal-800 transition-colors"
+                  aria-label={`View all insurance providers accepted at Bierman Autism Centers ${address.city}`}
+                >
+                  View Insurance Providers
+                  <svg viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4" aria-hidden="true"><path fillRule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clipRule="evenodd" /></svg>
+                </a>
               </div>
             </div>
           </div>
