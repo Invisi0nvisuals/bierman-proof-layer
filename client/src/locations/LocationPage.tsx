@@ -432,7 +432,7 @@ export function LocationPage({ data }: LocationPageProps) {
       <nav className="bg-white border-b border-slate-200 z-40 shadow-sm" style={{ position: "sticky", top: "0px" }}>
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <a href="https://www.biermanautism.com/" target="_blank" rel="noopener noreferrer"><img src={SHARED_ASSETS.logo} alt="Bierman Autism Centers 20th Anniversary" className="h-10 w-auto" /></a>
+            <a href="https://www.biermanautism.com/?utm_source=nj_hub&utm_medium=header_logo&utm_campaign=local_pilot" target="_blank" rel="noopener noreferrer"><img src={SHARED_ASSETS.logo} alt="Bierman Autism Centers 20th Anniversary" className="h-10 w-auto" /></a>
             <div className="hidden md:flex items-center gap-2">
               <span className="text-slate-300 text-sm">|</span>
               <span className="text-slate-500 text-sm">{address.city}, {address.state}</span>
@@ -879,12 +879,12 @@ export function LocationPage({ data }: LocationPageProps) {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
             {[
-              { title: "What is ABA Therapy?", copy: "ABA therapy uses structured, evidence-based techniques to build communication, social, and daily living skills in children with autism.", url: "https://www.biermanautism.com/aba-therapy-services/", linkLabel: "Learn about ABA →", icon: <IconABA /> },
-              { title: "What is ASD?", copy: "Autism Spectrum Disorder (ASD) describes a range of developmental differences. Understanding your child's profile is the first step toward the right support.", url: "https://www.biermanautism.com/autism-101/", linkLabel: "Autism 101 →", icon: <IconDiag /> },
-              { title: "What is Level 1 Autism?", copy: "Level 1 autism (formerly Asperger's) describes individuals who require some support. Many families search for clarity on what this means for their child.", url: "https://www.biermanautism.com/resources/blog/autism-level-1/", linkLabel: "Level 1 Autism →", icon: <IconSpeech /> },
-              { title: "Can Autism Be Cured?", copy: "Autism is not something to cure. Support focuses on helping each child build skills, independence, and confidence over time.", url: "https://www.biermanautism.com/autism-101/can-autism-be-cured/", linkLabel: "Read more →", icon: <IconOT /> },
-              { title: "Caregiver Training", copy: "Bierman offers caregiver training resources to help families support communication, daily routines, and behavior management at home.", url: "https://www.biermanautism.com/resources/caregiver-training/", linkLabel: "Caregiver resources →", icon: <IconABA /> },
-              { title: "ASD vs Autism", copy: "Many families ask whether ASD and autism are the same thing. This resource explains the terminology and what it means for your child's care.", url: "https://www.biermanautism.com/resources/blog/asd-vs-autism/", linkLabel: "ASD vs Autism →", icon: <IconDiag /> },
+              { title: "What is ABA Therapy?", copy: "ABA therapy uses structured, evidence-based techniques to build communication, social, and daily living skills in children with autism.", url: "https://www.biermanautism.com/aba-therapy-services/?utm_source=nj_hub&utm_medium=resource_card&utm_campaign=local_pilot&utm_content=aba_therapy", linkLabel: "Learn about ABA →", icon: <IconABA /> },
+              { title: "What is ASD?", copy: "Autism Spectrum Disorder (ASD) describes a range of developmental differences. Understanding your child's profile is the first step toward the right support.", url: "https://www.biermanautism.com/autism-101/?utm_source=nj_hub&utm_medium=resource_card&utm_campaign=local_pilot&utm_content=autism_101", linkLabel: "Autism 101 →", icon: <IconDiag /> },
+              { title: "What is Level 1 Autism?", copy: "Level 1 autism (formerly Asperger's) describes individuals who require some support. Many families search for clarity on what this means for their child.", url: "https://www.biermanautism.com/resources/blog/autism-level-1/?utm_source=nj_hub&utm_medium=resource_card&utm_campaign=local_pilot&utm_content=level1_autism", linkLabel: "Level 1 Autism →", icon: <IconSpeech /> },
+              { title: "Can Autism Be Cured?", copy: "Autism is not something to cure. Support focuses on helping each child build skills, independence, and confidence over time.", url: "https://www.biermanautism.com/autism-101/can-autism-be-cured/?utm_source=nj_hub&utm_medium=resource_card&utm_campaign=local_pilot&utm_content=autism_cure", linkLabel: "Read more →", icon: <IconOT /> },
+              { title: "Caregiver Training", copy: "Bierman offers caregiver training resources to help families understand communication, daily routines, and behavior management at home.", url: "https://www.biermanautism.com/resources/caregiver-training/?utm_source=nj_hub&utm_medium=resource_card&utm_campaign=local_pilot&utm_content=caregiver_training", linkLabel: "Caregiver resources →", icon: <IconABA /> },
+              { title: "ASD vs Autism", copy: "Many families ask whether ASD and autism are the same thing. This resource explains the terminology and what it means for your child's care.", url: "https://www.biermanautism.com/resources/blog/asd-vs-autism/?utm_source=nj_hub&utm_medium=resource_card&utm_campaign=local_pilot&utm_content=asd_vs_autism", linkLabel: "ASD vs Autism →", icon: <IconDiag /> },
             ].map((card) => (
               <div key={card.title} className="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col gap-2">
                 <div className="flex items-center gap-3 mb-1">
@@ -901,12 +901,12 @@ export function LocationPage({ data }: LocationPageProps) {
           <div className="flex flex-wrap items-center gap-3 pt-6 border-t border-slate-100">
             <span className="text-slate-400 text-xs font-semibold uppercase tracking-wide mr-1">Quick links:</span>
             {[
-              { label: "Autism 101", url: "https://www.biermanautism.com/autism-101/" },
-              { label: "Level 1 Autism", url: "https://www.biermanautism.com/resources/blog/autism-level-1/" },
-              { label: "ASD vs Autism", url: "https://www.biermanautism.com/resources/blog/asd-vs-autism/" },
-              { label: "Can Autism Be Cured?", url: "https://www.biermanautism.com/autism-101/can-autism-be-cured/" },
-              { label: "Caregiver Training", url: "https://www.biermanautism.com/resources/caregiver-training/" },
-              { label: "ABA Therapy Services", url: "https://www.biermanautism.com/aba-therapy-services/" },
+              { label: "Autism 101", url: "https://www.biermanautism.com/autism-101/?utm_source=nj_hub&utm_medium=quick_link&utm_campaign=local_pilot&utm_content=autism_101" },
+              { label: "Level 1 Autism", url: "https://www.biermanautism.com/resources/blog/autism-level-1/?utm_source=nj_hub&utm_medium=quick_link&utm_campaign=local_pilot&utm_content=level1_autism" },
+              { label: "ASD vs Autism", url: "https://www.biermanautism.com/resources/blog/asd-vs-autism/?utm_source=nj_hub&utm_medium=quick_link&utm_campaign=local_pilot&utm_content=asd_vs_autism" },
+              { label: "Can Autism Be Cured?", url: "https://www.biermanautism.com/autism-101/can-autism-be-cured/?utm_source=nj_hub&utm_medium=quick_link&utm_campaign=local_pilot&utm_content=autism_cure" },
+              { label: "Caregiver Training", url: "https://www.biermanautism.com/resources/caregiver-training/?utm_source=nj_hub&utm_medium=quick_link&utm_campaign=local_pilot&utm_content=caregiver_training" },
+              { label: "ABA Therapy Services", url: "https://www.biermanautism.com/aba-therapy-services/?utm_source=nj_hub&utm_medium=quick_link&utm_campaign=local_pilot&utm_content=aba_therapy" },
             ].map((link) => (
               <a key={link.label} href={link.url} target="_blank" rel="noopener noreferrer" className="text-brand-teal-700 text-xs font-medium hover:underline underline-offset-2">{link.label}</a>
             ))}
@@ -923,7 +923,7 @@ export function LocationPage({ data }: LocationPageProps) {
               <div className="inline-block bg-white border border-brand-teal-200 text-brand-teal-700 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4">Caregiver Support</div>
               <h2 className="text-3xl font-bold text-[#1a2b47] leading-tight mb-4">Support for Families at Home</h2>
               <p className="text-slate-500 text-sm leading-relaxed mb-6">Care does not stop when a child leaves the clinic. Bierman's caregiver training resources help families understand communication, daily routines, independence, and behavior support.</p>
-              <a href="https://www.biermanautism.com/resources/caregiver-training/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-brand-teal hover:bg-teal-700 text-white font-semibold px-5 py-3 rounded-xl text-sm transition-colors shadow-sm">
+              <a href="https://www.biermanautism.com/resources/caregiver-training/?utm_source=nj_hub&utm_medium=caregiver_cta&utm_campaign=local_pilot" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-brand-teal hover:bg-teal-700 text-white font-semibold px-5 py-3 rounded-xl text-sm transition-colors shadow-sm">
                 Caregiver Training Resources <span aria-hidden="true">→</span>
               </a>
             </div>
