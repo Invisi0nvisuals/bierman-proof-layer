@@ -36,7 +36,7 @@ import type { LocationData } from "@/locations/types";
 const LOGO = "/manus-storage/bierman-logo-anniversary-20_3f19246b.webp";
 const FOOTER_LOGO = "/manus-storage/Main_Logo_All_White_c1738645.png";
 const LOGO_FULL = "https://bierman-proof-layer.manus.space/manus-storage/bierman-logo-anniversary-20_3f19246b.webp";
-const INTAKE_URL = "https://www.biermanautism.com/start-now/?utm_source=nj_hub&utm_medium=cta&utm_campaign=local_pilot&utm_content=nj_hub_intake";
+const INTAKE_URL = "https://www.biermanautism.com/start-now/";
 const PAGE_URL = "https://bierman-proof-layer.manus.space/";
 
 // ── Location registry ─────────────────────────────────────────────────────────
@@ -219,7 +219,7 @@ export default function NJHub() {
       <nav className="bg-white border-b border-slate-200 z-40 shadow-sm sticky top-0">
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <a href="https://www.biermanautism.com/?utm_source=nj_hub&utm_medium=header_logo&utm_campaign=local_pilot" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.biermanautism.com/" target="_blank" rel="noopener noreferrer">
               <img src={LOGO} alt="Bierman Autism Centers 20th Anniversary" className="h-10 w-auto cursor-pointer" />
             </a>
             <div className="hidden md:flex items-center gap-2">
