@@ -59,22 +59,22 @@ export const princetonData: LocationData = {
   reviews: [
     {
       slug: "paradise",
-      name: "Paradise",
+      name: "Bierman Parent",
       meta: "Local Guide · 147 reviews · 210 photos",
       date: "6 months ago",
       stars: 5,
       text: "This place is everything autism! Someone told us about it — we have an autistic grandson and nephew. It's not only a school; Bierman also finds different ways to involve the community through various events, whether it be a holiday or something extra for enjoyment. Thank you Bierman Team!",
-      initials: "P",
+      initials: "BP",
       avatarColor: "#7c3aed",
     },
     {
       slug: "klassydolly",
-      name: "KlassyDolly",
+      name: "Bierman Parent",
       meta: "11 reviews · 2 photos",
       date: "1 year ago",
       stars: 5,
       text: "My babies had so much fun at the Bierman Trunk O Treat! All the teachers got dressed up and handed out candies to all the kids! It was very sweet!",
-      initials: "K",
+      initials: "BP",
       avatarColor: "#ea580c",
     },
     {
