@@ -476,7 +476,8 @@ export function LocationPage({ data }: LocationPageProps) {
             <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-5 text-[#1a2b47]">
               ABA Therapy in<br />{address.city}, {address.state === "NJ" ? "New Jersey" : address.state}
             </h1>
-            <p className="text-slate-600 text-lg mb-8 leading-relaxed">{heroDescription}</p>
+            <p className="text-slate-600 text-lg mb-4 leading-relaxed">{heroDescription}</p>
+            <p className="text-brand-teal-700 text-sm font-medium mb-8">We serve children 18 months to 9 years old.</p>
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <a href={intakeUrl} target="_blank" rel="noopener noreferrer" className="bg-brand-coral hover:bg-brand-coral/90 text-white font-semibold px-8 py-4 rounded-full text-lg tracking-wide transition-colors text-center shadow-md">
                 Request Services in {address.city}
@@ -492,7 +493,7 @@ export function LocationPage({ data }: LocationPageProps) {
                   <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4 text-brand-teal" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M13 6.5a5 5 0 11-10 0 5 5 0 0110 0z"/><path d="M6 6.5l1.5 1.5L10 4.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
                 </div>
                 <div>
-                  <div className="text-brand-teal-700 text-xs font-bold uppercase tracking-widest mb-1">Verified Bierman Location</div>
+                  <div className="text-brand-teal-700 text-xs font-bold uppercase tracking-widest mb-1">Bierman Autism Centers in {address.city}</div>
                   <div className="text-[#1a2b47] font-semibold text-sm">{entityName}</div>
                   <div className="text-slate-500 text-sm">{address.street}, {address.city}, {address.state} {address.zip}</div>
                   <div className="text-slate-500 text-sm">{phone}</div>

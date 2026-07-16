@@ -405,7 +405,7 @@ export default function NJHub() {
             <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100">
               <h3 className="text-lg font-bold text-[#1a2b47] mb-4">Insurance & Access</h3>
               <p className="text-slate-600 text-sm leading-relaxed mb-5">
-                Bierman New Jersey locations work with most major insurance providers. Contact our Intake Team to verify your coverage before your first visit.
+                Bierman New Jersey locations work with a variety of insurance providers. Contact our Intake Team to verify your coverage before your first visit.
               </p>
               <div className="space-y-2 text-sm text-slate-500">
                 {["Horizon BCBS NJ", "Aetna", "United Healthcare", "Cigna", "And other major providers"].map((ins) => (
