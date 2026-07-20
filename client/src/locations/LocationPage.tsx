@@ -86,8 +86,8 @@ const STANDARD_SERVICES = [
     slug: "occupational-therapy",
     title: "Occupational Therapy",
     desc: "Sensory integration, fine motor skills, and daily living activities to support independence and engagement.",
-    img: "/manus-storage/Occupational-Therapy-Bierman-Autism_65cc6b55.webp",
-    alt: "Bierman clinician supporting a child during an occupational therapy activity",
+    img: "/manus-storage/P1015029_9404179b.webp",
+    alt: "Bierman therapist guiding a child through a fine motor activity during occupational therapy",
   },
   {
     slug: "diagnostic-evaluation",
