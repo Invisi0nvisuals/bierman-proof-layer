@@ -453,7 +453,7 @@ export function LocationPage({ data }: LocationPageProps) {
       {/* Hero */}
       <section
         className="py-16 md:py-24 relative overflow-hidden"
-        style={assets.heroImage ? { background: "#e8f6fb" } : { background: "linear-gradient(135deg, #f0fdfa 0%, #e0f7f4 40%, #fef9f0 100%)" }}
+        style={assets.heroImage ? { background: "#0d2a4a" } : { background: "linear-gradient(135deg, #f0fdfa 0%, #e0f7f4 40%, #fef9f0 100%)" }}
       >
         {assets.heroImage && (
           <div className="absolute inset-0">
@@ -463,24 +463,24 @@ export function LocationPage({ data }: LocationPageProps) {
               aria-hidden="true"
               className="absolute inset-0 w-full h-full object-cover object-right"
             />
-            {/* Left fade so text stays readable */}
-            <div className="absolute inset-0" style={{ background: "linear-gradient(90deg, rgba(232,246,251,1) 0%, rgba(232,246,251,0.92) 35%, rgba(232,246,251,0.4) 60%, transparent 80%)" }} />
+            {/* Left fade — image already has dark navy left panel; overlay adds subtle depth only */}
+            <div className="absolute inset-0" style={{ background: "linear-gradient(90deg, rgba(13,42,74,0.85) 0%, rgba(13,42,74,0.6) 30%, rgba(13,42,74,0.1) 55%, transparent 75%)" }} />
           </div>
         )}
         <div className="relative max-w-6xl mx-auto px-4">
           <div className="max-w-2xl">
             <div className="flex items-center gap-2 mb-4">
-              <span className="inline-flex items-center gap-1.5 bg-brand-teal-100 text-brand-teal-700 text-xs font-semibold px-3 py-1 rounded-full">
+              <span className="inline-flex items-center gap-1.5 bg-white/20 text-white text-xs font-semibold px-3 py-1 rounded-full">
                 <svg viewBox="0 0 16 16" fill="currentColor" className="w-3 h-3" aria-hidden="true"><path d="M8 1a5 5 0 100 10A5 5 0 008 1zm0 1.5a3.5 3.5 0 110 7 3.5 3.5 0 010-7zM8 14a1 1 0 100-2 1 1 0 000 2z"/></svg>
                 {address.city}, {address.state}
               </span>
-              <span className="text-slate-400 text-xs">{address.county}</span>
+              <span className="text-blue-200 text-xs">{address.county}</span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-5 text-[#1a2b47]">
+            <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-5 text-white">
               ABA Therapy in<br />{address.city}, {address.state === "NJ" ? "New Jersey" : address.state}
             </h1>
-            <p className="text-slate-600 text-lg mb-4 leading-relaxed">{heroDescription}</p>
-            <p className="text-brand-teal-700 text-sm font-medium mb-8">We serve children 18 months to 9 years old.</p>
+            <p className="text-blue-100 text-lg mb-4 leading-relaxed">{heroDescription}</p>
+            <p className="text-teal-300 text-sm font-medium mb-8">We serve children 18 months to 9 years old.</p>
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <a href={intakeUrl} target="_blank" rel="noopener noreferrer" className="bg-brand-coral hover:bg-brand-coral/90 text-white font-semibold px-8 py-4 rounded-full text-lg tracking-wide transition-colors text-center shadow-md">
                 Request Services in {address.city}

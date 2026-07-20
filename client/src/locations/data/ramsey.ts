@@ -218,7 +218,7 @@ export const ramseyData: LocationData = {
   assets: {
     facility: "/manus-storage/bierman-autism-new-jersey-ramsey-facility-main_296feafd.webp",
     facilityAlt: "Bierman Autism Centers Ramsey, NJ — clinic interior",
-    heroImage: "/manus-storage/Ramsey,NJ_f3ab3867.png",
+    heroImage: "/manus-storage/nj_city_hero_static_light_2abb0770.png",
     videoPoster: "/manus-storage/bierman-ramsey-video-poster_28eb470d.jpg",
     videoFile: "/manus-storage/bierman-ramsey-aba-therapy-overview_e3501ef2.mp4",
     facilityYoutubeId: "dhHxU3o0p0o",
