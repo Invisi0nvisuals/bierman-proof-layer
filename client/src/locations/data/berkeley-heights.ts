@@ -173,8 +173,8 @@ export const berkeleyHeightsData: LocationData = {
 
   // ── Schema ────────────────────────────────────────────────────────────────
   schema: {
-    pageUrl: "https://bierman-proof-layer.manus.space/locations/nj/berkeley-heights/",
-    baseId: "https://bierman-proof-layer.manus.space/locations/nj/berkeley-heights/",
+    pageUrl: "https://local.biermanautism.com/locations/nj/berkeley-heights/",
+    baseId: "https://local.biermanautism.com/locations/nj/berkeley-heights/",
     pageTitle: "ABA Therapy Near Me | Berkeley Heights, NJ | Bierman Centers",
     pageDescription:
       "BCBA-supervised ABA therapy near Berkeley Heights, NJ. Bierman Autism Centers serves Union County families with evidence-based autism care. Insurance accepted.",

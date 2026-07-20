@@ -226,8 +226,8 @@ export const ramseyData: LocationData = {
 
   // ── Schema ────────────────────────────────────────────────────────────────
   schema: {
-    pageUrl: "https://bierman-proof-layer.manus.space/locations/nj/ramsey/",
-    baseId: "https://bierman-proof-layer.manus.space/locations/nj/ramsey/",
+    pageUrl: "https://local.biermanautism.com/locations/nj/ramsey/",
+    baseId: "https://local.biermanautism.com/locations/nj/ramsey/",
     pageTitle: "ABA Therapy Near Me | Ramsey, NJ | Bierman Autism Centers",
     pageDescription:
       "ABA therapy, speech therapy, occupational therapy & autism diagnostics near Ramsey, NJ. Bierman Autism Centers serves Bergen County families. Insurance accepted.",

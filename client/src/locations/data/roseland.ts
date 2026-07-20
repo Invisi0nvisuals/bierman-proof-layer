@@ -177,8 +177,8 @@ export const roselandData: LocationData = {
 
   // ── Schema ────────────────────────────────────────────────────────────────
   schema: {
-    pageUrl: "https://bierman-proof-layer.manus.space/locations/nj/roseland/",
-    baseId: "https://bierman-proof-layer.manus.space/locations/nj/roseland/",
+    pageUrl: "https://local.biermanautism.com/locations/nj/roseland/",
+    baseId: "https://local.biermanautism.com/locations/nj/roseland/",
     pageTitle: "ABA Therapy Near Me | Roseland, NJ | Bierman Autism Centers",
     pageDescription:
       "ABA therapy, speech, OT & diagnostics coming to Roseland, NJ — Fall 2026. Pre-register now for Essex County families. Bierman Autism Centers.",

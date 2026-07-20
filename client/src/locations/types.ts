@@ -117,9 +117,9 @@ export interface LocationAssets {
 // ─── Schema Metadata ─────────────────────────────────────────────────────────
 
 export interface LocationSchemaMetadata {
-  /** Canonical URL for this location page, e.g. "https://bierman-proof-layer.manus.space/locations/nj/piscataway/" */
+  /** Canonical URL for this location page, e.g. "https://local.biermanautism.com/locations/nj/piscataway/" */
   pageUrl: string;
-  /** Schema @id base URL for this location, e.g. "https://bierman-proof-layer.manus.space/locations/nj/piscataway/" */
+  /** Schema @id base URL for this location, e.g. "https://local.biermanautism.com/locations/nj/piscataway/" */
   baseId: string;
   /** Page <title> tag value */
   pageTitle: string;

@@ -35,9 +35,9 @@ import type { LocationData } from "@/locations/types";
 // ── Shared assets ─────────────────────────────────────────────────────────────
 const LOGO = "/manus-storage/bierman-logo-anniversary-20_3f19246b.webp";
 const FOOTER_LOGO = "/manus-storage/Main_Logo_All_White_c1738645.png";
-const LOGO_FULL = "https://bierman-proof-layer.manus.space/manus-storage/bierman-logo-anniversary-20_3f19246b.webp";
+const LOGO_FULL = "https://local.biermanautism.com/manus-storage/bierman-logo-anniversary-20_3f19246b.webp";
 const INTAKE_URL = "https://www.biermanautism.com/start-now/?utm_source=nj_hub&utm_medium=cta&utm_campaign=local_pilot&utm_content=nj_hub_intake";
-const PAGE_URL = "https://bierman-proof-layer.manus.space/";
+const PAGE_URL = "https://local.biermanautism.com/";
 
 // ── Location registry ─────────────────────────────────────────────────────────
 // Ordered alphabetically by city name (per Tiffany review request)
@@ -88,14 +88,14 @@ function buildNJHubSchema(): string {
         description:
           "Bierman Autism Centers operates 10 New Jersey locations providing ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism.",
         inLanguage: "en-US",
-        isPartOf: { "@id": "https://bierman-proof-layer.manus.space/#website" },
+        isPartOf: { "@id": "https://local.biermanautism.com/#website" },
         breadcrumb: { "@id": `${PAGE_URL}#breadcrumb` },
       },
       {
         "@type": "BreadcrumbList",
         "@id": `${PAGE_URL}#breadcrumb`,
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://bierman-proof-layer.manus.space/" },
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://local.biermanautism.com/" },
           { "@type": "ListItem", position: 2, name: "New Jersey ABA Therapy Locations", item: PAGE_URL },
         ],
       },

@@ -3,7 +3,7 @@
 
   <!-- NJ Hub — root / canonical home of the proof layer -->
   <url>
-    <loc>https://bierman-proof-layer.manus.space/</loc>
+    <loc>https://local.biermanautism.com/</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -11,7 +11,7 @@
 
   <!-- NJ Hub alias — canonical points to / -->
   <url>
-    <loc>https://bierman-proof-layer.manus.space/locations/nj/</loc>
+    <loc>https://local.biermanautism.com/locations/nj/</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -19,49 +19,49 @@
 
   <!-- NJ Location Pages — 7 open -->
   <url>
-    <loc>https://bierman-proof-layer.manus.space/locations/nj/ramsey/</loc>
+    <loc>https://local.biermanautism.com/locations/nj/ramsey/</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://bierman-proof-layer.manus.space/locations/nj/piscataway/</loc>
+    <loc>https://local.biermanautism.com/locations/nj/piscataway/</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://bierman-proof-layer.manus.space/locations/nj/west-orange/</loc>
+    <loc>https://local.biermanautism.com/locations/nj/west-orange/</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://bierman-proof-layer.manus.space/locations/nj/princeton/</loc>
+    <loc>https://local.biermanautism.com/locations/nj/princeton/</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://bierman-proof-layer.manus.space/locations/nj/cranford/</loc>
+    <loc>https://local.biermanautism.com/locations/nj/cranford/</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://bierman-proof-layer.manus.space/locations/nj/berkeley-heights/</loc>
+    <loc>https://local.biermanautism.com/locations/nj/berkeley-heights/</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://bierman-proof-layer.manus.space/locations/nj/eatontown/</loc>
+    <loc>https://local.biermanautism.com/locations/nj/eatontown/</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -69,7 +69,7 @@
 
   <!-- Parsippany — Coming Soon Summer 2026 -->
   <url>
-    <loc>https://bierman-proof-layer.manus.space/locations/nj/parsippany/</loc>
+    <loc>https://local.biermanautism.com/locations/nj/parsippany/</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -77,21 +77,21 @@
 
   <!-- Legal / Policy Pages -->
   <url>
-    <loc>https://bierman-proof-layer.manus.space/privacy/</loc>
+    <loc>https://local.biermanautism.com/privacy/</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
-    <loc>https://bierman-proof-layer.manus.space/terms/</loc>
+    <loc>https://local.biermanautism.com/terms/</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
-    <loc>https://bierman-proof-layer.manus.space/accessibility/</loc>
+    <loc>https://local.biermanautism.com/accessibility/</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

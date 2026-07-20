@@ -185,8 +185,8 @@ export const westOrangeData: LocationData = {
 
   // ── Schema ────────────────────────────────────────────────────────────────
   schema: {
-    pageUrl: "https://bierman-proof-layer.manus.space/locations/nj/west-orange/",
-    baseId: "https://bierman-proof-layer.manus.space/locations/nj/west-orange/",
+    pageUrl: "https://local.biermanautism.com/locations/nj/west-orange/",
+    baseId: "https://local.biermanautism.com/locations/nj/west-orange/",
     pageTitle: "ABA Therapy Near Me | West Orange, NJ | Bierman Autism Centers",
     pageDescription:
       "BCBA-supervised ABA therapy near West Orange, NJ. Bierman Autism Centers serves Essex County families with evidence-based autism care. Insurance accepted.",

@@ -177,8 +177,8 @@ export const parsippanyData: LocationData = {
 
   // ── Schema ────────────────────────────────────────────────────────────────
   schema: {
-    pageUrl: "https://bierman-proof-layer.manus.space/locations/nj/parsippany/",
-    baseId: "https://bierman-proof-layer.manus.space/locations/nj/parsippany/",
+    pageUrl: "https://local.biermanautism.com/locations/nj/parsippany/",
+    baseId: "https://local.biermanautism.com/locations/nj/parsippany/",
     pageTitle: "ABA Therapy Near Me | Parsippany, NJ | Bierman Autism Centers",
     pageDescription:
       "ABA therapy, speech-language therapy, occupational therapy, and autism diagnostic evaluations in Parsippany, NJ. Explore evidence-based autism services from Bierman Autism Centers.",

@@ -27,8 +27,8 @@ import type { LocationData } from "./types";
 
 // ─── Shared constants ─────────────────────────────────────────────────────────
 
-const ORG_ID = "https://bierman-proof-layer.manus.space/#organization";
-const WEBSITE_ID = "https://bierman-proof-layer.manus.space/#website";
+const ORG_ID = "https://local.biermanautism.com/#organization";
+const WEBSITE_ID = "https://local.biermanautism.com/#website";
 
 const STANDARD_KNOWS_ABOUT = [
   "Applied Behavior Analysis",
@@ -108,8 +108,8 @@ export function buildLocationSchema(data: LocationData): string {
     url: schema.pageUrl,
     telephone: phone,
     image: assets?.facility
-      ? `https://bierman-proof-layer.manus.space${assets.facility}`
-      : "https://bierman-proof-layer.manus.space/manus-storage/bierman-logo-anniversary-20_3f19246b.webp",
+      ? `https://local.biermanautism.com${assets.facility}`
+      : "https://local.biermanautism.com/manus-storage/bierman-logo-anniversary-20_3f19246b.webp",
     priceRange: "$$",
     address: {
       "@type": "PostalAddress",
@@ -178,19 +178,19 @@ export function buildLocationSchema(data: LocationData): string {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://bierman-proof-layer.manus.space/",
+        item: "https://local.biermanautism.com/",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Locations",
-        item: "https://bierman-proof-layer.manus.space/locations/",
+        item: "https://local.biermanautism.com/locations/",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: address.state,
-        item: `https://bierman-proof-layer.manus.space/locations/${address.state.toLowerCase()}/`,
+        item: `https://local.biermanautism.com/locations/${address.state.toLowerCase()}/`,
       },
       {
         "@type": "ListItem",
