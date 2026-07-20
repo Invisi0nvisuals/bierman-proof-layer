@@ -435,7 +435,7 @@ export function LocationPage({ data }: LocationPageProps) {
       <nav className="bg-white border-b border-slate-200 z-40 shadow-sm" style={{ position: "sticky", top: "0px" }}>
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <a href="https://www.biermanautism.com/?utm_source=nj_hub&utm_medium=header_logo&utm_campaign=local_pilot" target="_blank" rel="noopener noreferrer"><img src={SHARED_ASSETS.logo} alt="Bierman Autism Centers 20th Anniversary" className="h-10 w-auto" /></a>
+            <Link href="/"><img src={SHARED_ASSETS.logo} alt="Bierman Autism Centers 20th Anniversary" className="h-10 w-auto" /></Link>
             <div className="hidden md:flex items-center gap-2">
               <span className="text-slate-300 text-sm">|</span>
               <span className="text-slate-500 text-sm">{address.city}, {address.state}</span>
