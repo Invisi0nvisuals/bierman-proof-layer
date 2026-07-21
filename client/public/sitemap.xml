@@ -4,7 +4,7 @@
   <!-- NJ Hub — root / canonical home of the proof layer -->
   <url>
     <loc>https://local.biermanautism.com/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -12,89 +12,81 @@
   <!-- NJ Hub alias — canonical points to / -->
   <url>
     <loc>https://local.biermanautism.com/locations/nj/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- NJ Location Pages — 7 open -->
   <url>
-    <loc>https://local.biermanautism.com/locations/nj/ramsey/</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://local.biermanautism.com/locations/nj/piscataway/</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://local.biermanautism.com/locations/nj/west-orange/</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://local.biermanautism.com/locations/nj/princeton/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <loc>https://local.biermanautism.com/locations/nj/berkeley-heights/</loc>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://local.biermanautism.com/locations/nj/cranford/</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://local.biermanautism.com/locations/nj/berkeley-heights/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://local.biermanautism.com/locations/nj/eatontown/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Parsippany — Coming Soon Summer 2026 -->
+  <url>
+    <loc>https://local.biermanautism.com/locations/nj/piscataway/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://local.biermanautism.com/locations/nj/princeton/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://local.biermanautism.com/locations/nj/ramsey/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://local.biermanautism.com/locations/nj/west-orange/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- NJ Location Pages — 3 coming soon (pages live, form active, early indexation) -->
+  <url>
+    <loc>https://local.biermanautism.com/locations/nj/moorestown/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
   <url>
     <loc>https://local.biermanautism.com/locations/nj/parsippany/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- Legal / Policy Pages -->
-  <url>
-    <loc>https://local.biermanautism.com/privacy/</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://local.biermanautism.com/terms/</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-
-  <url>
-    <loc>https://local.biermanautism.com/accessibility/</loc>
-    <lastmod>2026-05-11</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://local.biermanautism.com/locations/nj/roseland/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 
 </urlset>
