@@ -52,8 +52,6 @@ const INSURANCE_LOGOS = [
   { src: "/manus-storage/Surest_42c5fe5a.png", alt: "Surest health insurance — accepted at Bierman Autism Centers" },
   { src: "/manus-storage/UMR_c43e5a4b.png", alt: "UMR health insurance — accepted at Bierman Autism Centers" },
   { src: "/manus-storage/UnitedHealthcare_277c39a3.png", alt: "United Healthcare — accepted at Bierman Autism Centers" },
-  { src: "/manus-storage/Wellcare-logo_4ccef813.webp", alt: "Wellcare health insurance — accepted at Bierman Autism Centers" },
-  { src: "/manus-storage/wellpoint_c663e82c.webp", alt: "Wellpoint health insurance — accepted at Bierman Autism Centers" },
   { src: "/manus-storage/Horizon-BCBS-New-Jersey-1536x332_09600505.webp", alt: "Horizon Blue Cross Blue Shield of New Jersey — accepted at Bierman Autism Centers" },
 ];
 
