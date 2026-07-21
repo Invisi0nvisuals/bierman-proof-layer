@@ -229,9 +229,7 @@ export default function NJHub() {
           </div>
           <div className="flex items-center gap-3">
             <a
-              href={INTAKE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#request-services"
               className="bg-brand-coral hover:bg-brand-coral/90 text-white font-semibold px-5 py-2.5 rounded-full text-sm tracking-wide transition-colors shadow-sm"
             >
               Request Services
@@ -285,9 +283,7 @@ export default function NJHub() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href={INTAKE_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#request-services"
                 className="bg-brand-coral hover:bg-brand-coral/90 text-white font-semibold px-8 py-4 rounded-full text-lg tracking-wide transition-colors text-center shadow-md"
               >
                 Request Services in NJ
@@ -339,6 +335,22 @@ export default function NJHub() {
         </div>
       </section>
 
+      {/* HubSpot Request Services Form */}
+      <section id="request-services" className="bg-white py-14 border-b border-slate-100">
+        <div className="max-w-3xl mx-auto px-4">
+          <div className="text-center mb-8">
+            <span className="inline-block bg-brand-teal-100 text-brand-teal-700 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">Get Started</span>
+            <h2 className="text-3xl font-bold text-[#1a2b47] mb-3">Request Services in New Jersey</h2>
+            <p className="text-slate-500 text-base">Complete the form below and our Intake Team will reach out within one business day.</p>
+          </div>
+          <div
+            className="hs-form-frame"
+            data-region="na1"
+            data-form-id="35c22952-9134-4372-8256-029b018f4f6a"
+            data-portal-id="46915865"
+          />
+        </div>
+      </section>
       {/* Location grid */}
       <section className="py-14 md:py-20 bg-slate-50">
         <div className="max-w-6xl mx-auto px-4">
@@ -416,9 +428,7 @@ export default function NJHub() {
                 ))}
               </div>
               <a
-                href={INTAKE_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#request-services"
                 className="mt-6 block w-full bg-brand-coral hover:bg-brand-coral/90 text-white font-semibold py-3 rounded-full text-sm tracking-wide text-center transition-colors"
               >
                 Start the Intake Process

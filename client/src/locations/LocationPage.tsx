@@ -443,7 +443,7 @@ export function LocationPage({ data }: LocationPageProps) {
           </div>
           <div className="flex items-center gap-3">
             <a href={`tel:${phone}`} className="hidden md:block text-slate-600 hover:text-brand-teal-700 text-sm font-medium transition-colors">{phone}</a>
-            <a href={intakeUrl} target="_blank" rel="noopener noreferrer" className="bg-brand-coral hover:bg-brand-coral/90 text-white font-semibold px-5 py-2.5 rounded-full text-sm tracking-wide transition-colors shadow-sm">
+            <a href="#request-services" className="bg-brand-coral hover:bg-brand-coral/90 text-white font-semibold px-5 py-2.5 rounded-full text-sm tracking-wide transition-colors shadow-sm">
               Request Services
             </a>
           </div>
@@ -482,7 +482,7 @@ export function LocationPage({ data }: LocationPageProps) {
             <p className="text-blue-100 text-lg mb-4 leading-relaxed">{heroDescription}</p>
             <p className="text-teal-300 text-sm font-medium mb-8">We serve children 18 months to 9 years old.</p>
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
-              <a href={intakeUrl} target="_blank" rel="noopener noreferrer" className="bg-brand-coral hover:bg-brand-coral/90 text-white font-semibold px-8 py-4 rounded-full text-lg tracking-wide transition-colors text-center shadow-md">
+              <a href="#request-services" className="bg-brand-coral hover:bg-brand-coral/90 text-white font-semibold px-8 py-4 rounded-full text-lg tracking-wide transition-colors text-center shadow-md">
                 Request Services in {address.city}
               </a>
               <a href={`tel:${phone}`} className="border-2 border-brand-teal-200 hover:border-brand-teal bg-white hover:bg-brand-teal-50 text-brand-teal-700 font-semibold px-8 py-4 rounded-full text-lg transition-colors text-center">
@@ -518,6 +518,22 @@ export function LocationPage({ data }: LocationPageProps) {
         </div>
       </section>
 
+      {/* HubSpot Request Services Form */}
+      <section id="request-services" className="bg-white py-14 border-b border-slate-100">
+        <div className="max-w-3xl mx-auto px-4">
+          <div className="text-center mb-8">
+            <span className="inline-block bg-brand-teal-100 text-brand-teal-700 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">Get Started</span>
+            <h2 className="text-3xl font-bold text-[#1a2b47] mb-3">Request Services in {address.city}</h2>
+            <p className="text-slate-500 text-base">Complete the form below and our Intake Team will reach out within one business day.</p>
+          </div>
+          <div
+            className="hs-form-frame"
+            data-region="na1"
+            data-form-id="35c22952-9134-4372-8256-029b018f4f6a"
+            data-portal-id="46915865"
+          />
+        </div>
+      </section>
       {/* Credential Badges */}
       <section className="bg-white border-b border-slate-100 py-6">
         <div className="max-w-6xl mx-auto px-4">
@@ -592,7 +608,7 @@ export function LocationPage({ data }: LocationPageProps) {
                 Our clinical team includes Board Certified Behavior Analysts (BCBAs), Registered Behavior Technicians (RBTs), speech-language pathologists, and occupational therapists working collaboratively on each child's individualized plan.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
-                <a href={intakeUrl} target="_blank" rel="noopener noreferrer" className="bg-brand-coral hover:bg-brand-coral/90 text-white font-semibold px-6 py-3 rounded-xl transition-colors text-center text-sm">
+                <a href="#request-services" className="bg-brand-coral hover:bg-brand-coral/90 text-white font-semibold px-6 py-3 rounded-xl transition-colors text-center text-sm">
                   Request Services in {address.city}
                 </a>
                 <a href={`tel:${phone}`} className="border border-brand-teal-200 hover:bg-brand-teal-50 text-brand-teal-700 font-semibold px-6 py-3 rounded-full transition-colors text-center text-sm">
@@ -773,7 +789,7 @@ export function LocationPage({ data }: LocationPageProps) {
             ))}
           </div>
           <div className="text-center mt-10">
-            <a href={intakeUrl} target="_blank" rel="noopener noreferrer" className="bg-brand-coral hover:bg-brand-coral/90 text-white font-semibold px-10 py-4 rounded-full text-lg tracking-wide transition-colors inline-block shadow-lg">
+            <a href="#request-services" className="bg-brand-coral hover:bg-brand-coral/90 text-white font-semibold px-10 py-4 rounded-full text-lg tracking-wide transition-colors inline-block shadow-lg">
               Start the Process →
             </a>
           </div>
@@ -1029,7 +1045,7 @@ export function LocationPage({ data }: LocationPageProps) {
           <p className="text-slate-600 text-lg mb-8 max-w-2xl mx-auto">
             Take the first step toward individualized autism support for your child. Our {address.city} team is here to guide your family through every stage of the process.
           </p>
-          <a href={intakeUrl} target="_blank" rel="noopener noreferrer" className="bg-brand-coral hover:bg-brand-coral/90 text-white font-semibold px-12 py-5 rounded-full text-xl tracking-wide transition-colors inline-block shadow-lg">
+          <a href="#request-services" className="bg-brand-coral hover:bg-brand-coral/90 text-white font-semibold px-12 py-5 rounded-full text-xl tracking-wide transition-colors inline-block shadow-lg">
             Request Services in {address.city} →
           </a>
 </div>
@@ -1081,7 +1097,7 @@ export function LocationPage({ data }: LocationPageProps) {
       {/* Mobile sticky action row */}
       <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-white border-t border-slate-200 shadow-lg">
         <div className="flex items-stretch">
-          <a href={intakeUrl} target="_blank" rel="noopener noreferrer" className="flex-1 flex flex-col items-center justify-center gap-0.5 py-3 bg-brand-coral hover:bg-brand-coral/90 text-white text-xs font-semibold transition-colors">
+          <a href="#request-services" className="flex-1 flex flex-col items-center justify-center gap-0.5 py-3 bg-brand-coral hover:bg-brand-coral/90 text-white text-xs font-semibold transition-colors">
             <svg viewBox="0 0 20 20" fill="none" className="w-4 h-4" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><path d="M10 2a8 8 0 100 16A8 8 0 0010 2z"/><path d="M10 7v6M7 10h6" strokeLinecap="round"/></svg>
             Request Services
           </a>
