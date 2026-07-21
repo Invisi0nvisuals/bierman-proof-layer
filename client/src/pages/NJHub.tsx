@@ -243,13 +243,13 @@ export default function NJHub() {
         {/* Banner image — full background, same image for desktop and mobile */}
         <div className="absolute inset-0">
           <img
-            src="/manus-storage/bierman-nj-hero-final_4aea9524.png"
+            src="/manus-storage/nj_hub_hero_v3_4226599c.png"
             alt=""
             aria-hidden="true"
             className="absolute inset-0 w-full h-full object-cover object-right"
           />
           {/* Left fade overlay so text stays readable */}
-          <div className="absolute inset-0" style={{ background: "linear-gradient(90deg, #003B71 0%, #003B71 30%, rgba(0,30,80,0.75) 52%, transparent 75%)" }} />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(90deg, #1a35c8 0%, #1a35c8 28%, rgba(26,53,200,0.80) 48%, transparent 72%)" }} />
         </div>
 
         <div className="relative max-w-6xl mx-auto px-4 py-14 md:py-20">
