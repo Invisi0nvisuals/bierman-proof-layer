@@ -416,6 +416,17 @@ export function LocationPage({ data }: LocationPageProps) {
   // Build per-route JSON-LD schema — memoized so it only recomputes when data changes
   const schemaJson = useMemo(() => buildLocationSchema(data), [data]);
 
+  // Lazy-load YouTube embeds — iframes are only injected after user clicks the thumbnail.
+  // This prevents YouTube's ~500 KB of JS/tracking from loading on page paint.
+  const [facilityVideoActive, setFacilityVideoActive] = useState(false);
+  const [outcomesVideoActive, setOutcomesVideoActive] = useState(false);
+
+  // Reset video state when navigating between locations
+  useEffect(() => {
+    setFacilityVideoActive(false);
+    setOutcomesVideoActive(false);
+  }, [data]);
+
   return (
     <div className="min-h-screen bg-white font-sans">
       {/* Per-route JSON-LD schema — injected dynamically so only this location's schema is present */}
@@ -553,16 +564,44 @@ export function LocationPage({ data }: LocationPageProps) {
               <div className="relative">
                 {assets.facilityYoutubeId ? (
                   <div className="rounded-3xl overflow-hidden shadow-2xl w-full" style={{ aspectRatio: "16/9" }}>
-                    <iframe
-                      src={`https://www.youtube.com/embed/${assets.facilityYoutubeId}?si=NFjyBt8ZfJJA2gSg`}
-                      title="Bierman Autism Centers location tour"
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerPolicy="strict-origin-when-cross-origin"
-                      allowFullScreen
-                      className="w-full h-full"
-                      style={{ display: "block", minHeight: "280px" }}
-                    />
+                    {facilityVideoActive ? (
+                      <iframe
+                        src={`https://www.youtube.com/embed/${assets.facilityYoutubeId}?autoplay=1&rel=0`}
+                        title={`${address.city}, NJ Autism Center Tour | Bierman Autism Centers`}
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen
+                        className="w-full h-full"
+                        style={{ display: "block", minHeight: "280px" }}
+                      />
+                    ) : (
+                      <button
+                        type="button"
+                        onClick={() => setFacilityVideoActive(true)}
+                        className="relative w-full h-full flex items-center justify-center group cursor-pointer bg-slate-900"
+                        style={{ minHeight: "280px" }}
+                        aria-label={`Play ${address.city} center tour video`}
+                      >
+                        <img
+                          src={assets.videoPoster ?? `https://img.youtube.com/vi/${assets.facilityYoutubeId}/maxresdefault.jpg`}
+                          alt={`${address.city}, NJ Autism Center Tour — click to play`}
+                          className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-70 transition-opacity"
+                          loading="lazy"
+                          onError={(e) => {
+                            (e.currentTarget as HTMLImageElement).src = `https://img.youtube.com/vi/${assets.facilityYoutubeId}/hqdefault.jpg`;
+                          }}
+                        />
+                        <div className="relative z-10 flex items-center justify-center w-16 h-16 rounded-full bg-white/90 shadow-lg group-hover:scale-110 transition-transform">
+                          <svg viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7 text-[#EF4E72] ml-1" aria-hidden="true">
+                            <path d="M8 5v14l11-7z" />
+                          </svg>
+                        </div>
+                        <span className="absolute bottom-3 left-0 right-0 text-center text-white text-xs font-medium opacity-80">
+                          {address.city} Center Tour
+                        </span>
+                      </button>
+                    )}
                   </div>
                 ) : (
                   <>
@@ -835,15 +874,39 @@ export function LocationPage({ data }: LocationPageProps) {
           <h2 className="text-3xl font-bold text-[#1a2b47] mb-3">Progress You Can See</h2>
           <p className="text-slate-500 mb-8 max-w-2xl mx-auto">See how Bierman's individualized approach helps children build skills, confidence, and greater independence—with families supported at every step.</p>
           <div className="rounded-3xl overflow-hidden shadow-xl border border-slate-200" style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}>
-            <iframe
-              src={PILOT_VIDEO.embedUrl}
-              title={PILOT_VIDEO.title}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-              referrerPolicy="strict-origin-when-cross-origin"
-              aria-label={`YouTube video: ${PILOT_VIDEO.title}`}
-              style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: 0 }}
-            />
+            {outcomesVideoActive ? (
+              <iframe
+                src={`${PILOT_VIDEO.embedUrl}?autoplay=1&rel=0`}
+                title={PILOT_VIDEO.title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                referrerPolicy="strict-origin-when-cross-origin"
+                aria-label={`YouTube video: ${PILOT_VIDEO.title}`}
+                style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: 0 }}
+              />
+            ) : (
+              <button
+                type="button"
+                onClick={() => setOutcomesVideoActive(true)}
+                className="absolute inset-0 w-full h-full flex items-center justify-center group cursor-pointer bg-slate-900"
+                aria-label={`Play video: ${PILOT_VIDEO.title}`}
+              >
+                <img
+                  src={PILOT_VIDEO.thumbnailUrl}
+                  alt={`${PILOT_VIDEO.title} — click to play`}
+                  className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-70 transition-opacity"
+                  loading="lazy"
+                  onError={(e) => {
+                    (e.currentTarget as HTMLImageElement).src = PILOT_VIDEO.thumbnailFallback;
+                  }}
+                />
+                <div className="relative z-10 flex items-center justify-center w-20 h-20 rounded-full bg-white/90 shadow-xl group-hover:scale-110 transition-transform">
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="w-9 h-9 text-[#EF4E72] ml-1" aria-hidden="true">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+              </button>
+            )}
           </div>
         </div>
       </section>
