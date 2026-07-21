@@ -180,6 +180,8 @@ export const cranfordData: LocationData = {
     pageDescription:
       "ABA therapy, speech-language therapy & occupational therapy near Cranford, NJ. Bierman Autism Centers serves Union County families. Evidence-based care.",
     videoUploadDate: "2023-10-19T00:00:00+00:00",
+    facilityVideoUploadDate: "2026-06-25T00:00:00+00:00",
+    facilityVideoDuration: "PT2M8S",
     // areaServed: Verified from biermanautism.com/location/cranford-nj/ — "Counties Served" section (May 2026)
     areaServed: [
       { type: "AdministrativeArea", name: "Union County, NJ", sameAs: "https://en.wikipedia.org/wiki/Union_County,_New_Jersey" },

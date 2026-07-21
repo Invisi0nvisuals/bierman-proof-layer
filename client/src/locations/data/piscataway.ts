@@ -180,6 +180,8 @@ export const piscatawayData: LocationData = {
     pageDescription:
       "BCBA-supervised ABA therapy near Piscataway, NJ. Bierman Autism Centers serves Middlesex County children with evidence-based autism care. Insurance accepted.",
     videoUploadDate: "2023-10-19T00:00:00+00:00",
+    facilityVideoUploadDate: "2026-06-12T00:00:00+00:00",
+    facilityVideoDuration: "PT2M10S",
     // areaServed: Verified from biermanautism.com/location/piscataway/ — "Counties Served" section (May 2026)
     areaServed: [
       { type: "AdministrativeArea", name: "Middlesex County, NJ", sameAs: "https://en.wikipedia.org/wiki/Middlesex_County,_New_Jersey" },

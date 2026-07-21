@@ -235,6 +235,25 @@ export function buildLocationSchema(data: LocationData): string {
     publisher: { "@id": ORG_ID },
   };
 
+  // ── Facility tour VideoObject node (location-specific center tour) ──────────
+  // Only added when the location has a facilityYoutubeId set in assets.
+  // @id is page-scoped using #facility-tour to prevent cross-page collisions.
+  const facilityTourVideoNode = assets.facilityYoutubeId
+    ? {
+        "@type": "VideoObject",
+        "@id": `${base}/#facility-tour`,
+        name: `${address.city}, NJ Autism Center Tour | Bierman Autism Centers`,
+        description: `Take a virtual tour of Bierman Autism Centers in ${address.city}, NJ. See our ABA therapy rooms, speech therapy spaces, and welcoming environment designed for children with autism.`,
+        embedUrl: `https://www.youtube.com/embed/${assets.facilityYoutubeId}`,
+        contentUrl: `https://www.youtube.com/watch?v=${assets.facilityYoutubeId}`,
+        thumbnailUrl: `https://img.youtube.com/vi/${assets.facilityYoutubeId}/maxresdefault.jpg`,
+        uploadDate: schema.facilityVideoUploadDate ?? schema.videoUploadDate,
+        duration: schema.facilityVideoDuration ?? "PT2M0S",
+        mainEntityOfPage: { "@id": `${base}/#webpage` },
+        publisher: { "@id": ORG_ID },
+      }
+    : null;
+
   // ── Review nodes ────────────────────────────────────────────────────────────
   const reviewNodes = data.reviews.map((r) => ({
     "@type": "Review",
@@ -260,6 +279,7 @@ export function buildLocationSchema(data: LocationData): string {
       breadcrumbNode,
       faqNode,
       videoNode,
+      ...(facilityTourVideoNode ? [facilityTourVideoNode] : []),
       ...reviewNodes,
     ],
   };

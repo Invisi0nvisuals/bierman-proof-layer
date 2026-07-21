@@ -180,6 +180,8 @@ export const eatontownData: LocationData = {
     pageDescription:
       "BCBA-supervised ABA therapy near Eatontown, NJ. Bierman Autism Centers serves Monmouth County families with evidence-based autism care. Insurance accepted.",
     videoUploadDate: "2023-10-19T00:00:00+00:00",
+    facilityVideoUploadDate: "2023-01-30T00:00:00+00:00",
+    facilityVideoDuration: "PT1M13S",
     // areaServed: Verified from biermanautism.com/location/eatontown-nj/ — "Counties Served" section (May 2026)
     areaServed: [
       { type: "AdministrativeArea", name: "Monmouth County, NJ", sameAs: "https://en.wikipedia.org/wiki/Monmouth_County,_New_Jersey" },

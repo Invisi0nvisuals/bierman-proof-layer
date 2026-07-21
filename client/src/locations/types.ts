@@ -145,6 +145,18 @@ export interface LocationSchemaMetadata {
   }>;
   /** Additional knowsAbout entries beyond the standard ABA/autism set */
   additionalKnowsAbout?: string[];
+  /**
+   * ISO 8601 upload date for the facility-specific center tour VideoObject.
+   * Falls back to videoUploadDate if not set.
+   * e.g. "2026-06-25T00:00:00+00:00"
+   */
+  facilityVideoUploadDate?: string;
+  /**
+   * ISO 8601 duration for the facility-specific center tour VideoObject.
+   * Falls back to "PT2M0S" if not set.
+   * e.g. "PT2M8S"
+   */
+  facilityVideoDuration?: string;
 }
 
 // ─── Visit Logistics ─────────────────────────────────────────────────────────
