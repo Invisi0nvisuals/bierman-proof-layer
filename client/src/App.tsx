@@ -29,7 +29,7 @@ function Router() {
     <>
     <ScrollToTop />
     <Switch>
-      {/* Root — renders Ramsey as the default proof-layer entry point */}
+      {/* Root — NJ Hub entry point */}
       <Route path={"/"} component={NJHub} />
       {/* ── NJ Location Pages ─────────────────────────────────────────────── */}
       <Route path={"/locations/nj/ramsey/"} component={() => <LocationPage data={ramseyData} />} />

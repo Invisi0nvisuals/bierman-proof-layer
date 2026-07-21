@@ -1,5 +1,5 @@
-# Bierman Autism Centers — NJ Hub Pilot (Pre-Launch Review Environment)
-# Crawling enabled for Rich Results validation and pre-launch review.
+# Bierman Autism Centers — NJ Local Hub (Pilot)
+# Status: Live — indexed, crawlable, accepting form submissions.
 User-agent: *
 Allow: /
 

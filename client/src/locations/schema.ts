@@ -1,5 +1,5 @@
 /**
- * Bierman Autism Centers — Proof Layer
+ * Bierman Autism Centers — NJ Local Hub (Pilot)
  * Schema Utility: buildLocationSchema
  *
  * Generates a complete, unique JSON-LD @graph for a single location page.
@@ -16,10 +16,6 @@
  *   import { ramseyData } from "@/locations/data/ramsey";
  *   const schemaJson = buildLocationSchema(ramseyData);
  *   // Inject as: <script type="application/ld+json">{schemaJson}</script>
- *
- * Note: Schema injection is handled in index.html for the proof layer.
- * This utility is the authoritative source — index.html blocks should be
- * replaced with script tags that call this utility in a production build.
  */
 
 import { PILOT_VIDEO } from "./types";
