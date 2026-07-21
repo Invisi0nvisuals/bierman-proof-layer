@@ -169,6 +169,7 @@ export const piscatawayData: LocationData = {
     facilityAlt: "Bierman Autism Centers Piscataway, NJ — clinic interior",
     heroImage: "/manus-storage/nj_city_hero_static_light_2abb0770.png",
     videoPoster: "/manus-storage/bierman-ramsey-video-poster_28eb470d.jpg",
+    facilityYoutubeId: "QA12slChGVM",
   },
 
   // ── Schema ────────────────────────────────────────────────────────────────

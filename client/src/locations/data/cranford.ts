@@ -169,6 +169,7 @@ export const cranfordData: LocationData = {
     facilityAlt: "Bierman Autism Centers Cranford, NJ — clinic interior",
     heroImage: "/manus-storage/nj_city_hero_static_light_2abb0770.png",
     videoPoster: "/manus-storage/bierman-ramsey-video-poster_28eb470d.jpg",
+    facilityYoutubeId: "JpLs9Q_eRGk",
   },
 
   // ── Schema ────────────────────────────────────────────────────────────────
