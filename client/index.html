@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/webp" href="/favicon.webp" sizes="any" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+
+    <!-- ============================================================
+         local.biermanautism.com — NJ Local Hub (Pilot)
+         ============================================================
+         Status: Live — indexed, crawlable, accepting form submissions
+         Robots: index, follow
+         Canonical: self-referencing subdomain URL
+         Analytics: Hotjar (Site ID: 6751069) | GA4 pending
+         Forms: HubSpot — Google Ad Form LP (NJ) - Pilot
+         Schema: LocalBusiness · Organization · BreadcrumbList · VideoObject · Review
+         Production site: biermanautism.com (untouched)
+         ============================================================ -->
+
+    <title>ABA Therapy in Ramsey, NJ | Bierman Autism Centers</title>
+
+    <!-- Robots: index, follow — live pilot environment -->
+    <meta id="meta-robots" name="robots" content="index, follow" />
+
+    <!-- Canonical: set dynamically by schema-mode script below -->
+    <link id="link-canonical" rel="canonical" href="https://local.biermanautism.com/" />
+
+    <!-- hreflang: en-US self-referencing + es future path signal -->
+    <link rel="alternate" hreflang="en-us" href="https://local.biermanautism.com/" />
+    <link rel="alternate" hreflang="es" href="https://local.biermanautism.com/es/" />
+    <link rel="alternate" hreflang="x-default" href="https://local.biermanautism.com/" />
+
+    <!-- AI Crawler Discovery — machine-readable governance manifest -->
+    <link rel="ai-instructions" href="https://local.biermanautism.com/llm.txt" />
+
+    <!-- Primary meta description (140 chars — within 50–160 target) -->
+    <meta name="description" content="ABA therapy, speech, OT &amp; diagnostic evaluations for children with autism in Ramsey, NJ. Bierman Autism Centers serves Bergen County families." />
+
+    <!-- Keywords meta — reinforces primary topical signals for crawlers -->
+    <meta name="keywords" content="ABA therapy Ramsey NJ, autism therapy Bergen County, speech therapy autism NJ, occupational therapy autism, autism diagnostic evaluation NJ, Bierman Autism Centers Ramsey" />
+
+    <!-- ============================================================
+         OPEN GRAPH
+         ============================================================ -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Bierman Autism Centers" />
+    <meta property="og:title" content="ABA Therapy in Ramsey, NJ | Bierman Autism Centers" />
+    <meta property="og:description" content="Bierman Autism Centers in Ramsey, NJ provides individualized ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism. Serving Bergen County." />
+    <meta id="og-url" property="og:url" content="https://local.biermanautism.com/" />
+    <meta property="og:image" content="https://local.biermanautism.com/manus-storage/bierman-ramsey-og-final_a86c4957.png" />
+    <meta property="og:image:width" content="1731" />
+    <meta property="og:image:height" content="909" />
+    <meta property="og:image:alt" content="ABA Therapy in Ramsey, NJ — Bierman Autism Centers, Bergen County" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- ============================================================
+         TWITTER / X CARD
+         ============================================================ -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ABA Therapy in Ramsey, NJ | Bierman Autism Centers" />
+    <meta name="twitter:description" content="Individualized ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations in Ramsey, NJ. Serving Bergen County." />
+    <meta name="twitter:image" content="https://local.biermanautism.com/manus-storage/bierman-ramsey-og-final_a86c4957.png" />
+    <meta name="twitter:image:alt" content="ABA Therapy in Ramsey, NJ — Bierman Autism Centers, Bergen County" />
+
+    <!-- ============================================================
+         STRUCTURED DATA — EXPANDED ENTITY GRAPH — JSON-LD
+         Types: WebPage, MedicalClinic/LocalBusiness, Organization,
+                BreadcrumbList, FAQPage (9 Q&As), 4 Service nodes,
+                4 ImageObject nodes, VideoObject (partial — uploadDate omitted)
+         No AggregateRating · No Review schema · No fake data
+         ============================================================ -->
+
+    <!-- DATA LAYER DOCUMENTATION — directions_click event (proof-layer planning only, no live tracking)
+         Safe event: directions_click
+         Allowed parameters:
+           location_name   (e.g. "Ramsey, NJ")
+           location_slug   (e.g. "ramsey-nj")
+           city            (e.g. "Ramsey")
+           state           (e.g. "NJ")
+           cta_location    (e.g. "plan-your-visit-card" | "map-section" | "mobile-sticky")
+           map_provider    (e.g. "google-maps")
+         Disallowed: user precise location, name, email, phone, child details, diagnosis, form values
+         Implementation: GTM custom event trigger — DO NOT add live tracking to this proof-layer environment.
+
+         RAMSEY NAP DISCREPANCY FLAG (3 phone values observed — needs Bierman confirmation):
+           Proof-layer NAP:          (201) 596-8104
+           Gemini GBP review report: (201) 308-3735
+           Gemini directions report: (201) 928-5245
+         Status: Do not update proof-layer NAP until Bierman confirms the correct number.
+
+         PISCATAWAY NAP DISCREPANCY FLAG (for future Piscataway build):
+           Directions report:  200 Centennial Ave, Piscataway, NJ 08854 / (732) 426-5470
+           Matrix v3 (prior):  280 Centennial Avenue, Piscataway, NJ 08854 / (732) 479-7225
+         Status: Needs confirmation from Bierman before Piscataway build.
+    -->
+
+    <!-- ============================================================
+         CANONICAL / OG URL — self-referencing proof-layer URL
+         Never points to biermanautism.com production.
+         ============================================================ -->
+    <script>
+      (function() {
+        var baseUrl = 'https://local.biermanautism.com/';
+        var linkCanonical = document.getElementById('link-canonical');
+        if (linkCanonical) { linkCanonical.setAttribute('href', baseUrl); }
+        var ogUrl = document.getElementById('og-url');
+        if (ogUrl) { ogUrl.setAttribute('content', baseUrl); }
+      })();
+    </script>
+
+    <!-- ============================================================
+         PISCATAWAY SCHEMA — JSON-LD
+         Types: LocalBusiness/MedicalClinic, BreadcrumbList, FAQPage,
+                4 Review nodes, AggregateRating (4 reviews, 5.0)
+         URL: /locations/nj/piscataway/
+         ============================================================ -->
+
+    <!-- ============================================================
+         WEST ORANGE SCHEMA — JSON-LD
+         Types: LocalBusiness/MedicalClinic, BreadcrumbList, FAQPage,
+                VideoObject
+         URL: /locations/nj/west-orange/
+         GBP note: 1 public review (Taesoo Kim, no body text).
+                   Reviews section uses corporate testimonials.
+         ============================================================ -->
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- HubSpot Forms embed -->
+  <script src="https://js.hsforms.net/forms/embed/46915865.js" defer></script>
+
+  <!-- Hotjar Tracking Code for Local NJ Hub — Site ID: 6751069 -->
+  <script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:6751069,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <!-- Manus platform analytics only — no GTM, GA4, Meta Pixel, Google Ads, Bing UET, CallRail, or any third-party tracking -->
+    <script
+      defer
+      src="%VITE_ANALYTICS_ENDPOINT%/umami"
+      data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
+  </body>
+
+</html>

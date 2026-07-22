@@ -1,0 +1,7 @@
+# Bierman Autism Centers — NJ Local Hub (Pilot)
+# Status: Live — indexed, crawlable, accepting form submissions.
+User-agent: *
+Allow: /
+
+Sitemap: https://local.biermanautism.com/sitemap.xml
+ai-instructions: https://local.biermanautism.com/llm.txt

@@ -1,0 +1,17 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = s3://vida-prod-gitrepo/webdev-git/91389010/QxDhxTcSVFBCVe6sC7dKv5
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "main"]
+	remote = origin
+	merge = refs/heads/main
+[remote "user_github"]
+	url = https://x-access-token:ghs_1869309_eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhdXRobmQiLCJjdHgiOiJlN0FVT25oQ29yYmlWS2JtbF9lR0FZdFEyc1JVMnpxOC1xc3kyYmd6WU9DNlJOWWtMbjJKTlpNeWZqN3pqMmsiLCJleHAiOjE3ODQ3NjU3MzcsImlhdCI6MTc4NDc2MjEzNywiaXNzIjoiZ2l0aHViIiwianRpIjoiMDcxZmZlODMtZmMzNy00MjhlLWJlNWUtN2FjMDUwNTE3MjEyIiwidmVyIjozfQ.w3_Sq5z0x7GtN9_Wh7-kmBG0rCtg5cba1Yqbjm_bRH2HtU9VVFma_JkuiviZMp49HDKo35nqS_LQptz5sl6nwg@github.com/Invisi0nvisuals/bierman-proof-layer.git
+	fetch = +refs/heads/*:refs/remotes/user_github/*
+[user]
+	email = dev-agent@manus.ai
+	name = Manus
