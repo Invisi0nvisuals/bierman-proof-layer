@@ -485,7 +485,7 @@ export function LocationPage({ data }: LocationPageProps) {
               src={assets.heroImage}
               alt=""
               aria-hidden="true"
-              className="absolute inset-0 w-full h-full object-cover object-right"
+              className="absolute inset-0 w-full h-full object-cover object-[center_20%] md:object-right"
             />
             {/* Left fade — image already has dark navy left panel; overlay adds subtle depth only */}
             <div className="absolute inset-0" style={{ background: "linear-gradient(90deg, rgba(13,42,74,0.85) 0%, rgba(13,42,74,0.6) 30%, rgba(13,42,74,0.1) 55%, transparent 75%)" }} />
@@ -565,6 +565,30 @@ export function LocationPage({ data }: LocationPageProps) {
             {TRUST_BADGES.map((badge) => (
               <div key={badge.alt} className="flex items-center justify-center" style={{ height: "64px" }}>
                 <img src={badge.src} alt={badge.alt} style={{ maxHeight: "56px", width: "auto", objectFit: "contain" }} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Outcome Stats Bar */}
+      <section className="py-12 border-b border-slate-100" style={{ background: "linear-gradient(135deg, #0d2a4a 0%, #1a3a6b 100%)" }}>
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-8">
+            <div className="text-brand-teal text-sm font-bold uppercase tracking-widest mb-2">Proven Results</div>
+            <h2 className="text-2xl font-bold text-white">Why Families Choose Bierman</h2>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {[
+              { stat: "375+", label: "Program Graduations", sub: "Since 2006" },
+              { stat: "72%", label: "Transition to General Education", sub: "Completed comprehensive ABA (2021–2025)" },
+              { stat: "18–20mo", label: "Avg Time to Graduation", sub: "From start of services" },
+              { stat: "~90%", label: "Parent Satisfaction", sub: "Across all survey waves" },
+            ].map((item) => (
+              <div key={item.label} className="text-center">
+                <div className="text-3xl md:text-4xl font-extrabold text-[#EF4E72] mb-1">{item.stat}</div>
+                <div className="text-brand-teal text-xs font-bold uppercase tracking-widest mb-1">{item.label}</div>
+                <div className="text-blue-200 text-xs leading-snug">{item.sub}</div>
               </div>
             ))}
           </div>
