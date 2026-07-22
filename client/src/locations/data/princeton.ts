@@ -170,6 +170,7 @@ export const princetonData: LocationData = {
     heroImage: "/manus-storage/nj_city_hero_static_light_2abb0770.png",
     videoPoster: "/manus-storage/bierman-ramsey-video-poster_28eb470d.jpg",
     facilityYoutubeId: "QFufx0pye4U",
+    ogImage: "/manus-storage/bierman-autism-centers-aba-therapy-princeton-nj-og_eceea8ab.jpg",
   },
 
   // ── Schema ────────────────────────────────────────────────────────────────

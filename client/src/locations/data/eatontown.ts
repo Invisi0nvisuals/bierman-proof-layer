@@ -170,6 +170,7 @@ export const eatontownData: LocationData = {
     heroImage: "/manus-storage/nj_city_hero_static_light_2abb0770.png",
     videoPoster: "/manus-storage/bierman-ramsey-video-poster_28eb470d.jpg",
     facilityYoutubeId: "Yzqhi0G8aug",
+    ogImage: "/manus-storage/bierman-autism-centers-aba-therapy-eatontown-nj-og_3172aa18.jpg",
   },
 
   // ── Schema ────────────────────────────────────────────────────────────────

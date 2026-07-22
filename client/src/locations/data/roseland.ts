@@ -171,6 +171,7 @@ export const roselandData: LocationData = {
     facility: "/manus-storage/bierman-autism-new-jersey-ramsey-facility-main_296feafd.webp",
     facilityAlt: "Bierman Autism Centers Roseland, NJ — therapy center interior",
     heroImage: "/manus-storage/nj_city_hero_static_light_2abb0770.png",
+    ogImage: "/manus-storage/bierman-autism-centers-aba-therapy-roseland-nj-og_c920a51d.jpg",
     videoPoster: "/manus-storage/bierman-ramsey-video-poster_28eb470d.jpg",
     videoFile: "/manus-storage/bierman-ramsey-aba-therapy-overview_e3501ef2.mp4",
   },

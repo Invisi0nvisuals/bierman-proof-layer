@@ -437,6 +437,21 @@ export function LocationPage({ data }: LocationPageProps) {
         <meta name="robots" content="index, follow" />
         <meta name="geo.region" content="US-NJ" />
         <meta name="geo.placename" content={data.address.city} />
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={data.schema.pageTitle} />
+        <meta property="og:description" content={data.schema.pageDescription} />
+        <meta property="og:url" content={data.schema.pageUrl} />
+        <meta property="og:site_name" content="Bierman Autism Centers" />
+        {data.assets.ogImage && <meta property="og:image" content={data.assets.ogImage} />}
+        {data.assets.ogImage && <meta property="og:image:width" content="1200" />}
+        {data.assets.ogImage && <meta property="og:image:height" content="630" />}
+        {data.assets.ogImage && <meta property="og:image:alt" content={`Bierman Autism Centers ABA therapy in ${data.address.city}, New Jersey`} />}
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={data.schema.pageTitle} />
+        <meta name="twitter:description" content={data.schema.pageDescription} />
+        {data.assets.ogImage && <meta name="twitter:image" content={data.assets.ogImage} />}
         <script type="application/ld+json">{schemaJson}</script>
       </Helmet>
 

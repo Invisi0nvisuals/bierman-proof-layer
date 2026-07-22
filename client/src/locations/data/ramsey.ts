@@ -222,6 +222,7 @@ export const ramseyData: LocationData = {
     videoPoster: "/manus-storage/bierman-ramsey-video-poster_28eb470d.jpg",
     videoFile: "/manus-storage/bierman-ramsey-aba-therapy-overview_e3501ef2.mp4",
     facilityYoutubeId: "dhHxU3o0p0o",
+    ogImage: "/manus-storage/bierman-autism-centers-aba-therapy-ramsey-nj-og_731760d9.jpg",
   },
 
   // ── Schema ────────────────────────────────────────────────────────────────

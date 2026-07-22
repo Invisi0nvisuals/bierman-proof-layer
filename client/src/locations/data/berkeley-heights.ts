@@ -168,6 +168,7 @@ export const berkeleyHeightsData: LocationData = {
     facility: "/manus-storage/bierman-autism-new-jersey-ramsey-facility-main_296feafd.webp",
     facilityAlt: "Bierman Autism Centers Berkeley Heights, NJ — clinic interior",
     heroImage: "/manus-storage/nj_city_hero_static_light_2abb0770.png",
+    ogImage: "/manus-storage/bierman-autism-centers-aba-therapy-berkeley-heights-nj-og_56cfcce2.jpg",
     videoPoster: "/manus-storage/bierman-ramsey-video-poster_28eb470d.jpg",
   },
 

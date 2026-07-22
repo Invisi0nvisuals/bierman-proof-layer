@@ -213,6 +213,21 @@ export default function NJHub() {
         {/* Canonical: / is the root hub. /locations/nj/ is an alias that also points here. */}
         <link rel="canonical" href={PAGE_URL} />
         <meta name="robots" content="index, follow" />
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Comprehensive Autism Services Near Me in NJ | Bierman Autism Centers" />
+        <meta property="og:description" content="Comprehensive autism services near you in New Jersey — ABA therapy, speech, OT & diagnostics at 10 locations. BCBA-supervised care. Insurance accepted." />
+        <meta property="og:url" content={PAGE_URL} />
+        <meta property="og:site_name" content="Bierman Autism Centers" />
+        <meta property="og:image" content="/manus-storage/bierman-autism-centers-aba-therapy-new-jersey-og_a336c1c3.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Bierman Autism Centers — ABA therapy, speech, OT & diagnostics across New Jersey" />
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Comprehensive Autism Services Near Me in NJ | Bierman Autism Centers" />
+        <meta name="twitter:description" content="Comprehensive autism services near you in New Jersey — ABA therapy, speech, OT & diagnostics at 10 locations. BCBA-supervised care. Insurance accepted." />
+        <meta name="twitter:image" content="/manus-storage/bierman-autism-centers-aba-therapy-new-jersey-og_a336c1c3.jpg" />
         <script type="application/ld+json">{buildNJHubSchema()}</script>
       </Helmet>
 {/* Navigation */}

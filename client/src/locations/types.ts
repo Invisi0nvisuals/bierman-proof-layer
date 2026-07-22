@@ -112,6 +112,8 @@ export interface LocationAssets {
   videoFile?: string;
   /** Optional: YouTube video ID to show in place of the facility photo in the Welcoming Environment section */
   facilityYoutubeId?: string;
+  /** Optional: OG/Twitter social share image URL (1200x630) */
+  ogImage?: string;
 }
 
 // ─── Schema Metadata ─────────────────────────────────────────────────────────

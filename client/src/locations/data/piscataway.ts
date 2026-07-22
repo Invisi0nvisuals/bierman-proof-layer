@@ -170,6 +170,7 @@ export const piscatawayData: LocationData = {
     heroImage: "/manus-storage/nj_city_hero_static_light_2abb0770.png",
     videoPoster: "/manus-storage/bierman-ramsey-video-poster_28eb470d.jpg",
     facilityYoutubeId: "QA12slChGVM",
+    ogImage: "/manus-storage/bierman-autism-centers-aba-therapy-piscataway-nj-og_ee8c6f4f.jpg",
   },
 
   // ── Schema ────────────────────────────────────────────────────────────────
