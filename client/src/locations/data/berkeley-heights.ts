@@ -27,7 +27,7 @@ export const berkeleyHeightsData: LocationData = {
     zip: "07922",
     county: "Union County",
   },
-  phone: "(908) 493-5270",
+  phone: "(847) 232-4997",
   geo: {
     lat: 40.6801,
     lng: -74.4354,

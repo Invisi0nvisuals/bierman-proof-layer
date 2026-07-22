@@ -28,7 +28,7 @@ export const moorestownData: LocationData = {
     zip: "08057",
     county: "Burlington County",
   },
-  phone: "(609) 362-5141",
+  phone: "(847) 232-4997",
   geo: {
     lat: 39.9712,
     lng: -74.9488,

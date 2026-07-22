@@ -26,7 +26,7 @@ export const ramseyData: LocationData = {
     zip: "07446",
     county: "Bergen County",
   },
-  phone: "(201) 928-5245",
+  phone: "(847) 232-4997",
   geo: {
     lat: 41.0579,
     lng: -74.1441,

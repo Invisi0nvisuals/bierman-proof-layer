@@ -258,7 +258,7 @@ export default function NJHub() {
         {/* Banner image — full background, same image for desktop and mobile */}
         <div className="absolute inset-0">
           <img
-            src="/manus-storage/nj_hub_hero_v3_4226599c.png"
+            src="/manus-storage/nj_hub_hero_map(1)_618c2db8.png"
             alt=""
             aria-hidden="true"
             className="absolute inset-0 w-full h-full object-cover object-right"
@@ -304,10 +304,10 @@ export default function NJHub() {
                 Request Services in NJ
               </a>
               <a
-                href="tel:8009318113"
+                href="tel:8472324997"
                 className="border-2 border-white/40 hover:border-white bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-full text-lg transition-colors text-center"
               >
-                (800) 931-8113
+                (847) 232-4997
               </a>
             </div>
           </div>

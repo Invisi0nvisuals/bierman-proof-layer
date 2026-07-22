@@ -27,7 +27,7 @@ export const princetonData: LocationData = {
     zip: "08540",
     county: "Mercer County",
   },
-  phone: "(267) 508-7941",
+  phone: "(847) 232-4997",
   geo: {
     lat: 40.3419,
     lng: -74.6630,

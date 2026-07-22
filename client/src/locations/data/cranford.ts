@@ -27,7 +27,7 @@ export const cranfordData: LocationData = {
     zip: "07016",
     county: "Union County",
   },
-  phone: "(609) 798-2428",
+  phone: "(847) 232-4997",
   geo: {
     lat: 40.6576,
     lng: -74.2982,
