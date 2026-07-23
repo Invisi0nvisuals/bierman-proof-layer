@@ -21,6 +21,7 @@
 - [x] BR-06: Replace 'Verified Bierman Location' label with 'Bierman Autism Centers in [City]'
 - [x] BR-14: Nearby module updated — all 9 other cities listed A-Z + 'All 10 NJ Locations' link
 - [x] BR-09: Add noindex for manus.space domain only (X-Robots-Tag header, hostname-conditional)
+- [x] CV-02: FacilityGallery component for 5 no-video locations (BH own photos; Moorestown/Parsippany/Roseland/West Orange use Cranford+Piscataway fallback mix)
 
 ## Blocked on Client
 - [ ] Quincy penguin hero photos (need assets from Google Drive)
@@ -28,3 +29,4 @@
 - [ ] Hotjar pixel (need Tiffany to provide access)
 - [ ] CallRail per-location numbers (pending their team meeting confirmation)
 - [ ] Google Places API live ratings (need decision/API key)
+- [x] CV-03: Facility section hides when no video/gallery/facility image — hide logic implemented. Per-location YouTube IDs pending from Bierman (add facilityYoutubeId to each data file when provided)

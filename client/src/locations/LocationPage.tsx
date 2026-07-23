@@ -643,7 +643,8 @@ export function LocationPage({ data }: LocationPageProps) {
         </div>
       </section>
 
-      {/* Facility Section */}
+      {/* Facility Section — hidden when no video, gallery, or facility image is available */}
+      {(assets.facilityYoutubeId || (assets.facilityGallery && assets.facilityGallery.length > 0) || assets.facility) && (
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -742,6 +743,7 @@ export function LocationPage({ data }: LocationPageProps) {
           </div>
         </div>
       </section>
+      )}
 
       {/* Services */}
       <section id="services" className="py-16" style={{ background: "linear-gradient(180deg, #f8fffe 0%, #f0fdfa 100%)" }}>
