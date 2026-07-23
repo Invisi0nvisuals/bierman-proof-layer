@@ -16,8 +16,8 @@ async function startServer() {
 
   // BR-09: Prevent manus.space from being indexed while keeping local.biermanautism.com indexable
   app.use((req, res, next) => {
-    const host = req.hostname || "";
-    if (host.endsWith(".manus.space")) {
+    const host = (req.get("x-forwarded-host") || req.get("host") || req.hostname || "").toLowerCase();
+    if (host.includes("manus.space")) {
       res.setHeader("X-Robots-Tag", "noindex, nofollow");
     }
     next();
