@@ -107,11 +107,11 @@ export const parsippanyData: LocationData = {
   faqs: [
     {
       q: "What autism therapy services are available at the Parsippany center?",
-      a: "Bierman Autism Centers in Parsippany offers BCBA-supervised ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism. Services are individualized based on each child's needs and developmental goals. Service availability may vary. Contact our Intake Team to confirm availability at your preferred center.",
+      a: "Bierman Autism Centers in Parsippany offers BCBA-supervised ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism. Services are individualized based on each child's needs and developmental goals. Service availability may vary. <a href="#request-services">Contact our Intake Team</a> to confirm availability at your preferred center.",
     },
     {
       q: "Does Bierman Autism Centers in Parsippany accept insurance?",
-      a: "Yes. Bierman Parsippany works with a variety of insurance providers, including Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others. Contact us to verify your specific coverage.",
+      a: "Yes. Bierman Parsippany works with a variety of insurance providers, including Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others. <a href="#request-services">Contact us</a> to verify your specific coverage.",
     },
     {
       q: "What age groups does the Parsippany center serve?",
@@ -119,7 +119,7 @@ export const parsippanyData: LocationData = {
     },
     {
       q: "Where is the Bierman Autism Centers Parsippany clinic located?",
-      a: "The Parsippany clinic is located at 2001 US 46, Suite 100, Parsippany, NJ 07054, serving families in Morris County and surrounding areas.",
+      a: "The Parsippany clinic is located at <a href="https://maps.app.goo.gl/5MznVvcqg1AkxsJ27" target="_blank" rel="noopener noreferrer">2001 US 46, Suite 100, Parsippany, NJ 07054</a>, serving families in Morris County and surrounding areas.",
     },
     {
       q: "What is ABA therapy and how does it help children with autism?",
@@ -131,11 +131,11 @@ export const parsippanyData: LocationData = {
     },
     {
       q: "Does Bierman Parsippany offer speech therapy for children with autism?",
-      a: "Yes. Speech-language therapy is available at the Parsippany center, delivered by licensed speech-language pathologists as part of a coordinated care plan. Service availability may vary. Contact our Intake Team to confirm availability at your preferred center.",
+      a: "Yes. Speech-language therapy is available at the Parsippany center, delivered by licensed speech-language pathologists as part of a coordinated care plan. Service availability may vary. <a href="#request-services">Contact our Intake Team</a> to confirm availability at your preferred center.",
     },
     {
       q: "Does Bierman Parsippany offer occupational therapy?",
-      a: "Yes. Occupational therapy services are available at the Parsippany location, focusing on sensory integration, fine motor skills, and daily living activities. Service availability may vary. Contact our Intake Team to confirm availability at your preferred center.",
+      a: "Yes. Occupational therapy services are available at the Parsippany location, focusing on sensory integration, fine motor skills, and daily living activities. Service availability may vary. <a href="#request-services">Contact our Intake Team</a> to confirm availability at your preferred center.",
     },
   ],
 

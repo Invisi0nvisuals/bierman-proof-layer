@@ -393,9 +393,7 @@ function FAQItem({ faq, index }: { faq: LocationFaq; index: number }) {
         {faq.q}
         <span className="text-brand-teal ml-4 flex-shrink-0 text-xl group-open:rotate-45 transition-transform duration-200">+</span>
       </summary>
-      <div className="px-6 pb-5 text-slate-600 leading-relaxed border-t border-slate-100 pt-4 text-sm">
-        {faq.a}
-      </div>
+      <div className="px-6 pb-5 text-slate-600 leading-relaxed border-t border-slate-100 pt-4 text-sm [&_a]:text-brand-teal [&_a]:font-medium [&_a]:underline [&_a]:underline-offset-2 hover:[&_a]:text-brand-teal-700" dangerouslySetInnerHTML={{ __html: faq.a }} />
     </details>
   );
 }

@@ -103,7 +103,7 @@ export const eatontownData: LocationData = {
   faqs: [
     {
       q: "Does Bierman Autism Centers in Eatontown accept insurance?",
-      a: "Yes. Bierman Eatontown works with a variety of insurance providers, including Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others. Contact us to verify your specific coverage.",
+      a: "Yes. Bierman Eatontown works with a variety of insurance providers, including Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others. <a href="#request-services">Contact us</a> to verify your specific coverage.",
     },
     {
       q: "What age groups does the Eatontown center serve?",
@@ -111,11 +111,11 @@ export const eatontownData: LocationData = {
     },
     {
       q: "How do I get started with services at the Eatontown location?",
-      a: "The first step is completing our intake request. A member of our team will contact you to discuss your child's needs, verify insurance, and schedule an initial consultation.",
+      a: "The first step is <a href="#request-services">completing our intake request</a>. A member of our team will contact you to discuss your child's needs, verify insurance, and schedule an initial consultation.",
     },
     {
       q: "Where is the Bierman Autism Centers Eatontown clinic located?",
-      a: "The Eatontown clinic is located at 40 Christopher Way, Suite 103, Eatontown, NJ 07724, serving families in Monmouth County and surrounding areas.",
+      a: "The Eatontown clinic is located at <a href="https://maps.app.goo.gl/yRMovFRFHjM1xqkE6" target="_blank" rel="noopener noreferrer">40 Christopher Way, Suite 103, Eatontown, NJ 07724</a>, serving families in Monmouth County and surrounding areas.",
     },
     {
       q: "What is ABA therapy and how does it help children with autism?",
@@ -123,15 +123,15 @@ export const eatontownData: LocationData = {
     },
     {
       q: "Is ABA therapy available near Eatontown, NJ?",
-      a: "Yes. Bierman Autism Centers operates a clinic in Eatontown, NJ at 40 Christopher Way, Suite 103, providing ABA therapy to families in Monmouth County, Ocean County, and surrounding communities including Red Bank, Long Branch, and Tinton Falls.",
+      a: "Yes. Bierman Autism Centers operates a clinic in Eatontown, NJ at <a href="https://maps.app.goo.gl/yRMovFRFHjM1xqkE6" target="_blank" rel="noopener noreferrer">40 Christopher Way, Suite 103</a>, providing ABA therapy to families in Monmouth County, Ocean County, and surrounding communities including Red Bank, Long Branch, and Tinton Falls.",
     },
     {
       q: "Does Bierman Eatontown offer speech therapy for children with autism?",
-      a: "Yes. Speech-language therapy is available at the Eatontown center, delivered by licensed speech-language pathologists as part of a coordinated care plan. Service availability may vary. Contact our Intake Team to confirm availability at your preferred center.",
+      a: "Yes. Speech-language therapy is available at the Eatontown center, delivered by licensed speech-language pathologists as part of a coordinated care plan. Service availability may vary. <a href="#request-services">Contact our Intake Team</a> to confirm availability at your preferred center.",
     },
     {
       q: "Does Bierman Eatontown offer occupational therapy?",
-      a: "Yes. Occupational therapy services are available at the Eatontown location, focusing on sensory integration, fine motor skills, and daily living activities. Service availability may vary. Contact our Intake Team to confirm availability at your preferred center.",
+      a: "Yes. Occupational therapy services are available at the Eatontown location, focusing on sensory integration, fine motor skills, and daily living activities. Service availability may vary. <a href="#request-services">Contact our Intake Team</a> to confirm availability at your preferred center.",
     },
   ],
 

@@ -122,7 +122,7 @@ export const ramseyData: LocationData = {
   faqs: [
     {
       q: "Does Bierman Autism Centers in Ramsey accept insurance?",
-      a: "Yes. Bierman Ramsey works with a variety of insurance providers, including Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others. Contact us to verify your specific coverage.",
+      a: "Yes. Bierman Ramsey works with a variety of insurance providers, including Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others. <a href="#request-services">Contact us</a> to verify your specific coverage.",
     },
     {
       q: "What age groups does the Ramsey center serve?",
@@ -130,11 +130,11 @@ export const ramseyData: LocationData = {
     },
     {
       q: "How do I get started with services at the Ramsey location?",
-      a: "The first step is completing our intake request. A member of our team will contact you to discuss your child\u2019s needs, verify insurance, and schedule an initial consultation.",
+      a: "The first step is <a href="#request-services">completing our intake request</a>. A member of our team will contact you to discuss your child\u2019s needs, verify insurance, and schedule an initial consultation.",
     },
     {
       q: "Where is the Bierman Autism Centers Ramsey clinic located?",
-      a: "The Ramsey clinic is located at 500 N Franklin Tpke, Suite 203, Ramsey, NJ 07446, serving families in Bergen County and surrounding areas.",
+      a: "The Ramsey clinic is located at <a href="https://maps.app.goo.gl/3MrbDKvY9nvwFh4Q8" target="_blank" rel="noopener noreferrer">500 N Franklin Tpke, Suite 203, Ramsey, NJ 07446</a>, serving families in Bergen County and surrounding areas.",
     },
     {
       q: "What is ABA therapy and how does it help children with autism?",
@@ -142,19 +142,19 @@ export const ramseyData: LocationData = {
     },
     {
       q: "Is ABA therapy available near Ramsey, NJ?",
-      a: "Yes. Bierman Autism Centers operates a clinic in Ramsey, NJ at 500 N Franklin Tpke, Ste 203, providing ABA therapy to families in Bergen County, Passaic County, and surrounding communities including Mahwah, Ridgewood, and Paramus.",
+      a: "Yes. Bierman Autism Centers operates a clinic in Ramsey, NJ at <a href="https://maps.app.goo.gl/3MrbDKvY9nvwFh4Q8" target="_blank" rel="noopener noreferrer">500 N Franklin Tpke, Ste 203</a>, providing ABA therapy to families in Bergen County, Passaic County, and surrounding communities including Mahwah, Ridgewood, and Paramus.",
     },
     {
       q: "Does Bierman Ramsey offer speech therapy for children with autism?",
-      a: "Yes. Speech-language therapy is available at the Ramsey center, delivered by licensed speech-language pathologists as part of a coordinated care plan. Service availability may vary. Contact our Intake Team to confirm availability at your preferred center.",
+      a: "Yes. Speech-language therapy is available at the Ramsey center, delivered by licensed speech-language pathologists as part of a coordinated care plan. Service availability may vary. <a href="#request-services">Contact our Intake Team</a> to confirm availability at your preferred center.",
     },
     {
       q: "Does Bierman Ramsey offer occupational therapy for children with autism?",
-      a: "Yes. Occupational therapy is available at the Ramsey clinic. Services focus on fine motor skills, sensory processing, and building daily living independence in a supportive environment. Service availability may vary. Contact our Intake Team to confirm availability at your preferred center.",
+      a: "Yes. Occupational therapy is available at the Ramsey clinic. Services focus on fine motor skills, sensory processing, and building daily living independence in a supportive environment. Service availability may vary. <a href="#request-services">Contact our Intake Team</a> to confirm availability at your preferred center.",
     },
     {
       q: "Does Bierman Ramsey offer diagnostic evaluations for autism?",
-      a: "Yes. Bierman Ramsey offers comprehensive diagnostic evaluations to help families understand their child\u2019s developmental profile and determine appropriate next steps for support and therapy. Service availability may vary. Contact our Intake Team to confirm availability at your preferred center.",
+      a: "Yes. Bierman Ramsey offers comprehensive diagnostic evaluations to help families understand their child\u2019s developmental profile and determine appropriate next steps for support and therapy. Service availability may vary. <a href="#request-services">Contact our Intake Team</a> to confirm availability at your preferred center.",
     },
     {
       q: "Does Bierman serve families in Bergen County?",
@@ -162,7 +162,7 @@ export const ramseyData: LocationData = {
     },
     {
       q: "How do I start autism services near me in Ramsey, NJ?",
-      a: "Contact the Ramsey center directly or submit an intake request online. A member of our team will reach out to discuss your child\u2019s needs, verify insurance coverage, and guide you through next steps.",
+      a: "<a href="#request-services">Contact the Ramsey center</a> directly or <a href="#request-services">submit an intake request online</a>. A member of our team will reach out to discuss your child\u2019s needs, verify insurance coverage, and guide you through next steps.",
     },
     {
       q: "Does Bierman offer caregiver training resources?",
