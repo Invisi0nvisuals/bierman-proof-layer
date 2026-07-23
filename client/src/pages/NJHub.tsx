@@ -265,13 +265,11 @@ export default function NJHub() {
         {/* Banner image — full background, same image for desktop and mobile */}
         <div className="absolute inset-0">
           <img
-            src="/manus-storage/NewJerseyLightBlue(1)_13de059a.png"
+            src="/manus-storage/NJHubHerov2_a5f1036d.png"
             alt=""
             aria-hidden="true"
-            className="absolute inset-0 w-full h-full object-cover object-right"
+            className="absolute inset-0 w-full h-full object-cover object-center"
           />
-          {/* Left fade overlay so text stays readable */}
-          <div className="absolute inset-0" style={{ background: "linear-gradient(90deg, #003B71 0%, #003B71 28%, rgba(26,53,200,0.80) 48%, transparent 72%)" }} />
         </div>
 
         <div className="relative max-w-6xl mx-auto px-4 py-14 md:py-20">
