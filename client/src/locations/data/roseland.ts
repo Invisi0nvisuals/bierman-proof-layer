@@ -56,7 +56,7 @@ export const roselandData: LocationData = {
   heroDescription:
     "Bierman Autism Centers in Roseland provides individualized ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism. Serving Essex County, Morris County, and surrounding North Jersey communities.",
   insuranceText:
-    "Bierman Roseland works with a variety of insurance providers. <a href="#request-services">Contact our Intake Team</a> to verify your coverage before your first visit. Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others are accepted.",
+    "Bierman Roseland works with a variety of insurance providers. Contact our Intake Team to verify your coverage before your first visit. Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others are accepted.",
 
   // ── Reviews ───────────────────────────────────────────────────────────────
   // Note: Roseland is opening Fall 2026. Reviews below are from Bierman NJ centers
@@ -98,15 +98,15 @@ export const roselandData: LocationData = {
   faqs: [
     {
       q: "When will the Bierman Autism Centers Roseland location open?",
-      a: "The Roseland center is opening Fall 2026. Families can <a href="#request-services">submit an intake request now</a> to get on our list and be contacted as soon as we are ready to schedule.",
+      a: "The Roseland center is opening Fall 2026. Families can <a href='#request-services'>submit an intake request now</a> to get on our list and be contacted as soon as we are ready to schedule.",
     },
     {
       q: "Where is the Bierman Autism Centers Roseland clinic located?",
-      a: "The Roseland clinic is located at <a href="https://maps.app.goo.gl/yhdYY5oYzQauMwdq6" target="_blank" rel="noopener noreferrer">103 Eisenhower Pkwy, Ste 120, Roseland, NJ 07068</a>, serving families in Essex County, Morris County, Passaic County, and Union County.",
+      a: "The Roseland clinic is located at <a href='https://maps.app.goo.gl/yhdYY5oYzQauMwdq6' target='_blank' rel='noopener noreferrer'>103 Eisenhower Pkwy, Ste 120, Roseland, NJ 07068</a>, serving families in Essex County, Morris County, Passaic County, and Union County.",
     },
     {
       q: "What services will be available at the Roseland location?",
-      a: "The Roseland center will offer ABA therapy, diagnostic evaluations, speech therapy, and occupational therapy. Services are delivered by BCBA-supervised clinical teams and tailored to each child's individual needs. Service availability may vary. <a href="#request-services">Contact our Intake Team</a> to confirm availability at your preferred center.",
+      a: "The Roseland center will offer ABA therapy, diagnostic evaluations, speech therapy, and occupational therapy. Services are delivered by BCBA-supervised clinical teams and tailored to each child's individual needs. Service availability may vary. <a href='#request-services'>Contact our Intake Team</a> to confirm availability at your preferred center.",
     },
     {
       q: "What counties does the Roseland location serve?",
@@ -114,7 +114,7 @@ export const roselandData: LocationData = {
     },
     {
       q: "How do I get started with ABA therapy near Roseland, NJ?",
-      a: "<a href="#request-services">Submit an intake request online</a> or call us at (847) 232-4997. A member of our team will reach out to discuss your child's needs, verify insurance, and walk you through next steps.",
+      a: "<a href='#request-services'>Submit an intake request online</a> or call us at (847) 232-4997. A member of our team will reach out to discuss your child's needs, verify insurance, and walk you through next steps.",
     },
     {
       q: "Does Bierman Roseland accept insurance?",

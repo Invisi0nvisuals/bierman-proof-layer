@@ -96,15 +96,15 @@ export const moorestownData: LocationData = {
   faqs: [
     {
       q: "When will the Bierman Autism Centers Moorestown location open?",
-      a: "The Moorestown center is opening Fall 2026. Families can <a href="#request-services">submit an intake request now</a> to get on our list and be contacted as soon as we are ready to schedule.",
+      a: "The Moorestown center is opening Fall 2026. Families can <a href='#request-services'>submit an intake request now</a> to get on our list and be contacted as soon as we are ready to schedule.",
     },
     {
       q: "Where is the Bierman Autism Centers Moorestown clinic located?",
-      a: "The Moorestown clinic is located at <a href="https://maps.app.goo.gl/wCJ1eqeL74PxBiBW7" target="_blank" rel="noopener noreferrer">505 Pleasant Valley Ave, Moorestown, NJ 08057</a>, serving families in Burlington County, Camden County, and surrounding South Jersey communities.",
+      a: "The Moorestown clinic is located at <a href='https://maps.app.goo.gl/wCJ1eqeL74PxBiBW7' target='_blank' rel='noopener noreferrer'>505 Pleasant Valley Ave, Moorestown, NJ 08057</a>, serving families in Burlington County, Camden County, and surrounding South Jersey communities.",
     },
     {
       q: "What services will be available at the Moorestown location?",
-      a: "The Moorestown center will offer ABA therapy, diagnostic evaluations, speech therapy, and occupational therapy. Services are delivered by BCBA-supervised clinical teams and tailored to each child's individual needs. Service availability may vary. <a href="#request-services">Contact our Intake Team</a> to confirm availability at your preferred center.",
+      a: "The Moorestown center will offer ABA therapy, diagnostic evaluations, speech therapy, and occupational therapy. Services are delivered by BCBA-supervised clinical teams and tailored to each child's individual needs. Service availability may vary. <a href='#request-services'>Contact our Intake Team</a> to confirm availability at your preferred center.",
     },
     {
       q: "What counties does the Moorestown location serve?",
@@ -112,7 +112,7 @@ export const moorestownData: LocationData = {
     },
     {
       q: "How do I get started with ABA therapy near Moorestown, NJ?",
-      a: "<a href="#request-services">Submit an intake request online</a> or call us at (847) 232-4997. A member of our team will reach out to discuss your child's needs, verify insurance, and walk you through next steps.",
+      a: "<a href='#request-services'>Submit an intake request online</a> or call us at (847) 232-4997. A member of our team will reach out to discuss your child's needs, verify insurance, and walk you through next steps.",
     },
     {
       q: "Does Bierman Moorestown accept insurance?",

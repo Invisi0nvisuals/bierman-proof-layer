@@ -103,7 +103,7 @@ export const berkeleyHeightsData: LocationData = {
   faqs: [
     {
       q: "Does Bierman Autism Centers in Berkeley Heights accept insurance?",
-      a: "Yes. Bierman Berkeley Heights works with a variety of insurance providers, including Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others. <a href="#request-services">Contact us</a> to verify your specific coverage.",
+      a: "Yes. Bierman Berkeley Heights works with a variety of insurance providers, including Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others. <a href='#request-services'>Contact us</a> to verify your specific coverage.",
     },
     {
       q: "What age groups does the Berkeley Heights center serve?",
@@ -111,11 +111,11 @@ export const berkeleyHeightsData: LocationData = {
     },
     {
       q: "How do I get started with services at the Berkeley Heights location?",
-      a: "The first step is <a href="#request-services">completing our intake request</a>. A member of our team will contact you to discuss your child's needs, verify insurance, and schedule an initial consultation.",
+      a: "The first step is <a href='#request-services'>completing our intake request</a>. A member of our team will contact you to discuss your child's needs, verify insurance, and schedule an initial consultation.",
     },
     {
       q: "Where is the Bierman Autism Centers Berkeley Heights clinic located?",
-      a: "The Berkeley Heights clinic is located at <a href="https://maps.app.goo.gl/RrzHDfH2aKM3QNPu8" target="_blank" rel="noopener noreferrer">550 Springfield Ave., Berkeley Heights, NJ 07922</a>, serving families in Union County and surrounding areas.",
+      a: "The Berkeley Heights clinic is located at <a href='https://maps.app.goo.gl/RrzHDfH2aKM3QNPu8' target='_blank' rel='noopener noreferrer'>550 Springfield Ave., Berkeley Heights, NJ 07922</a>, serving families in Union County and surrounding areas.",
     },
     {
       q: "What is ABA therapy and how does it help children with autism?",
@@ -123,15 +123,15 @@ export const berkeleyHeightsData: LocationData = {
     },
     {
       q: "Is ABA therapy available near Berkeley Heights, NJ?",
-      a: "Yes. Bierman Autism Centers operates a clinic in Berkeley Heights, NJ at <a href="https://maps.app.goo.gl/RrzHDfH2aKM3QNPu8" target="_blank" rel="noopener noreferrer">550 Springfield Ave.</a>, providing ABA therapy to families in Union County, Somerset County, and surrounding communities including Summit, New Providence, and Westfield.",
+      a: "Yes. Bierman Autism Centers operates a clinic in Berkeley Heights, NJ at <a href='https://maps.app.goo.gl/RrzHDfH2aKM3QNPu8' target='_blank' rel='noopener noreferrer'>550 Springfield Ave.</a>, providing ABA therapy to families in Union County, Somerset County, and surrounding communities including Summit, New Providence, and Westfield.",
     },
     {
       q: "Does Bierman Berkeley Heights offer speech therapy for children with autism?",
-      a: "Yes. Speech-language therapy is available at the Berkeley Heights center, delivered by licensed speech-language pathologists as part of a coordinated care plan. Service availability may vary. <a href="#request-services">Contact our Intake Team</a> to confirm availability at your preferred center.",
+      a: "Yes. Speech-language therapy is available at the Berkeley Heights center, delivered by licensed speech-language pathologists as part of a coordinated care plan. Service availability may vary. <a href='#request-services'>Contact our Intake Team</a> to confirm availability at your preferred center.",
     },
     {
       q: "Does Bierman Berkeley Heights offer occupational therapy?",
-      a: "Yes. Occupational therapy services are available at the Berkeley Heights location, focusing on sensory integration, fine motor skills, and daily living activities. Service availability may vary. <a href="#request-services">Contact our Intake Team</a> to confirm availability at your preferred center.",
+      a: "Yes. Occupational therapy services are available at the Berkeley Heights location, focusing on sensory integration, fine motor skills, and daily living activities. Service availability may vary. <a href='#request-services'>Contact our Intake Team</a> to confirm availability at your preferred center.",
     },
   ],
 

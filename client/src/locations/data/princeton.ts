@@ -103,7 +103,7 @@ export const princetonData: LocationData = {
   faqs: [
     {
       q: "Does Bierman Autism Centers in Princeton accept insurance?",
-      a: "Yes. Bierman Princeton works with a variety of insurance providers, including Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others. <a href="#request-services">Contact us</a> to verify your specific coverage.",
+      a: "Yes. Bierman Princeton works with a variety of insurance providers, including Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others. <a href='#request-services'>Contact us</a> to verify your specific coverage.",
     },
     {
       q: "What age groups does the Princeton center serve?",
@@ -111,11 +111,11 @@ export const princetonData: LocationData = {
     },
     {
       q: "How do I get started with services at the Princeton location?",
-      a: "The first step is <a href="#request-services">completing our intake request</a>. A member of our team will contact you to discuss your child's needs, verify insurance, and schedule an initial consultation.",
+      a: "The first step is <a href='#request-services'>completing our intake request</a>. A member of our team will contact you to discuss your child's needs, verify insurance, and schedule an initial consultation.",
     },
     {
       q: "Where is the Bierman Autism Centers Princeton clinic located?",
-      a: "The Princeton clinic is located at <a href="https://maps.app.goo.gl/AoANRxYghyy2sdJC8" target="_blank" rel="noopener noreferrer">746 Alexander Rd, Princeton, NJ 08540</a>, serving families in Mercer County and surrounding areas.",
+      a: "The Princeton clinic is located at <a href='https://maps.app.goo.gl/AoANRxYghyy2sdJC8' target='_blank' rel='noopener noreferrer'>746 Alexander Rd, Princeton, NJ 08540</a>, serving families in Mercer County and surrounding areas.",
     },
     {
       q: "What is ABA therapy and how does it help children with autism?",
@@ -123,15 +123,15 @@ export const princetonData: LocationData = {
     },
     {
       q: "Is ABA therapy available near Princeton, NJ?",
-      a: "Yes. Bierman Autism Centers operates a clinic in Princeton, NJ at <a href="https://maps.app.goo.gl/AoANRxYghyy2sdJC8" target="_blank" rel="noopener noreferrer">746 Alexander Rd</a>, providing ABA therapy to families in Mercer County, Somerset County, and surrounding communities including Trenton, Hamilton, and Lawrence Township.",
+      a: "Yes. Bierman Autism Centers operates a clinic in Princeton, NJ at <a href='https://maps.app.goo.gl/AoANRxYghyy2sdJC8' target='_blank' rel='noopener noreferrer'>746 Alexander Rd</a>, providing ABA therapy to families in Mercer County, Somerset County, and surrounding communities including Trenton, Hamilton, and Lawrence Township.",
     },
     {
       q: "Does Bierman Princeton offer speech therapy for children with autism?",
-      a: "Yes. Speech-language therapy is available at the Princeton center, delivered by licensed speech-language pathologists as part of a coordinated care plan. Service availability may vary. <a href="#request-services">Contact our Intake Team</a> to confirm availability at your preferred center.",
+      a: "Yes. Speech-language therapy is available at the Princeton center, delivered by licensed speech-language pathologists as part of a coordinated care plan. Service availability may vary. <a href='#request-services'>Contact our Intake Team</a> to confirm availability at your preferred center.",
     },
     {
       q: "Does Bierman Princeton offer occupational therapy?",
-      a: "Yes. Occupational therapy services are available at the Princeton location, focusing on sensory integration, fine motor skills, and daily living activities. Service availability may vary. <a href="#request-services">Contact our Intake Team</a> to confirm availability at your preferred center.",
+      a: "Yes. Occupational therapy services are available at the Princeton location, focusing on sensory integration, fine motor skills, and daily living activities. Service availability may vary. <a href='#request-services'>Contact our Intake Team</a> to confirm availability at your preferred center.",
     },
   ],
 

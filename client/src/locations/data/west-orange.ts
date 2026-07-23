@@ -115,7 +115,7 @@ export const westOrangeData: LocationData = {
   faqs: [
     {
       q: "Does Bierman Autism Centers in West Orange accept insurance?",
-      a: "Yes. Bierman West Orange works with a variety of insurance providers, including Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others. <a href="#request-services">Contact us</a> to verify your specific coverage.",
+      a: "Yes. Bierman West Orange works with a variety of insurance providers, including Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others. <a href='#request-services'>Contact us</a> to verify your specific coverage.",
     },
     {
       q: "What age groups does the West Orange center serve?",
@@ -123,11 +123,11 @@ export const westOrangeData: LocationData = {
     },
     {
       q: "How do I get started with services at the West Orange location?",
-      a: "The first step is <a href="#request-services">completing our intake request</a>. A member of our team will contact you to discuss your child\u2019s needs, verify insurance, and schedule an initial consultation.",
+      a: "The first step is <a href='#request-services'>completing our intake request</a>. A member of our team will contact you to discuss your child\u2019s needs, verify insurance, and schedule an initial consultation.",
     },
     {
       q: "Where is the Bierman Autism Centers West Orange clinic located?",
-      a: "The West Orange clinic is located at <a href="https://maps.app.goo.gl/gcVuRHyetFgWknR87" target="_blank" rel="noopener noreferrer">300 Executive Drive, Suite 070, West Orange, NJ 07052</a>, serving families in Essex County and surrounding areas.",
+      a: "The West Orange clinic is located at <a href='https://maps.app.goo.gl/gcVuRHyetFgWknR87' target='_blank' rel='noopener noreferrer'>300 Executive Drive, Suite 070, West Orange, NJ 07052</a>, serving families in Essex County and surrounding areas.",
     },
     {
       q: "What is ABA therapy and how does it help children with autism?",
@@ -135,15 +135,15 @@ export const westOrangeData: LocationData = {
     },
     {
       q: "Is ABA therapy available near West Orange, NJ?",
-      a: "Yes. Bierman Autism Centers operates a clinic in West Orange, NJ at <a href="https://maps.app.goo.gl/gcVuRHyetFgWknR87" target="_blank" rel="noopener noreferrer">300 Executive Drive, Suite 070</a>, providing ABA therapy to families in Essex County, Morris County, Union County, and surrounding communities including Livingston, Millburn, Morristown, and Summit.",
+      a: "Yes. Bierman Autism Centers operates a clinic in West Orange, NJ at <a href='https://maps.app.goo.gl/gcVuRHyetFgWknR87' target='_blank' rel='noopener noreferrer'>300 Executive Drive, Suite 070</a>, providing ABA therapy to families in Essex County, Morris County, Union County, and surrounding communities including Livingston, Millburn, Morristown, and Summit.",
     },
     {
       q: "Does Bierman West Orange offer speech therapy for children with autism?",
-      a: "Yes. Speech-language therapy is available at the West Orange center, delivered by licensed speech-language pathologists as part of a coordinated care plan. Service availability may vary. <a href="#request-services">Contact our Intake Team</a> to confirm availability at your preferred center.",
+      a: "Yes. Speech-language therapy is available at the West Orange center, delivered by licensed speech-language pathologists as part of a coordinated care plan. Service availability may vary. <a href='#request-services'>Contact our Intake Team</a> to confirm availability at your preferred center.",
     },
     {
       q: "Does Bierman West Orange offer occupational therapy?",
-      a: "Yes. Occupational therapy services are available at the West Orange location, focusing on sensory integration, fine motor skills, and daily living activities. Service availability may vary. <a href="#request-services">Contact our Intake Team</a> to confirm availability at your preferred center.",
+      a: "Yes. Occupational therapy services are available at the West Orange location, focusing on sensory integration, fine motor skills, and daily living activities. Service availability may vary. <a href='#request-services'>Contact our Intake Team</a> to confirm availability at your preferred center.",
     },
   ],
 

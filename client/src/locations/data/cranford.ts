@@ -103,7 +103,7 @@ export const cranfordData: LocationData = {
   faqs: [
     {
       q: "Does Bierman Autism Centers in Cranford accept insurance?",
-      a: "Yes. Bierman Cranford works with a variety of insurance providers, including Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others. <a href="#request-services">Contact us</a> to verify your specific coverage.",
+      a: "Yes. Bierman Cranford works with a variety of insurance providers, including Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others. <a href='#request-services'>Contact us</a> to verify your specific coverage.",
     },
     {
       q: "What age groups does the Cranford center serve?",
@@ -111,11 +111,11 @@ export const cranfordData: LocationData = {
     },
     {
       q: "How do I get started with services at the Cranford location?",
-      a: "The first step is <a href="#request-services">completing our intake request</a>. A member of our team will contact you to discuss your child's needs, verify insurance, and schedule an initial consultation.",
+      a: "The first step is <a href='#request-services'>completing our intake request</a>. A member of our team will contact you to discuss your child's needs, verify insurance, and schedule an initial consultation.",
     },
     {
       q: "Where is the Bierman Autism Centers Cranford clinic located?",
-      a: "The Cranford clinic is located at <a href="https://maps.app.goo.gl/mBJGYojAXJek27WD6" target="_blank" rel="noopener noreferrer">65 Jackson Drive, Suite 302, Cranford, NJ 07016</a>, serving families in Union County and surrounding areas.",
+      a: "The Cranford clinic is located at <a href='https://maps.app.goo.gl/mBJGYojAXJek27WD6' target='_blank' rel='noopener noreferrer'>65 Jackson Drive, Suite 302, Cranford, NJ 07016</a>, serving families in Union County and surrounding areas.",
     },
     {
       q: "What is ABA therapy and how does it help children with autism?",
@@ -123,15 +123,15 @@ export const cranfordData: LocationData = {
     },
     {
       q: "Is ABA therapy available near Cranford, NJ?",
-      a: "Yes. Bierman Autism Centers operates a clinic in Cranford, NJ at <a href="https://maps.app.goo.gl/mBJGYojAXJek27WD6" target="_blank" rel="noopener noreferrer">65 Jackson Drive, Suite 302</a>, providing ABA therapy to families in Union County, Essex County, and surrounding communities including Westfield, Clark, and Scotch Plains.",
+      a: "Yes. Bierman Autism Centers operates a clinic in Cranford, NJ at <a href='https://maps.app.goo.gl/mBJGYojAXJek27WD6' target='_blank' rel='noopener noreferrer'>65 Jackson Drive, Suite 302</a>, providing ABA therapy to families in Union County, Essex County, and surrounding communities including Westfield, Clark, and Scotch Plains.",
     },
     {
       q: "Does Bierman Cranford offer speech therapy for children with autism?",
-      a: "Yes. Speech-language therapy is available at the Cranford center, delivered by licensed speech-language pathologists as part of a coordinated care plan. Service availability may vary. <a href="#request-services">Contact our Intake Team</a> to confirm availability at your preferred center.",
+      a: "Yes. Speech-language therapy is available at the Cranford center, delivered by licensed speech-language pathologists as part of a coordinated care plan. Service availability may vary. <a href='#request-services'>Contact our Intake Team</a> to confirm availability at your preferred center.",
     },
     {
       q: "Does Bierman Cranford offer occupational therapy?",
-      a: "Yes. Occupational therapy services are available at the Cranford location, focusing on sensory integration, fine motor skills, and daily living activities. Service availability may vary. <a href="#request-services">Contact our Intake Team</a> to confirm availability at your preferred center.",
+      a: "Yes. Occupational therapy services are available at the Cranford location, focusing on sensory integration, fine motor skills, and daily living activities. Service availability may vary. <a href='#request-services'>Contact our Intake Team</a> to confirm availability at your preferred center.",
     },
   ],
 

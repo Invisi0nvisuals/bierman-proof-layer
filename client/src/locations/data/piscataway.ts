@@ -103,7 +103,7 @@ export const piscatawayData: LocationData = {
   faqs: [
     {
       q: "Does Bierman Autism Centers in Piscataway accept insurance?",
-      a: "Yes. Bierman Piscataway works with a variety of insurance providers, including Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others. <a href="#request-services">Contact us</a> to verify your specific coverage.",
+      a: "Yes. Bierman Piscataway works with a variety of insurance providers, including Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others. <a href='#request-services'>Contact us</a> to verify your specific coverage.",
     },
     {
       q: "What age groups does the Piscataway center serve?",
@@ -111,11 +111,11 @@ export const piscatawayData: LocationData = {
     },
     {
       q: "How do I get started with services at the Piscataway location?",
-      a: "The first step is <a href="#request-services">completing our intake request</a>. A member of our team will contact you to discuss your child\u2019s needs, verify insurance, and schedule an initial consultation.",
+      a: "The first step is <a href='#request-services'>completing our intake request</a>. A member of our team will contact you to discuss your child\u2019s needs, verify insurance, and schedule an initial consultation.",
     },
     {
       q: "Where is the Bierman Autism Centers Piscataway clinic located?",
-      a: "The Piscataway clinic is located at <a href="https://maps.app.goo.gl/xAmfnjg553emHKsh9" target="_blank" rel="noopener noreferrer">200 Centennial Ave, Suite 200, Piscataway, NJ 08854</a>, serving families in Middlesex County and surrounding areas.",
+      a: "The Piscataway clinic is located at <a href='https://maps.app.goo.gl/xAmfnjg553emHKsh9' target='_blank' rel='noopener noreferrer'>200 Centennial Ave, Suite 200, Piscataway, NJ 08854</a>, serving families in Middlesex County and surrounding areas.",
     },
     {
       q: "What is ABA therapy and how does it help children with autism?",
@@ -123,15 +123,15 @@ export const piscatawayData: LocationData = {
     },
     {
       q: "Is ABA therapy available near Piscataway, NJ?",
-      a: "Yes. Bierman Autism Centers operates a clinic in Piscataway, NJ at <a href="https://maps.app.goo.gl/xAmfnjg553emHKsh9" target="_blank" rel="noopener noreferrer">200 Centennial Ave, Suite 200</a>, providing ABA therapy to families in Middlesex County, Somerset County, and surrounding communities including Edison, New Brunswick, and South Plainfield.",
+      a: "Yes. Bierman Autism Centers operates a clinic in Piscataway, NJ at <a href='https://maps.app.goo.gl/xAmfnjg553emHKsh9' target='_blank' rel='noopener noreferrer'>200 Centennial Ave, Suite 200</a>, providing ABA therapy to families in Middlesex County, Somerset County, and surrounding communities including Edison, New Brunswick, and South Plainfield.",
     },
     {
       q: "Does Bierman Piscataway offer speech therapy for children with autism?",
-      a: "Yes. Speech-language therapy is available at the Piscataway center, delivered by licensed speech-language pathologists as part of a coordinated care plan. Service availability may vary. <a href="#request-services">Contact our Intake Team</a> to confirm availability at your preferred center.",
+      a: "Yes. Speech-language therapy is available at the Piscataway center, delivered by licensed speech-language pathologists as part of a coordinated care plan. Service availability may vary. <a href='#request-services'>Contact our Intake Team</a> to confirm availability at your preferred center.",
     },
     {
       q: "Does Bierman Piscataway offer occupational therapy?",
-      a: "Yes. Occupational therapy services are available at the Piscataway location, focusing on sensory integration, fine motor skills, and daily living activities. Service availability may vary. <a href="#request-services">Contact our Intake Team</a> to confirm availability at your preferred center.",
+      a: "Yes. Occupational therapy services are available at the Piscataway location, focusing on sensory integration, fine motor skills, and daily living activities. Service availability may vary. <a href='#request-services'>Contact our Intake Team</a> to confirm availability at your preferred center.",
     },
   ],
 
