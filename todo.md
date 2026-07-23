@@ -14,10 +14,17 @@
 - [x] Server catch-all route to serve per-route pre-rendered index.html
 - [x] Upgrade to web-db-user for Express server in production
 - [x] Add { index: false } to express.static to fix directory URL routing
+- [x] Verify canonical/og:url fix is working in production after deploy
+- [x] CallRail phone: confirmed (847) 232-4997 pool number everywhere (OC-01, OC-05 resolved)
+- [x] VI-01: Swap bird feet images with penguin feet in What Families Value section
+- [x] BR-17: Apply Copy Blocks warm messaging (hero subhead, services, safety, getting started, insurance)
+- [x] BR-06: Replace 'Verified Bierman Location' label with 'Bierman Autism Centers in [City]'
+- [x] BR-14: Nearby module updated — all 9 other cities listed A-Z + 'All 10 NJ Locations' link
+- [x] BR-09: Add noindex for manus.space domain only (X-Robots-Tag header, hostname-conditional)
 
-## Pending
-- [ ] Verify canonical/og:url fix is working in production after deploy
-- [ ] BR-17: Brand voice/copy warmth (waiting for Google Doc from client)
-- [ ] BR-05/VI-01: Bird feet images in "What Families Value" section (needs Quincy/penguin assets)
-- [ ] Moorestown/Roseland CallRail numbers (pending from client team)
-- [ ] Anna Leigh's additional edits (pending from client)
+## Blocked on Client
+- [ ] Quincy penguin hero photos (need assets from Google Drive)
+- [ ] Location-specific center tour videos (need video assets)
+- [ ] Hotjar pixel (need Tiffany to provide access)
+- [ ] CallRail per-location numbers (pending their team meeting confirmation)
+- [ ] Google Places API live ratings (need decision/API key)

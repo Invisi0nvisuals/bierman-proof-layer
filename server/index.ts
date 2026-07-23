@@ -14,6 +14,15 @@ async function startServer() {
       ? path.resolve(__dirname, "public")
       : path.resolve(__dirname, "..", "dist", "public");
 
+  // BR-09: Prevent manus.space from being indexed while keeping local.biermanautism.com indexable
+  app.use((req, res, next) => {
+    const host = req.hostname || "";
+    if (host.endsWith(".manus.space")) {
+      res.setHeader("X-Robots-Tag", "noindex, nofollow");
+    }
+    next();
+  });
+
   // CRITICAL: { index: false } prevents express.static from auto-serving index.html
   // for directory URLs. This lets our catch-all route below handle all HTML routing
   // and serve the correct per-route pre-rendered index.html with proper canonical/og:url.

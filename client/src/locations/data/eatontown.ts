@@ -51,9 +51,9 @@ export const eatontownData: LocationData = {
 
   // ── Content ───────────────────────────────────────────────────────────────
   heroDescription:
-    "Bierman Autism Centers in Eatontown provides individualized ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism. Serving Monmouth County and surrounding New Jersey communities.",
+    "Progress should be something you can see. Our Eatontown team measures your child's growth every day and adjusts quickly, so small wins build into real milestones like communication, independence, and school readiness.",
   insuranceText:
-    "Bierman Eatontown works with a variety of insurance providers. Contact our Intake Team to verify your coverage before your first visit. Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others are accepted.",
+    "Bierman Eatontown works with a variety of insurance providers, including Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others. Contact our Intake Team to verify your coverage before your first visit.",
 
   // ── Reviews ───────────────────────────────────────────────────────────────
   reviews: [
@@ -137,11 +137,15 @@ export const eatontownData: LocationData = {
 
   // ── Nearby ────────────────────────────────────────────────────────────────
   nearby: [
-    { name: "Princeton, NJ", url: "/locations/nj/princeton/" },
-    { name: "Piscataway, NJ", url: "/locations/nj/piscataway/" },
     { name: "Berkeley Heights, NJ", url: "/locations/nj/berkeley-heights/" },
     { name: "Cranford, NJ", url: "/locations/nj/cranford/" },
     { name: "Moorestown, NJ", url: "/locations/nj/moorestown/" },
+    { name: "Parsippany, NJ", url: "/locations/nj/parsippany/" },
+    { name: "Piscataway, NJ", url: "/locations/nj/piscataway/" },
+    { name: "Princeton, NJ", url: "/locations/nj/princeton/" },
+    { name: "Ramsey, NJ", url: "/locations/nj/ramsey/" },
+    { name: "Roseland, NJ", url: "/locations/nj/roseland/" },
+    { name: "West Orange, NJ", url: "/locations/nj/west-orange/" },
     { name: "All 10 NJ Locations →", url: "/" },
   ],
 

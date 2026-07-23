@@ -60,37 +60,38 @@ const SHARED_ASSETS = {
   footerLogo: "/manus-storage/Main_Logo_All_White_c1738645.png",
   mascot: "/manus-storage/bierman-brand-nj-penguin-accent_64e9cbdd.webp",
   insurance: "/manus-storage/Horizon_BCBS_New_Jersey_0df83934.png",
-  themeBcbaGuidance: "/manus-storage/SupportiveBCBAGuidance_6bffed7f.png",
-  themeFamilyPartnership: "/manus-storage/FamilyPartnership_0efd3934.png",
-  themeProgressFocused: "/manus-storage/Progress-FocusedSupport_20321a51.png",
+  themeBcbaGuidance: "/manus-storage/theme_bcba_clean_06fc3aeb.png",
+  themeFamilyPartnership: "/manus-storage/theme_family_clean_77931315.png",
+  themeProgressFocused: "/manus-storage/theme_progress_clean_83b579f2.png",
+  penguinFeet: "/manus-storage/Website_V1-01-02copy_4ac68e1b.png",
 };
 
 const STANDARD_SERVICES = [
   {
     slug: "aba-therapy",
     title: "ABA Therapy",
-    desc: "Applied Behavior Analysis — individualized, evidence-based therapy designed to build communication, social, and daily living skills.",
+    desc: "Individualized, evidence-based ABA that builds communication, social, and daily-living skills. Our BCBA-led teams measure progress every day and adjust quickly, so your child keeps moving forward.",
     img: "/manus-storage/ABA-Therapy-Bierman-Autism_0e3cca4a.webp",
     alt: "Bierman therapist supporting a child during an ABA therapy activity",
   },
   {
     slug: "speech-therapy",
     title: "Speech-Language Therapy",
-    desc: "Targeted speech and language support to help children communicate more effectively and confidently.",
+    desc: "Support that helps your child understand and be understood. Our speech-language pathologists make communication practical and playful, so new skills carry into home and school.",
     img: "/manus-storage/Speech-Language-Therapy-Bierman-Autism_4e584cfb.webp",
     alt: "Bierman speech-language pathologist working with a child during a communication activity",
   },
   {
     slug: "occupational-therapy",
     title: "Occupational Therapy",
-    desc: "Sensory integration, fine motor skills, and daily living activities to support independence and engagement.",
+    desc: "Hands-on help with motor skills, sensory needs, and everyday routines, building the confidence and independence that make daily life easier.",
     img: "/manus-storage/P1015029_9404179b.webp",
     alt: "Bierman therapist guiding a child through a fine motor activity during occupational therapy",
   },
   {
     slug: "diagnostic-evaluation",
     title: "Diagnostic Evaluation",
-    desc: "Comprehensive autism diagnostic evaluations by licensed clinicians, with results and recommendations for families.",
+    desc: "Thorough, compassionate evaluations from licensed clinicians, so you leave with clear answers and a practical plan for what comes next.",
     img: "/manus-storage/Diagnostic-Evaluation-Bierman-Autism_338899cf.webp",
     alt: "Bierman clinician using a tablet during a child-focused assessment activity",
   },
@@ -675,11 +676,8 @@ export function LocationPage({ data }: LocationPageProps) {
             <div className="pt-4 md:pt-0">
               <div className="text-brand-teal text-sm font-bold uppercase tracking-widest mb-2">Our {address.city} Clinic</div>
               <h2 className="text-3xl font-bold text-[#003B71] mb-4">A Welcoming Environment for Every Child</h2>
-              <p className="text-slate-600 leading-relaxed mb-4">
-                Our {address.city} center is designed to be a safe, engaging, and supportive space for children and families. Every aspect of our clinic — from the therapy rooms to the waiting areas — is built with the needs of children with autism in mind.
-              </p>
               <p className="text-slate-600 leading-relaxed mb-6">
-                Our clinical team includes Board Certified Behavior Analysts (BCBAs), Registered Behavior Technicians (RBTs), speech-language pathologists, and occupational therapists working collaboratively on each child's individualized plan.
+                Our {address.city} center is built for your child: calm spaces, thoughtful design, and a team of BCBAs, RBTs, and therapists working together on one plan made just for them.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <a href="#request-services" className="bg-brand-coral hover:bg-brand-coral/90 text-white font-semibold px-6 py-3 rounded-xl transition-colors text-center text-sm">
@@ -700,7 +698,7 @@ export function LocationPage({ data }: LocationPageProps) {
           <div className="text-center mb-12">
             <div className="text-brand-teal text-sm font-bold uppercase tracking-widest mb-2">Services at {address.city}</div>
             <h2 className="text-3xl font-bold text-[#003B71]">Comprehensive and Focused Autism Support Services</h2>
-            <p className="text-slate-500 mt-3 max-w-2xl mx-auto">Each service is individualized to your child's goals and delivered by licensed, experienced clinicians.</p>
+            <p className="text-slate-500 mt-3 max-w-2xl mx-auto">{`Care at Bierman ${address.city} is built around your child. Comprehensive ABA supports the full range of developmental skills, Focused ABA targets specific goals, and speech, occupational therapy, and diagnostic evaluations add the right support at the right time.`}</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {STANDARD_SERVICES.map((svc) => {
@@ -739,7 +737,7 @@ export function LocationPage({ data }: LocationPageProps) {
               );
             })}
           </div>
-          <p className="text-center text-slate-400 text-xs mt-6">Service availability varies by location. Contact our Intake Team to confirm the services currently available at your preferred center.</p>
+          <p className="text-center text-slate-400 text-xs mt-6">Service availability varies by location. Contact our Intake Team to confirm which services are offered at your preferred center.</p>
         </div>
       </section>
 
@@ -846,14 +844,14 @@ export function LocationPage({ data }: LocationPageProps) {
           <div className="text-center mb-12">
             <div className="text-brand-teal-200 text-sm font-bold uppercase tracking-widest mb-2">Getting Started</div>
             <h2 className="text-3xl font-bold text-white">How to Begin Services at {address.city}</h2>
-            <p className="text-brand-teal-100/80 mt-3 max-w-2xl mx-auto">Our intake process is designed to be straightforward and supportive for families.</p>
+            <p className="text-brand-teal-100/80 mt-3 max-w-2xl mx-auto">{`Starting care at Bierman ${address.city} is simple and supportive. Here's what to expect.`}</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { step: "01", title: "Submit a Request", desc: "Complete our intake request form. A team member will contact you within 1–2 business days." },
-              { step: "02", title: "Insurance Verification", desc: "We verify your insurance coverage and explain your benefits before any commitment." },
-              { step: "03", title: "Initial Consultation", desc: "Meet with our clinical team to discuss your child's needs and goals." },
-              { step: "04", title: "Begin Services", desc: "Your child's individualized program begins with ongoing family collaboration." },
+              { step: "01", title: "Submit a Request", desc: "Complete our intake form, and a team member will reach out within 1 to 2 business days." },
+              { step: "02", title: "Insurance Verification", desc: "We verify your coverage and explain your benefits before any commitment." },
+              { step: "03", title: "Initial Consultation", desc: "Meet your clinical team to talk through your child's needs and goals." },
+              { step: "04", title: "Begin Services", desc: "Your child starts an individualized program with ongoing family collaboration." },
             ].map((item) => (
               <div key={item.step} className="bg-white/15 backdrop-blur-sm rounded-3xl p-6 border border-white/20">
                 <div className="text-brand-coral font-bold text-3xl mb-3 font-mono">{item.step}</div>
@@ -877,19 +875,19 @@ export function LocationPage({ data }: LocationPageProps) {
             <div className="text-brand-teal text-sm font-bold uppercase tracking-widest mb-2">SAFETY &amp; SECURITY</div>
             <h2 className="text-3xl font-bold text-[#003B71] mb-4">Safety Systems Designed to Give Families Peace of Mind</h2>
             <p className="text-slate-500 max-w-3xl mx-auto text-base leading-relaxed">
-              Families deserve to feel confident that their child's care is supported by secure access, prepared teams, thoughtful clinical safeguards, and clear communication.
+              {`Families deserve peace of mind. Our ${address.city} center pairs secure systems, trained teams, and clinical safeguards, so your child can focus on learning.`}
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
             {[
-              { icon: "🔒", title: "Secure Access", desc: "Electronic access control and visitor check-in procedures help ensure that only authorized individuals enter the center." },
-              { icon: "✅", title: "Verified Pick-Up", desc: "A strict pick-up verification process helps ensure children are released only to approved caregivers." },
-              { icon: "📹", title: "Recorded Oversight", desc: "Secure, recorded video surveillance in key areas adds transparency and supports the ability to review and respond to concerns." },
-              { icon: "🩺", title: "Prepared Teams", desc: "Team members receive CPR, First Aid, and Safety-Care training within their first two weeks, with ongoing training throughout their careers." },
-              { icon: "🧼", title: "Health &amp; Hygiene", desc: "Cleaning and infection-prevention practices help keep centers healthy and ready for learning." },
-              { icon: "🚨", title: "Emergency Readiness", desc: "Teams regularly practice safety drills and follow established emergency response procedures." },
-              { icon: "🔍", title: "Screened Staff", desc: "Team members complete pre-employment screening and clearance processes." },
-              { icon: "💙", title: "Clinical Safety Practices", desc: "Evidence-based, compassionate care supports each learner in a secure, well-structured setting." },
+              { icon: "🔒", title: "Controlled Entry", desc: "Electronic access control and visitor check-in mean only authorized people come in." },
+              { icon: "✅", title: "Verified Pick-Up", desc: "A strict pick-up process ensures children leave only with approved caregivers." },
+              { icon: "📹", title: "Recorded Oversight", desc: "Secure video in key areas adds transparency and helps us respond to any concern." },
+              { icon: "🩺", title: "Prepared Teams", desc: "Staff complete CPR, First Aid, and Safety-Care training in their first two weeks, with ongoing refreshers." },
+              { icon: "🧼", title: "Health &amp; Hygiene", desc: "Rigorous cleaning and infection-prevention keep the center healthy and ready for learning." },
+              { icon: "🚨", title: "Emergency Readiness", desc: "Teams practice drills and follow established emergency procedures." },
+              { icon: "🔍", title: "Screened Staff", desc: "Every team member clears comprehensive pre-employment screening." },
+              { icon: "💙", title: "Clinical Safeguards", desc: "Evidence-based, compassionate care in a secure, well-structured setting." },
             ].map((item) => (
               <div key={item.title} className="bg-slate-50 rounded-2xl p-5 border border-slate-100">
                 <div className="text-2xl mb-3">{item.icon}</div>
@@ -899,7 +897,7 @@ export function LocationPage({ data }: LocationPageProps) {
             ))}
           </div>
           <p className="text-center text-slate-500 text-sm max-w-2xl mx-auto italic">
-            Safety isn't just a protocol. It's a promise. Every layer of protection is designed to support each child's well-being, progress, and family peace of mind.
+            Safety isn't just a protocol. It's a promise.
           </p>
         </div>
       </section>
@@ -970,6 +968,10 @@ export function LocationPage({ data }: LocationPageProps) {
                 <img src={card.src} alt={card.alt} className="w-full h-auto object-contain" loading="lazy" />
               </div>
             ))}
+          </div>
+          {/* Penguin Feet Divider */}
+          <div className="my-8 flex justify-center">
+            <img src={SHARED_ASSETS.penguinFeet} alt="" className="w-full max-w-4xl h-auto opacity-80" aria-hidden="true" />
           </div>
 {/* Real GBP Reviews */}
           <div className="mt-14">
@@ -1163,7 +1165,7 @@ export function LocationPage({ data }: LocationPageProps) {
                 <div>{address.street}</div>
                 <div>{address.city}, {address.state} {address.zip}</div>
                 <div><a href={`tel:${phone}`} className="hover:text-white transition-colors">{phone}</a></div>
-                <div className="text-white/40 text-xs mt-2">Verified Bierman Location · {address.county}</div>
+                <div className="text-white/40 text-xs mt-2">Bierman Autism Centers in {address.city} · {address.county}</div>
               </div>
             </div>
             <div>

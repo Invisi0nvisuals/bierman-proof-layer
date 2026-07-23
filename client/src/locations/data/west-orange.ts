@@ -59,9 +59,9 @@ export const westOrangeData: LocationData = {
 
   // ── Content ───────────────────────────────────────────────────────────────
   heroDescription:
-    "Bierman Autism Centers in West Orange provides individualized ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations for children with autism. Serving Essex County, Morris County, Union County, and surrounding New Jersey communities.",
+    "Progress should be something you can see. Our West Orange team measures your child's growth every day and adjusts quickly, so small wins build into real milestones like communication, independence, and school readiness.",
   insuranceText:
-    "Bierman West Orange works with a variety of insurance providers. Contact our Intake Team to verify your coverage before your first visit. Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others are accepted.",
+    "Bierman West Orange works with a variety of insurance providers, including Horizon BCBS NJ, Aetna, United Healthcare, Cigna, and others. Contact our Intake Team to verify your coverage before your first visit.",
 
   // ── Reviews ───────────────────────────────────────────────────────────────
   // GBP note: Only 1 public GBP review (Taesoo Kim — 5 stars, no body text).
@@ -149,11 +149,15 @@ export const westOrangeData: LocationData = {
 
   // ── Nearby ────────────────────────────────────────────────────────────────
   nearby: [
-    { name: "Ramsey, NJ", url: "/locations/nj/ramsey/" },
-    { name: "Piscataway, NJ", url: "/locations/nj/piscataway/" },
-    { name: "Roseland, NJ", url: "/locations/nj/roseland/" },
+    { name: "Berkeley Heights, NJ", url: "/locations/nj/berkeley-heights/" },
     { name: "Cranford, NJ", url: "/locations/nj/cranford/" },
+    { name: "Eatontown, NJ", url: "/locations/nj/eatontown/" },
+    { name: "Moorestown, NJ", url: "/locations/nj/moorestown/" },
     { name: "Parsippany, NJ", url: "/locations/nj/parsippany/" },
+    { name: "Piscataway, NJ", url: "/locations/nj/piscataway/" },
+    { name: "Princeton, NJ", url: "/locations/nj/princeton/" },
+    { name: "Ramsey, NJ", url: "/locations/nj/ramsey/" },
+    { name: "Roseland, NJ", url: "/locations/nj/roseland/" },
     { name: "All 10 NJ Locations →", url: "/" },
   ],
 
