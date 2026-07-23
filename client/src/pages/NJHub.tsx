@@ -265,7 +265,7 @@ export default function NJHub() {
         {/* Banner image — full background, same image for desktop and mobile */}
         <div className="absolute inset-0">
           <img
-            src="/manus-storage/NJHubHerov2_a5f1036d.png"
+            src="/manus-storage/NJHubHerov3_008ccaa2.png"
             alt=""
             aria-hidden="true"
             className="absolute inset-0 w-full h-full object-cover object-center"
