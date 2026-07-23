@@ -65,7 +65,7 @@ export const princetonData: LocationData = {
       stars: 5,
       text: "This place is everything autism! Someone told us about it — we have an autistic grandson and nephew. It's not only a school; Bierman also finds different ways to involve the community through various events, whether it be a holiday or something extra for enjoyment. Thank you Bierman Team!",
       initials: "BP",
-      avatarColor: "#7c3aed",
+      avatarColor: "#003B71",
     },
     {
       slug: "klassydolly",
@@ -75,7 +75,7 @@ export const princetonData: LocationData = {
       stars: 5,
       text: "My babies had so much fun at the Bierman Trunk O Treat! All the teachers got dressed up and handed out candies to all the kids! It was very sweet!",
       initials: "BP",
-      avatarColor: "#ea580c",
+      avatarColor: "#EF4E72",
     },
     {
       slug: "bierman-parent-princeton-1",
@@ -85,7 +85,7 @@ export const princetonData: LocationData = {
       stars: 5,
       text: "I can't thank the Bierman team enough. Our child was there for 4 years, beginning at age 20 months. We didn't know what ABA was at all prior to starting. Now he is thriving in public school, chattering away about his favorite dinosaurs.",
       initials: "BP",
-      avatarColor: "#2563eb",
+      avatarColor: "#004C97",
     },
     {
       slug: "bierman-parent-princeton-2",
@@ -95,7 +95,7 @@ export const princetonData: LocationData = {
       stars: 5,
       text: "This place saved my son's and my family's lives. They have extremely high-quality care, communication, problem-solving, support, environment, and staff. Everything and every experience we had with Bierman was top-notch.",
       initials: "BP",
-      avatarColor: "#16a34a",
+      avatarColor: "#05C3DE",
     },
   ],
 

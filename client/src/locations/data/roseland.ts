@@ -70,7 +70,7 @@ export const roselandData: LocationData = {
       stars: 5,
       text: "My 10-year-old autistic son has been coming to Bierman since the center first opened. This center has a lot of structure, open communication, and everything is well-documented — lots of support for the parents, including parent training. Speech and OT is also offered at the center, which is a plus!",
       initials: "BP",
-      avatarColor: "#0284c7",
+      avatarColor: "#05C3DE",
     },
     {
       slug: "nj-review-roseland-2",
@@ -80,7 +80,7 @@ export const roselandData: LocationData = {
       stars: 5,
       text: "Great facility and caring and supportive team. I would like to express my gratitude to the clinical director, who was incredibly helpful during our son's assessment. She was professional, kind, and very knowledgeable. She took the time to explain everything clearly and truly listened to our concerns as parents.",
       initials: "BP",
-      avatarColor: "#16a34a",
+      avatarColor: "#05C3DE",
     },
     {
       slug: "nj-review-roseland-3",
@@ -90,7 +90,7 @@ export const roselandData: LocationData = {
       stars: 5,
       text: "Bierman truly saved my life at a time when I could not manage my child's behaviors and had no hope that our lives would get better. My child was able to build her tolerance and patience, coping, and calming strategies. I received weekly parenting sessions, which helped me be a better parent.",
       initials: "BP",
-      avatarColor: "#ea580c",
+      avatarColor: "#EF4E72",
     },
   ],
 

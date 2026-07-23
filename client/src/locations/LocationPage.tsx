@@ -6,7 +6,7 @@
  * - Warm off-white / light aqua backgrounds (no heavy dark navy dominance)
  * - Soft teal (#05C3DE) brand accent
  * - Warm orange (#EF4E72) CTA
- * - Navy (#1a2b47) used sparingly for headings and footer only
+ * - Navy (#003B71) used sparingly for headings and footer only
  * - Rounded cards, generous whitespace, playful-but-polished SVG icons
  *
  * PROOF LAYER — NOT PRODUCTION
@@ -363,7 +363,7 @@ function GBPReviewCard({ review }: { review: LocationReview }) {
           {review.initials}
         </div>
         <div className="min-w-0">
-          <p className="font-semibold text-[#1a2b47] text-sm leading-tight truncate">{formatReviewerName(review.name)}</p>
+          <p className="font-semibold text-[#003B71] text-sm leading-tight truncate">{formatReviewerName(review.name)}</p>
           <p className="text-slate-400 text-xs mt-0.5 truncate">{review.meta}</p>
         </div>
       </div>
@@ -389,7 +389,7 @@ function GBPReviewCard({ review }: { review: LocationReview }) {
 function FAQItem({ faq, index }: { faq: LocationFaq; index: number }) {
   return (
     <details key={index} className="border border-slate-200 rounded-2xl overflow-hidden group bg-white hover:border-brand-teal-200 transition-colors">
-      <summary className="flex items-center justify-between px-6 py-4 cursor-pointer font-semibold text-[#1a2b47] hover:bg-brand-teal-50/50 transition-colors list-none text-sm">
+      <summary className="flex items-center justify-between px-6 py-4 cursor-pointer font-semibold text-[#003B71] hover:bg-brand-teal-50/50 transition-colors list-none text-sm">
         {faq.q}
         <span className="text-brand-teal ml-4 flex-shrink-0 text-xl group-open:rotate-45 transition-transform duration-200">+</span>
       </summary>
@@ -477,7 +477,7 @@ export function LocationPage({ data }: LocationPageProps) {
       {/* Hero */}
       <section
         className="py-16 md:py-24 relative overflow-hidden"
-        style={assets.heroImage ? { background: "#0d2a4a" } : { background: "linear-gradient(135deg, #f0fdfa 0%, #e0f7f4 40%, #fef9f0 100%)" }}
+        style={assets.heroImage ? { background: "#003B71" } : { background: "linear-gradient(135deg, #f0fdfa 0%, #e0f7f4 40%, #fef9f0 100%)" }}
       >
         {assets.heroImage && (
           <div className="absolute inset-0">
@@ -521,7 +521,7 @@ export function LocationPage({ data }: LocationPageProps) {
                 </div>
                 <div>
                   <div className="text-brand-teal-700 text-xs font-bold uppercase tracking-widest mb-1">Bierman Autism Centers in {address.city}</div>
-                  <div className="text-[#1a2b47] font-semibold text-sm">{entityName}</div>
+                  <div className="text-[#003B71] font-semibold text-sm">{entityName}</div>
                   <div className="text-slate-500 text-sm">{address.street}, {address.city}, {address.state} {address.zip}</div>
                   <div className="text-slate-500 text-sm">{phone}</div>
                 </div>
@@ -547,7 +547,7 @@ export function LocationPage({ data }: LocationPageProps) {
         <div className="max-w-3xl mx-auto px-4">
           <div className="text-center mb-8">
             <span className="inline-block bg-brand-teal-100 text-brand-teal-700 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">Get Started</span>
-            <h2 className="text-3xl font-bold text-[#1a2b47] mb-3">Request Services in {address.city}</h2>
+            <h2 className="text-3xl font-bold text-[#003B71] mb-3">Request Services in {address.city}</h2>
             <p className="text-slate-500 text-base">Complete the form below and our Intake Team will reach out within one business day.</p>
           </div>
           <div
@@ -572,7 +572,7 @@ export function LocationPage({ data }: LocationPageProps) {
       </section>
 
       {/* Outcome Stats Bar */}
-      <section className="py-12 border-b border-slate-100" style={{ background: "linear-gradient(135deg, #0d2a4a 0%, #1a3a6b 100%)" }}>
+      <section className="py-12 border-b border-slate-100" style={{ background: "linear-gradient(135deg, #003B71 0%, #004C97 100%)" }}>
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-8">
             <div className="text-brand-teal text-sm font-bold uppercase tracking-widest mb-2">Proven Results</div>
@@ -666,7 +666,7 @@ export function LocationPage({ data }: LocationPageProps) {
                     <div className="absolute -bottom-5 -right-4 bg-white rounded-2xl shadow-lg p-3 flex items-center gap-2 border border-brand-teal-100">
                       <img src={SHARED_ASSETS.mascot} alt="Pilot the Penguin mascot" className="h-12 w-auto" />
                       <div>
-                        <div className="text-[#1a2b47] font-semibold text-xs">Pilot the Penguin</div>
+                        <div className="text-[#003B71] font-semibold text-xs">Pilot the Penguin</div>
                         <div className="text-slate-400 text-xs">Bierman's friendly guide</div>
                       </div>
                     </div>
@@ -676,7 +676,7 @@ export function LocationPage({ data }: LocationPageProps) {
             </div>
             <div className="pt-4 md:pt-0">
               <div className="text-brand-teal text-sm font-bold uppercase tracking-widest mb-2">Our {address.city} Clinic</div>
-              <h2 className="text-3xl font-bold text-[#1a2b47] mb-4">A Welcoming Environment for Every Child</h2>
+              <h2 className="text-3xl font-bold text-[#003B71] mb-4">A Welcoming Environment for Every Child</h2>
               <p className="text-slate-600 leading-relaxed mb-4">
                 Our {address.city} center is designed to be a safe, engaging, and supportive space for children and families. Every aspect of our clinic — from the therapy rooms to the waiting areas — is built with the needs of children with autism in mind.
               </p>
@@ -701,7 +701,7 @@ export function LocationPage({ data }: LocationPageProps) {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
             <div className="text-brand-teal text-sm font-bold uppercase tracking-widest mb-2">Services at {address.city}</div>
-            <h2 className="text-3xl font-bold text-[#1a2b47]">Comprehensive and Focused Autism Support Services</h2>
+            <h2 className="text-3xl font-bold text-[#003B71]">Comprehensive and Focused Autism Support Services</h2>
             <p className="text-slate-500 mt-3 max-w-2xl mx-auto">Each service is individualized to your child's goals and delivered by licensed, experienced clinicians.</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -713,7 +713,7 @@ export function LocationPage({ data }: LocationPageProps) {
                     <img src={svc.img} alt={svc.alt ?? svc.title} className="w-full h-40 object-cover" />
                   )}
                   <div className="p-5">
-                    <h3 className="font-bold text-[#1a2b47] text-base mb-2">{svc.title}</h3>
+                    <h3 className="font-bold text-[#003B71] text-base mb-2">{svc.title}</h3>
                     <p className="text-slate-500 text-sm leading-relaxed">{svc.desc}</p>
                     {cardUrl && (
                       <span className="inline-flex items-center gap-1 text-brand-teal text-xs font-semibold mt-3">
@@ -751,7 +751,7 @@ export function LocationPage({ data }: LocationPageProps) {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <div className="text-brand-teal text-sm font-bold uppercase tracking-widest mb-2">Insurance</div>
-              <h2 className="text-3xl font-bold text-[#1a2b47] mb-4">Insurance Accepted at {address.city}</h2>
+              <h2 className="text-3xl font-bold text-[#003B71] mb-4">Insurance Accepted at {address.city}</h2>
               <p className="text-slate-600 leading-relaxed">{insuranceText}</p>
             </div>
             <div>
@@ -794,13 +794,13 @@ export function LocationPage({ data }: LocationPageProps) {
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div>
               <div className="text-brand-teal text-sm font-bold uppercase tracking-widest mb-2">Location & Directions</div>
-              <h2 className="text-3xl font-bold text-[#1a2b47] mb-4">Find Us in {address.city}</h2>
+              <h2 className="text-3xl font-bold text-[#003B71] mb-4">Find Us in {address.city}</h2>
               <div className="bg-white border border-brand-teal-100 rounded-2xl p-6 shadow-sm mb-6">
                 <div className="space-y-3 text-sm">
                   <div className="flex items-start gap-3">
                     <svg viewBox="0 0 20 20" fill="none" className="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><path d="M10 2a6 6 0 016 6c0 4-6 10-6 10S4 12 4 8a6 6 0 016-6z"/><circle cx="10" cy="8" r="2"/></svg>
                     <div>
-                      <div className="font-semibold text-[#1a2b47]">{entityName}</div>
+                      <div className="font-semibold text-[#003B71]">{entityName}</div>
                       <div className="text-slate-500">{address.street}</div>
                       <div className="text-slate-500">{address.city}, {address.state} {address.zip}</div>
                     </div>
@@ -843,7 +843,7 @@ export function LocationPage({ data }: LocationPageProps) {
       </section>
 
       {/* Getting Started */}
-      <section className="py-16" style={{ background: "linear-gradient(135deg, #05C3DE 0%, #0f766e 100%)" }}>
+      <section className="py-16" style={{ background: "linear-gradient(135deg, #05C3DE 0%, #004C97 100%)" }}>
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
             <div className="text-brand-teal-200 text-sm font-bold uppercase tracking-widest mb-2">Getting Started</div>
@@ -877,7 +877,7 @@ export function LocationPage({ data }: LocationPageProps) {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
             <div className="text-brand-teal text-sm font-bold uppercase tracking-widest mb-2">SAFETY &amp; SECURITY</div>
-            <h2 className="text-3xl font-bold text-[#1a2b47] mb-4">Safety Systems Designed to Give Families Peace of Mind</h2>
+            <h2 className="text-3xl font-bold text-[#003B71] mb-4">Safety Systems Designed to Give Families Peace of Mind</h2>
             <p className="text-slate-500 max-w-3xl mx-auto text-base leading-relaxed">
               Families deserve to feel confident that their child's care is supported by secure access, prepared teams, thoughtful clinical safeguards, and clear communication.
             </p>
@@ -895,7 +895,7 @@ export function LocationPage({ data }: LocationPageProps) {
             ].map((item) => (
               <div key={item.title} className="bg-slate-50 rounded-2xl p-5 border border-slate-100">
                 <div className="text-2xl mb-3">{item.icon}</div>
-                <h3 className="font-bold text-[#1a2b47] text-sm mb-2" dangerouslySetInnerHTML={{ __html: item.title }} />
+                <h3 className="font-bold text-[#003B71] text-sm mb-2" dangerouslySetInnerHTML={{ __html: item.title }} />
                 <p className="text-slate-500 text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: item.desc }} />
               </div>
             ))}
@@ -910,7 +910,7 @@ export function LocationPage({ data }: LocationPageProps) {
       <section className="py-16 bg-slate-50">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <div className="text-brand-teal text-sm font-bold uppercase tracking-widest mb-2">FAMILY OUTCOMES</div>
-          <h2 className="text-3xl font-bold text-[#1a2b47] mb-3">Progress You Can See</h2>
+          <h2 className="text-3xl font-bold text-[#003B71] mb-3">Progress You Can See</h2>
           <p className="text-slate-500 mb-8 max-w-2xl mx-auto">See how Bierman's individualized approach helps children build skills, confidence, and greater independence—with families supported at every step.</p>
           <div className="rounded-3xl overflow-hidden shadow-xl border border-slate-200" style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}>
             {outcomesVideoActive ? (
@@ -955,7 +955,7 @@ export function LocationPage({ data }: LocationPageProps) {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-4">
             <div className="text-brand-teal text-sm font-bold uppercase tracking-widest mb-2">WHAT FAMILIES VALUE</div>
-            <h2 className="text-3xl font-bold text-[#1a2b47]">{data.comingSoon ? "What Families Value About Bierman" : `What Families Value at ${address.city}`}</h2>
+            <h2 className="text-3xl font-bold text-[#003B71]">{data.comingSoon ? "What Families Value About Bierman" : `What Families Value at ${address.city}`}</h2>
             <p className="text-slate-500 mt-3 max-w-2xl mx-auto text-sm leading-relaxed">
               {data.comingSoon
                 ? "Families consistently share that Bierman's clinical team communicates clearly, responds quickly, and keeps each child at the center of every decision."
@@ -977,7 +977,7 @@ export function LocationPage({ data }: LocationPageProps) {
           <div className="mt-14">
             <div className="text-center mb-10">
               <div className="text-brand-teal text-sm font-bold uppercase tracking-widest mb-2">Google Reviews</div>
-              <h3 className="text-2xl font-bold text-[#1a2b47]">What Families Are Saying</h3>
+              <h3 className="text-2xl font-bold text-[#003B71]">What Families Are Saying</h3>
               <p className="text-slate-500 text-sm mt-2 max-w-xl mx-auto">Real reviews from families at {entityName}.</p>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -992,7 +992,7 @@ export function LocationPage({ data }: LocationPageProps) {
         <div className="max-w-6xl mx-auto px-4">
           <div className="max-w-2xl mb-12">
             <div className="inline-block bg-brand-teal-50 border border-brand-teal-200 text-brand-teal-700 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4">Parent Resource Pathway</div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1a2b47] leading-tight">Understanding Autism Support Near {address.city}</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#003B71] leading-tight">Understanding Autism Support Near {address.city}</h2>
             <p className="text-slate-500 mt-4 text-base leading-relaxed">
               Families often start with questions before they start services. These resources connect common questions to local support available in {address.county}.
             </p>
@@ -1009,7 +1009,7 @@ export function LocationPage({ data }: LocationPageProps) {
               <div key={card.title} className="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col gap-2">
                 <div className="flex items-center gap-3 mb-1">
                   {card.icon}
-                  <h3 className="font-bold text-[#1a2b47] text-sm leading-snug">{card.title}</h3>
+                  <h3 className="font-bold text-[#003B71] text-sm leading-snug">{card.title}</h3>
                 </div>
                 <p className="text-slate-500 text-sm leading-relaxed flex-1">{card.copy}</p>
                 <a href={card.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-brand-teal font-semibold text-xs hover:text-brand-teal-800 transition-colors mt-1">
@@ -1041,7 +1041,7 @@ export function LocationPage({ data }: LocationPageProps) {
           <div className="flex flex-col lg:flex-row gap-12 items-start">
             <div className="lg:w-80 flex-shrink-0">
               <div className="inline-block bg-white border border-brand-teal-200 text-brand-teal-700 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4">Caregiver Support</div>
-              <h2 className="text-3xl font-bold text-[#1a2b47] leading-tight mb-4">Support for Families at Home</h2>
+              <h2 className="text-3xl font-bold text-[#003B71] leading-tight mb-4">Support for Families at Home</h2>
               <p className="text-slate-500 text-sm leading-relaxed mb-6">Care does not stop when a child leaves the clinic. Bierman's caregiver training resources help families understand communication, daily routines, independence, and behavior support.</p>
               <a href="https://www.biermanautism.com/resources/caregiver-training/?utm_source=nj_hub&utm_medium=caregiver_cta&utm_campaign=local_pilot" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-brand-teal hover:bg-teal-700 text-white font-semibold px-5 py-3 rounded-xl text-sm transition-colors shadow-sm">
                 Caregiver Training Resources <span aria-hidden="true">→</span>
@@ -1059,7 +1059,7 @@ export function LocationPage({ data }: LocationPageProps) {
                     <svg viewBox="0 0 36 36" fill="none" className="w-7 h-7" aria-hidden="true"><circle cx="18" cy="18" r="14" fill="#ccfbf1" stroke="#05C3DE" strokeWidth="2"/><path d="M11 21l4-4 3 3 7-7" stroke="#05C3DE" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
                   </div>
                   <div>
-                    <h3 className="font-bold text-[#1a2b47] text-sm mb-1">{card.title}</h3>
+                    <h3 className="font-bold text-[#003B71] text-sm mb-1">{card.title}</h3>
                     <p className="text-slate-500 text-xs leading-relaxed">{card.copy}</p>
                   </div>
                 </div>
@@ -1070,7 +1070,7 @@ export function LocationPage({ data }: LocationPageProps) {
       </section>
 
       {/* Clinical Leadership */}
-      <section className="py-20 bg-[#1a2b47]">
+      <section className="py-20 bg-[#003B71]">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-12 items-center">
             <div className="lg:w-96 flex-shrink-0">
@@ -1086,7 +1086,7 @@ export function LocationPage({ data }: LocationPageProps) {
                 <div key={person.name} className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/8 transition-all duration-200">
                   <div className="relative">
                     <img src={person.headshot} alt={`${person.name}, ${person.credentials} — ${person.role}, Bierman Autism Centers`} className="w-full aspect-square object-cover object-top" loading="lazy" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#1a2b47]/80 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#003B71]/80 via-transparent to-transparent" />
                     <div className="absolute bottom-3 left-4 right-4">
                       <div className="text-white font-bold text-base leading-tight">{person.name}</div>
                       <div className="text-brand-teal-200 text-xs font-semibold">{person.credentials}</div>
@@ -1113,11 +1113,11 @@ export function LocationPage({ data }: LocationPageProps) {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-8">
             <div className="text-brand-teal text-sm font-bold uppercase tracking-widest mb-2">Other New Jersey Locations</div>
-            <h2 className="text-2xl font-bold text-[#1a2b47]">More Bierman Centers Near You</h2>
+            <h2 className="text-2xl font-bold text-[#003B71]">More Bierman Centers Near You</h2>
           </div>
           <div className="flex flex-wrap justify-center gap-3">
             {nearby.map((loc) => (
-              <a key={loc.name} href={loc.url} className="bg-white border border-brand-teal-200 hover:border-teal-400 hover:bg-brand-teal-50 text-[#1a2b47] font-medium px-5 py-2.5 rounded-xl text-sm transition-colors shadow-sm">
+              <a key={loc.name} href={loc.url} className="bg-white border border-brand-teal-200 hover:border-teal-400 hover:bg-brand-teal-50 text-[#003B71] font-medium px-5 py-2.5 rounded-xl text-sm transition-colors shadow-sm">
                 📍 {loc.name}
               </a>
             ))}
@@ -1130,7 +1130,7 @@ export function LocationPage({ data }: LocationPageProps) {
         <div className="max-w-3xl mx-auto px-4">
           <div className="text-center mb-10">
             <div className="text-brand-teal text-sm font-bold uppercase tracking-widest mb-2">FAQ</div>
-            <h2 className="text-3xl font-bold text-[#1a2b47]">Frequently Asked Questions</h2>
+            <h2 className="text-3xl font-bold text-[#003B71]">Frequently Asked Questions</h2>
           </div>
           <div className="space-y-3">
             {faqs.map((faq, i) => <FAQItem key={i} faq={faq} index={i} />)}
@@ -1141,7 +1141,7 @@ export function LocationPage({ data }: LocationPageProps) {
       {/* Final CTA */}
       <section className="py-16" style={{ background: "linear-gradient(135deg, #f0fdfa 0%, #e0f7f4 50%, #fef9f0 100%)" }}>
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#1a2b47]">Ready to Get Started in {address.city}?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#003B71]">Ready to Get Started in {address.city}?</h2>
           <p className="text-slate-600 text-lg mb-8 max-w-2xl mx-auto">
             Take the first step toward individualized autism support for your child. Our {address.city} team is here to guide your family through every stage of the process.
           </p>
@@ -1152,7 +1152,7 @@ export function LocationPage({ data }: LocationPageProps) {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#1a2b47] text-white py-12">
+      <footer className="bg-[#003B71] text-white py-12">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>

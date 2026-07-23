@@ -64,7 +64,7 @@ export const ramseyData: LocationData = {
       stars: 5,
       text: "If I could give this center 10 stars, I would!! My son has been here for a little over a year, and I am beyond thankful for all the help he has received. I would like to thank all of the therapists, aides, and clinical directors who contributed to my son\u2019s progress and positive evolution. I would highly recommend this center to anyone who is looking to get their child more support with therapies. It has personally been one of the best decisions I\u2019ve made for my son\u2019s ADS journey.",
       initials: "BP",
-      avatarColor: "#ea580c",
+      avatarColor: "#EF4E72",
     },
     {
       slug: "sohayb-stiti",
@@ -74,7 +74,7 @@ export const ramseyData: LocationData = {
       stars: 5,
       text: "I would like to express my gratitude to Dr. Catherine Lark, who was incredibly helpful during our son\u2019s assessment. She was professional, kind, and very knowledgeable. She took the time to explain everything clearly and truly listened to our concerns as parents. We felt supported and confident throughout the process.",
       initials: "BP",
-      avatarColor: "#7c3aed",
+      avatarColor: "#003B71",
     },
     {
       slug: "kim-sedlacek",
@@ -84,7 +84,7 @@ export const ramseyData: LocationData = {
       stars: 5,
       text: "The Practice Manager, Kelsey, and all the Behavior Technicians are very knowledgeable and caring. They are making a huge difference for the children they serve.",
       initials: "BP",
-      avatarColor: "#0d9488",
+      avatarColor: "#05C3DE",
     },
     {
       slug: "margarita-morales",
@@ -94,7 +94,7 @@ export const ramseyData: LocationData = {
       stars: 5,
       text: "Staff was great! Nice experience! Thank you",
       initials: "BP",
-      avatarColor: "#2563eb",
+      avatarColor: "#004C97",
     },
     {
       slug: "anthony-siciliano",
@@ -104,7 +104,7 @@ export const ramseyData: LocationData = {
       stars: 5,
       text: "Went here for a public event \u2014 nice, clean center and friendly staff :)",
       initials: "BP",
-      avatarColor: "#16a34a",
+      avatarColor: "#05C3DE",
     },
     {
       slug: "nancy-passano",
@@ -114,7 +114,7 @@ export const ramseyData: LocationData = {
       stars: 5,
       text: "Amazing experience at the Reptile Encounter \u2014 our son loved seeing and touching all the reptiles. Such a great family event!",
       initials: "BP",
-      avatarColor: "#db2777",
+      avatarColor: "#EF4E72",
     },
   ],
 

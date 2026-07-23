@@ -65,7 +65,7 @@ export const piscatawayData: LocationData = {
       stars: 5,
       text: "I should be clear: My child doesn\u2019t attend our local Bierman Autism Center. However, we did visit their recent free petting zoo event. I am glad that Bierman is part of our community and grateful that they host events. I found all the staff to be warm, welcoming and very kind.",
       initials: "BP",
-      avatarColor: "#ea580c",
+      avatarColor: "#EF4E72",
     },
     {
       slug: "kimona-smith",
@@ -75,7 +75,7 @@ export const piscatawayData: LocationData = {
       stars: 5,
       text: "I took my nephew to the petting zoo. He thoroughly enjoyed himself and the variety of animals that were present was welcoming. Definitely would love to see this happen more often.",
       initials: "BP",
-      avatarColor: "#7c3aed",
+      avatarColor: "#003B71",
     },
     {
       slug: "amauris-corniel",
@@ -85,7 +85,7 @@ export const piscatawayData: LocationData = {
       stars: 5,
       text: "Took my nephew to the petting zoo Bierman hosted. It was a experience. The team was genuinely welcoming and not just surface level nice. If you are curious about their services, they actually take the time to explain things with real insight instead of giving you generic answers. A lot of happy, smiling faces all around!",
       initials: "BP",
-      avatarColor: "#2563eb",
+      avatarColor: "#004C97",
     },
     {
       slug: "sowbagya-sp",
@@ -95,7 +95,7 @@ export const piscatawayData: LocationData = {
       stars: 5,
       text: "It was really great! Kids had so much fun! Thanks for organizing this amazing event. Animals were so friendly and staff were so supportive!",
       initials: "BP",
-      avatarColor: "#16a34a",
+      avatarColor: "#05C3DE",
     },
   ],
 

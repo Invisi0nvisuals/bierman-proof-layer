@@ -65,7 +65,7 @@ export const cranfordData: LocationData = {
       stars: 5,
       text: "I can't thank the Bierman team enough. Our child was there for 4 years, beginning at age 20 months. We didn't know what ABA was at all prior to starting. Now he is thriving in public school, chattering away about his favorite dinosaurs.",
       initials: "BP",
-      avatarColor: "#2563eb",
+      avatarColor: "#004C97",
     },
     {
       slug: "bierman-parent-cranford-2",
@@ -75,7 +75,7 @@ export const cranfordData: LocationData = {
       stars: 5,
       text: "Bierman truly saved my life at a time when I could not manage my child's behaviors and had no hope that our lives would get better. My child was able to build her tolerance and patience, coping, and calming strategies.",
       initials: "BP",
-      avatarColor: "#ea580c",
+      avatarColor: "#EF4E72",
     },
     {
       slug: "bierman-parent-cranford-3",
@@ -85,7 +85,7 @@ export const cranfordData: LocationData = {
       stars: 5,
       text: "This place saved my son's and my family's lives. They have extremely high-quality care, communication, problem-solving, support, environment, and staff. Everything and every experience we had with Bierman was top-notch.",
       initials: "BP",
-      avatarColor: "#7c3aed",
+      avatarColor: "#003B71",
     },
     {
       slug: "bierman-parent-cranford-4",
@@ -95,7 +95,7 @@ export const cranfordData: LocationData = {
       stars: 5,
       text: "My 10-year-old autistic son has been coming here since the center first opened. This center has a lot of structure, open communication, and everything is well-documented — lots of support for the parents, including parent training. Speech and OT are also offered at the center, which is a plus!",
       initials: "BP",
-      avatarColor: "#16a34a",
+      avatarColor: "#05C3DE",
     },
   ],
 

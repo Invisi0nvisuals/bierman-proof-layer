@@ -2,7 +2,7 @@
  * Bierman Autism Centers — Proof Layer
  * New Jersey Location Hub: /locations/nj/
  *
- * Design system: Poppins, brand-teal (#05C3DE) / brand-coral (#EF4E72) / navy (#1a2b47)
+ * Design system: Poppins, brand-teal (#05C3DE) / brand-coral (#EF4E72) / navy (#003B71)
  * Matches LocationPage visual language exactly.
  *
  * Purpose:
@@ -153,7 +153,7 @@ function LocationCard({ loc }: { loc: LocationData }) {
         </div>
 
         {/* City + state */}
-        <h2 className="text-lg font-bold text-[#1a2b47] mb-1 group-hover:text-brand-teal-700 transition-colors">
+        <h2 className="text-lg font-bold text-[#003B71] mb-1 group-hover:text-brand-teal-700 transition-colors">
           {loc.address.city}, {loc.address.state}
         </h2>
 
@@ -264,7 +264,7 @@ export default function NJHub() {
             className="absolute inset-0 w-full h-full object-cover object-right"
           />
           {/* Left fade overlay so text stays readable */}
-          <div className="absolute inset-0" style={{ background: "linear-gradient(90deg, #1a35c8 0%, #1a35c8 28%, rgba(26,53,200,0.80) 48%, transparent 72%)" }} />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(90deg, #003B71 0%, #003B71 28%, rgba(26,53,200,0.80) 48%, transparent 72%)" }} />
         </div>
 
         <div className="relative max-w-6xl mx-auto px-4 py-14 md:py-20">
@@ -355,7 +355,7 @@ export default function NJHub() {
         <div className="max-w-3xl mx-auto px-4">
           <div className="text-center mb-8">
             <span className="inline-block bg-brand-teal-100 text-brand-teal-700 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">Get Started</span>
-            <h2 className="text-3xl font-bold text-[#1a2b47] mb-3">Request Services in New Jersey</h2>
+            <h2 className="text-3xl font-bold text-[#003B71] mb-3">Request Services in New Jersey</h2>
             <p className="text-slate-500 text-base">Complete the form below and our Intake Team will reach out within one business day.</p>
           </div>
           <div
@@ -370,7 +370,7 @@ export default function NJHub() {
       <section className="py-14 md:py-20 bg-slate-50">
         <div className="max-w-6xl mx-auto px-4">
           <div className="mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#1a2b47] mb-2">ABA Therapy &amp; Autism Services Near You in New Jersey</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-[#003B71] mb-2">ABA Therapy &amp; Autism Services Near You in New Jersey</h2>
             <p className="text-slate-500 text-base">Each location offers BCBA-supervised ABA therapy, speech-language therapy, occupational therapy, and diagnostic evaluations. Select a location to view services, hours, insurance, and directions.</p>
           </div>
 
@@ -404,7 +404,7 @@ export default function NJHub() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-[#1a2b47] mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold text-[#003B71] mb-4">
                 Comprehensive Autism Support Across New Jersey
               </h2>
               <p className="text-slate-600 leading-relaxed mb-6">
@@ -430,7 +430,7 @@ export default function NJHub() {
               </ul>
             </div>
             <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100">
-              <h3 className="text-lg font-bold text-[#1a2b47] mb-4">Insurance & Access</h3>
+              <h3 className="text-lg font-bold text-[#003B71] mb-4">Insurance & Access</h3>
               <p className="text-slate-600 text-sm leading-relaxed mb-5">
                 Bierman New Jersey locations work with a variety of insurance providers. Contact our Intake Team to verify your coverage before your first visit.
               </p>
@@ -454,7 +454,7 @@ export default function NJHub() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#1a2b47] text-white py-12">
+      <footer className="bg-[#003B71] text-white py-12">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>

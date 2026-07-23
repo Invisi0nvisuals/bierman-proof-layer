@@ -77,7 +77,7 @@ export const westOrangeData: LocationData = {
       stars: 5,
       text: "This place saved my son\u2019s and my family\u2019s lives. They have extremely high-quality care, communication, problem-solving, support, environment, staff\u2014everything. Every experience we had with Bierman was top-notch, and I am forever grateful for them.",
       initials: "BP",
-      avatarColor: "#ea580c",
+      avatarColor: "#EF4E72",
     },
     {
       slug: "client-b",
@@ -87,7 +87,7 @@ export const westOrangeData: LocationData = {
       stars: 5,
       text: "My 10-year-old autistic son has been coming here since the center first opened. This center has a lot of structure, open communication, and everything is well-documented\u2014lots of support for the parents, including parent training. Speech and OT are also offered at the center, which is a plus!",
       initials: "BP",
-      avatarColor: "#7c3aed",
+      avatarColor: "#003B71",
     },
     {
       slug: "client-c",
@@ -97,7 +97,7 @@ export const westOrangeData: LocationData = {
       stars: 5,
       text: "Bierman truly saved my life at a time when I could not manage my child\u2019s behaviors and had no hope that our lives would get better. My child was able to build her tolerance and patience, coping, and calming strategies. I received weekly parenting sessions, which helped me be a better parent.",
       initials: "BP",
-      avatarColor: "#2563eb",
+      avatarColor: "#004C97",
     },
     {
       slug: "client-d",
@@ -107,7 +107,7 @@ export const westOrangeData: LocationData = {
       stars: 5,
       text: "We didn\u2019t know what ABA was at all prior to starting. When our child entered Bierman, we had no idea if he would even speak, and now he is thriving in public school, chattering away about his favorite dinosaurs and taking on challenge after challenge.",
       initials: "BP",
-      avatarColor: "#16a34a",
+      avatarColor: "#05C3DE",
     },
   ],
 

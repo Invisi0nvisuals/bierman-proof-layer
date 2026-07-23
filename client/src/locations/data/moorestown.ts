@@ -68,7 +68,7 @@ export const moorestownData: LocationData = {
       stars: 5,
       text: "I can't thank the Bierman team enough. Our child was there for 4 years, beginning at age 20 months, so it was a tremendous journey through key developmental years. We didn't know what ABA was at all prior to starting. When our child entered Bierman, we had no idea if he would even speak, and now he is thriving in public school, chattering away about his favorite dinosaurs and taking on challenge after challenge.",
       initials: "BP",
-      avatarColor: "#0284c7",
+      avatarColor: "#05C3DE",
     },
     {
       slug: "nj-review-moorestown-2",
@@ -78,7 +78,7 @@ export const moorestownData: LocationData = {
       stars: 5,
       text: "Bierman truly saved my life at a time when I could not manage my child's behaviors and had no hope that our lives would get better. My child was able to build her tolerance and patience, coping, and calming strategies. The full day gave me the separation that I needed. I received weekly parenting sessions, which helped me be a better parent.",
       initials: "BP",
-      avatarColor: "#7c3aed",
+      avatarColor: "#003B71",
     },
     {
       slug: "nj-review-moorestown-3",
@@ -88,7 +88,7 @@ export const moorestownData: LocationData = {
       stars: 5,
       text: "This place saved my son's and my family's lives. They have extremely high-quality care, communication, problem-solving, support, environment, staff — everything. Every experience we had with Bierman was top-notch, and I am forever grateful for them. I highly recommend them.",
       initials: "BP",
-      avatarColor: "#ea580c",
+      avatarColor: "#EF4E72",
     },
   ],
 
