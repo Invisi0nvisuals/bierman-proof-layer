@@ -436,14 +436,6 @@ function FacilityGallery({ photos, city, state }: { photos: string[]; city: stri
           ))}
         </div>
       )}
-      {/* Mascot badge */}
-      <div className="absolute -bottom-5 -right-4 bg-white rounded-2xl shadow-lg p-3 flex items-center gap-2 border border-brand-teal-100">
-        <img src={SHARED_ASSETS.mascot} alt="Pilot the Penguin mascot" className="h-12 w-auto" />
-        <div>
-          <div className="text-[#003B71] font-semibold text-xs">Pilot the Penguin</div>
-          <div className="text-slate-400 text-xs">Bierman's friendly guide</div>
-        </div>
-      </div>
     </div>
   );
 }
@@ -629,7 +621,7 @@ export function LocationPage({ data }: LocationPageProps) {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
               { stat: "375+", label: "Program Graduations", sub: "Since 2006" },
-              { stat: "72%", label: "Transition to General Education", sub: "Completed comprehensive ABA (2021–2025)" },
+              { stat: "72%", label: "Transition to General Education", sub: "Children who completed clinically recommended comprehensive ABA" },
               { stat: "18–20mo", label: "Avg Time to Graduation", sub: "From start of services" },
               { stat: "~90%", label: "Parent Satisfaction", sub: "Across all survey waves" },
             ].map((item) => (
@@ -714,13 +706,7 @@ export function LocationPage({ data }: LocationPageProps) {
                         <div className="text-slate-400 text-sm mt-1">Image pending upload confirmation</div>
                       </div>
                     </div>
-                    <div className="absolute -bottom-5 -right-4 bg-white rounded-2xl shadow-lg p-3 flex items-center gap-2 border border-brand-teal-100">
-                      <img src={SHARED_ASSETS.mascot} alt="Pilot the Penguin mascot" className="h-12 w-auto" />
-                      <div>
-                        <div className="text-[#003B71] font-semibold text-xs">Pilot the Penguin</div>
-                        <div className="text-slate-400 text-xs">Bierman's friendly guide</div>
-                      </div>
-                    </div>
+
                   </>
                 )}
               </div>
