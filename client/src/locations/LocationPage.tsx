@@ -621,7 +621,7 @@ export function LocationPage({ data }: LocationPageProps) {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
               { stat: "375+", label: "Program Graduations", sub: "Since 2006" },
-              { stat: "72%", label: "Transition to General Education", sub: "Children who completed clinically recommended comprehensive ABA" },
+              { stat: "72%", label: "Transition to General Education", sub: "Children who completed clinically recommended comprehensive ABA (2021–2025)" },
               { stat: "18–20mo", label: "Avg Time to Graduation", sub: "From start of services" },
               { stat: "~90%", label: "Parent Satisfaction", sub: "Across all survey waves" },
             ].map((item) => (
