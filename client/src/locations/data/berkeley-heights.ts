@@ -174,6 +174,11 @@ export const berkeleyHeightsData: LocationData = {
     heroImage: "/manus-storage/nj_city_hero_static_light_2abb0770.png",
     ogImage: "/manus-storage/bierman-autism-centers-aba-therapy-berkeley-heights-nj-og_56cfcce2.jpg",
     videoPoster: "/manus-storage/bierman-ramsey-video-poster_28eb470d.jpg",
+    facilityGallery: [
+      "/manus-storage/bh_1_05954d33.jpg",
+      "/manus-storage/bh_2_3167a99c.jpg",
+      "/manus-storage/bh_3_2091e7f8.jpg",
+    ],
   },
 
   // ── Schema ────────────────────────────────────────────────────────────────

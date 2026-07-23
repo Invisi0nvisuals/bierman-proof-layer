@@ -186,6 +186,11 @@ export const westOrangeData: LocationData = {
     heroImage: "/manus-storage/nj_city_hero_static_light_2abb0770.png",
     ogImage: "/manus-storage/bierman-autism-centers-aba-therapy-west-orange-nj-og_93fb6c98.jpg",
     videoPoster: "/manus-storage/bierman-ramsey-video-poster_28eb470d.jpg",
+    facilityGallery: [
+      "/manus-storage/cranford_1_cfbea6af.jpg",
+      "/manus-storage/piscataway_1_c6e42fad.jpg",
+      "/manus-storage/cranford_2_220b42b5.jpg",
+    ],
   },
 
   // ── Schema ────────────────────────────────────────────────────────────────

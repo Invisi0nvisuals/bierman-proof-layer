@@ -178,6 +178,11 @@ export const parsippanyData: LocationData = {
     heroImage: "/manus-storage/nj_city_hero_static_light_2abb0770.png",
     ogImage: "/manus-storage/bierman-autism-centers-aba-therapy-parsippany-nj-og_8c376c7b.jpg",
     videoPoster: "/manus-storage/bierman-ramsey-video-poster_28eb470d.jpg",
+    facilityGallery: [
+      "/manus-storage/cranford_1_cfbea6af.jpg",
+      "/manus-storage/piscataway_1_c6e42fad.jpg",
+      "/manus-storage/cranford_2_220b42b5.jpg",
+    ],
   },
 
   // ── Schema ────────────────────────────────────────────────────────────────

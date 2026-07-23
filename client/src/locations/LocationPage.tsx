@@ -399,6 +399,55 @@ function FAQItem({ faq, index }: { faq: LocationFaq; index: number }) {
   );
 }
 
+// ─── Facility Gallery Component ─────────────────────────────────────────────
+
+function FacilityGallery({ photos, city, state }: { photos: string[]; city: string; state: string }) {
+  const [activeIdx, setActiveIdx] = useState(0);
+  const main = photos[activeIdx] ?? photos[0];
+  const thumbs = photos.filter((_, i) => i !== activeIdx);
+
+  return (
+    <div className="relative">
+      {/* Main photo */}
+      <div className="rounded-3xl overflow-hidden shadow-2xl w-full" style={{ aspectRatio: "4/3" }}>
+        <img
+          src={main}
+          alt={`Bierman Autism Centers ${city}, ${state} — clinic interior`}
+          className="w-full h-full object-cover"
+          loading="lazy"
+        />
+      </div>
+      {/* Thumbnails row */}
+      {photos.length > 1 && (
+        <div className="flex gap-2 mt-3">
+          {photos.map((src, i) => (
+            <button
+              key={src}
+              type="button"
+              onClick={() => setActiveIdx(i)}
+              className={`flex-1 rounded-xl overflow-hidden border-2 transition-all ${
+                i === activeIdx ? "border-brand-teal shadow-md" : "border-transparent opacity-70 hover:opacity-100"
+              }`}
+              style={{ aspectRatio: "4/3" }}
+              aria-label={`View photo ${i + 1} of ${city} clinic`}
+            >
+              <img src={src} alt="" className="w-full h-full object-cover" loading="lazy" />
+            </button>
+          ))}
+        </div>
+      )}
+      {/* Mascot badge */}
+      <div className="absolute -bottom-5 -right-4 bg-white rounded-2xl shadow-lg p-3 flex items-center gap-2 border border-brand-teal-100">
+        <img src={SHARED_ASSETS.mascot} alt="Pilot the Penguin mascot" className="h-12 w-auto" />
+        <div>
+          <div className="text-[#003B71] font-semibold text-xs">Pilot the Penguin</div>
+          <div className="text-slate-400 text-xs">Bierman's friendly guide</div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // ─── Main Component ───────────────────────────────────────────────────────────
 
 interface LocationPageProps {
@@ -641,6 +690,8 @@ export function LocationPage({ data }: LocationPageProps) {
                       </button>
                     )}
                   </div>
+                ) : assets.facilityGallery && assets.facilityGallery.length > 0 ? (
+                  <FacilityGallery photos={assets.facilityGallery} city={address.city} state={address.state} />
                 ) : (
                   <>
                     <img

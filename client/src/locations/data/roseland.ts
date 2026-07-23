@@ -178,6 +178,11 @@ export const roselandData: LocationData = {
     ogImage: "/manus-storage/bierman-autism-centers-aba-therapy-roseland-nj-og_c920a51d.jpg",
     videoPoster: "/manus-storage/bierman-ramsey-video-poster_28eb470d.jpg",
     videoFile: "/manus-storage/bierman-ramsey-aba-therapy-overview_e3501ef2.mp4",
+    facilityGallery: [
+      "/manus-storage/cranford_1_cfbea6af.jpg",
+      "/manus-storage/piscataway_1_c6e42fad.jpg",
+      "/manus-storage/cranford_2_220b42b5.jpg",
+    ],
   },
 
   // ── Schema ────────────────────────────────────────────────────────────────
