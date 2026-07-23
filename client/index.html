@@ -164,7 +164,13 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <!-- Manus platform analytics only — no GTM, GA4, Meta Pixel, Google Ads, Bing UET, CallRail, or any third-party tracking -->
+    <!-- CallRail DNI — Dynamic Number Insertion (website pool swap)
+         Company: 776466092 | Swap key: db61ceb13422e9f1316a
+         Replaces static pool number with visitor-source-specific tracking number
+         Per Tiffany Newman request 7.21.26 -->
+    <script type="text/javascript" src="//cdn.callrail.com/companies/776466092/db61ceb13422e9f1316a/12/swap.js"></script>
+
+    <!-- Manus platform analytics only — no GTM, GA4, Meta Pixel, Google Ads, Bing UET, or any third-party tracking -->
     <script
       defer
       src="%VITE_ANALYTICS_ENDPOINT%/umami"
