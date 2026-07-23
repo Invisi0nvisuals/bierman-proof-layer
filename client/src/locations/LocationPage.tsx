@@ -62,7 +62,7 @@ const SHARED_ASSETS = {
   insurance: "/manus-storage/Horizon_BCBS_New_Jersey_0df83934.png",
   themeBcbaGuidance: "/manus-storage/theme_bcba_clean_06fc3aeb.png",
   themeFamilyPartnership: "/manus-storage/theme_family_clean_77931315.png",
-  themeProgressFocused: "/manus-storage/progress_card_no_feet_96d4833c.png",
+  themeProgressFocused: "/manus-storage/progress_card_no_feet_6b837ce7.png",
   penguinFeet: "/manus-storage/Website_V1-01-02copy_4ac68e1b.png",
 };
 
