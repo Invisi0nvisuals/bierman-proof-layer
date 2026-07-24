@@ -37,6 +37,7 @@ export const cranfordData: LocationData = {
   intakeUrl: "https://www.biermanautism.com/start-now/?loc=cranford-nj&utm_source=local-hub&utm_medium=referral&utm_campaign=nj-pilot-cranford",
   gbpUrl: "https://maps.app.goo.gl/mBJGYojAXJek27WD6",
   mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12108.899154360637!2d-74.29248947558634!3d40.64697502517768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3b36c82d38f35%3A0x1de431561d96eb45!2sBierman%20Autism%20Centers%20-%20Cranford!5e0!3m2!1sen!2sus!4v1784901139760!5m2!1sen!2sus",
+  googlePlaceId: "0x89c3b36c82d38f35:0x1de431561d96eb45",
 
   // ── Hours ─────────────────────────────────────────────────────────────────
   hoursDisplay: "Monday–Friday, 8:30 AM – 4:30 PM",

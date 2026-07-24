@@ -40,6 +40,7 @@ export const roselandData: LocationData = {
   intakeUrl: "https://www.biermanautism.com/start-now/?loc=roseland-nj&utm_source=local-hub&utm_medium=referral&utm_campaign=nj-pilot-roseland",
   gbpUrl: "https://maps.app.goo.gl/yhdYY5oYzQauMwdq6",
   mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12075.756880399242!2d-74.32992897546332!3d40.82929868018177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3a940483d74f3%3A0x3b7fb381cb18b1d!2sBierman%20Autism%20Centers%20-%20Roseland!5e0!3m2!1sen!2sus!4v1784901341583!5m2!1sen!2sus",
+  googlePlaceId: "0x89c3a940483d74f3:0x3b7fb381cb18b1d",
 
   // ── Hours ─────────────────────────────────────────────────────────────────
   hoursDisplay: "Monday–Friday, 8:30 AM – 4:30 PM",

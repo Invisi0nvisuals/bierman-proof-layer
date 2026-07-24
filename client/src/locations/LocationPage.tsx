@@ -447,8 +447,12 @@ interface LocationPageProps {
 }
 
 export function LocationPage({ data }: LocationPageProps) {
-  const { address, phone, intakeUrl, gbpUrl, mapEmbedUrl, youtubeId, displayName, entityName, heroDescription, insuranceText, reviews, faqs, nearby, clinicalLeadership, assets } = data;
-  const mapsDirectionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(`${address.street}, ${address.city}, ${address.state} ${address.zip}`)}`;
+  const { address, phone, intakeUrl, gbpUrl, mapEmbedUrl, googlePlaceId, youtubeId, displayName, entityName, heroDescription, insuranceText, reviews, faqs, nearby, clinicalLeadership, assets } = data;
+  // Place ID link opens the actual GBP listing (name, reviews, photos, directions)
+  const mapsPlaceUrl = googlePlaceId
+    ? `https://www.google.com/maps/place/?q=place_id:${googlePlaceId}`
+    : gbpUrl;
+  const mapsDirectionsUrl = mapsPlaceUrl;
 
   // Scroll to top on route change (fixes SPA mid-page landing)
   useEffect(() => { window.scrollTo(0, 0); }, [data]);
@@ -868,7 +872,7 @@ export function LocationPage({ data }: LocationPageProps) {
                   aria-label={`Map showing location of Bierman Autism Centers in ${address.city}, ${address.state}`}
                 />
               </div>
-              <a href={gbpUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-brand-teal-700 hover:text-brand-teal-800 text-sm font-medium mt-3 transition-colors">
+              <a href={mapsPlaceUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-brand-teal-700 hover:text-brand-teal-800 text-sm font-medium mt-3 transition-colors">
                 <svg viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4" aria-hidden="true"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/></svg>
                 View on Google Maps
               </a>

@@ -36,6 +36,7 @@ export const ramseyData: LocationData = {
   intakeUrl: "https://www.biermanautism.com/start-now/?loc=ramsey-nj&utm_source=local-hub&utm_medium=referral&utm_campaign=nj-pilot-ramsey",
   gbpUrl: "https://maps.app.goo.gl/3MrbDKvY9nvwFh4Q8",
   mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12031.033513389979!2d-74.14649837529723!3d41.07427391949429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2e193ec96cfbf%3A0x13735dcdca4af901!2sBierman%20Autism%20Centers%20-%20Ramsey!5e0!3m2!1sen!2sus!4v1784901247996!5m2!1sen!2sus",
+  googlePlaceId: "0x89c2e193ec96cfbf:0x13735dcdca4af901",
 
   // ── Hours ─────────────────────────────────────────────────────────────────
   hoursDisplay: "Monday–Friday, 8:30 AM – 4:30 PM",

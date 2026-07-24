@@ -217,6 +217,8 @@ export interface LocationData {
   gbpUrl: string;
   /** Google Maps embed URL for directions section */
   mapEmbedUrl: string;
+  /** Google Place ID — used to build branded map links that open the GBP listing */
+  googlePlaceId?: string;
 
   // ── Hours ─────────────────────────────────────────────────────────────────
   /** Human-readable hours, e.g. "Monday–Friday, 8:00 AM – 6:00 PM" */

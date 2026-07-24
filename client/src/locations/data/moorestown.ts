@@ -38,6 +38,7 @@ export const moorestownData: LocationData = {
   intakeUrl: "https://www.biermanautism.com/start-now/?loc=moorestown-nj&utm_source=local-hub&utm_medium=referral&utm_campaign=nj-pilot-moorestown",
   gbpUrl: "https://maps.app.goo.gl/wCJ1eqeL74PxBiBW7",
   mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12234.517515872752!2d-74.9616017760521!3d39.949679095909545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c1352dc813d101%3A0x37423f8b4aa4f891!2sBierman%20Autism%20Centers%20-%20Moorestown!5e0!3m2!1sen!2sus!4v1784901185024!5m2!1sen!2sus",
+  googlePlaceId: "0x89c1352dc813d101:0x37423f8b4aa4f891",
 
   // ── Hours ─────────────────────────────────────────────────────────────────
   hoursDisplay: "Monday–Friday, 8:30 AM – 4:30 PM",
