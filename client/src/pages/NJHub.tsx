@@ -112,6 +112,42 @@ function buildNJHubSchema(): string {
           url: loc.schema.pageUrl,
         })),
       },
+      {
+        "@type": "MedicalOrganization",
+        "@id": "https://biermanautism.com/#organization",
+        name: "Bierman Autism Centers",
+        url: "https://biermanautism.com/",
+        telephone: "+1-847-232-4997",
+        sameAs: [
+          "https://www.facebook.com/BiermanAutism/",
+          "https://www.linkedin.com/company/biermanautismcenters/",
+        ],
+        areaServed: {
+          "@type": "State",
+          name: "New Jersey",
+        },
+      },
+      {
+        "@type": "MedicalClinic",
+        "@id": "https://local.biermanautism.com/#localbusiness",
+        name: "Bierman Autism Centers - New Jersey",
+        url: "https://local.biermanautism.com/",
+        parentOrganization: {
+          "@id": "https://biermanautism.com/#organization",
+        },
+        telephone: "+1-847-232-4997",
+        address: {
+          "@type": "PostalAddress",
+          addressRegion: "NJ",
+          addressCountry: "US",
+        },
+        serviceType: [
+          "Applied Behavior Analysis (ABA) Therapy",
+          "Speech-Language Therapy",
+          "Occupational Therapy",
+          "Diagnostic Evaluation for Autism",
+        ],
+      },
     ],
   };
   return JSON.stringify(graph, null, 2);
