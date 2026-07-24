@@ -36,8 +36,7 @@ export const berkeleyHeightsData: LocationData = {
   // ── URLs ──────────────────────────────────────────────────────────────────
   intakeUrl: "https://www.biermanautism.com/start-now/?loc=berkeley-heights-nj&utm_source=local-hub&utm_medium=referral&utm_campaign=nj-pilot-berkeley-heights",
   gbpUrl: "https://maps.app.goo.gl/RrzHDfH2aKM3QNPu8",
-  mapEmbedUrl:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.0!2d-74.4354!3d40.6801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s550+Springfield+Ave%2C+Berkeley+Heights%2C+NJ+07922!5e0!3m2!1sen!2sus!4v1620000000003",
+  mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.605545872972!2d-74.44618902383776!3d40.68265943941117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3bb136891c6bd%3A0x5a4b1b8d158c59ef!2sBierman%20Autism%20Centers%20-%20Berkeley%20Heights!5e0!3m2!1sen!2sus!4v1784901117142!5m2!1sen!2sus",
 
   // ── Hours ─────────────────────────────────────────────────────────────────
   hoursDisplay: "Monday–Friday, 8:30 AM – 4:30 PM",

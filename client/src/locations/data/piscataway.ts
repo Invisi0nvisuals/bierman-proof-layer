@@ -36,8 +36,7 @@ export const piscatawayData: LocationData = {
   // ── URLs ──────────────────────────────────────────────────────────────────
   intakeUrl: "https://www.biermanautism.com/start-now/?loc=piscataway-nj&utm_source=local-hub&utm_medium=referral&utm_campaign=nj-pilot-piscataway",
   gbpUrl: "https://maps.app.goo.gl/xAmfnjg553emHKsh9",
-  mapEmbedUrl:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3028.0!2d-74.4774!3d40.5493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s200+Centennial+Ave%2C+Piscataway%2C+NJ+08854!5e0!3m2!1sen!2sus!4v1620000000001",
+  mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12127.651250172354!2d-74.50524017565591!3d40.54351535064553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3c7986846b795%3A0x4f0116d60635b082!2sBierman%20Autism%20Centers%20-%20Piscataway!5e0!3m2!1sen!2sus!4v1784901218966!5m2!1sen!2sus",
 
   // ── Hours ─────────────────────────────────────────────────────────────────
   hoursDisplay: "Monday–Friday, 8:30 AM – 4:30 PM",
