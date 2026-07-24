@@ -35,7 +35,7 @@ export const cranfordData: LocationData = {
 
   // ── URLs ──────────────────────────────────────────────────────────────────
   intakeUrl: "https://www.biermanautism.com/start-now/?loc=cranford-nj&utm_source=local-hub&utm_medium=referral&utm_campaign=nj-pilot-cranford",
-  gbpUrl: "https://maps.app.goo.gl/mBJGYojAXJek27WD6",
+  gbpUrl: "https://www.google.com/search?q=Bierman+Autism+Centers+-+Cranford&stick=H4sIAAAAAAAA_-NgU1I1qLCwTDZOMjZLtjBKMbZIMza1MqgwTDM1MTY0NTNMsTRLTTIxXcSq6JSZWpSbmKfgWFqSWZyr4JyaV5JaVKygq-BclJiXll-UAgAJVSEuTQAAAA&hl=en&mat=CaLt98IQV74AElYBa0lj_zlbVaLa5owCqxFwraB88kWE4LqFiQW48exKO0ypcHrgAPQhpuJMIeZiJrDYNCi1MWjQGCqDDbXY9tbVrkaSaibzuD2t7LsYQOCeLErTuNJXPQ&authuser=0&safe=active&ssui=on",
   mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12108.899154360637!2d-74.29248947558634!3d40.64697502517768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3b36c82d38f35%3A0x1de431561d96eb45!2sBierman%20Autism%20Centers%20-%20Cranford!5e0!3m2!1sen!2sus!4v1784901139760!5m2!1sen!2sus",
   googlePlaceId: "0x89c3b36c82d38f35:0x1de431561d96eb45",
 

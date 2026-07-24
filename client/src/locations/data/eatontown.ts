@@ -35,7 +35,7 @@ export const eatontownData: LocationData = {
 
   // ── URLs ──────────────────────────────────────────────────────────────────
   intakeUrl: "https://www.biermanautism.com/start-now/?loc=eatontown-nj&utm_source=local-hub&utm_medium=referral&utm_campaign=nj-pilot-eatontown",
-  gbpUrl: "https://maps.app.goo.gl/yRMovFRFHjM1xqkE6",
+  gbpUrl: "https://www.google.com/search?q=Bierman+Autism+Centers+-+Eatontown&stick=H4sIAAAAAAAA_-NgU1I1qLCwTDYySjO1SDU0TkyyTEmyMqgwNzBMMTZPMzWwMDBJNTFMWcSq5JSZWpSbmKfgWFqSWZyr4JyaV5JaVKygq-CaWJKfV5JfngcA2-Wvik4AAAA&hl=en&mat=CVxtdbggjfQ1ElcBa0lj_6IY_CWVEkEhW2d3WqUI1I_51NwAMw320ZfMV37IVSXYHAGnly-Lhdstxf52GgKz5gbSXC51-WDNuY0_pxIJicD6OlfeUtKEwd-AHes0m4jTG_c&authuser=0&safe=active&ssui=on",
   mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12175.722906537656!2d-74.04792227583421!3d40.2772890159631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c22f58e13ab9db%3A0x701d37f50804e41d!2sBierman%20Autism%20Centers%20-%20Eatontown!5e0!3m2!1sen!2sus!4v1784901156838!5m2!1sen!2sus",
   googlePlaceId: "0x89c22f58e13ab9db:0x701d37f50804e41d",
 

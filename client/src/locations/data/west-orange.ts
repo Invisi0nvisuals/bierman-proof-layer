@@ -40,7 +40,7 @@ export const westOrangeData: LocationData = {
 
   // ── URLs ──────────────────────────────────────────────────────────────────
   intakeUrl: "https://www.biermanautism.com/start-now/?loc=west-orange-nj&utm_source=local-hub&utm_medium=referral&utm_campaign=nj-pilot-west-orange",
-  gbpUrl: "https://maps.app.goo.gl/gcVuRHyetFgWknR87",
+  gbpUrl: "https://www.google.com/search?q=Bierman+Autism+Centers+-+West+Orange&sca_esv=f4c500ed9085b262&hl=en&authuser=0&sxsrf=APpeQnsLZdcWKz7mcPbJGjA_SepuCpFmzw%3A1782334883143&ei=o0U8aqOjCIusmtkP-Y-B6AI&biw=953&bih=863&ved=0ahUKEwjjgNLs4qCVAxULliYFHflHAC0Q4dUDCBI&uact=5&oq=Bierman+Autism+Centers+-+West+Orange&gs_lp=Egxnd3Mtd2l6LXNlcnAiJEJpZXJtYW4gQXV0aXNtIENlbnRlcnMgLSBXZXN0IE9yYW5nZTIFEAAYgAQyBRAAGIAEMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB5I3CBQkw9Y5h9wAngBkAEAmAGHAaABywaqAQM4LjK4AQPIAQDiAwQYACBBiAYBkAYIkgcEMTAuMqAH7EuyBwM4LjK4B5MHwgcHMC41LjYuMcgHNoAIAQ&sclient=gws-wiz-serp&safe=active&ssui=on",
   mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12081.727799069773!2d-74.27193137548548!3d40.79650088828675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3ab428ca5d0af%3A0x1edc5c9c28051cae!2sBierman%20Autism%20Centers%20-%20West%20Orange!5e0!3m2!1sen!2sus!4v1784901365885!5m2!1sen!2sus",
   googlePlaceId: "0x89c3ab428ca5d0af:0x1edc5c9c28051cae",
 

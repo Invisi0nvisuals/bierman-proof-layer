@@ -35,7 +35,7 @@ export const princetonData: LocationData = {
 
   // ── URLs ──────────────────────────────────────────────────────────────────
   intakeUrl: "https://www.biermanautism.com/start-now/?loc=princeton-nj&utm_source=local-hub&utm_medium=referral&utm_campaign=nj-pilot-princeton",
-  gbpUrl: "https://maps.app.goo.gl/AoANRxYghyy2sdJC8",
+  gbpUrl: "https://www.google.com/search?q=Bierman+Autism+Centers+-+Princeton&stick=H4sIAAAAAAAA_-NgU1I1qLCwTDZONTQ2NDC1TDRLSzG1MqhIMbRMMU1KNU1MMjNJTUxOXMSq5JSZWpSbmKfgWFqSWZyr4JyaV5JaVKygqxBQlJmXnFqSnwcA8QXM804AAAA&hl=en&mat=Ccm5SkqDtK_HElcBa0lj_1AHKouClqpkyJi1UUV4PEVpTwsKcos1QLuqAvU4rUXyA9KfI2Fy-tc7pyP8TZupLURwMdRJZHSIMX0CTVZUoW2OH1smNEN6Pqx1kI4MVgXaB0o&authuser=0&safe=active&ssui=on",
   mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12168.011541855032!2d-74.64806557580563!3d40.32009350548237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3e131059a6fd5%3A0xd19d5be5ab64eaca!2sBierman%20Autism%20Centers%20-%20Princeton!5e0!3m2!1sen!2sus!4v1784901233896!5m2!1sen!2sus",
   googlePlaceId: "0x89c3e131059a6fd5:0xd19d5be5ab64eaca",
 

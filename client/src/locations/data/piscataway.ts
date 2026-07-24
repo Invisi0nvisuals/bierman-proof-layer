@@ -35,7 +35,7 @@ export const piscatawayData: LocationData = {
 
   // ── URLs ──────────────────────────────────────────────────────────────────
   intakeUrl: "https://www.biermanautism.com/start-now/?loc=piscataway-nj&utm_source=local-hub&utm_medium=referral&utm_campaign=nj-pilot-piscataway",
-  gbpUrl: "https://maps.app.goo.gl/xAmfnjg553emHKsh9",
+  gbpUrl: "https://www.google.com/search?q=Bierman+Autism+Centers+-+Piscataway&stick=H4sIAAAAAAAA_-NgU1I1qLCwTDZONre0MLMwMUsytzS1MqgwSTMwNDRLMTMwMzZNMrAwWsSq7JSZWpSbmKfgWFqSWZyr4JyaV5JaVKygqxCQWZycWJJYnlgJAGayzcZPAAAA&hl=en&mat=CeJ9b_8x7gT2ElcBa0lj_zoLt77KhXpiI_x1eNW5aK5ZqiQr7ps7oiQcM-yXoKtF5XUEMOYeU8TQ-gIpOwOt7TEXaYdrQE8UGLnD6tDxlSwFLZ08YMy69PIfhOcS_R4Gbtw&authuser=0&safe=active&ssui=on",
   mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12127.651250172354!2d-74.50524017565591!3d40.54351535064553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3c7986846b795%3A0x4f0116d60635b082!2sBierman%20Autism%20Centers%20-%20Piscataway!5e0!3m2!1sen!2sus!4v1784901218966!5m2!1sen!2sus",
   googlePlaceId: "0x89c3c7986846b795:0x4f0116d60635b082",
 

@@ -39,7 +39,7 @@ export const parsippanyData: LocationData = {
 
   // ── URLs ──────────────────────────────────────────────────────────────────
   intakeUrl: "https://www.biermanautism.com/start-now/?loc=parsippany-nj&utm_source=local-hub&utm_medium=referral&utm_campaign=nj-pilot-parsippany",
-  gbpUrl: "https://maps.app.goo.gl/5MznVvcqg1AkxsJ27",
+  gbpUrl: "https://www.google.com/search?q=Bierman+Autism+Centers+-+Parsippany&stick=H4sIAAAAAAAA_-NgU1IxqLCwTDY2sDQwMzIwNUoxSTS3MqhIMTU2NE9JSjM2MTFNMTRbxKrslJlalJuYp-BYWpJZnKvgnJpXklpUrKCrEJBYVJxZUJCYVwkALp9yqU4AAAA&hl=en&mat=CUdQPuQaWXUqElYBa0lj_09Rem8s7ovWswDQ52GhLJrE-xQqDxMZdO8hMNV3957gE6Ew68PPtjw2PU82kdr8_dHzjm3XzZnl54LO7c7702rBdQlhwJZWQ3blbfnCQ0CkIQ&authuser=0&safe=active&ssui=on",
   mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12068.50908797005!2d-74.42746547543642!3d40.86908107034439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c309062052d4a7%3A0xd5317dbf3445d16!2sBierman%20Autism%20Centers%20-%20Parsippany!5e0!3m2!1sen!2sus!4v1784901201469!5m2!1sen!2sus",
   googlePlaceId: "0x89c309062052d4a7:0xd5317dbf3445d16",
 

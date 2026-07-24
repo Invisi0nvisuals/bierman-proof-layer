@@ -447,12 +447,10 @@ interface LocationPageProps {
 }
 
 export function LocationPage({ data }: LocationPageProps) {
-  const { address, phone, intakeUrl, gbpUrl, mapEmbedUrl, googlePlaceId, youtubeId, displayName, entityName, heroDescription, insuranceText, reviews, faqs, nearby, clinicalLeadership, assets } = data;
-  // Place ID link opens the actual GBP listing (name, reviews, photos, directions)
-  const mapsPlaceUrl = googlePlaceId
-    ? `https://www.google.com/maps/place/?q=place_id:${googlePlaceId}`
-    : gbpUrl;
-  const mapsDirectionsUrl = mapsPlaceUrl;
+  const { address, phone, intakeUrl, gbpUrl, mapEmbedUrl, youtubeId, displayName, entityName, heroDescription, insuranceText, reviews, faqs, nearby, clinicalLeadership, assets } = data;
+  // gbpUrl links directly to the GBP knowledge panel for this location
+  const mapsDirectionsUrl = gbpUrl;
+  const mapsPlaceUrl = gbpUrl;
 
   // Scroll to top on route change (fixes SPA mid-page landing)
   useEffect(() => { window.scrollTo(0, 0); }, [data]);

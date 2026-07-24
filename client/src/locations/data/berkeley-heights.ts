@@ -35,7 +35,7 @@ export const berkeleyHeightsData: LocationData = {
 
   // ── URLs ──────────────────────────────────────────────────────────────────
   intakeUrl: "https://www.biermanautism.com/start-now/?loc=berkeley-heights-nj&utm_source=local-hub&utm_medium=referral&utm_campaign=nj-pilot-berkeley-heights",
-  gbpUrl: "https://maps.app.goo.gl/RrzHDfH2aKM3QNPu8",
+  gbpUrl: "https://www.google.com/search?q=Bierman+Autism+Centers+-+Berkeley+Heights&stick=H4sIAAAAAAAA_-NgU1I1qLCwTDZOSjI0NrOwNEw2S0qxMqgwTTRJMkyySDE0tUg2tUxNW8Sq6ZSZWpSbmKfgWFqSWZyr4JyaV5JaVKygq-CUWpSdmpNaqeCRmpmeUVIMAPSdhyJVAAAA&hl=en&mat=CULpyazErjluElYBa0lj_x3gPyjyQyfkBXbYunUEaFG80ssRpGBmZQOjBgk6Sqn09hUkB7UDYribTLfC7YIocZtLXoHgiD-E1m93waPSDkymRA5sQ2Cr2UmXV3xOuNXlsg&authuser=0&safe=active&ssui=on",
   mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.605545872972!2d-74.44618902383776!3d40.68265943941117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3bb136891c6bd%3A0x5a4b1b8d158c59ef!2sBierman%20Autism%20Centers%20-%20Berkeley%20Heights!5e0!3m2!1sen!2sus!4v1784901117142!5m2!1sen!2sus",
   googlePlaceId: "0x89c3bb136891c6bd:0x5a4b1b8d158c59ef",
 
