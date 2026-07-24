@@ -241,7 +241,7 @@ export default function NJHub() {
   return (
     <div className="min-h-screen bg-white font-sans">
       <Helmet>
-        <title>Comprehensive Autism Services Near Me in NJ | Bierman Autism Centers</title>
+        <title>Autism Services in New Jersey | Bierman Autism Centers</title>
         <meta
           name="description"
           content="Comprehensive autism services near you in New Jersey — ABA therapy, speech, OT & diagnostics at 10 locations. BCBA-supervised care. Insurance accepted."

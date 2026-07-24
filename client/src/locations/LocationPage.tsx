@@ -516,6 +516,19 @@ export function LocationPage({ data }: LocationPageProps) {
         </div>
       </nav>
 
+      {/* Coming Soon Status Bar — renders only when comingSoon: true (Moorestown, Roseland) */}
+      {data.comingSoon && (
+        <div className="w-full bg-amber-50 border-b border-amber-200">
+          <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col sm:flex-row items-start sm:items-center gap-1 sm:gap-3">
+            <span className="bg-amber-100 text-amber-700 text-xs font-bold px-2.5 py-1 rounded-full border border-amber-200 whitespace-nowrap flex-shrink-0">
+              {data.comingSoonLabel ?? "Coming Soon"}
+            </span>
+            <span className="text-amber-800 text-sm">
+              This location is not yet open. You can submit an intake request now and our team will reach out as soon as scheduling begins.
+            </span>
+          </div>
+        </div>
+      )}
       {/* Hero */}
       <section
         className="py-16 md:py-24 relative overflow-hidden"
