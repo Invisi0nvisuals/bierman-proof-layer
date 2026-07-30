@@ -14,7 +14,7 @@
  * No hardcoded NAP or address data — everything flows from the data files.
  */
 
-import { useMemo } from "react";
+import { useMemo, useEffect } from "react";
 import { Link } from "wouter";
 import { Helmet } from "react-helmet-async";
 import HealthcareDisclaimer from "@/components/HealthcareDisclaimer";
@@ -238,6 +238,46 @@ export default function NJHub() {
   const openLocations = NJ_LOCATIONS.filter((l) => !l.comingSoon);
   const comingSoonLocations = NJ_LOCATIONS.filter((l) => l.comingSoon);
 
+  // ─── GA4 Event Tracking Helpers ──────────────────────────────────────────────
+  const trackPhoneClick = (source: string) => {
+    gtag('event', 'phone_click', {
+      event_category: 'engagement',
+      event_label: source,
+      hub_location: 'nj_hub',
+      hub_city: 'New Jersey',
+    });
+  };
+
+  const trackCtaClick = (ctaLabel: string, source: string) => {
+    gtag('event', 'cta_click', {
+      event_category: 'engagement',
+      event_label: ctaLabel,
+      cta_source: source,
+      hub_location: 'nj_hub',
+      hub_city: 'New Jersey',
+    });
+  };
+
+  // HubSpot form submission listener — fires form_submit when the iframe posts onFormSubmitted
+  useEffect(() => {
+    const handleHubSpotMessage = (event: MessageEvent) => {
+      if (
+        event.data?.type === 'hsFormCallback' &&
+        event.data?.eventName === 'onFormSubmitted'
+      ) {
+        gtag('event', 'form_submit', {
+          event_category: 'lead',
+          event_label: 'hubspot_intake_form',
+          form_id: '35c22952-9134-4372-8256-029b018f4f6a',
+          hub_location: 'nj_hub',
+          hub_city: 'New Jersey',
+        });
+      }
+    };
+    window.addEventListener('message', handleHubSpotMessage);
+    return () => window.removeEventListener('message', handleHubSpotMessage);
+  }, []);
+
   return (
     <div className="min-h-screen bg-white font-sans">
       <Helmet>
@@ -281,6 +321,7 @@ export default function NJHub() {
           <div className="flex items-center gap-3">
             <a
               href="tel:8472324997"
+              onClick={() => trackPhoneClick('header_nav')}
               className="hidden md:inline-flex items-center gap-1.5 text-[#003B71] font-semibold text-sm hover:text-brand-teal transition-colors"
             >
               <svg viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4" aria-hidden="true"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
@@ -288,6 +329,7 @@ export default function NJHub() {
             </a>
             <a
               href="#request-services"
+              onClick={() => trackCtaClick('Request Services', 'header_nav')}
               className="bg-brand-coral hover:bg-brand-coral/90 text-white font-semibold px-5 py-2.5 rounded-full text-sm tracking-wide transition-colors shadow-sm"
             >
               Request Services
@@ -340,12 +382,14 @@ export default function NJHub() {
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="#request-services"
+                onClick={() => trackCtaClick('Request Services in NJ', 'hero_cta')}
                 className="bg-brand-coral hover:bg-brand-coral/90 text-white font-semibold px-8 py-4 rounded-full text-lg tracking-wide transition-colors text-center shadow-md"
               >
                 Request Services in NJ
               </a>
               <a
                 href="tel:8472324997"
+                onClick={() => trackPhoneClick('hero_cta')}
                 className="border-2 border-white/40 hover:border-white bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-full text-lg transition-colors text-center"
               >
                 (847) 232-4997
@@ -485,6 +529,7 @@ export default function NJHub() {
               </div>
               <a
                 href="#request-services"
+                onClick={() => trackCtaClick('Start the Intake Process', 'insurance_card')}
                 className="mt-6 block w-full bg-brand-coral hover:bg-brand-coral/90 text-white font-semibold py-3 rounded-full text-sm tracking-wide text-center transition-colors"
               >
                 Start the Intake Process

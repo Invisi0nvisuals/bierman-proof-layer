@@ -469,6 +469,64 @@ export function LocationPage({ data }: LocationPageProps) {
     setOutcomesVideoActive(false);
   }, [data]);
 
+  // ─── GA4 Event Tracking Helpers ──────────────────────────────────────────────
+  const trackPhoneClick = (source: string) => {
+    gtag('event', 'phone_click', {
+      event_category: 'engagement',
+      event_label: source,
+      hub_location: data.slug,
+      hub_city: address.city,
+    });
+  };
+
+  const trackCtaClick = (ctaLabel: string, source: string) => {
+    gtag('event', 'cta_click', {
+      event_category: 'engagement',
+      event_label: ctaLabel,
+      cta_source: source,
+      hub_location: data.slug,
+      hub_city: address.city,
+    });
+  };
+
+  const trackDirectionsClick = (linkType: string) => {
+    gtag('event', 'get_directions', {
+      event_category: 'engagement',
+      event_label: linkType,
+      hub_location: data.slug,
+      hub_city: address.city,
+    });
+  };
+
+  const trackVideoPlay = (videoType: string) => {
+    gtag('event', 'video_play', {
+      event_category: 'engagement',
+      event_label: videoType,
+      hub_location: data.slug,
+      hub_city: address.city,
+    });
+  };
+
+  // HubSpot form submission listener — fires form_submit when the iframe posts onFormSubmitted
+  useEffect(() => {
+    const handleHubSpotMessage = (event: MessageEvent) => {
+      if (
+        event.data?.type === 'hsFormCallback' &&
+        event.data?.eventName === 'onFormSubmitted'
+      ) {
+        gtag('event', 'form_submit', {
+          event_category: 'lead',
+          event_label: 'hubspot_intake_form',
+          form_id: '35c22952-9134-4372-8256-029b018f4f6a',
+          hub_location: data.slug,
+          hub_city: address.city,
+        });
+      }
+    };
+    window.addEventListener('message', handleHubSpotMessage);
+    return () => window.removeEventListener('message', handleHubSpotMessage);
+  }, [data.slug, address.city]);
+
   return (
     <div className="min-h-screen bg-white font-sans">
       {/* Per-route JSON-LD schema — injected dynamically so only this location's schema is present */}
@@ -508,8 +566,8 @@ export function LocationPage({ data }: LocationPageProps) {
             </div>
           </div>
           <div className="flex items-center gap-3">
-            <a href={`tel:${phone}`} className="hidden md:block text-slate-600 hover:text-brand-teal-700 text-sm font-medium transition-colors">{phone}</a>
-            <a href="#request-services" className="bg-brand-coral hover:bg-brand-coral/90 text-white font-semibold px-5 py-2.5 rounded-full text-sm tracking-wide transition-colors shadow-sm">
+            <a href={`tel:${phone}`} onClick={() => trackPhoneClick('header_nav')} className="hidden md:block text-slate-600 hover:text-brand-teal-700 text-sm font-medium transition-colors">{phone}</a>
+            <a href="#request-services" onClick={() => trackCtaClick('Request Services', 'header_nav')} className="bg-brand-coral hover:bg-brand-coral/90 text-white font-semibold px-5 py-2.5 rounded-full text-sm tracking-wide transition-colors shadow-sm">
               Request Services
             </a>
           </div>
@@ -561,10 +619,10 @@ export function LocationPage({ data }: LocationPageProps) {
             <p className="text-blue-100 text-lg mb-4 leading-relaxed">{heroDescription}</p>
             <p className="text-teal-300 text-sm font-medium mb-8">We serve children 18 months to 9 years old.</p>
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
-              <a href="#request-services" className="bg-brand-coral hover:bg-brand-coral/90 text-white font-semibold px-8 py-4 rounded-full text-lg tracking-wide transition-colors text-center shadow-md">
+              <a href="#request-services" onClick={() => trackCtaClick('Request Services', 'hero_cta')} className="bg-brand-coral hover:bg-brand-coral/90 text-white font-semibold px-8 py-4 rounded-full text-lg tracking-wide transition-colors text-center shadow-md">
                 Request Services in {address.city}
               </a>
-              <a href={`tel:${phone}`} className="border-2 border-brand-teal-200 hover:border-brand-teal bg-white hover:bg-brand-teal-50 text-brand-teal-700 font-semibold px-8 py-4 rounded-full text-lg transition-colors text-center">
+              <a href={`tel:${phone}`} onClick={() => trackPhoneClick('hero_cta')} className="border-2 border-brand-teal-200 hover:border-brand-teal bg-white hover:bg-brand-teal-50 text-brand-teal-700 font-semibold px-8 py-4 rounded-full text-lg transition-colors text-center">
                 {phone}
               </a>
             </div>
@@ -673,7 +731,7 @@ export function LocationPage({ data }: LocationPageProps) {
                     ) : (
                       <button
                         type="button"
-                        onClick={() => setFacilityVideoActive(true)}
+                        onClick={() => { setFacilityVideoActive(true); trackVideoPlay('facility_tour_video'); }}
                         className="relative w-full h-full flex items-center justify-center group cursor-pointer bg-slate-900"
                         style={{ minHeight: "280px" }}
                         aria-label={`Play ${address.city} center tour video`}
@@ -733,10 +791,10 @@ export function LocationPage({ data }: LocationPageProps) {
                 Our {address.city} center is built for your child: calm spaces, thoughtful design, and a team of BCBAs, RBTs, and therapists working together on one plan made just for them.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
-                <a href="#request-services" className="bg-brand-coral hover:bg-brand-coral/90 text-white font-semibold px-6 py-3 rounded-xl transition-colors text-center text-sm">
+                <a href="#request-services" onClick={() => trackCtaClick('Request Services', 'facility_section')} className="bg-brand-coral hover:bg-brand-coral/90 text-white font-semibold px-6 py-3 rounded-xl transition-colors text-center text-sm">
                   Request Services in {address.city}
                 </a>
-                <a href={`tel:${phone}`} className="border border-brand-teal-200 hover:bg-brand-teal-50 text-brand-teal-700 font-semibold px-6 py-3 rounded-full transition-colors text-center text-sm">
+                <a href={`tel:${phone}`} onClick={() => trackPhoneClick('facility_section')} className="border border-brand-teal-200 hover:bg-brand-teal-50 text-brand-teal-700 font-semibold px-6 py-3 rounded-full transition-colors text-center text-sm">
                   {phone}
                 </a>
               </div>
@@ -857,7 +915,7 @@ export function LocationPage({ data }: LocationPageProps) {
                   </div>
                   <div className="flex items-center gap-3">
                     <svg viewBox="0 0 20 20" fill="none" className="w-5 h-5 text-brand-teal flex-shrink-0" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><path d="M3 5a2 2 0 012-2h2l2 4-1.5 1.5a11 11 0 005 5L14 12l4 2v2a2 2 0 01-2 2C7.163 18 2 12.837 2 7a2 2 0 012-2z"/></svg>
-                    <a href={`tel:${phone}`} className="text-brand-teal-700 font-semibold hover:underline">{phone}</a>
+                    <a href={`tel:${phone}`} onClick={() => trackPhoneClick('location_card')} className="text-brand-teal-700 font-semibold hover:underline">{phone}</a>
                   </div>
                   <div className="flex items-center gap-3">
                     <svg viewBox="0 0 20 20" fill="none" className="w-5 h-5 text-brand-teal flex-shrink-0" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><circle cx="10" cy="10" r="8"/><path d="M10 6v4l3 3" strokeLinecap="round"/></svg>
@@ -865,7 +923,7 @@ export function LocationPage({ data }: LocationPageProps) {
                   </div>
                 </div>
               </div>
-              <a href={mapsDirectionsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-brand-teal hover:bg-teal-700 text-white font-semibold px-6 py-3 rounded-xl text-sm transition-colors shadow-sm">
+              <a href={mapsDirectionsUrl} target="_blank" rel="noopener noreferrer" onClick={() => trackDirectionsClick('get_directions_button')} className="inline-flex items-center gap-2 bg-brand-teal hover:bg-teal-700 text-white font-semibold px-6 py-3 rounded-xl text-sm transition-colors shadow-sm">
                 Get Directions →
               </a>
             </div>
@@ -883,7 +941,7 @@ export function LocationPage({ data }: LocationPageProps) {
                   aria-label={`Map showing location of Bierman Autism Centers in ${address.city}, ${address.state}`}
                 />
               </div>
-              <a href={mapsPlaceUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-brand-teal-700 hover:text-brand-teal-800 text-sm font-medium mt-3 transition-colors">
+              <a href={mapsPlaceUrl} target="_blank" rel="noopener noreferrer" onClick={() => trackDirectionsClick('view_on_google_maps')} className="inline-flex items-center gap-2 text-brand-teal-700 hover:text-brand-teal-800 text-sm font-medium mt-3 transition-colors">
                 <svg viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4" aria-hidden="true"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/></svg>
                 View on Google Maps
               </a>
@@ -915,7 +973,7 @@ export function LocationPage({ data }: LocationPageProps) {
             ))}
           </div>
           <div className="text-center mt-10">
-            <a href="#request-services" className="bg-brand-coral hover:bg-brand-coral/90 text-white font-semibold px-10 py-4 rounded-full text-lg tracking-wide transition-colors inline-block shadow-lg">
+            <a href="#request-services" onClick={() => trackCtaClick('Start the Process', 'getting_started_section')} className="bg-brand-coral hover:bg-brand-coral/90 text-white font-semibold px-10 py-4 rounded-full text-lg tracking-wide transition-colors inline-block shadow-lg">
               Start the Process →
             </a>
           </div>
@@ -976,7 +1034,7 @@ export function LocationPage({ data }: LocationPageProps) {
             ) : (
               <button
                 type="button"
-                onClick={() => setOutcomesVideoActive(true)}
+                onClick={() => { setOutcomesVideoActive(true); trackVideoPlay('outcomes_video'); }}
                 className="absolute inset-0 w-full h-full flex items-center justify-center group cursor-pointer bg-slate-900"
                 aria-label={`Play video: ${PILOT_VIDEO.title}`}
               >
@@ -1218,7 +1276,7 @@ export function LocationPage({ data }: LocationPageProps) {
               <div className="text-white/60 text-sm space-y-1">
                 <div>{address.street}</div>
                 <div>{address.city}, {address.state} {address.zip}</div>
-                <div><a href={`tel:${phone}`} className="hover:text-white transition-colors">{phone}</a></div>
+                <div><a href={`tel:${phone}`} onClick={() => trackPhoneClick('footer')} className="hover:text-white transition-colors">{phone}</a></div>
                 <div className="text-white/40 text-xs mt-2">Bierman Autism Centers in {address.city} · {address.county}</div>
               </div>
             </div>
@@ -1251,15 +1309,15 @@ export function LocationPage({ data }: LocationPageProps) {
       {/* Mobile sticky action row */}
       <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-white border-t border-slate-200 shadow-lg">
         <div className="flex items-stretch">
-          <a href="#request-services" className="flex-1 flex flex-col items-center justify-center gap-0.5 py-3 bg-brand-coral hover:bg-brand-coral/90 text-white text-xs font-semibold transition-colors">
+          <a href="#request-services" onClick={() => trackCtaClick('Request Services', 'mobile_sticky_bar')} className="flex-1 flex flex-col items-center justify-center gap-0.5 py-3 bg-brand-coral hover:bg-brand-coral/90 text-white text-xs font-semibold transition-colors">
             <svg viewBox="0 0 20 20" fill="none" className="w-4 h-4" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><path d="M10 2a8 8 0 100 16A8 8 0 0010 2z"/><path d="M10 7v6M7 10h6" strokeLinecap="round"/></svg>
             Request Services
           </a>
-          <a href={`tel:${phone}`} className="flex-1 flex flex-col items-center justify-center gap-0.5 py-3 bg-brand-teal hover:bg-teal-700 text-white text-xs font-semibold transition-colors border-x border-teal-700">
+          <a href={`tel:${phone}`} onClick={() => trackPhoneClick('mobile_sticky_bar')} className="flex-1 flex flex-col items-center justify-center gap-0.5 py-3 bg-brand-teal hover:bg-teal-700 text-white text-xs font-semibold transition-colors border-x border-teal-700">
             <svg viewBox="0 0 20 20" fill="none" className="w-4 h-4" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><path d="M3 5a2 2 0 012-2h2l2 4-1.5 1.5a11 11 0 005 5L14 12l4 2v2a2 2 0 01-2 2C7.163 18 2 12.837 2 7a2 2 0 012-2z"/></svg>
             Call
           </a>
-          <a href={mapsDirectionsUrl} target="_blank" rel="noopener noreferrer" className="flex-1 flex flex-col items-center justify-center gap-0.5 py-3 bg-slate-700 hover:bg-slate-800 text-white text-xs font-semibold transition-colors">
+          <a href={mapsDirectionsUrl} target="_blank" rel="noopener noreferrer" onClick={() => trackDirectionsClick('mobile_sticky_bar')} className="flex-1 flex flex-col items-center justify-center gap-0.5 py-3 bg-slate-700 hover:bg-slate-800 text-white text-xs font-semibold transition-colors">
             <svg viewBox="0 0 20 20" fill="none" className="w-4 h-4" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><path d="M10 2a6 6 0 016 6c0 4-6 10-6 10S4 12 4 8a6 6 0 016-6z"/><circle cx="10" cy="8" r="2"/></svg>
             Directions
           </a>
