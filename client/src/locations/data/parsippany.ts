@@ -6,7 +6,7 @@
  * Consumed by LocationPage renderer and buildLocationSchema utility.
  *
  * NAP status: Confirmed from Bierman website (May 2026)
- * Address: 2001 US 46, Suite 100, Parsippany, NJ 07054
+ * Address: 2001 US 46, Suite 104, Parsippany, NJ 07054
  * Phone: (609) 480-2522
  * County: Morris County (primary)
  *
@@ -25,7 +25,7 @@ export const parsippanyData: LocationData = {
 
   // ── NAP ───────────────────────────────────────────────────────────────────
   address: {
-    street: "2001 US 46, Suite 100",
+    street: "2001 US 46, Suite 104",
     city: "Parsippany",
     state: "NJ",
     zip: "07054",
@@ -119,7 +119,7 @@ export const parsippanyData: LocationData = {
     },
     {
       q: "Where is the Bierman Autism Centers Parsippany clinic located?",
-      a: "The Parsippany clinic is located at <a href='https://maps.app.goo.gl/5MznVvcqg1AkxsJ27' target='_blank' rel='noopener noreferrer'>2001 US 46, Suite 100, Parsippany, NJ 07054</a>, serving families in Morris County and surrounding areas.",
+      a: "The Parsippany clinic is located at <a href='https://maps.app.goo.gl/5MznVvcqg1AkxsJ27' target='_blank' rel='noopener noreferrer'>2001 US 46, Suite 104, Parsippany, NJ 07054</a>, serving families in Morris County and surrounding areas.",
     },
     {
       q: "What is ABA therapy and how does it help children with autism?",
@@ -127,7 +127,7 @@ export const parsippanyData: LocationData = {
     },
     {
       q: "Is ABA therapy available near Parsippany, NJ?",
-      a: "Yes. Bierman Autism Centers in Parsippany is located at 2001 US 46, Suite 100. The clinic serves families in Morris County, Essex County, and surrounding communities including Morristown, Denville, and Montville.",
+      a: "Yes. Bierman Autism Centers in Parsippany is located at 2001 US 46, Suite 104. The clinic serves families in Morris County, Essex County, and surrounding communities including Morristown, Denville, and Montville.",
     },
     {
       q: "Does Bierman Parsippany offer speech therapy for children with autism?",
