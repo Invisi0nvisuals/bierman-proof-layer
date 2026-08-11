@@ -31,3 +31,4 @@
 - [ ] Google Places API live ratings (need decision/API key)
 - [x] CV-03: Facility section hides when no video/gallery/facility image — hide logic implemented. Per-location YouTube IDs pending from Bierman (add facilityYoutubeId to each data file when provided)
 - [x] GA4 custom event tracking: form_submit (HubSpot postMessage), phone_click, cta_click, get_directions, video_play — implemented in NJHub.tsx and LocationPage.tsx with hub_location and hub_city parameters on all events
+- [x] Audited CallRail DNI phone-link hydration behavior across NJHub.tsx and LocationPage.tsx — no fix warranted because the app uses React createRoot client rendering, not SSR hydration; current CallRail script placement and phone links are compatible
